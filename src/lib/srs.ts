@@ -1,0 +1,173 @@
+import type { Card, CardProgress, SessionCard } from '../types';
+
+export const SRS_INTERVALS = [0, 1, 3, 7, 30, 180]; // days per level
+
+export function getToday(): string {
+  return new Date().toISOString().split('T')[0]!;
+}
+
+export function addDays(dateStr: string, days: number): string {
+  const d = new Date(dateStr);
+  d.setDate(d.getDate() + days);
+  return d.toISOString().split('T')[0]!;
+}
+
+export function createInitialProgress(cardId: string): CardProgress {
+  return {
+    cardId,
+    level: 0,
+    nextReviewDate: getToday(),
+    consecutiveCorrect: 0,
+    totalCorrect: 0,
+    totalWrong: 0,
+  };
+}
+
+// Returns updated progress after an answer
+export function processAnswer(
+  progress: CardProgress,
+  correct: boolean
+): CardProgress {
+  const today = getToday();
+  if (correct) {
+    const newConsec = progress.consecutiveCorrect + 1;
+    const levelUp = newConsec >= 2;
+    const newLevel = levelUp ? Math.min(progress.level + 1, 5) : progress.level;
+    const interval = SRS_INTERVALS[newLevel] ?? 180;
+    return {
+      ...progress,
+      level: newLevel,
+      consecutiveCorrect: levelUp ? 0 : newConsec,
+      totalCorrect: progress.totalCorrect + 1,
+      nextReviewDate: addDays(today, interval),
+    };
+  } else {
+    const newLevel = Math.max(progress.level - 1, 1);
+    return {
+      ...progress,
+      level: newLevel,
+      consecutiveCorrect: 0,
+      totalWrong: progress.totalWrong + 1,
+      nextReviewDate: addDays(today, 1),
+    };
+  }
+}
+
+// Build the session queue
+export function buildQueue(
+  dueProgress: CardProgress[],
+  newCards: Card[],
+  allCards: Card[],
+  direction: 'mixed' | 'en-ru' | 'ru-en' = 'mixed'
+): SessionCard[] {
+  const queue: SessionCard[] = [];
+
+  // Map cardId -> Card for lookup
+  const cardMap = new Map(allCards.map(c => [c.id, c]));
+
+  // 1. Due cards (review)
+  for (const p of dueProgress) {
+    const card = cardMap.get(p.cardId);
+    if (!card) continue;
+    const dir = direction === 'mixed'
+      ? (Math.random() < 0.5 ? 'en-ru' : 'ru-en')
+      : direction;
+    queue.push({ card, direction: dir, isRetry: false });
+  }
+
+  // 2. New cards
+  for (const card of newCards) {
+    const dir = direction === 'mixed'
+      ? (Math.random() < 0.5 ? 'en-ru' : 'ru-en')
+      : direction;
+    queue.push({ card, direction: dir, isRetry: false });
+  }
+
+  // Shuffle
+  for (let i = queue.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [queue[i], queue[j]] = [queue[j]!, queue[i]!];
+  }
+
+  return queue;
+}
+
+// Generate 4 options: 1 correct + 3 random
+export function generateOptions(
+  correctCard: Card,
+  direction: 'en-ru' | 'ru-en',
+  allCards: Card[]
+): string[] {
+  const correctAnswer = direction === 'en-ru' ? correctCard.russian : correctCard.english;
+
+  const pool = allCards
+    .filter(c => c.id !== correctCard.id)
+    .map(c => direction === 'en-ru' ? c.russian : c.english);
+
+  // Shuffle pool
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  const distractors = shuffled.slice(0, 3);
+
+  const options = [correctAnswer, ...distractors];
+  // Shuffle options
+  return options.sort(() => Math.random() - 0.5);
+}
+
+// Language level system
+export const LEVELS = [
+  { min: 0,    title: 'Умный как Siri' },
+  { min: 50,   title: 'Немой турист' },
+  { min: 100,  title: 'Гугл транслейт на ножках' },
+  { min: 150,  title: 'Знаю "hello" и "sorry"' },
+  { min: 200,  title: 'Выживший в аэропорту' },
+  { min: 250,  title: 'Смотрю сериалы с субтитрами' },
+  { min: 300,  title: 'Могу заказать кофе' },
+  { min: 350,  title: 'Читаю меню без паники' },
+  { min: 400,  title: 'Иностранец с акцентом' },
+  { min: 450,  title: 'Разговариваю руками и словами' },
+  { min: 500,  title: 'B1 с понтами' },
+  { min: 550,  title: 'Понимаю половину мемов' },
+  { min: 600,  title: 'Средний английский, нижний предел' },
+  { min: 650,  title: 'Пишу "I\'m fine" и это правда' },
+  { min: 700,  title: 'Смотрел Друзей 4 раза' },
+  { min: 750,  title: 'Дружу с грамматикой (иногда)' },
+  { min: 850,  title: 'Могу поспорить и проиграть' },
+  { min: 950,  title: 'Разговариваю как человек' },
+  { min: 1050, title: 'Пишу в чат без переводчика' },
+  { min: 1150, title: 'Делаю замечания по чужой грамматике' },
+  { min: 1250, title: 'Думаю на английском в душе' },
+  { min: 1350, title: 'Почти не стыдно' },
+  { min: 1450, title: 'Смотрю стендап и смеюсь в нужных местах' },
+  { min: 1550, title: 'Носитель духа языка' },
+  { min: 1650, title: 'Говорю быстро и мало думаю' },
+  { min: 1750, title: 'Объясняю грамматику русским' },
+  { min: 1850, title: 'Иностранцы не догадываются. Сразу.' },
+  { min: 1950, title: 'Лингвистический монстр' },
+  { min: 2050, title: 'Словарный запас > самооценка' },
+  { min: 2150, title: 'Читаю книги без словаря' },
+  { min: 2300, title: 'Думаю на английском даже когда злюсь' },
+  { min: 2450, title: 'Профессиональный болтун' },
+  { min: 2550, title: 'Объясняю русские мемы иностранцам' },
+  { min: 2650, title: 'Слушаю подкасты на скорости 1.5х' },
+  { min: 2750, title: 'Поправляю носителей и они соглашаются' },
+  { min: 2850, title: 'Шекспир был бы доволен' },
+  { min: 2950, title: 'Английский — это я' },
+  { min: 3000, title: 'WordPunk завершён. Иди жить.' },
+];
+
+export function getCurrentLevel(knownCount: number): { title: string; min: number; nextMin: number } {
+  let current = LEVELS[0]!;
+  for (const lvl of LEVELS) {
+    if (knownCount >= lvl.min) current = lvl;
+    else break;
+  }
+  const idx = LEVELS.indexOf(current);
+  const next = LEVELS[idx + 1] ?? current;
+  return { title: current.title, min: current.min, nextMin: next.min };
+}
+
+export function getLevelProgress(knownCount: number): number {
+  const { min, nextMin } = getCurrentLevel(knownCount);
+  if (nextMin === min) return 100;
+  return Math.min(100, ((knownCount - min) / (nextMin - min)) * 100);
+}
