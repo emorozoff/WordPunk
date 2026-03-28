@@ -750,7 +750,8 @@ button {
 }
 
 .level-row-future {
-  opacity: 0.2;
+  opacity: 0.12;
+  text-decoration: line-through;
 }
 
 .topic-item {
