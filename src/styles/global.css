@@ -303,11 +303,18 @@ button {
 }
 
 .card-example {
-  font-size: 11px;
-  color: var(--text-dim);
+  font-size: 13px;
+  color: var(--text-muted);
   font-style: italic;
   margin-top: 4px;
   line-height: 1.4;
+  text-align: center;
+}
+
+.example-highlight {
+  color: var(--accent-green);
+  font-style: normal;
+  font-weight: 600;
 }
 
 /* XP toast slot — фиксированная высота, карточка не прыгает */

@@ -1,4 +1,4 @@
-import { FC, useState, useEffect, useRef, useCallback } from 'react';
+import React, { FC, useState, useEffect, useRef, useCallback } from 'react';
 import type { Card, SessionCard } from '../types';
 import {
   getAllCards, getAllProgress, getProgress,
@@ -21,6 +21,17 @@ interface Props {
   prefsVersion: number;
   onOpenTopics: () => void;
   onOpenStats: () => void;
+}
+
+function renderExample(example: string, englishWord: string): React.ReactNode {
+  const escaped = englishWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const regex = new RegExp(`(${escaped})`, 'gi');
+  const parts = example.split(regex);
+  return parts.map((part, i) =>
+    part.toLowerCase() === englishWord.toLowerCase()
+      ? <span key={i} className="example-highlight">{part}</span>
+      : part
+  );
 }
 
 function getWordSizeClass(word: string): string {
@@ -352,7 +363,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.316</span>
+          <span className="header-version">v0.32</span>
         </div>
         <div className="header-known" onClick={() => setShowKnownInfo(true)} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -423,7 +434,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
                     : currentCard.card.english}
                 </div>
                 {currentCard.card.example && (
-                  <div className="card-example">{currentCard.card.example}</div>
+                  <div className="card-example">
+                    {renderExample(currentCard.card.example, currentCard.card.english)}
+                  </div>
                 )}
               </div>
             )}
