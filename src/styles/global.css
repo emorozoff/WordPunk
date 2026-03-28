@@ -362,7 +362,7 @@ button {
   text-align: center;
   line-height: 1.5;
   pointer-events: none;
-  animation: prev-example-dim 5s ease-out forwards;
+  animation: prev-example-dim 1s ease-out forwards;
 }
 
 .prev-example .example-highlight {
@@ -372,8 +372,7 @@ button {
 
 @keyframes prev-example-dim {
   0%   { opacity: 0.65; }
-  10%  { opacity: 0.6; }
-  100% { opacity: 0.08; }
+  100% { opacity: 0.35; }
 }
 
 /* Wrong answer reveal */
