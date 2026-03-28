@@ -331,7 +331,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.302</span>
+          <span className="header-version">v0.303</span>
         </div>
         <div className="header-known">
           <span className="header-known-label">знаю слов:</span>
@@ -360,10 +360,11 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           </div>
         ) : isFinished ? (
           <div className="empty-state">
-            <div className="empty-state-title">готово на сегодня</div>
-            <div className="empty-state-sub">
-              все карточки пройдены 🎉{'\n'}
-              возвращайся завтра
+            <div className="empty-state-no-words">НЕТ СЛОВ_</div>
+            <div className="empty-state-no-words-body">
+              <span className="empty-state-no-words-line">либо ты всё выучил</span>
+              <span className="empty-state-no-words-sep">//</span>
+              <span className="empty-state-no-words-line">либо не выбрал темы</span>
             </div>
           </div>
         ) : currentCard ? (

@@ -511,6 +511,36 @@ button {
   white-space: pre-line;
 }
 
+.empty-state-no-words {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.empty-state-no-words-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.empty-state-no-words-line {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.empty-state-no-words-sep {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin: 4px 0;
+}
+
 /* Modal */
 .modal-overlay {
   position: fixed;
