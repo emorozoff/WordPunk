@@ -290,10 +290,10 @@ button {
   line-height: 1.4;
 }
 
-/* XP toast — всплывает сверху при правильном ответе */
+/* XP toast — всплывает снизу (над навигацией) при правильном ответе */
 .xp-toast {
   position: fixed;
-  top: 72px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 255, 136, 0.12);
@@ -310,10 +310,10 @@ button {
 }
 
 @keyframes xpToastAnim {
-  0%   { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  0%   { opacity: 0; transform: translateX(-50%) translateY(10px); }
   18%  { opacity: 1; transform: translateX(-50%) translateY(0); }
-  70%  { opacity: 1; transform: translateX(-50%) translateY(0); }
-  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  70%  { opacity: 1; transform: translateX(-50%) translateY(-6px); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
 }
 
 /* Wrong answer reveal */
