@@ -296,7 +296,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.248</span>
+          <span className="header-version">v0.249</span>
         </div>
         <div className="header-known">
           <span className="header-known-label">знаю слов:</span>
@@ -333,21 +333,33 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
           </div>
         ) : currentCard ? (
           <>
-            {showXpToast && (
-              <div key={xpToastKey} className="xp-toast">▲ ОПЫТ</div>
-            )}
+            {/* Слот фиксированной высоты для XP — карточка не прыгает */}
+            <div className="xp-toast-slot">
+              {showXpToast && <div key={xpToastKey} className="xp-toast">▲ ОПЫТ</div>}
+            </div>
             <div className="word-card">
-            {topic && (
-              <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
-            )}
-            <div className={`card-word ${sizeClass} ${isTyping ? 'typing' : ''}`}>
-              {displayWord}
+              {topic && (
+                <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
+              )}
+              <div className={`card-word ${sizeClass} ${isTyping ? 'typing' : ''}`}>
+                {displayWord}
+              </div>
+              <div className="card-hint">
+                {currentCard.direction === 'en-ru' ? 'что это значит?' : 'как по-английски?'}
+              </div>
+              {answered && !answered.wasCorrect && (
+                <div className="wrong-reveal">
+                  <div className="wrong-reveal-pair">
+                    <span className="wrong-reveal-en">{currentCard.card.english}</span>
+                    <span className="wrong-reveal-sep">→</span>
+                    <span className="wrong-reveal-ru">{currentCard.card.russian}</span>
+                  </div>
+                </div>
+              )}
             </div>
-            <div className="card-hint">
-              {currentCard.direction === 'en-ru' ? 'что это значит?' : 'как по-английски?'}
-            </div>
+            {/* Перевод и пример — под карточкой, вне рамки */}
             {answered && answered.wasCorrect && (
-              <div className="card-answer">
+              <div className="card-answer-below">
                 <div className="card-translation">
                   {currentCard.direction === 'en-ru'
                     ? currentCard.card.russian
@@ -358,16 +370,6 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
                 )}
               </div>
             )}
-            {answered && !answered.wasCorrect && (
-              <div className="wrong-reveal">
-                <div className="wrong-reveal-pair">
-                  <span className="wrong-reveal-en">{currentCard.card.english}</span>
-                  <span className="wrong-reveal-sep">→</span>
-                  <span className="wrong-reveal-ru">{currentCard.card.russian}</span>
-                </div>
-              </div>
-            )}
-            </div>
           </>
         ) : null}
       </div>
