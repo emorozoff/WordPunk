@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, useRef } from 'react';
 import { TOPICS } from '../data/topics';
 import { getAllCards, getAllProgress } from '../db';
 import { loadTopicPrefs, saveTopicPrefs, getPref } from '../lib/topicPrefs';
@@ -25,9 +25,15 @@ const PREF_NEXT: Record<PrefLevel, PrefLevel> = {
   0: 1,
 };
 
+const DISMISS_THRESHOLD = 100; // px
+
 const TopicModal: FC<Props> = ({ onClose }) => {
   const [prefs, setPrefs] = useState<TopicPrefs>(() => loadTopicPrefs());
   const [stats, setStats] = useState<Record<string, TopicStats>>({});
+  const sheetRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const dragStartY = useRef(0);
+  const isDragging = useRef(false);
 
   useEffect(() => {
     const load = async () => {
@@ -54,9 +60,78 @@ const TopicModal: FC<Props> = ({ onClose }) => {
     saveTopicPrefs(updated);
   };
 
+  const dismiss = () => {
+    const sheet = sheetRef.current;
+    const overlay = overlayRef.current;
+    if (!sheet) { onClose(); return; }
+    sheet.style.transition = 'transform 0.25s ease';
+    sheet.style.transform = 'translateY(110%)';
+    if (overlay) {
+      overlay.style.transition = 'opacity 0.25s ease';
+      overlay.style.opacity = '0';
+    }
+    setTimeout(onClose, 250);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    dragStartY.current = e.touches[0]!.clientY;
+    isDragging.current = false;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    const sheet = sheetRef.current;
+    const overlay = overlayRef.current;
+    if (!sheet) return;
+
+    const delta = e.touches[0]!.clientY - dragStartY.current;
+    if (delta <= 0) return;
+
+    // Only dismiss-drag when list is scrolled to top
+    if (sheet.scrollTop > 0) return;
+
+    isDragging.current = true;
+    sheet.style.transition = 'none';
+    sheet.style.transform = `translateY(${delta}px)`;
+
+    // Fade overlay proportionally
+    if (overlay) {
+      const opacity = Math.max(0, 0.75 - (delta / 300) * 0.75);
+      overlay.style.transition = 'none';
+      overlay.style.opacity = String(opacity);
+    }
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!isDragging.current) return;
+    const sheet = sheetRef.current;
+    if (!sheet) return;
+
+    const delta = e.changedTouches[0]!.clientY - dragStartY.current;
+    isDragging.current = false;
+
+    if (delta > DISMISS_THRESHOLD) {
+      dismiss();
+    } else {
+      sheet.style.transition = 'transform 0.3s cubic-bezier(0.32, 0.72, 0, 1)';
+      sheet.style.transform = 'translateY(0)';
+      const overlay = overlayRef.current;
+      if (overlay) {
+        overlay.style.transition = 'opacity 0.3s ease';
+        overlay.style.opacity = '0.75';
+      }
+    }
+  };
+
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-sheet" onClick={e => e.stopPropagation()}>
+    <div ref={overlayRef} className="modal-overlay" onClick={dismiss}>
+      <div
+        ref={sheetRef}
+        className="modal-sheet"
+        onClick={e => e.stopPropagation()}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         <div className="modal-handle" />
         <div className="modal-title">ТЕМЫ_</div>
         <div className="topics-pref-hint">
