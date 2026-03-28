@@ -552,6 +552,13 @@ button {
 }
 
 /* Topics */
+.topics-pref-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
 .topics-list {
   display: flex;
   flex-direction: column;
@@ -562,18 +569,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 14px;
+  padding: 10px 14px;
   background: #1a1a1a;
   border: 1px solid var(--border);
   border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.15s;
+  transition: border-color 0.15s;
 }
 
-.topic-item.active {
-  border-color: var(--accent-green);
-  background: rgba(0,255,136,0.07);
-}
+.topic-item.pref-2 { border-color: rgba(0,255,136,0.4); }
+.topic-item.pref-0 { opacity: 0.45; }
 
 .topic-item-left {
   display: flex;
@@ -583,7 +587,60 @@ button {
 
 .topic-emoji { font-size: 18px; }
 .topic-name { font-size: 13px; color: var(--text); }
-.topic-count { font-size: 11px; color: var(--text-muted); }
+
+/* Pref toggle button */
+.pref-toggle {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.1s;
+  min-width: 42px;
+  text-align: center;
+}
+
+.pref-toggle:active { transform: scale(0.93); }
+
+.pref-toggle-2 {
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+  background: rgba(0,255,136,0.1);
+}
+
+.pref-toggle-1 {
+  color: var(--text-muted);
+  border-color: var(--border);
+  background: transparent;
+}
+
+.pref-toggle-0 {
+  color: var(--accent-red);
+  border-color: rgba(255,51,102,0.3);
+  background: transparent;
+}
+
+/* Legend */
+.topics-pref-legend {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.legend-2 { color: var(--accent-green); }
+.legend-1 { color: var(--text-muted); }
+.legend-0 { color: var(--accent-red); opacity: 0.7; }
 
 /* Add form */
 .add-form { display: flex; flex-direction: column; gap: 12px; }

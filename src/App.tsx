@@ -6,15 +6,20 @@ import StatsScreen from './components/StatsScreen';
 
 export default function App() {
   const [screen, setScreen] = useState<AppScreen>('main');
-  const [topicId, setTopicId] = useState<string | null>(null);
   const [showTopics, setShowTopics] = useState(false);
+  const [prefsVersion, setPrefsVersion] = useState(0);
+
+  const handleTopicsClose = () => {
+    setShowTopics(false);
+    setPrefsVersion(v => v + 1);
+  };
 
   return (
     <div className="app">
       {/* MainScreen всегда в DOM — сохраняет состояние сессии при переходе в статистику */}
       <div style={{ display: screen === 'main' ? 'contents' : 'none' }}>
         <MainScreen
-          topicId={topicId}
+          prefsVersion={prefsVersion}
           onOpenTopics={() => setShowTopics(true)}
           onOpenStats={() => setScreen('stats')}
         />
@@ -25,11 +30,7 @@ export default function App() {
       )}
 
       {showTopics && (
-        <TopicModal
-          selectedTopicId={topicId}
-          onSelect={setTopicId}
-          onClose={() => setShowTopics(false)}
-        />
+        <TopicModal onClose={handleTopicsClose} />
       )}
 
       {/* CRT scanline effect */}

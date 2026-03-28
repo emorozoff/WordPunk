@@ -1,57 +1,66 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { TOPICS } from '../data/topics';
-import { getCardsByTopic } from '../db';
+import { loadTopicPrefs, saveTopicPrefs, getPref } from '../lib/topicPrefs';
+import type { PrefLevel, TopicPrefs } from '../lib/topicPrefs';
 
 interface Props {
-  selectedTopicId: string | null; // null = all topics
-  onSelect: (topicId: string | null) => void;
   onClose: () => void;
 }
 
-const TopicModal: FC<Props> = ({ selectedTopicId, onSelect, onClose }) => {
-  const [counts, setCounts] = useState<Record<string, number>>({});
+const PREF_LABELS: Record<PrefLevel, string> = {
+  2: '++',
+  1: '+',
+  0: '—',
+};
 
-  useEffect(() => {
-    const load = async () => {
-      const map: Record<string, number> = {};
-      for (const t of TOPICS) {
-        const cards = await getCardsByTopic(t.id);
-        map[t.id] = cards.length;
-      }
-      setCounts(map);
-    };
-    load();
-  }, []);
+const PREF_NEXT: Record<PrefLevel, PrefLevel> = {
+  1: 2,
+  2: 0,
+  0: 1,
+};
+
+const TopicModal: FC<Props> = ({ onClose }) => {
+  const [prefs, setPrefs] = useState<TopicPrefs>(() => loadTopicPrefs());
+
+  const toggle = (topicId: string) => {
+    const current = getPref(prefs, topicId);
+    const next = PREF_NEXT[current];
+    const updated = { ...prefs, [topicId]: next };
+    setPrefs(updated);
+    saveTopicPrefs(updated);
+  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-sheet" onClick={e => e.stopPropagation()}>
         <div className="modal-handle" />
         <div className="modal-title">ТЕМЫ_</div>
+        <div className="topics-pref-hint">
+          Выбери темы — алгоритм подберёт слова автоматически
+        </div>
         <div className="topics-list">
-          <div
-            className={`topic-item ${selectedTopicId === null ? 'active' : ''}`}
-            onClick={() => { onSelect(null); onClose(); }}
-          >
-            <div className="topic-item-left">
-              <span className="topic-emoji">🌐</span>
-              <span className="topic-name">Все темы вперемешку</span>
-            </div>
-            <span className="topic-count">все</span>
-          </div>
-          {TOPICS.filter(t => t.id !== 'custom').map(topic => (
-            <div
-              key={topic.id}
-              className={`topic-item ${selectedTopicId === topic.id ? 'active' : ''}`}
-              onClick={() => { onSelect(topic.id); onClose(); }}
-            >
-              <div className="topic-item-left">
-                <span className="topic-emoji">{topic.emoji}</span>
-                <span className="topic-name">{topic.name}</span>
+          {TOPICS.filter(t => t.id !== 'custom').map(topic => {
+            const pref = getPref(prefs, topic.id);
+            return (
+              <div key={topic.id} className={`topic-item pref-${pref}`}>
+                <div className="topic-item-left">
+                  <span className="topic-emoji">{topic.emoji}</span>
+                  <span className="topic-name">{topic.name}</span>
+                </div>
+                <button
+                  className={`pref-toggle pref-toggle-${pref}`}
+                  onClick={() => toggle(topic.id)}
+                >
+                  {PREF_LABELS[pref]}
+                </button>
               </div>
-              <span className="topic-count">{counts[topic.id] ?? 0} сл.</span>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+        <div className="topics-pref-legend">
+          <span className="legend-item legend-2">++ очень интересно</span>
+          <span className="legend-item legend-1">+ немного</span>
+          <span className="legend-item legend-0">— исключить</span>
         </div>
       </div>
     </div>

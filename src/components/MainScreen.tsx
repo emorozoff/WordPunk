@@ -13,11 +13,12 @@ import {
 } from '../lib/srs';
 import { playCorrect, playWrong, playLevelUp } from '../lib/audio';
 import { getTopicById } from '../data/topics';
+import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
 import DebugPanel from './DebugPanel';
 
 interface Props {
-  topicId: string | null;
+  prefsVersion: number;
   onOpenTopics: () => void;
   onOpenStats: () => void;
 }
@@ -33,7 +34,7 @@ function getWordSizeClass(word: string): string {
 
 const TYPING_SPEED_MS = 40;
 
-const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
+const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const [queue, setQueue]           = useState<SessionCard[]>([]);
   const [queueIdx, setQueueIdx]     = useState(0);
   const [options, setOptions]       = useState<string[]>([]);
@@ -66,7 +67,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
       }
       const cards = await getAllCards();
       setAllCards(cards);
-      await loadQueue(cards, topicId);
+      await loadQueue(cards);
       const kc = await getKnownCount();
       setKnownCount(kc);
       const lvl = getCurrentLevel(kc);
@@ -76,12 +77,12 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
     init();
   }, []);
 
-  // Reload queue when topic changes
+  // Reload queue when topic prefs change
   useEffect(() => {
     if (!loading && allCards.length > 0) {
-      loadQueue(allCards, topicId);
+      loadQueue(allCards);
     }
-  }, [topicId]);
+  }, [prefsVersion]);
 
   // Glitch animation when knownCount increases
   useEffect(() => {
@@ -93,27 +94,48 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
     prevKnownRef.current = knownCount;
   }, [knownCount]);
 
-  const loadQueue = async (cards: Card[], tid: string | null) => {
+  const loadQueue = async (cards: Card[]) => {
     const today = getToday();
     const dueProgress = await getDueCards(today);
-    // Get new cards (no progress yet) from chosen topic
-    const topicCards = tid
-      ? cards.filter(c => c.topicId === tid)
-      : cards.filter(c => c.topicId !== 'custom');
+    const prefs = loadTopicPrefs();
 
     const allProgress = await getAllProgress();
     const progressMap = new Map(allProgress.map(p => [p.cardId, p]));
 
-    const newCards = topicCards
-      .filter(c => !progressMap.has(c.id))
-      .slice(0, 20); // max 20 new per session
-
-    const q = buildQueue(dueProgress.filter(p => {
+    // Due cards (SRS reviews) — show all regardless of prefs
+    const filteredDue = dueProgress.filter(p => {
       const c = cards.find(cc => cc.id === p.cardId);
-      if (!c) return false;
-      if (tid) return c.topicId === tid;
-      return c.topicId !== 'custom';
-    }), newCards, cards);
+      return c && c.topicId !== 'custom';
+    });
+
+    // New cards — weighted by topic prefs
+    const eligibleNew = cards.filter(c =>
+      c.topicId !== 'custom' && !progressMap.has(c.id) && getWeight(prefs, c.topicId) > 0
+    );
+
+    // Build weighted pool
+    const pool: Card[] = [];
+    for (const card of eligibleNew) {
+      const w = getWeight(prefs, card.topicId);
+      for (let i = 0; i < w; i++) pool.push(card);
+    }
+    // Shuffle
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j]!, pool[i]!];
+    }
+    // Unique first 20
+    const seen = new Set<string>();
+    const newCards: Card[] = [];
+    for (const card of pool) {
+      if (!seen.has(card.id)) {
+        seen.add(card.id);
+        newCards.push(card);
+        if (newCards.length >= 20) break;
+      }
+    }
+
+    const q = buildQueue(filteredDue, newCards, cards);
 
     setQueue(q);
     setQueueIdx(0);
@@ -288,7 +310,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
     sessionDataRef.current.clear();
     setKnownCount(0);
     prevLevelRef.current = getCurrentLevel(0).title;
-    await loadQueue(allCards, topicId);
+    await loadQueue(allCards);
     setDebugOpen(false);
   };
 
@@ -309,7 +331,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.252</span>
+          <span className="header-version">v0.3</span>
         </div>
         <div className="header-known">
           <span className="header-known-label">знаю слов:</span>
