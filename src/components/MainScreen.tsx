@@ -48,8 +48,11 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
   const [debugOpen, setDebugOpen]       = useState(false);
   const [allCards, setAllCards]     = useState<Card[]>([]);
   const [loading, setLoading]       = useState(true);
+  const [isGlitching, setIsGlitching] = useState(false);
   const prevLevelRef = useRef<string>('');
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const glitchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const prevKnownRef = useRef<number>(0);
 
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
@@ -79,6 +82,16 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
       loadQueue(allCards, topicId);
     }
   }, [topicId]);
+
+  // Glitch animation when knownCount increases
+  useEffect(() => {
+    if (knownCount > prevKnownRef.current && prevKnownRef.current !== 0) {
+      if (glitchTimerRef.current) clearTimeout(glitchTimerRef.current);
+      setIsGlitching(true);
+      glitchTimerRef.current = setTimeout(() => setIsGlitching(false), 650);
+    }
+    prevKnownRef.current = knownCount;
+  }, [knownCount]);
 
   const loadQueue = async (cards: Card[], tid: string | null) => {
     const today = getToday();
@@ -296,11 +309,11 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.251</span>
+          <span className="header-version">v0.252</span>
         </div>
         <div className="header-known">
           <span className="header-known-label">знаю слов:</span>
-          <span className="header-known-count">{knownCount}</span>
+          <span className={`header-known-count${isGlitching ? ' glitching' : ''}`}>{knownCount}</span>
         </div>
       </div>
 
