@@ -296,7 +296,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.246</span>
+          <span className="header-version">v0.247</span>
         </div>
         <div className="header-known">
           <span className="header-known-label">знаю слов:</span>
@@ -335,6 +335,9 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
           <div className="word-card">
             {topic && (
               <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
+            )}
+            {showXpToast && (
+              <div key={xpToastKey} className="xp-toast">▲ +XP</div>
             )}
             <div className={`card-word ${sizeClass} ${isTyping ? 'typing' : ''}`}>
               {displayWord}
@@ -407,10 +410,6 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
       </div>
 
       {/* XP toast */}
-      {showXpToast && (
-        <div key={xpToastKey} className="xp-toast">⚡ +XP</div>
-      )}
-
       {/* Level up popup */}
       {levelUpTitle && (
         <LevelUpPopup
