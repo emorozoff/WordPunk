@@ -157,11 +157,11 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
       const newWrongCount = existing.wrongCount + (isCorrect ? 0 : 1);
       sessionDataRef.current.set(sc.card.id, { shows: newShows, correctCount: newCorrectCount, wrongCount: newWrongCount });
 
-      // TEMP: при первом правильном ответе на новое слово — сразу +1 в счётчик (до записи в DB)
+      // TEMP: при первом правильном ответе на новое слово — сразу +1 в счётчик
+      // Берём текущий стейт knownCount, а не DB — иначе счётчик сбрасывается каждый раз
       // TODO v1.0: убрать, вернуть дробную систему
-      if (isCorrect && newShows === 1 && newCorrectCount === 1) {
-        const newKnown = await getKnownCount();
-        const tentative = newKnown + 1;
+      if (isCorrect && newShows === 1) {
+        const tentative = knownCount + 1;
         setKnownCount(tentative);
         const newLvl = getCurrentLevel(tentative);
         if (newLvl.title !== prevLevelRef.current) {
@@ -250,7 +250,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
       <div className="header">
         <div className="header-logo">
           WORDPUNK_
-          <span className="header-version">v0.23</span>
+          <span className="header-version">v0.24</span>
         </div>
         <div className="header-known">ЗНАЮ {knownCount} слов</div>
       </div>
@@ -303,6 +303,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
                 {currentCard.card.example && (
                   <div className="card-example">{currentCard.card.example}</div>
                 )}
+                <div className="card-level-up">▲ УРОВЕНЬ ПОВЫШЕН</div>
               </div>
             )}
             {answered && !answered.wasCorrect && (

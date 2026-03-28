@@ -270,6 +270,14 @@ button {
   line-height: 1.4;
 }
 
+.card-level-up {
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent-green);
+}
+
 /* Wrong answer reveal */
 .wrong-reveal {
   margin-top: 12px;
