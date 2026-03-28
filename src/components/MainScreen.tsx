@@ -410,7 +410,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
       <div className="bottom-nav">
         <button className="nav-btn" onClick={onOpenTopics}>ТЕМЫ</button>
         <span className="nav-btn center no-click">ЗНАЮ {knownCount}</span>
-        <button className="nav-btn" onClick={onOpenStats}>СТАТ ↗</button>
+        <button className="nav-btn" onClick={onOpenStats}>СТАТИСТИКА</button>
       </div>
 
       {/* XP toast */}
