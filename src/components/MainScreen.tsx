@@ -42,6 +42,9 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
   const [isTyping, setIsTyping]     = useState(false);
   const [knownCount, setKnownCount] = useState(0);
   const [levelUpTitle, setLevelUpTitle] = useState<string | null>(null);
+  const [xpToastKey, setXpToastKey] = useState(0); // каждый инкремент — новая анимация
+  const [showXpToast, setShowXpToast] = useState(false);
+  const xpToastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [debugOpen, setDebugOpen]       = useState(false);
   const [allCards, setAllCards]     = useState<Card[]>([]);
   const [loading, setLoading]       = useState(true);
@@ -128,6 +131,13 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
     }, TYPING_SPEED_MS);
   };
 
+  const showXp = () => {
+    if (xpToastTimer.current) clearTimeout(xpToastTimer.current);
+    setXpToastKey(k => k + 1);
+    setShowXpToast(true);
+    xpToastTimer.current = setTimeout(() => setShowXpToast(false), 1400);
+  };
+
   const handleAnswer = async (chosen: string) => {
     if (answered || queue.length === 0) return;
     const sc = queue[queueIdx];
@@ -161,6 +171,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
       // TEMP: при первом правильном ответе на новое слово — сразу +1 в счётчик
       // Берём текущий стейт knownCount, а не DB — иначе счётчик сбрасывается каждый раз
       // TODO v1.0: убрать, вернуть дробную систему
+      if (isCorrect) showXp();
       if (isCorrect && newShows === 1) {
         const tentative = knownCount + 1;
         setKnownCount(tentative);
@@ -197,6 +208,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
     } else {
       // Уровень 1–5: стандартный SRS
       // Правильно → +1 уровень, ошибка → -1 уровень (минимум 1), следующий показ завтра
+      if (isCorrect) showXp();
       const progress = processAnswer(progressFromDB, isCorrect);
       await putProgress(progress);
       const newKnown = await getKnownCount();
@@ -340,7 +352,6 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
                 {currentCard.card.example && (
                   <div className="card-example">{currentCard.card.example}</div>
                 )}
-                <div className="card-level-up">▲ УРОВЕНЬ ПОВЫШЕН</div>
               </div>
             )}
             {answered && !answered.wasCorrect && (
@@ -394,6 +405,11 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
         <span className="nav-btn center no-click">ЗНАЮ {knownCount}</span>
         <button className="nav-btn" onClick={onOpenStats}>СТАТ ↗</button>
       </div>
+
+      {/* XP toast */}
+      {showXpToast && (
+        <div key={xpToastKey} className="xp-toast">⚡ +XP</div>
+      )}
 
       {/* Level up popup */}
       {levelUpTitle && (
