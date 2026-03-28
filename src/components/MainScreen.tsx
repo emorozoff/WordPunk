@@ -62,6 +62,8 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const [loading, setLoading]       = useState(true);
   const [isGlitching, setIsGlitching] = useState(false);
   const [showKnownInfo, setShowKnownInfo] = useState(false);
+  const [prevExample, setPrevExample] = useState<{ text: string; word: string; animKey: number } | null>(null);
+  const pendingExampleRef = useRef<{ text: string; word: string } | null>(null);
   const prevLevelRef = useRef<string>('');
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const glitchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -190,6 +192,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
 
   const handleAnswer = async (chosen: string) => {
     if (answered || queue.length === 0) return;
+    setPrevExample(null); // убираем предыдущий пример при новом ответе
     const sc = queue[queueIdx];
     if (!sc) return;
 
@@ -273,6 +276,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     // Автопереход — только при правильном ответе
     // При ошибке пользователь сам нажимает "ДАЛЕЕ"
     if (isCorrect) {
+      if (sc.card.example) {
+        pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
+      }
       autoAdvanceRef.current = setTimeout(() => {
         advance();
       }, 1600);
@@ -281,6 +287,10 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
 
   const advance = useCallback(() => {
     if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
+    if (pendingExampleRef.current) {
+      setPrevExample({ ...pendingExampleRef.current, animKey: Date.now() });
+      pendingExampleRef.current = null;
+    }
     setQueueIdx(prev => {
       const next = prev + 1;
       setQueue(q => {
@@ -363,7 +373,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.32</span>
+          <span className="header-version">v0.33</span>
         </div>
         <div className="header-known" onClick={() => setShowKnownInfo(true)} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -438,6 +448,12 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
                     {renderExample(currentCard.card.example, currentCard.card.english)}
                   </div>
                 )}
+              </div>
+            )}
+            {/* Предыдущий пример — остаётся и гаснет */}
+            {!answered && prevExample && (
+              <div key={prevExample.animKey} className="prev-example">
+                {renderExample(prevExample.text, prevExample.word)}
               </div>
             )}
           </>
