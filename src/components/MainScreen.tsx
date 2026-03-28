@@ -50,6 +50,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const [allCards, setAllCards]     = useState<Card[]>([]);
   const [loading, setLoading]       = useState(true);
   const [isGlitching, setIsGlitching] = useState(false);
+  const [showKnownInfo, setShowKnownInfo] = useState(false);
   const prevLevelRef = useRef<string>('');
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const glitchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -331,9 +332,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.31</span>
+          <span className="header-version">v0.311</span>
         </div>
-        <div className="header-known">
+        <div className="header-known" onClick={() => setShowKnownInfo(true)} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
           <span className={`header-known-count${isGlitching ? ' glitching' : ''}`}>{knownCount}</span>
         </div>
@@ -456,6 +457,21 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           title={levelUpTitle}
           onClose={() => setLevelUpTitle(null)}
         />
+      )}
+
+      {/* Known count info popup */}
+      {showKnownInfo && (
+        <div className="info-overlay" onClick={() => setShowKnownInfo(false)}>
+          <div className="info-popup" onClick={e => e.stopPropagation()}>
+            <div className="info-popup-title">как считается счётчик?</div>
+            <div className="info-popup-body">
+              <p>Слово считается «известным», когда ты видел его несколько раз и каждый раз отвечал правильно.</p>
+              <p>Новые слова сначала показываются три раза подряд — это проверка. Если ответил верно — слово попадает в счётчик и в расписание повторений.</p>
+              <p>Дальше алгоритм сам решает, когда снова показать слово — через день, через неделю или через месяц. Чем лучше знаешь — тем реже видишь.</p>
+            </div>
+            <button className="info-popup-close" onClick={() => setShowKnownInfo(false)}>понятно</button>
+          </div>
+        </div>
       )}
 
       {/* Debug panel */}
