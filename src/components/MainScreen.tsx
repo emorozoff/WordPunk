@@ -55,6 +55,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const glitchTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const prevKnownRef = useRef<number>(0);
+  const swipeTouchStartX = useRef(0);
+  const swipeTouchStartY = useRef(0);
+  const swipeEdge = useRef(false);
 
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
@@ -315,6 +318,19 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     setDebugOpen(false);
   };
 
+  const onSwipeTouchStart = (e: React.TouchEvent) => {
+    swipeTouchStartX.current = e.touches[0]!.clientX;
+    swipeTouchStartY.current = e.touches[0]!.clientY;
+    swipeEdge.current = e.touches[0]!.clientX >= window.innerWidth - 30;
+  };
+
+  const onSwipeTouchEnd = (e: React.TouchEvent) => {
+    if (!swipeEdge.current) return;
+    const dx = e.changedTouches[0]!.clientX - swipeTouchStartX.current;
+    const dy = Math.abs(e.changedTouches[0]!.clientY - swipeTouchStartY.current);
+    if (dx < -80 && dy < 80) onOpenStats();
+  };
+
   const currentCard = queue[queueIdx];
   const isFinished = !loading && queueIdx >= queue.length;
   const topic = currentCard ? getTopicById(currentCard.card.topicId) : null;
@@ -327,12 +343,16 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const wordsUntil = knownLevel.nextMin - knownCount;
 
   return (
-    <>
+    <div
+      style={{ display: 'contents' }}
+      onTouchStart={onSwipeTouchStart}
+      onTouchEnd={onSwipeTouchEnd}
+    >
       {/* Header */}
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.314</span>
+          <span className="header-version">v0.315</span>
         </div>
         <div className="header-known" onClick={() => setShowKnownInfo(true)} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -483,7 +503,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           onReset={handleDebugReset}
         />
       )}
-    </>
+    </div>
   );
 };
 
