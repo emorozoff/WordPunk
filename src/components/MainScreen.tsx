@@ -3,7 +3,7 @@ import type { Card, SessionCard } from '../types';
 import {
   getAllCards, getAllProgress, getProgress,
   putProgress, putCards, isSeeded, getDueCards, getKnownCount,
-  recordActivity,
+  recordActivity, clearAllProgress,
 } from '../db';
 import { WORDS } from '../data/words';
 import {
@@ -14,6 +14,7 @@ import {
 import { playCorrect, playWrong, playLevelUp } from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import LevelUpPopup from './LevelUpPopup';
+import DebugPanel from './DebugPanel';
 
 interface Props {
   topicId: string | null;
@@ -42,6 +43,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
   const [isTyping, setIsTyping]     = useState(false);
   const [knownCount, setKnownCount] = useState(0);
   const [levelUpTitle, setLevelUpTitle] = useState<string | null>(null);
+  const [debugOpen, setDebugOpen]       = useState(false);
   const [allCards, setAllCards]     = useState<Card[]>([]);
   const [loading, setLoading]       = useState(true);
   const prevLevelRef = useRef<string>('');
@@ -233,6 +235,39 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
     });
   }, [allCards, setupCard]);
 
+  // Debug handlers
+  const handleDebugAddPoints = (n: number) => {
+    const next = knownCount + n;
+    setKnownCount(next);
+    const newLvl = getCurrentLevel(next);
+    if (newLvl.title !== prevLevelRef.current) {
+      prevLevelRef.current = newLvl.title;
+      playLevelUp();
+      setLevelUpTitle(newLvl.title);
+    }
+    setDebugOpen(false);
+  };
+
+  const handleDebugNextLevel = () => {
+    const { nextMin } = getCurrentLevel(knownCount);
+    const next = nextMin;
+    setKnownCount(next);
+    const newLvl = getCurrentLevel(next);
+    prevLevelRef.current = newLvl.title;
+    playLevelUp();
+    setLevelUpTitle(newLvl.title);
+    setDebugOpen(false);
+  };
+
+  const handleDebugReset = async () => {
+    await clearAllProgress();
+    sessionDataRef.current.clear();
+    setKnownCount(0);
+    prevLevelRef.current = getCurrentLevel(0).title;
+    await loadQueue(allCards, topicId);
+    setDebugOpen(false);
+  };
+
   const currentCard = queue[queueIdx];
   const isFinished = !loading && queueIdx >= queue.length;
   const topic = currentCard ? getTopicById(currentCard.card.topicId) : null;
@@ -248,9 +283,9 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
     <>
       {/* Header */}
       <div className="header">
-        <div className="header-logo">
+        <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.242</span>
+          <span className="header-version">v0.243</span>
         </div>
         <div className="header-known">ЗНАЮ {knownCount} слов</div>
       </div>
@@ -363,6 +398,16 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
         <LevelUpPopup
           title={levelUpTitle}
           onClose={() => setLevelUpTitle(null)}
+        />
+      )}
+
+      {/* Debug panel */}
+      {debugOpen && (
+        <DebugPanel
+          onClose={() => setDebugOpen(false)}
+          onAddPoints={handleDebugAddPoints}
+          onNextLevel={handleDebugNextLevel}
+          onReset={handleDebugReset}
         />
       )}
     </>

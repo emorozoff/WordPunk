@@ -131,6 +131,12 @@ export async function getActivity(days = 90): Promise<DayActivity[]> {
   return all.filter(a => a.date >= cutoffStr).sort((a, b) => a.date.localeCompare(b.date));
 }
 
+export async function clearAllProgress(): Promise<void> {
+  const db = await getDB();
+  await db.clear('progress');
+  await db.clear('activity');
+}
+
 // ── Seed check ─────────────────────────────────────────────────────────────
 
 export async function isSeeded(): Promise<boolean> {

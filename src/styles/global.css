@@ -669,6 +669,58 @@ button {
   cursor: pointer;
 }
 
+/* Debug panel */
+.debug-panel {
+  background: var(--surface);
+  border: 1px solid #333;
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  padding: 20px 16px calc(24px + var(--safe-bottom, 0px));
+  animation: slide-up 0.2s ease;
+}
+
+.debug-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--accent-green);
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+
+.debug-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.debug-btn {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 10px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.5px;
+}
+
+.debug-btn:active { opacity: 0.7; }
+
+.debug-btn.accent {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+}
+
+.debug-btn.danger {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
 /* CRT scanline */
 .scanline {
   position: fixed;
