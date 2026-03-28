@@ -92,13 +92,6 @@ const TopicModal: FC<Props> = ({ onClose }) => {
     isDragging.current = true;
     sheet.style.transition = 'none';
     sheet.style.transform = `translateY(${delta}px)`;
-
-    // Fade overlay proportionally
-    if (overlay) {
-      const opacity = Math.max(0, 0.75 - (delta / 300) * 0.75);
-      overlay.style.transition = 'none';
-      overlay.style.opacity = String(opacity);
-    }
   };
 
   const onTouchEnd = (e: React.TouchEvent) => {
@@ -114,11 +107,6 @@ const TopicModal: FC<Props> = ({ onClose }) => {
     } else {
       sheet.style.transition = 'transform 0.3s cubic-bezier(0.32, 0.72, 0, 1)';
       sheet.style.transform = 'translateY(0)';
-      const overlay = overlayRef.current;
-      if (overlay) {
-        overlay.style.transition = 'opacity 0.3s ease';
-        overlay.style.opacity = '0.75';
-      }
     }
   };
 
