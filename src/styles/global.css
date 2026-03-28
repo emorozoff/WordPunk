@@ -115,9 +115,9 @@ button {
 /* Header */
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  padding: 14px 16px 6px;
+  padding: 14px 16px 8px;
   flex-shrink: 0;
 }
 
