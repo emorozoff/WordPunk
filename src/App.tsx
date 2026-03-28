@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className="app">
       {/* MainScreen всегда в DOM — сохраняет состояние сессии при переходе в статистику */}
-      <div style={{ display: screen === 'main' ? '' : 'none' }}>
+      <div style={{ display: screen === 'main' ? 'contents' : 'none' }}>
         <MainScreen
           topicId={topicId}
           onOpenTopics={() => setShowTopics(true)}
