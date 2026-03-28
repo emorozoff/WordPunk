@@ -331,7 +331,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.301</span>
+          <span className="header-version">v0.302</span>
         </div>
         <div className="header-known">
           <span className="header-known-label">знаю слов:</span>

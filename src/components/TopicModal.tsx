@@ -1,10 +1,16 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { TOPICS } from '../data/topics';
+import { getAllCards, getAllProgress } from '../db';
 import { loadTopicPrefs, saveTopicPrefs, getPref } from '../lib/topicPrefs';
 import type { PrefLevel, TopicPrefs } from '../lib/topicPrefs';
 
 interface Props {
   onClose: () => void;
+}
+
+interface TopicStats {
+  total: number;
+  known: number;
 }
 
 const PREF_LABELS: Record<PrefLevel, string> = {
@@ -21,6 +27,24 @@ const PREF_NEXT: Record<PrefLevel, PrefLevel> = {
 
 const TopicModal: FC<Props> = ({ onClose }) => {
   const [prefs, setPrefs] = useState<TopicPrefs>(() => loadTopicPrefs());
+  const [stats, setStats] = useState<Record<string, TopicStats>>({});
+
+  useEffect(() => {
+    const load = async () => {
+      const [cards, progress] = await Promise.all([getAllCards(), getAllProgress()]);
+      const knownSet = new Set(progress.filter(p => p.level >= 1).map(p => p.cardId));
+      const result: Record<string, TopicStats> = {};
+      for (const topic of TOPICS) {
+        const topicCards = cards.filter(c => c.topicId === topic.id);
+        result[topic.id] = {
+          total: topicCards.length,
+          known: topicCards.filter(c => knownSet.has(c.id)).length,
+        };
+      }
+      setStats(result);
+    };
+    load();
+  }, []);
 
   const toggle = (topicId: string) => {
     const current = getPref(prefs, topicId);
@@ -46,18 +70,28 @@ const TopicModal: FC<Props> = ({ onClose }) => {
         <div className="topics-list">
           {TOPICS.filter(t => t.id !== 'custom').map(topic => {
             const pref = getPref(prefs, topic.id);
+            const s = stats[topic.id] ?? { total: 0, known: 0 };
+            const pct = s.total > 0 ? (s.known / s.total) * 100 : 0;
             return (
               <div key={topic.id} className={`topic-item pref-${pref}`}>
-                <div className="topic-item-left">
-                  <span className="topic-emoji">{topic.emoji}</span>
-                  <span className="topic-name">{topic.name}</span>
+                <div className="topic-item-row">
+                  <div className="topic-item-left">
+                    <span className="topic-emoji">{topic.emoji}</span>
+                    <span className="topic-name">{topic.name}</span>
+                  </div>
+                  <div className="topic-item-right">
+                    <span className="topic-progress-count">{s.known}/{s.total}</span>
+                    <button
+                      className={`pref-toggle pref-toggle-${pref}`}
+                      onClick={() => toggle(topic.id)}
+                    >
+                      {PREF_LABELS[pref]}
+                    </button>
+                  </div>
                 </div>
-                <button
-                  className={`pref-toggle pref-toggle-${pref}`}
-                  onClick={() => toggle(topic.id)}
-                >
-                  {PREF_LABELS[pref]}
-                </button>
+                <div className="topic-progress-bar">
+                  <div className="topic-progress-fill" style={{ width: `${pct}%` }} />
+                </div>
               </div>
             );
           })}

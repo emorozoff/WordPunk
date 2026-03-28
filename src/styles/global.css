@@ -567,17 +567,24 @@ button {
 
 .topic-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px;
+  flex-direction: column;
+  padding: 10px 14px 0;
   background: #1a1a1a;
   border: 1px solid var(--border);
   border-radius: 8px;
   transition: border-color 0.15s;
+  overflow: hidden;
 }
 
 .topic-item.pref-2 { border-color: rgba(0,255,136,0.4); }
 .topic-item.pref-0 { opacity: 0.45; }
+
+.topic-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
 
 .topic-item-left {
   display: flex;
@@ -585,8 +592,34 @@ button {
   gap: 10px;
 }
 
+.topic-item-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .topic-emoji { font-size: 18px; }
 .topic-name { font-size: 13px; color: var(--text); }
+
+.topic-progress-count {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.topic-progress-bar {
+  height: 3px;
+  background: var(--border);
+  margin: 0 -14px;
+  width: calc(100% + 28px);
+}
+
+.topic-progress-fill {
+  height: 100%;
+  background: var(--accent-green);
+  transition: width 0.4s ease;
+}
 
 /* Pref toggle button */
 .pref-toggle {
