@@ -157,6 +157,19 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
       const newWrongCount = existing.wrongCount + (isCorrect ? 0 : 1);
       sessionDataRef.current.set(sc.card.id, { shows: newShows, correctCount: newCorrectCount, wrongCount: newWrongCount });
 
+      // TEMP: при первом правильном ответе на новое слово — сразу +1 в счётчик (до записи в DB)
+      // TODO v1.0: убрать, вернуть дробную систему
+      if (isCorrect && newShows === 1 && newCorrectCount === 1) {
+        const newKnown = await getKnownCount();
+        const tentative = newKnown + 1;
+        setKnownCount(tentative);
+        const newLvl = getCurrentLevel(tentative);
+        if (newLvl.title !== prevLevelRef.current) {
+          prevLevelRef.current = newLvl.title;
+          setTimeout(() => { playLevelUp(); setLevelUpTitle(newLvl.title); }, 800);
+        }
+      }
+
       if (newShows < 3) {
         // Вставляем карточку обратно в очередь: ~10-15 карточек для 2-го показа, ~20-30 для 3-го
         const offset = newShows === 1
