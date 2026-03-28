@@ -332,7 +332,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.312</span>
+          <span className="header-version">v0.313</span>
         </div>
         <div className="header-known" onClick={() => setShowKnownInfo(true)} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -465,11 +465,11 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           <div className="info-popup" onClick={e => e.stopPropagation()}>
             <div className="info-popup-title">как считается счётчик?</div>
             <div className="info-popup-body">
-              <p>Слово считается «известным», когда ты видел его несколько раз и каждый раз отвечал правильно.</p>
-              <p>Новые слова сначала показываются три раза подряд — это проверка. Если ответил верно — слово попадает в счётчик и в расписание повторений.</p>
-              <p>Дальше алгоритм сам решает, когда снова показать слово — через день, через неделю или через месяц. Чем лучше знаешь — тем реже видишь.</p>
+              <p>Не заморачивайся — алгоритм сам всё считает.</p>
+              <p>Каждое слово имеет свой вес: чем лучше знаешь, тем больше оно добавляет в счётчик. Новое слово — маленький вклад. Повторил через день, через неделю, через месяц — вклад растёт.</p>
+              <p>Просто отвечай на карточки, а цифра будет расти сама.</p>
             </div>
-            <button className="info-popup-close" onClick={() => setShowKnownInfo(false)}>понятно</button>
+            <button className="info-popup-close" onClick={() => setShowKnownInfo(false)}>ок, ладно</button>
           </div>
         </div>
       )}
