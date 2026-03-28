@@ -31,7 +31,6 @@ const TopicModal: FC<Props> = ({ onClose }) => {
   const [prefs, setPrefs] = useState<TopicPrefs>(() => loadTopicPrefs());
   const [stats, setStats] = useState<Record<string, TopicStats>>({});
   const sheetRef = useRef<HTMLDivElement>(null);
-  const overlayRef = useRef<HTMLDivElement>(null);
   const dragStartY = useRef(0);
   const isDragging = useRef(false);
 
@@ -62,14 +61,9 @@ const TopicModal: FC<Props> = ({ onClose }) => {
 
   const dismiss = () => {
     const sheet = sheetRef.current;
-    const overlay = overlayRef.current;
     if (!sheet) { onClose(); return; }
     sheet.style.transition = 'transform 0.25s ease';
     sheet.style.transform = 'translateY(110%)';
-    if (overlay) {
-      overlay.style.transition = 'opacity 0.25s ease';
-      overlay.style.opacity = '0';
-    }
     setTimeout(onClose, 250);
   };
 
@@ -80,7 +74,6 @@ const TopicModal: FC<Props> = ({ onClose }) => {
 
   const onTouchMove = (e: React.TouchEvent) => {
     const sheet = sheetRef.current;
-    const overlay = overlayRef.current;
     if (!sheet) return;
 
     const delta = e.touches[0]!.clientY - dragStartY.current;
@@ -93,14 +86,6 @@ const TopicModal: FC<Props> = ({ onClose }) => {
     sheet.style.transition = 'none';
     sheet.style.overflowY = 'hidden'; // prevent content scroll while dragging
     sheet.style.transform = `translateY(${delta}px)`;
-
-    // Fade overlay proportionally to sheet height
-    if (overlay) {
-      const sheetH = sheet.clientHeight || 400;
-      const opacity = Math.max(0, 0.75 * (1 - delta / sheetH));
-      overlay.style.transition = 'none';
-      overlay.style.opacity = String(opacity);
-    }
   };
 
   const onTouchEnd = (e: React.TouchEvent) => {
@@ -117,16 +102,11 @@ const TopicModal: FC<Props> = ({ onClose }) => {
     } else {
       sheet.style.transition = 'transform 0.3s cubic-bezier(0.32, 0.72, 0, 1)';
       sheet.style.transform = 'translateY(0)';
-      const overlay = overlayRef.current;
-      if (overlay) {
-        overlay.style.transition = 'opacity 0.3s ease';
-        overlay.style.opacity = '0.75';
-      }
     }
   };
 
   return (
-    <div ref={overlayRef} className="modal-overlay" onClick={dismiss}>
+    <div className="modal-overlay" onClick={dismiss}>
       <div
         ref={sheetRef}
         className="modal-sheet"
