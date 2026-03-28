@@ -38,6 +38,11 @@ const TopicModal: FC<Props> = ({ onClose }) => {
         <div className="topics-pref-hint">
           Выбери темы — алгоритм подберёт слова автоматически
         </div>
+        <div className="topics-pref-legend">
+          <span className="legend-item legend-2">++ очень интересно</span>
+          <span className="legend-item legend-1">+ немного</span>
+          <span className="legend-item legend-0">— исключить</span>
+        </div>
         <div className="topics-list">
           {TOPICS.filter(t => t.id !== 'custom').map(topic => {
             const pref = getPref(prefs, topic.id);
@@ -56,11 +61,6 @@ const TopicModal: FC<Props> = ({ onClose }) => {
               </div>
             );
           })}
-        </div>
-        <div className="topics-pref-legend">
-          <span className="legend-item legend-2">++ очень интересно</span>
-          <span className="legend-item legend-1">+ немного</span>
-          <span className="legend-item legend-0">— исключить</span>
         </div>
       </div>
     </div>
