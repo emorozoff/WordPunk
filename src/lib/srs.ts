@@ -1,6 +1,8 @@
 import type { Card, CardProgress, SessionCard } from '../types';
 
-export const SRS_INTERVALS = [0, 1, 3, 7, 30, 180]; // days per level
+// Level 0 = новое слово (до 3 показов в сессии)
+// Level 1 = +1 день, 2 = +3 дня, 3 = +7 дней, 4 = +30 дней, 5 = +180 дней
+export const SRS_INTERVALS = [0, 1, 3, 7, 30, 180];
 
 export function getToday(): string {
   return new Date().toISOString().split('T')[0]!;
@@ -23,34 +25,52 @@ export function createInitialProgress(cardId: string): CardProgress {
   };
 }
 
-// Returns updated progress after an answer
+// Для уровней 1–5: 1 правильный → уровень вверх, 1 ошибка → уровень вниз (минимум 1, не 0)
 export function processAnswer(
   progress: CardProgress,
   correct: boolean
 ): CardProgress {
   const today = getToday();
   if (correct) {
-    const newConsec = progress.consecutiveCorrect + 1;
-    const levelUp = newConsec >= 2;
-    const newLevel = levelUp ? Math.min(progress.level + 1, 5) : progress.level;
+    const newLevel = Math.min(progress.level + 1, 5);
     const interval = SRS_INTERVALS[newLevel] ?? 180;
     return {
       ...progress,
       level: newLevel,
-      consecutiveCorrect: levelUp ? 0 : newConsec,
+      consecutiveCorrect: progress.consecutiveCorrect + 1,
       totalCorrect: progress.totalCorrect + 1,
       nextReviewDate: addDays(today, interval),
     };
   } else {
+    // Откат на 1 уровень, но не ниже 1 (0 — особый статус новых слов)
     const newLevel = Math.max(progress.level - 1, 1);
     return {
       ...progress,
       level: newLevel,
       consecutiveCorrect: 0,
       totalWrong: progress.totalWrong + 1,
-      nextReviewDate: addDays(today, 1),
+      nextReviewDate: addDays(today, 1), // завтра
     };
   }
+}
+
+// Финализация слова уровня 0 после 3 показов в сессии
+// Если все 3 правильно → уровень 1 (следующий показ завтра)
+// Если была хоть одна ошибка → остаётся на уровне 0 (завтра снова)
+export function finalizeLevel0Card(
+  progress: CardProgress,
+  correctCount: number,
+  wrongCount: number,
+): CardProgress {
+  const allCorrect = wrongCount === 0;
+  return {
+    ...progress,
+    level: allCorrect ? 1 : 0,
+    consecutiveCorrect: allCorrect ? 1 : 0,
+    totalCorrect: progress.totalCorrect + correctCount,
+    totalWrong: progress.totalWrong + wrongCount,
+    nextReviewDate: addDays(getToday(), 1), // завтра в любом случае
+  };
 }
 
 // Build the session queue

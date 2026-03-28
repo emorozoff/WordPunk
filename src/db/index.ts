@@ -93,10 +93,17 @@ export async function getDueCards(today: string): Promise<CardProgress[]> {
   return all.filter(p => p.nextReviewDate <= today);
 }
 
+// Дробный счётчик: уровень 1 → +0.25, уровень 2 → +0.5, уровень 3-5 → +1.0
 export async function getKnownCount(): Promise<number> {
   const db = await getDB();
   const all = await db.getAll('progress');
-  return all.filter(p => p.level >= 3).length;
+  let total = 0;
+  for (const p of all) {
+    if (p.level === 1) total += 0.25;
+    else if (p.level === 2) total += 0.5;
+    else if (p.level >= 3) total += 1.0;
+  }
+  return Math.round(total);
 }
 
 export async function getLevelDistribution(): Promise<Record<number, number>> {

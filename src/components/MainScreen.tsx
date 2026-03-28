@@ -7,7 +7,7 @@ import {
 } from '../db';
 import { WORDS } from '../data/words';
 import {
-  buildQueue, generateOptions, processAnswer,
+  buildQueue, generateOptions, processAnswer, finalizeLevel0Card,
   createInitialProgress, getCurrentLevel, getLevelProgress,
   getToday,
 } from '../lib/srs';
@@ -46,6 +46,9 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
   const [loading, setLoading]       = useState(true);
   const prevLevelRef = useRef<string>('');
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
+  const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
 
   // Seed DB on first load
   useEffect(() => {
@@ -135,37 +138,63 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
 
     setAnswered({ chosen, correct: correctAnswer });
 
-    // Update progress
-    let progress = await getProgress(sc.card.id) ?? createInitialProgress(sc.card.id);
-    progress = processAnswer(progress, isCorrect);
-    await putProgress(progress);
+    // Звук
+    if (isCorrect) playCorrect();
+    else playWrong();
 
-    // Record activity
+    // Активность — записываем каждый ответ
     await recordActivity(getToday());
 
-    // Sound
-    if (isCorrect) {
-      playCorrect();
+    // Прогресс из DB (или создаём начальный для новых слов)
+    const progressFromDB = await getProgress(sc.card.id) ?? createInitialProgress(sc.card.id);
+    const isLevel0 = progressFromDB.level === 0;
+
+    if (isLevel0) {
+      // Уровень 0: до 3 показов в сессии, в DB не пишем до финального
+      const existing = sessionDataRef.current.get(sc.card.id) ?? { shows: 0, correctCount: 0, wrongCount: 0 };
+      const newShows = existing.shows + 1;
+      const newCorrectCount = existing.correctCount + (isCorrect ? 1 : 0);
+      const newWrongCount = existing.wrongCount + (isCorrect ? 0 : 1);
+      sessionDataRef.current.set(sc.card.id, { shows: newShows, correctCount: newCorrectCount, wrongCount: newWrongCount });
+
+      if (newShows < 3) {
+        // Вставляем карточку обратно в очередь: ~10-15 карточек для 2-го показа, ~20-30 для 3-го
+        const offset = newShows === 1
+          ? 10 + Math.floor(Math.random() * 6)   // 10–15 карточек
+          : 20 + Math.floor(Math.random() * 11);  // 20–30 карточек
+        setQueue(prev => {
+          const insertIdx = Math.min(queueIdx + 1 + offset, prev.length);
+          const newQueue = [...prev];
+          newQueue.splice(insertIdx, 0, { ...sc, isRetry: true });
+          return newQueue;
+        });
+      } else {
+        // 3-й показ: финализируем и сохраняем в DB
+        const finalProgress = finalizeLevel0Card(progressFromDB, newCorrectCount, newWrongCount);
+        await putProgress(finalProgress);
+        const newKnown = await getKnownCount();
+        setKnownCount(newKnown);
+        const newLvl = getCurrentLevel(newKnown);
+        if (newLvl.title !== prevLevelRef.current) {
+          prevLevelRef.current = newLvl.title;
+          setTimeout(() => { playLevelUp(); setLevelUpTitle(newLvl.title); }, 800);
+        }
+      }
     } else {
-      playWrong();
-      // Add retry to end of queue
-      const retryItem: SessionCard = { ...sc, isRetry: true };
-      setQueue(prev => [...prev, retryItem]);
+      // Уровень 1–5: стандартный SRS
+      // Правильно → +1 уровень, ошибка → -1 уровень (минимум 1), следующий показ завтра
+      const progress = processAnswer(progressFromDB, isCorrect);
+      await putProgress(progress);
+      const newKnown = await getKnownCount();
+      setKnownCount(newKnown);
+      const newLvl = getCurrentLevel(newKnown);
+      if (newLvl.title !== prevLevelRef.current) {
+        prevLevelRef.current = newLvl.title;
+        setTimeout(() => { playLevelUp(); setLevelUpTitle(newLvl.title); }, 800);
+      }
     }
 
-    // Check known count and level
-    const newKnown = await getKnownCount();
-    setKnownCount(newKnown);
-    const newLevel = getCurrentLevel(newKnown);
-    if (newLevel.title !== prevLevelRef.current) {
-      prevLevelRef.current = newLevel.title;
-      setTimeout(() => {
-        playLevelUp();
-        setLevelUpTitle(newLevel.title);
-      }, 800);
-    }
-
-    // Auto advance
+    // Автопереход к следующей карточке
     autoAdvanceRef.current = setTimeout(() => {
       advance();
     }, 1600);
@@ -205,7 +234,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
       <div className="header">
         <div className="header-logo">
           WORDPUNK_
-          <span className="header-version">v0.1</span>
+          <span className="header-version">v0.2</span>
         </div>
         <div className="header-known">ЗНАЮ {knownCount} слов</div>
       </div>
