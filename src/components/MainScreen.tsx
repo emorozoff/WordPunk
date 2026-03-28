@@ -285,9 +285,12 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.243</span>
+          <span className="header-version">v0.244</span>
         </div>
-        <div className="header-known">ЗНАЮ {knownCount} слов</div>
+        <div className="header-known">
+          <span className="header-known-label">знаю слов:</span>
+          <span className="header-known-count">{knownCount}</span>
+        </div>
       </div>
 
       {/* Level bar */}
