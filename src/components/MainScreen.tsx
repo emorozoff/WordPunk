@@ -19,7 +19,6 @@ import DebugPanel from './DebugPanel';
 interface Props {
   topicId: string | null;
   onOpenTopics: () => void;
-  onOpenAdd: () => void;
   onOpenStats: () => void;
 }
 
@@ -34,7 +33,7 @@ function getWordSizeClass(word: string): string {
 
 const TYPING_SPEED_MS = 40;
 
-const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }) => {
+const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenStats }) => {
   const [queue, setQueue]           = useState<SessionCard[]>([]);
   const [queueIdx, setQueueIdx]     = useState(0);
   const [options, setOptions]       = useState<string[]>([]);
@@ -285,7 +284,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.245</span>
+          <span className="header-version">v0.246</span>
         </div>
         <div className="header-known">
           <span className="header-known-label">знаю слов:</span>
@@ -392,7 +391,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
       {/* Bottom nav */}
       <div className="bottom-nav">
         <button className="nav-btn" onClick={onOpenTopics}>ТЕМЫ</button>
-        <button className="nav-btn center" onClick={onOpenAdd}>ЗНАЮ {knownCount}</button>
+        <span className="nav-btn center no-click">ЗНАЮ {knownCount}</span>
         <button className="nav-btn" onClick={onOpenStats}>СТАТ ↗</button>
       </div>
 

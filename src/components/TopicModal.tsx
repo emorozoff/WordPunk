@@ -52,16 +52,6 @@ const TopicModal: FC<Props> = ({ selectedTopicId, onSelect, onClose }) => {
               <span className="topic-count">{counts[topic.id] ?? 0} сл.</span>
             </div>
           ))}
-          <div
-            className={`topic-item ${selectedTopicId === 'custom' ? 'active' : ''}`}
-            onClick={() => { onSelect('custom'); onClose(); }}
-          >
-            <div className="topic-item-left">
-              <span className="topic-emoji">✏️</span>
-              <span className="topic-name">Мои слова</span>
-            </div>
-            <span className="topic-count">{counts['custom'] ?? 0} сл.</span>
-          </div>
         </div>
       </div>
     </div>

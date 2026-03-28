@@ -436,6 +436,11 @@ button {
   letter-spacing: 2px;
 }
 
+.nav-btn.no-click {
+  cursor: default;
+  pointer-events: none;
+}
+
 /* Empty state */
 .empty-state {
   text-align: center;

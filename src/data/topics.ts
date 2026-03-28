@@ -15,7 +15,6 @@ export const TOPICS: Topic[] = [
   { id: 'money',      name: 'Деньги и покупки',      emoji: '💰' },
   { id: 'sports',     name: 'Спорт и активность',    emoji: '⚽' },
   { id: 'city',       name: 'Город и инфраструктура', emoji: '🏙️' },
-  { id: 'custom',     name: 'Мои слова',             emoji: '✏️' },
 ];
 
 export function getTopicById(id: string): Topic | undefined {
