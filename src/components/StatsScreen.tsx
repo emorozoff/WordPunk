@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState, useRef } from 'react';
 import { getAllProgress, getActivity, countCards } from '../db';
 import type { DayActivity } from '../types';
 
@@ -9,11 +9,18 @@ interface Props {
 const LEVEL_COLORS = ['#555', '#444488', '#3355aa', '#00aa55', '#00ff88', '#ffaa00'];
 const LEVEL_NAMES  = ['Новые', 'Lvl 1', 'Lvl 2', 'Lvl 3', 'Lvl 4', 'Lvl 5 ★'];
 
+const SWIPE_EDGE = 30;    // px from left edge to start gesture
+const SWIPE_MIN  = 80;    // min horizontal distance to trigger back
+
 const StatsScreen: FC<Props> = ({ onBack }) => {
   const [known, setKnown] = useState(0);
   const [total, setTotal] = useState(0);
   const [dist, setDist] = useState<Record<number, number>>({ 0:0,1:0,2:0,3:0,4:0,5:0 });
   const [activity, setActivity] = useState<DayActivity[]>([]);
+
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const edgeSwipe = useRef(false);
 
   useEffect(() => {
     const load = async () => {
@@ -32,6 +39,21 @@ const StatsScreen: FC<Props> = ({ onBack }) => {
     load();
   }, []);
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0]!.clientX;
+    touchStartY.current = e.touches[0]!.clientY;
+    edgeSwipe.current = touchStartX.current <= SWIPE_EDGE;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!edgeSwipe.current) return;
+    const dx = e.changedTouches[0]!.clientX - touchStartX.current;
+    const dy = Math.abs(e.changedTouches[0]!.clientY - touchStartY.current);
+    if (dx > SWIPE_MIN && dy < 80) {
+      onBack();
+    }
+  };
+
   // Build 90-day grid
   const today = new Date();
   const cells: { date: string; count: number }[] = [];
@@ -46,10 +68,11 @@ const StatsScreen: FC<Props> = ({ onBack }) => {
   const maxDist = Math.max(...Object.values(dist), 1);
 
   return (
-    <div className="stats-screen">
-      <button className="nav-btn" onClick={onBack} style={{ padding: '0 0 16px', color: 'var(--text-muted)' }}>
-        ← назад
-      </button>
+    <div
+      className="stats-screen"
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
       <div className="stats-header">СТАТИСТИКА_</div>
 
       <div className="stats-cards">
@@ -92,6 +115,10 @@ const StatsScreen: FC<Props> = ({ onBack }) => {
           if (cell.count > 30) cls += ' active-4';
           return <div key={cell.date} className={cls} title={`${cell.date}: ${cell.count}`} />;
         })}
+      </div>
+
+      <div className="stats-back-area">
+        <button className="stats-back-btn" onClick={onBack}>← назад</button>
       </div>
     </div>
   );
