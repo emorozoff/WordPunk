@@ -697,6 +697,62 @@ button {
   gap: 6px;
 }
 
+/* Levels modal */
+.levels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.level-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.level-row-icon {
+  font-size: 12px;
+  width: 14px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.level-row-title {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.level-row-min {
+  font-size: 11px;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+.level-row-past {
+  opacity: 0.45;
+  color: var(--accent-green);
+}
+
+.level-row-current {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+.level-row-current .level-row-title {
+  font-size: 14px;
+}
+
+.level-row-current .level-row-icon {
+  color: var(--accent-green);
+}
+
+.level-row-future {
+  opacity: 0.2;
+}
+
 .topic-item {
   display: flex;
   flex-direction: column;

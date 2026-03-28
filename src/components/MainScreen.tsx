@@ -15,6 +15,7 @@ import { playCorrect, playWrong, playLevelUp } from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
+import LevelsModal from './LevelsModal';
 import DebugPanel from './DebugPanel';
 
 interface Props {
@@ -62,6 +63,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const [loading, setLoading]       = useState(true);
   const [isGlitching, setIsGlitching] = useState(false);
   const [showKnownInfo, setShowKnownInfo] = useState(false);
+  const [showLevels, setShowLevels] = useState(false);
   const [prevExample, setPrevExample] = useState<{ text: string; word: string; animKey: number } | null>(null);
   const pendingExampleRef = useRef<{ text: string; word: string } | null>(null);
   const prevLevelRef = useRef<string>('');
@@ -373,7 +375,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.33</span>
+          <span className="header-version">v0.35</span>
         </div>
         <div className="header-known" onClick={() => setShowKnownInfo(true)} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -382,7 +384,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       </div>
 
       {/* Level bar */}
-      <div className="level-bar">
+      <div className="level-bar" onClick={() => setShowLevels(true)} style={{ cursor: 'pointer' }}>
         <div className="level-bar-top">
           <span className="level-title">{knownLevel.title}</span>
           {wordsUntil > 0 && (
@@ -415,7 +417,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
             <div className="xp-toast-slot">
               {showXpToast && <div key={xpToastKey} className="xp-toast">▲ ОПЫТ</div>}
             </div>
-            <div className="word-card">
+            <div className="word-card" onClick={onOpenTopics} style={{ cursor: 'pointer' }}>
               {topic && (
                 <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
               )}
@@ -506,6 +508,11 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           title={levelUpTitle}
           onClose={() => setLevelUpTitle(null)}
         />
+      )}
+
+      {/* Levels modal */}
+      {showLevels && (
+        <LevelsModal knownCount={knownCount} onClose={() => setShowLevels(false)} />
       )}
 
       {/* Known count info popup */}
