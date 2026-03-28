@@ -37,7 +37,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
   const [queue, setQueue]           = useState<SessionCard[]>([]);
   const [queueIdx, setQueueIdx]     = useState(0);
   const [options, setOptions]       = useState<string[]>([]);
-  const [answered, setAnswered]     = useState<null | { chosen: string; correct: string }>(null);
+  const [answered, setAnswered]     = useState<null | { chosen: string; correct: string; wasCorrect: boolean }>(null);
   const [displayWord, setDisplayWord] = useState('');
   const [isTyping, setIsTyping]     = useState(false);
   const [knownCount, setKnownCount] = useState(0);
@@ -136,7 +136,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
     const allSynonyms = [correctAnswer, ...(sc.card.synonyms || [])];
     const isCorrect = allSynonyms.some(s => s.toLowerCase() === chosen.toLowerCase());
 
-    setAnswered({ chosen, correct: correctAnswer });
+    setAnswered({ chosen, correct: correctAnswer, wasCorrect: isCorrect });
 
     // Звук
     if (isCorrect) playCorrect();
@@ -194,10 +194,13 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
       }
     }
 
-    // Автопереход к следующей карточке
-    autoAdvanceRef.current = setTimeout(() => {
-      advance();
-    }, 1600);
+    // Автопереход — только при правильном ответе
+    // При ошибке пользователь сам нажимает "ДАЛЕЕ"
+    if (isCorrect) {
+      autoAdvanceRef.current = setTimeout(() => {
+        advance();
+      }, 1600);
+    }
   };
 
   const advance = useCallback(() => {
@@ -234,7 +237,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
       <div className="header">
         <div className="header-logo">
           WORDPUNK_
-          <span className="header-version">v0.21</span>
+          <span className="header-version">v0.22</span>
         </div>
         <div className="header-known">ЗНАЮ {knownCount} слов</div>
       </div>
@@ -277,7 +280,7 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
             <div className="card-hint">
               {currentCard.direction === 'en-ru' ? 'что это значит?' : 'как по-английски?'}
             </div>
-            {answered && (
+            {answered && answered.wasCorrect && (
               <div className="card-answer">
                 <div className="card-translation">
                   {currentCard.direction === 'en-ru'
@@ -289,32 +292,49 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
                 )}
               </div>
             )}
+            {answered && !answered.wasCorrect && (
+              <div className="wrong-reveal">
+                <div className="wrong-reveal-pair">
+                  <span className="wrong-reveal-en">{currentCard.card.english}</span>
+                  <span className="wrong-reveal-sep">→</span>
+                  <span className="wrong-reveal-ru">{currentCard.card.russian}</span>
+                </div>
+              </div>
+            )}
           </div>
         ) : null}
       </div>
 
-      {/* Options */}
+      {/* Options / Continue */}
       {!isFinished && !loading && currentCard && (
-        <div className="options-grid">
-          {options.map((opt, i) => {
-            let cls = 'option-btn';
-            if (answered) {
-              if (opt === answered.correct) cls += ' correct';
-              else if (opt === answered.chosen) cls += ' wrong';
-              else cls += ' dimmed';
-            }
-            return (
-              <button
-                key={i}
-                className={cls}
-                onClick={() => handleAnswer(opt)}
-                disabled={!!answered}
-              >
-                {opt}
-              </button>
-            );
-          })}
-        </div>
+        answered && !answered.wasCorrect ? (
+          <div className="continue-area">
+            <button className="continue-btn" onClick={advance}>
+              ДАЛЕЕ →
+            </button>
+          </div>
+        ) : (
+          <div className="options-grid">
+            {options.map((opt, i) => {
+              let cls = 'option-btn';
+              if (answered) {
+                if (opt === answered.correct) cls += ' correct';
+                else if (opt === answered.chosen) cls += ' wrong';
+                else cls += ' dimmed';
+              }
+              return (
+                <button
+                  key={i}
+                  className={cls}
+                  onClick={() => handleAnswer(opt)}
+                  disabled={!!answered}
+                >
+                  {opt}
+                </button>
+              );
+            })}
+          </div>
+        )
       )}
 
       {/* Bottom nav */}
