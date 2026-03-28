@@ -203,7 +203,10 @@ const MainScreen: FC<Props> = ({ topicId, onOpenTopics, onOpenAdd, onOpenStats }
     <>
       {/* Header */}
       <div className="header">
-        <div className="header-logo">WORDPUNK_</div>
+        <div className="header-logo">
+          WORDPUNK_
+          <span className="header-version">v1.0</span>
+        </div>
         <div className="header-known">ЗНАЮ {knownCount} слов</div>
       </div>
 
