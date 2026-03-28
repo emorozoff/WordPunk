@@ -136,7 +136,7 @@ export function generateOptions(
 // Language level system
 export const LEVELS = [
   { min: 0,    title: 'уровень: кто такой хеллоу?' },
-  { min: 5,    title: 'уровень: умный как Siri' },
+  { min: 10,   title: 'уровень: тупой как Siri' },
   { min: 50,   title: 'уровень: немой турист' },
   { min: 100,  title: 'уровень: гугл транслейт на ножках' },
   { min: 150,  title: 'уровень: знаю "hello" и "sorry"' },
