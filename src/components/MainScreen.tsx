@@ -62,7 +62,6 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const [allCards, setAllCards]     = useState<Card[]>([]);
   const [loading, setLoading]       = useState(true);
   const [isGlitching, setIsGlitching] = useState(false);
-  const [showKnownInfo, setShowKnownInfo] = useState(false);
   const [showLevels, setShowLevels] = useState(false);
   const [prevExample, setPrevExample] = useState<{ text: string; word: string; animKey: number } | null>(null);
   const pendingExampleRef = useRef<{ text: string; word: string } | null>(null);
@@ -377,7 +376,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           WORDPUNK_
           <span className="header-version">v0.35</span>
         </div>
-        <div className="header-known" onClick={() => setShowKnownInfo(true)} style={{ cursor: 'pointer' }}>
+        <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
           <span className={`header-known-count${isGlitching ? ' glitching' : ''}`}>{knownCount}</span>
         </div>
@@ -513,21 +512,6 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       {/* Levels modal */}
       {showLevels && (
         <LevelsModal knownCount={knownCount} onClose={() => setShowLevels(false)} />
-      )}
-
-      {/* Known count info popup */}
-      {showKnownInfo && (
-        <div className="info-overlay" onClick={() => setShowKnownInfo(false)}>
-          <div className="info-popup" onClick={e => e.stopPropagation()}>
-            <div className="info-popup-title">как считается счётчик?</div>
-            <div className="info-popup-body">
-              <p>Не заморачивайся — алгоритм сам всё считает.</p>
-              <p>Каждое слово имеет свой вес: чем лучше знаешь, тем больше оно добавляет в счётчик. Новое слово — маленький вклад. Повторил через день, через неделю, через месяц — вклад растёт.</p>
-              <p>Просто отвечай на карточки, а цифра будет расти сама.</p>
-            </div>
-            <button className="info-popup-close" onClick={() => setShowKnownInfo(false)}>ок, ладно</button>
-          </div>
-        </div>
       )}
 
       {/* Debug panel */}

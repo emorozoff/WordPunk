@@ -922,6 +922,17 @@ button {
   will-change: transform;
 }
 
+.stats-counter-info {
+  margin-bottom: 24px;
+}
+
+.stats-counter-info p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
 .stats-back-area {
   margin-top: auto;
   padding: 16px 0 calc(16px + var(--safe-bottom, 0px));

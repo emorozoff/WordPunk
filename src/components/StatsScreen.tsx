@@ -117,6 +117,13 @@ const StatsScreen: FC<Props> = ({ onBack }) => {
         })}
       </div>
 
+      <div className="stats-counter-info">
+        <div className="stats-section-title">КАК СЧИТАЕТСЯ СЧЁТЧИК</div>
+        <p>Не заморачивайся — алгоритм сам всё считает.</p>
+        <p>Каждое слово имеет свой вес: чем лучше знаешь, тем больше оно добавляет в счётчик. Новое слово — маленький вклад. Повторил через день, через неделю, через месяц — вклад растёт.</p>
+        <p>Просто отвечай на карточки, а цифра будет расти сама.</p>
+      </div>
+
       <div className="stats-back-area">
         <button className="stats-back-btn" onClick={onBack}>← назад</button>
       </div>
