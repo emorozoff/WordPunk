@@ -2,9 +2,10 @@ import React, { FC, useState, useEffect, useRef, useCallback } from 'react';
 import type { Card, SessionCard } from '../types';
 import {
   getAllCards, getAllProgress, getProgress,
-  putProgress, putCards, isSeeded, getDueCards, getKnownCount,
+  putProgress, putCards, deleteCard, getDueCards, getKnownCount,
   recordActivity, clearAllProgress,
 } from '../db';
+
 import { WORDS } from '../data/words';
 import {
   buildQueue, generateOptions, processAnswer, finalizeLevel0Card,
@@ -76,11 +77,16 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
 
-  // Seed DB on first load
+  // Seed DB on first load (re-seed if built-in word count changed)
   useEffect(() => {
     const init = async () => {
-      const seeded = await isSeeded();
-      if (!seeded) {
+      const allExisting = await getAllCards();
+      const builtInCount = allExisting.filter(c => !c.isCustom).length;
+      if (builtInCount !== WORDS.length) {
+        // Remove outdated built-in cards, keep custom ones
+        for (const c of allExisting.filter(cc => !cc.isCustom)) {
+          await deleteCard(c.id);
+        }
         await putCards(WORDS);
       }
       const cards = await getAllCards();
