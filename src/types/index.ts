@@ -6,6 +6,7 @@ export interface Card {
   example?: string;
   topicId: string;
   isCustom: boolean;
+  difficulty?: number; // 1–6, соответствует A1–C2
 }
 
 export interface CardProgress {
