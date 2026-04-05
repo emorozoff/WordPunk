@@ -30,6 +30,7 @@ const DISMISS_THRESHOLD = 100; // px
 const TopicModal: FC<Props> = ({ onClose }) => {
   const [prefs, setPrefs] = useState<TopicPrefs>(() => loadTopicPrefs());
   const [stats, setStats] = useState<Record<string, TopicStats>>({});
+  const [showBasicWarning, setShowBasicWarning] = useState(false);
   const sheetRef = useRef<HTMLDivElement>(null);
   const dragStartY = useRef(0);
   const isDragging = useRef(false);
@@ -54,6 +55,10 @@ const TopicModal: FC<Props> = ({ onClose }) => {
   const toggle = (topicId: string) => {
     const current = getPref(prefs, topicId);
     const next = PREF_NEXT[current];
+    if (topicId === 'basic' && next === 0) {
+      setShowBasicWarning(true);
+      return;
+    }
     const updated = { ...prefs, [topicId]: next };
     setPrefs(updated);
     saveTopicPrefs(updated);
@@ -125,8 +130,41 @@ const TopicModal: FC<Props> = ({ onClose }) => {
           <span className="legend-item legend-1">+ немного</span>
           <span className="legend-item legend-0">— исключить</span>
         </div>
+        {/* Базовая тема — отдельно, вверху */}
+        {(() => {
+          const basic = TOPICS.find(t => t.id === 'basic');
+          if (!basic) return null;
+          const pref = getPref(prefs, 'basic');
+          const s = stats['basic'] ?? { total: 0, known: 0 };
+          const pct = s.total > 0 ? (s.known / s.total) * 100 : 0;
+          return (
+            <div className="topic-basic-section">
+              <div className={`topic-item topic-item-basic pref-${pref}`}>
+                <div className="topic-item-row">
+                  <div className="topic-item-left">
+                    <span className="topic-emoji">{basic.emoji}</span>
+                    <span className="topic-name">{basic.name}</span>
+                  </div>
+                  <div className="topic-item-right">
+                    <span className="topic-progress-count">{s.known}/{s.total}</span>
+                    <button
+                      className={`pref-toggle pref-toggle-${pref}`}
+                      onClick={() => toggle('basic')}
+                    >
+                      {PREF_LABELS[pref]}
+                    </button>
+                  </div>
+                </div>
+                <div className="topic-progress-bar">
+                  <div className="topic-progress-fill" style={{ width: `${pct}%` }} />
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
         <div className="topics-list">
-          {TOPICS.filter(t => t.id !== 'custom').map(topic => {
+          {TOPICS.filter(t => t.id !== 'custom' && t.id !== 'basic').map(topic => {
             const pref = getPref(prefs, topic.id);
             const s = stats[topic.id] ?? { total: 0, known: 0 };
             const pct = s.total > 0 ? (s.known / s.total) * 100 : 0;
@@ -155,6 +193,20 @@ const TopicModal: FC<Props> = ({ onClose }) => {
           })}
         </div>
       </div>
+
+      {/* Предупреждение при попытке выключить basic */}
+      {showBasicWarning && (
+        <div className="info-overlay" onClick={() => setShowBasicWarning(false)}>
+          <div className="info-popup" onClick={e => e.stopPropagation()}>
+            <div className="info-popup-title">это нельзя выключить</div>
+            <div className="info-popup-body">
+              <p>Основа языка — это не тема, это скелет. Без этих слов не строится ни одно предложение.</p>
+              <p>Они нужны всем: и новичкам, и тем кто уже умеет.</p>
+            </div>
+            <button className="info-popup-close" onClick={() => setShowBasicWarning(false)}>понятно</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

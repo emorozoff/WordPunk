@@ -691,6 +691,21 @@ button {
   line-height: 1.5;
 }
 
+.topic-basic-section {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.topic-item-basic {
+  border-color: var(--accent-amber) !important;
+  background: rgba(255, 170, 0, 0.04) !important;
+}
+
+.topic-item-basic .topic-name {
+  color: var(--accent-amber);
+}
+
 .topics-list {
   display: flex;
   flex-direction: column;
