@@ -198,12 +198,24 @@ const TopicModal: FC<Props> = ({ onClose }) => {
       {showBasicWarning && (
         <div className="info-overlay" onClick={() => setShowBasicWarning(false)}>
           <div className="info-popup" onClick={e => e.stopPropagation()}>
-            <div className="info-popup-title">это нельзя выключить</div>
+            <div className="info-popup-title">лучше не выключать</div>
             <div className="info-popup-body">
-              <p>Основа языка — это не тема, это скелет. Без этих слов не строится ни одно предложение.</p>
-              <p>Они нужны всем: и новичкам, и тем кто уже умеет.</p>
+              <p>Это фундамент — базовые глаголы, служебные слова, числа. Без них остальные темы учить сложнее.</p>
+              <p>Но если очень хочется — можно.</p>
             </div>
-            <button className="info-popup-close" onClick={() => setShowBasicWarning(false)}>понятно</button>
+            <button
+              className="info-popup-close info-popup-close-dim"
+              style={{ marginBottom: 8 }}
+              onClick={() => {
+                const updated = { ...prefs, basic: 0 as PrefLevel };
+                setPrefs(updated);
+                saveTopicPrefs(updated);
+                setShowBasicWarning(false);
+              }}
+            >
+              всё равно выключить
+            </button>
+            <button className="info-popup-close" onClick={() => setShowBasicWarning(false)}>оставить</button>
           </div>
         </div>
       )}

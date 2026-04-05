@@ -642,6 +642,16 @@ button {
   background: rgba(0,255,136,0.15);
 }
 
+.info-popup-close-dim {
+  background: transparent;
+  border-color: rgba(255,255,255,0.1);
+  color: var(--text-muted);
+}
+
+.info-popup-close-dim:active {
+  background: rgba(255,255,255,0.05);
+}
+
 /* Modal */
 .modal-overlay {
   position: fixed;
