@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import type { AppScreen } from './types';
 import MainScreen from './components/MainScreen';
 import TopicModal from './components/TopicModal';
 import StatsScreen from './components/StatsScreen';
 
 export default function App() {
-  const [screen, setScreen] = useState<AppScreen>('main');
   const [showTopics, setShowTopics] = useState(false);
+  const [showStats, setShowStats] = useState(false);
   const [prefsVersion, setPrefsVersion] = useState(0);
 
   const handleTopicsClose = () => {
@@ -16,21 +15,18 @@ export default function App() {
 
   return (
     <div className="app">
-      {/* MainScreen всегда в DOM — сохраняет состояние сессии при переходе в статистику */}
-      <div style={{ display: screen === 'main' ? 'contents' : 'none' }}>
-        <MainScreen
-          prefsVersion={prefsVersion}
-          onOpenTopics={() => setShowTopics(true)}
-          onOpenStats={() => setScreen('stats')}
-        />
-      </div>
-
-      {screen === 'stats' && (
-        <StatsScreen onBack={() => setScreen('main')} />
-      )}
+      <MainScreen
+        prefsVersion={prefsVersion}
+        onOpenTopics={() => setShowTopics(true)}
+        onOpenStats={() => setShowStats(true)}
+      />
 
       {showTopics && (
         <TopicModal onClose={handleTopicsClose} />
+      )}
+
+      {showStats && (
+        <StatsScreen onClose={() => setShowStats(false)} />
       )}
 
       {/* CRT scanline effect */}
