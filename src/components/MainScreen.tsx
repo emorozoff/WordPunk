@@ -133,21 +133,32 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       return c && c.topicId !== 'custom';
     });
 
-    // New cards — weighted by topic prefs, sorted by difficulty
+    // New cards — weighted by topic prefs, grouped by difficulty
     const eligibleNew = cards.filter(c =>
       c.topicId !== 'custom' && !progressMap.has(c.id) && getWeight(prefs, c.topicId) > 0
-    ).sort((a, b) => a.difficulty - b.difficulty);
+    ).sort((a, b) => (a.difficulty ?? 6) - (b.difficulty ?? 6));
 
-    // Build weighted pool
-    const pool: Card[] = [];
+    // Group by difficulty, shuffle within each group, then concat
+    const byDiff = new Map<number, Card[]>();
     for (const card of eligibleNew) {
-      const w = getWeight(prefs, card.topicId);
-      for (let i = 0; i < w; i++) pool.push(card);
+      const d = card.difficulty ?? 6;
+      if (!byDiff.has(d)) byDiff.set(d, []);
+      byDiff.get(d)!.push(card);
     }
-    // Shuffle
-    for (let i = pool.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pool[i], pool[j]] = [pool[j]!, pool[i]!];
+    const pool: Card[] = [];
+    for (const d of [...byDiff.keys()].sort((a, b) => a - b)) {
+      const group = byDiff.get(d)!;
+      // Weighted shuffle within difficulty group
+      const weighted: Card[] = [];
+      for (const card of group) {
+        const w = getWeight(prefs, card.topicId);
+        for (let i = 0; i < w; i++) weighted.push(card);
+      }
+      for (let i = weighted.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [weighted[i], weighted[j]] = [weighted[j]!, weighted[i]!];
+      }
+      pool.push(...weighted);
     }
     // Unique first 20
     const seen = new Set<string>();
@@ -381,7 +392,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.37</span>
+          <span className="header-version">v0.38</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
