@@ -2,6 +2,12 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "Python HTTP Server",
+      "runtimeExecutable": "/usr/local/bin/node",
+      "runtimeArgs": ["node_modules/.bin/vite", "--port", "5173"],
+      "port": 5173
+    },
+    {
       "name": "WordPunk dev",
       "runtimeExecutable": "/usr/local/bin/node",
       "runtimeArgs": ["node_modules/.bin/vite", "--port", "5173"],

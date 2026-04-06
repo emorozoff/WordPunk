@@ -113,23 +113,74 @@ export function buildQueue(
 }
 
 // Generate 4 options: 1 correct + 3 random
+function distractorScore(
+  correctAnswer: string,
+  candidate: string,
+  sameTopic: boolean
+): number {
+  let score = 0;
+  const ca = correctAnswer.toLowerCase();
+  const cb = candidate.toLowerCase();
+
+  // Same topic = semantically close
+  if (sameTopic) score += 5;
+
+  // Same first letter
+  if (ca[0] === cb[0]) score += 2;
+
+  // Similar string length (±3 chars)
+  const lenDiff = Math.abs(ca.length - cb.length);
+  if (lenDiff <= 2) score += 2;
+  else if (lenDiff <= 5) score += 1;
+
+  // Common prefix
+  let prefix = 0;
+  for (let i = 0; i < Math.min(ca.length, cb.length); i++) {
+    if (ca[i] === cb[i]) prefix++;
+    else break;
+  }
+  if (prefix >= 3) score += 3;
+  else if (prefix >= 2) score += 1;
+
+  return score;
+}
+
 export function generateOptions(
   correctCard: Card,
   direction: 'en-ru' | 'ru-en',
   allCards: Card[]
 ): string[] {
   const correctAnswer = direction === 'en-ru' ? correctCard.russian : correctCard.english;
+  const correctWordCount = correctAnswer.trim().split(/\s+/).length;
 
-  const pool = allCards
+  const scored = allCards
     .filter(c => c.id !== correctCard.id)
-    .map(c => direction === 'en-ru' ? c.russian : c.english);
+    .map(c => {
+      const text = direction === 'en-ru' ? c.russian : c.english;
+      const wordCount = text.trim().split(/\s+/).length;
+      let score = distractorScore(correctAnswer, text, c.topicId === correctCard.topicId);
+      // Same word count is a hard preference
+      if (wordCount === correctWordCount) score += 10;
+      return { text, score };
+    });
 
-  // Shuffle pool
-  const shuffled = [...pool].sort(() => Math.random() - 0.5);
-  const distractors = shuffled.slice(0, 3);
+  // Sort by score desc, take top bucket and shuffle to add variety
+  scored.sort((a, b) => b.score - a.score);
+  const topBucket = scored.slice(0, Math.min(15, scored.length));
+  const shuffled = topBucket.sort(() => Math.random() - 0.5);
+  const distractors = shuffled.slice(0, 3).map(d => d.text);
+
+  // Fallback
+  if (distractors.length < 3) {
+    const used = new Set(distractors);
+    const rest = scored.filter(d => !used.has(d.text));
+    for (const d of rest) {
+      if (distractors.length >= 3) break;
+      distractors.push(d.text);
+    }
+  }
 
   const options = [correctAnswer, ...distractors];
-  // Shuffle options
   return options.sort(() => Math.random() - 0.5);
 }
 
