@@ -133,10 +133,10 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       return c && c.topicId !== 'custom';
     });
 
-    // New cards — weighted by topic prefs
+    // New cards — weighted by topic prefs, sorted by difficulty
     const eligibleNew = cards.filter(c =>
       c.topicId !== 'custom' && !progressMap.has(c.id) && getWeight(prefs, c.topicId) > 0
-    );
+    ).sort((a, b) => a.difficulty - b.difficulty);
 
     // Build weighted pool
     const pool: Card[] = [];
