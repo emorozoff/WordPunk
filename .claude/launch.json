@@ -18,6 +18,12 @@
       "runtimeExecutable": "/usr/local/bin/node",
       "runtimeArgs": ["node_modules/.bin/vite", "preview", "--port", "4173"],
       "port": 4173
+    },
+    {
+      "name": "WordPunk worktree dev",
+      "runtimeExecutable": "/Users/egor/Desktop/Claude Code/wordpunk/node_modules/.bin/vite",
+      "runtimeArgs": ["--port", "5174", "--root", "/Users/egor/Desktop/Claude Code/wordpunk"],
+      "port": 5174
     }
   ]
 }
