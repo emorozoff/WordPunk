@@ -1,4 +1,6 @@
 import { FC, useState, useEffect, useRef } from 'react';
+import * as LucideIcons from 'lucide-react';
+import type { LucideProps } from 'lucide-react';
 import { TOPICS } from '../data/topics';
 import { getAllCards, getAllProgress } from '../db';
 import { loadTopicPrefs, saveTopicPrefs, getPref } from '../lib/topicPrefs';
@@ -26,6 +28,12 @@ const PREF_NEXT: Record<PrefLevel, PrefLevel> = {
 };
 
 const DISMISS_THRESHOLD = 100; // px
+
+const TopicIcon: FC<{ name: string }> = ({ name }) => {
+  const Icon = (LucideIcons as unknown as Record<string, FC<LucideProps>>)[name];
+  if (!Icon) return null;
+  return <Icon size={15} strokeWidth={1.5} />;
+};
 
 const TopicModal: FC<Props> = ({ onClose }) => {
   const [prefs, setPrefs] = useState<TopicPrefs>(() => loadTopicPrefs());
@@ -64,6 +72,30 @@ const TopicModal: FC<Props> = ({ onClose }) => {
     saveTopicPrefs(updated);
   };
 
+  const selectAll = () => {
+    const updated = { ...prefs };
+    for (const t of TOPICS) {
+      if (t.id !== 'custom' && !t.isAdult) {
+        updated[t.id] = 1;
+      }
+    }
+    setPrefs(updated);
+    saveTopicPrefs(updated);
+  };
+
+  const deselectAll = () => {
+    const updated = { ...prefs };
+    for (const t of TOPICS) {
+      if (t.id !== 'custom' && t.id !== 'basic' && !t.isAdult) {
+        updated[t.id] = 0;
+      }
+    }
+    // Ensure basic stays at least 1
+    if ((updated['basic'] ?? 1) === 0) updated['basic'] = 1;
+    setPrefs(updated);
+    saveTopicPrefs(updated);
+  };
+
   const dismiss = () => {
     const sheet = sheetRef.current;
     if (!sheet) { onClose(); return; }
@@ -84,12 +116,11 @@ const TopicModal: FC<Props> = ({ onClose }) => {
     const delta = e.touches[0]!.clientY - dragStartY.current;
     if (delta <= 0) return;
 
-    // Only dismiss-drag when list is scrolled to top
     if (sheet.scrollTop > 0) return;
 
     isDragging.current = true;
     sheet.style.transition = 'none';
-    sheet.style.overflowY = 'hidden'; // prevent content scroll while dragging
+    sheet.style.overflowY = 'hidden';
     sheet.style.transform = `translateY(${delta}px)`;
   };
 
@@ -100,7 +131,7 @@ const TopicModal: FC<Props> = ({ onClose }) => {
 
     const delta = e.changedTouches[0]!.clientY - dragStartY.current;
     isDragging.current = false;
-    sheet.style.overflowY = ''; // restore scroll
+    sheet.style.overflowY = '';
 
     if (delta > DISMISS_THRESHOLD) {
       dismiss();
@@ -125,11 +156,18 @@ const TopicModal: FC<Props> = ({ onClose }) => {
         <div className="topics-pref-hint">
           Выбери темы — алгоритм подберёт слова автоматически
         </div>
-        <div className="topics-pref-legend">
-          <span className="legend-item legend-2">++ очень интересно</span>
-          <span className="legend-item legend-1">+ немного</span>
-          <span className="legend-item legend-0">— исключить</span>
+        <div className="topics-header-row">
+          <div className="topics-pref-legend">
+            <span className="legend-item legend-2">++ очень интересно</span>
+            <span className="legend-item legend-1">+ немного</span>
+            <span className="legend-item legend-0">— исключить</span>
+          </div>
+          <div className="topics-bulk-btns">
+            <button className="topics-bulk-btn" onClick={selectAll}>все</button>
+            <button className="topics-bulk-btn topics-bulk-btn-off" onClick={deselectAll}>убрать все</button>
+          </div>
         </div>
+
         {/* Базовая тема — отдельно, вверху */}
         {(() => {
           const basic = TOPICS.find(t => t.id === 'basic');
@@ -142,7 +180,7 @@ const TopicModal: FC<Props> = ({ onClose }) => {
               <div className={`topic-item topic-item-basic pref-${pref}`}>
                 <div className="topic-item-row">
                   <div className="topic-item-left">
-                    <span className="topic-emoji">{basic.emoji}</span>
+                    <span className="topic-icon topic-icon-basic"><TopicIcon name={basic.icon} /></span>
                     <span className="topic-name">{basic.name}</span>
                   </div>
                   <div className="topic-item-right">
@@ -163,7 +201,7 @@ const TopicModal: FC<Props> = ({ onClose }) => {
           );
         })()}
 
-        {/* Взрослые темы — отдельная секция вверху */}
+        {/* Взрослые темы — отдельная секция */}
         {TOPICS.filter(t => t.isAdult).length > 0 && (
           <div className="topic-adult-section">
             <div className="topic-adult-header">18+</div>
@@ -175,7 +213,7 @@ const TopicModal: FC<Props> = ({ onClose }) => {
                 <div key={topic.id} className={`topic-item topic-item-adult pref-${pref}`}>
                   <div className="topic-item-row">
                     <div className="topic-item-left">
-                      <span className="topic-emoji">{topic.emoji}</span>
+                      <span className="topic-icon topic-icon-adult"><TopicIcon name={topic.icon} /></span>
                       <span className="topic-name">{topic.name}</span>
                     </div>
                     <div className="topic-item-right">
@@ -206,7 +244,7 @@ const TopicModal: FC<Props> = ({ onClose }) => {
               <div key={topic.id} className={`topic-item pref-${pref}`}>
                 <div className="topic-item-row">
                   <div className="topic-item-left">
-                    <span className="topic-emoji">{topic.emoji}</span>
+                    <span className="topic-icon"><TopicIcon name={topic.icon} /></span>
                     <span className="topic-name">{topic.name}</span>
                   </div>
                   <div className="topic-item-right">

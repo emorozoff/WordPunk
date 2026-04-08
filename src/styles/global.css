@@ -943,7 +943,34 @@ button {
   gap: 8px;
 }
 
-.topic-emoji { font-size: 18px; }
+.topic-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.topic-item-basic .topic-icon,
+.topic-icon-basic {
+  color: var(--accent-amber);
+  opacity: 1;
+}
+
+.topic-item-adult .topic-icon,
+.topic-icon-adult {
+  color: var(--accent-red);
+  opacity: 0.85;
+}
+
+.topic-item.pref-2 .topic-icon {
+  color: var(--accent-green);
+  opacity: 0.9;
+}
+
 .topic-name { font-size: 13px; color: var(--text); }
 
 .topic-progress-count {
@@ -1001,12 +1028,55 @@ button {
   background: transparent;
 }
 
-/* Legend */
+/* Legend + bulk action row */
+.topics-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
 .topics-pref-legend {
   display: flex;
-  gap: 14px;
-  margin-bottom: 14px;
+  gap: 10px;
   flex-wrap: wrap;
+  flex: 1;
+}
+
+.topics-bulk-btns {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.topics-bulk-btn {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  background: rgba(0, 255, 136, 0.08);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 4px;
+  color: var(--accent-green);
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.topics-bulk-btn:active {
+  background: rgba(0, 255, 136, 0.18);
+}
+
+.topics-bulk-btn-off {
+  background: rgba(255, 51, 102, 0.06);
+  border-color: rgba(255, 51, 102, 0.25);
+  color: var(--accent-red);
+  opacity: 0.75;
+}
+
+.topics-bulk-btn-off:active {
+  background: rgba(255, 51, 102, 0.14);
 }
 
 .legend-item {

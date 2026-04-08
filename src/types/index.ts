@@ -21,7 +21,7 @@ export interface CardProgress {
 export interface Topic {
   id: string;
   name: string;
-  emoji: string;
+  icon: string; // Lucide icon name, e.g. 'Zap'
   isAdult?: boolean;
 }
 
