@@ -446,7 +446,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
             <div className="xp-toast-slot">
               {showXpToast && <div key={xpToastKey} className="xp-toast">▲ ОПЫТ</div>}
             </div>
-            <div className="word-card" style={{ cursor: 'pointer' }} onClick={e => { e.stopPropagation(); answered?.wasCorrect ? advance() : onOpenTopics(); }}>
+            <div className="word-card" style={{ cursor: 'pointer' }} onClick={e => { e.stopPropagation(); if (answered?.wasCorrect) advance(); else if (!answered) onOpenTopics(); }}>
               {topic && (
                 <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
               )}
