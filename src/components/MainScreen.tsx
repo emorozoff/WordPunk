@@ -182,10 +182,15 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   };
 
   const setupCard = useCallback((sc: SessionCard, cards: Card[]) => {
-    const word = sc.direction === 'en-ru' ? sc.card.english : sc.card.russian;
     setOptions(generateOptions(sc.card, sc.direction, cards));
     setAnswered(null);
-    typeWord(word);
+    if (sc.direction === 'ru-en') {
+      typeWord(sc.card.russian);
+    } else {
+      // en-ru: показываем предложение напрямую, без typing-анимации
+      setDisplayWord('');
+      setIsTyping(false);
+    }
   }, []);
 
   const typeWord = (word: string) => {
@@ -295,7 +300,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     // Автопереход — только при правильном ответе
     // При ошибке пользователь сам нажимает "ДАЛЕЕ"
     if (isCorrect) {
-      if (sc.card.example) {
+      // Для ru-en: пример показывается под карточкой после ответа, потом гаснет
+      // Для en-ru: пример уже был на карточке — не дублируем
+      if (sc.card.example && sc.direction === 'ru-en') {
         pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
       }
       autoAdvanceRef.current = setTimeout(() => {
@@ -392,7 +399,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.40</span>
+          <span className="header-version">v0.41-exp</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -439,12 +446,15 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
               {topic && (
                 <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
               )}
-              <div className={`card-word ${sizeClass} ${isTyping ? 'typing' : ''}`}>
-                {displayWord}
-              </div>
-              <div className="card-hint">
-                {currentCard.direction === 'en-ru' ? 'что это значит?' : 'как по-английски?'}
-              </div>
+              {currentCard.direction === 'en-ru' && currentCard.card.example ? (
+                <div className="card-sentence">
+                  {renderExample(currentCard.card.example, currentCard.card.english)}
+                </div>
+              ) : (
+                <div className={`card-word ${sizeClass} ${isTyping ? 'typing' : ''}`}>
+                  {displayWord}
+                </div>
+              )}
               {answered && !answered.wasCorrect && (
                 <div className="wrong-reveal">
                   <div className="wrong-reveal-pair">
@@ -463,7 +473,8 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
                     ? currentCard.card.russian
                     : currentCard.card.english}
                 </div>
-                {currentCard.card.example && (
+                {/* Пример только для ru-en: при en-ru он уже виден на карточке */}
+                {currentCard.direction === 'ru-en' && currentCard.card.example && (
                   <div className="card-example">
                     {renderExample(currentCard.card.example, currentCard.card.english)}
                   </div>
