@@ -57,7 +57,7 @@ const AddWordModal: FC<Props> = ({ onClose, onAdded }) => {
             <label className="form-label">Тема</label>
             <select className="form-input" value={topicId} onChange={e => setTopicId(e.target.value)}>
               {TOPICS.map(t => (
-                <option key={t.id} value={t.id}>{t.emoji} {t.name}</option>
+                <option key={t.id} value={t.id}>{t.name}</option>
               ))}
             </select>
           </div>
