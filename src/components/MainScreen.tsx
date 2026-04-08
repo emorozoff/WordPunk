@@ -365,6 +365,10 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     setDebugOpen(false);
   };
 
+  const handleMainZoneTap = useCallback(() => {
+    if (answered?.wasCorrect) advance();
+  }, [answered, advance]);
+
   const onSwipeTouchStart = (e: React.TouchEvent) => {
     swipeTouchStartX.current = e.touches[0]!.clientX;
     swipeTouchStartY.current = e.touches[0]!.clientY;
@@ -399,7 +403,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.43</span>
+          <span className="header-version">v0.44</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -422,7 +426,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       </div>
 
       {/* Card area */}
-      <div className="card-area">
+      <div className="card-area" onClick={handleMainZoneTap}>
         {loading ? (
           <div className="empty-state">
             <div className="empty-state-title">загрузка_</div>
@@ -442,7 +446,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
             <div className="xp-toast-slot">
               {showXpToast && <div key={xpToastKey} className="xp-toast">▲ ОПЫТ</div>}
             </div>
-            <div className="word-card" onClick={onOpenTopics} style={{ cursor: 'pointer' }}>
+            <div className="word-card" style={{ cursor: 'pointer' }} onClick={e => { e.stopPropagation(); answered?.wasCorrect ? advance() : onOpenTopics(); }}>
               {topic && (
                 <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
               )}
@@ -500,7 +504,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
             </button>
           </div>
         ) : (
-          <div className="options-grid">
+          <div className="options-grid" onClick={handleMainZoneTap}>
             {options.map((opt, i) => {
               let cls = 'option-btn';
               if (answered) {
@@ -514,6 +518,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
                   className={cls}
                   onClick={() => handleAnswer(opt)}
                   disabled={!!answered}
+                  style={answered ? { pointerEvents: 'none' } : undefined}
                 >
                   {opt}
                 </button>
