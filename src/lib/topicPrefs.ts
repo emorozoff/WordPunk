@@ -4,6 +4,9 @@ const KEY = 'wordpunk_topic_prefs';
 export type PrefLevel = 0 | 1 | 2;
 export type TopicPrefs = Record<string, PrefLevel>;
 
+// Темы с возрастным ограничением — по умолчанию выключены
+const ADULT_TOPIC_IDS = new Set(['swearing']);
+
 export function loadTopicPrefs(): TopicPrefs {
   try {
     const raw = localStorage.getItem(KEY);
@@ -18,7 +21,8 @@ export function saveTopicPrefs(prefs: TopicPrefs): void {
 }
 
 export function getPref(prefs: TopicPrefs, topicId: string): PrefLevel {
-  return (prefs[topicId] as PrefLevel | undefined) ?? 1;
+  const defaultLevel: PrefLevel = ADULT_TOPIC_IDS.has(topicId) ? 0 : 1;
+  return (prefs[topicId] as PrefLevel | undefined) ?? defaultLevel;
 }
 
 export function getWeight(prefs: TopicPrefs, topicId: string): number {

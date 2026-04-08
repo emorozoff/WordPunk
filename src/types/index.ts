@@ -22,6 +22,7 @@ export interface Topic {
   id: string;
   name: string;
   emoji: string;
+  isAdult?: boolean;
 }
 
 export interface SessionCard {

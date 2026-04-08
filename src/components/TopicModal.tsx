@@ -163,8 +163,42 @@ const TopicModal: FC<Props> = ({ onClose }) => {
           );
         })()}
 
+        {/* Взрослые темы — отдельная секция вверху */}
+        {TOPICS.filter(t => t.isAdult).length > 0 && (
+          <div className="topic-adult-section">
+            <div className="topic-adult-header">18+</div>
+            {TOPICS.filter(t => t.isAdult).map(topic => {
+              const pref = getPref(prefs, topic.id);
+              const s = stats[topic.id] ?? { total: 0, known: 0 };
+              const pct = s.total > 0 ? (s.known / s.total) * 100 : 0;
+              return (
+                <div key={topic.id} className={`topic-item topic-item-adult pref-${pref}`}>
+                  <div className="topic-item-row">
+                    <div className="topic-item-left">
+                      <span className="topic-emoji">{topic.emoji}</span>
+                      <span className="topic-name">{topic.name}</span>
+                    </div>
+                    <div className="topic-item-right">
+                      <span className="topic-progress-count">{s.known}/{s.total}</span>
+                      <button
+                        className={`pref-toggle pref-toggle-${pref}`}
+                        onClick={() => toggle(topic.id)}
+                      >
+                        {PREF_LABELS[pref]}
+                      </button>
+                    </div>
+                  </div>
+                  <div className="topic-progress-bar">
+                    <div className="topic-progress-fill topic-progress-fill-adult" style={{ width: `${pct}%` }} />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
         <div className="topics-list">
-          {TOPICS.filter(t => t.id !== 'custom' && t.id !== 'basic').map(topic => {
+          {TOPICS.filter(t => t.id !== 'custom' && t.id !== 'basic' && !t.isAdult).map(topic => {
             const pref = getPref(prefs, topic.id);
             const s = stats[topic.id] ?? { total: 0, known: 0 };
             const pct = s.total > 0 ? (s.known / s.total) * 100 : 0;

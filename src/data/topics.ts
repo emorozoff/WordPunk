@@ -2,6 +2,7 @@ import type { Topic } from '../types';
 
 export const TOPICS: Topic[] = [
   { id: 'basic',      name: 'Основа языка',               emoji: '⚡' },
+  { id: 'swearing',   name: '18+ Ругательства',           emoji: '🤬', isAdult: true },
   { id: 'home',       name: 'Дома и в быту',              emoji: '🏠' },
   { id: 'restaurant', name: 'В ресторане и кафе',          emoji: '🍽️' },
   { id: 'shopping',   name: 'В магазине и шопинг',         emoji: '🛍️' },
