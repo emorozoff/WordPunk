@@ -9,7 +9,7 @@ import {
 import { WORDS } from '../data/words';
 import { UNIQUE_WORD_COUNT } from '../data/wordCount';
 import {
-  buildQueue, generateOptions, processAnswer, finalizeLevel0Card,
+  buildQueue, generateOptions, processAnswer, processLevel0Answer,
   createInitialProgress, getCurrentLevel, getLevelProgress,
   getToday,
 } from '../lib/srs';
@@ -238,18 +238,34 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     const isLevel0 = progressFromDB.level === 0;
 
     if (isLevel0) {
-      // Уровень 0: до 3 показов в сессии, в DB не пишем до финального
+      // Уровень 0: прогресс сохраняется в DB после каждого ответа.
+      // 3 правильных подряд (consecutiveCorrect >= 3) → уровень 1, независимо от сессии.
+      // Ошибка сбрасывает consecutiveCorrect.
       const existing = sessionDataRef.current.get(sc.card.id) ?? { shows: 0, correctCount: 0, wrongCount: 0 };
       const newShows = existing.shows + 1;
-      const newCorrectCount = existing.correctCount + (isCorrect ? 1 : 0);
-      const newWrongCount = existing.wrongCount + (isCorrect ? 0 : 1);
-      sessionDataRef.current.set(sc.card.id, { shows: newShows, correctCount: newCorrectCount, wrongCount: newWrongCount });
+      sessionDataRef.current.set(sc.card.id, {
+        shows: newShows,
+        correctCount: existing.correctCount + (isCorrect ? 1 : 0),
+        wrongCount: existing.wrongCount + (isCorrect ? 0 : 1),
+      });
 
-      // TEMP: при первом правильном ответе на новое слово — сразу +1 в счётчик
-      // Берём текущий стейт knownCount, а не DB — иначе счётчик сбрасывается каждый раз
-      // TODO v1.0: убрать, вернуть дробную систему
+      // Сохраняем в DB сразу после каждого ответа
+      const newProgress = processLevel0Answer(progressFromDB, isCorrect);
+      await putProgress(newProgress);
+
       if (isCorrect) showXp();
-      if (isCorrect && newShows === 1) {
+
+      if (newProgress.level === 1) {
+        // Слово выучено (3 правильных подряд) — берём счётчик из DB
+        const newKnown = await getKnownCount();
+        setKnownCount(newKnown);
+        const newLvl = getCurrentLevel(newKnown);
+        if (newLvl.title !== prevLevelRef.current) {
+          prevLevelRef.current = newLvl.title;
+          setTimeout(() => { playLevelUp(); setLevelUp({ title: newLvl.title, description: newLvl.description }); }, 800);
+        }
+      } else if (isCorrect && newShows === 1) {
+        // Первый правильный ответ в этой сессии — оптимистичный +1 в счётчик
         const tentative = knownCount + 1;
         setKnownCount(tentative);
         const newLvl = getCurrentLevel(tentative);
@@ -259,8 +275,8 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         }
       }
 
+      // Вставляем обратно в очередь (не более 3 показов за сессию)
       if (newShows < 3) {
-        // Вставляем карточку обратно в очередь: ~10-15 карточек для 2-го показа, ~20-30 для 3-го
         const offset = newShows === 1
           ? 10 + Math.floor(Math.random() * 6)   // 10–15 карточек
           : 20 + Math.floor(Math.random() * 11);  // 20–30 карточек
@@ -270,17 +286,6 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           newQueue.splice(insertIdx, 0, { ...sc, isRetry: true });
           return newQueue;
         });
-      } else {
-        // 3-й показ: финализируем и сохраняем в DB
-        const finalProgress = finalizeLevel0Card(progressFromDB, newCorrectCount, newWrongCount);
-        await putProgress(finalProgress);
-        const newKnown = await getKnownCount();
-        setKnownCount(newKnown);
-        const newLvl = getCurrentLevel(newKnown);
-        if (newLvl.title !== prevLevelRef.current) {
-          prevLevelRef.current = newLvl.title;
-          setTimeout(() => { playLevelUp(); setLevelUp({ title: newLvl.title, description: newLvl.description }); }, 800);
-        }
       }
     } else {
       // Уровень 1–5: стандартный SRS
@@ -403,7 +408,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.44</span>
+          <span className="header-version">v0.45</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>

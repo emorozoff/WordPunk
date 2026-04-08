@@ -54,23 +54,44 @@ export function processAnswer(
   }
 }
 
-// Финализация слова уровня 0 после 3 показов в сессии
-// Если все 3 правильно → уровень 1 (следующий показ завтра)
-// Если была хоть одна ошибка → остаётся на уровне 0 (завтра снова)
-export function finalizeLevel0Card(
+// Обработка ответа для слов уровня 0.
+// Прогресс сохраняется в DB после каждого ответа.
+// Продвижение на уровень 1 происходит при 3 правильных подряд (consecutiveCorrect >= 3),
+// независимо от того, были они в одной сессии или в разных.
+// Ошибка сбрасывает consecutiveCorrect в 0.
+export function processLevel0Answer(
   progress: CardProgress,
-  correctCount: number,
-  wrongCount: number,
+  correct: boolean,
 ): CardProgress {
-  const allCorrect = wrongCount === 0;
-  return {
-    ...progress,
-    level: allCorrect ? 1 : 0,
-    consecutiveCorrect: allCorrect ? 1 : 0,
-    totalCorrect: progress.totalCorrect + correctCount,
-    totalWrong: progress.totalWrong + wrongCount,
-    nextReviewDate: addDays(getToday(), 1), // завтра в любом случае
-  };
+  const today = getToday();
+  if (correct) {
+    const newConsecutive = progress.consecutiveCorrect + 1;
+    if (newConsecutive >= 3) {
+      // 3 правильных подряд → уровень 1, следующий показ завтра
+      return {
+        ...progress,
+        level: 1,
+        consecutiveCorrect: newConsecutive,
+        totalCorrect: progress.totalCorrect + 1,
+        nextReviewDate: addDays(today, SRS_INTERVALS[1]!),
+      };
+    }
+    return {
+      ...progress,
+      level: 0,
+      consecutiveCorrect: newConsecutive,
+      totalCorrect: progress.totalCorrect + 1,
+      nextReviewDate: today, // доступно сегодня — в следующей сессии покажется снова
+    };
+  } else {
+    return {
+      ...progress,
+      level: 0,
+      consecutiveCorrect: 0,
+      totalWrong: progress.totalWrong + 1,
+      nextReviewDate: today,
+    };
+  }
 }
 
 // Build the session queue
