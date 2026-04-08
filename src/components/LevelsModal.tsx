@@ -1,5 +1,5 @@
-import { FC, useRef, useState, useEffect } from 'react';
-import { LEVELS } from '../lib/srs';
+import { FC, useRef } from 'react';
+import { LEVELS, getCurrentLevel, getLevelProgress } from '../lib/srs';
 
 interface Props {
   knownCount: number;
@@ -7,31 +7,15 @@ interface Props {
 }
 
 const DISMISS_THRESHOLD = 100;
-const GLITCH_CHARS = '!@#$%^&*<>?/|{}[]░▒▓■□~`';
-
-const GlitchText: FC<{ text: string }> = ({ text }) => {
-  const [display, setDisplay] = useState(text);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDisplay(
-        text.split('').map(char =>
-          char === ' ' ? ' ' : Math.random() < 0.45
-            ? GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)]!
-            : char
-        ).join('')
-      );
-    }, 80);
-    return () => clearInterval(interval);
-  }, [text]);
-
-  return <>{display}</>;
-};
 
 const LevelsModal: FC<Props> = ({ knownCount, onClose }) => {
   const sheetRef = useRef<HTMLDivElement>(null);
   const dragStartY = useRef(0);
   const isDragging = useRef(false);
+
+  const currentLevel = getCurrentLevel(knownCount);
+  const levelPct = getLevelProgress(knownCount);
+  const wordsUntilNext = currentLevel.nextMin - knownCount;
 
   let currentIdx = 0;
   for (let i = 0; i < LEVELS.length; i++) {
@@ -90,9 +74,27 @@ const LevelsModal: FC<Props> = ({ knownCount, onClose }) => {
       >
         <div className="modal-handle" />
         <div className="modal-title">УРОВНИ_</div>
+
+        {/* Текущий уровень — выделен */}
+        <div className="levels-current-card">
+          <div className="levels-current-label">твой уровень</div>
+          <div className="levels-current-title">{currentLevel.title}</div>
+          <div className="levels-current-desc">{currentLevel.description}</div>
+          <div className="levels-current-progress">
+            <div className="levels-current-track">
+              <div className="levels-current-fill" style={{ width: `${levelPct}%` }} />
+            </div>
+            {wordsUntilNext > 0 && (
+              <div className="levels-current-until">
+                ещё {wordsUntilNext} {wordsUntilNext === 1 ? 'слово' : wordsUntilNext <= 4 ? 'слова' : 'слов'} до следующего уровня
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Список всех уровней */}
         <div className="levels-list">
           {LEVELS.map((lvl, idx) => {
-            const title = lvl.title.replace(/^уровень:\s*/i, '');
             const isPast = idx < currentIdx;
             const isCurrent = idx === currentIdx;
             const isFuture = idx > currentIdx;
@@ -104,8 +106,11 @@ const LevelsModal: FC<Props> = ({ knownCount, onClose }) => {
                 <span className="level-row-icon">
                   {isPast ? '✓' : isCurrent ? '→' : '·'}
                 </span>
-                <span className="level-row-title">
-                  {isFuture ? <GlitchText text={title} /> : title}
+                <span className="level-row-body">
+                  <span className="level-row-title">{lvl.title}</span>
+                  {!isFuture && (
+                    <span className="level-row-desc">{lvl.description}</span>
+                  )}
                 </span>
                 <span className="level-row-min">{lvl.min}</span>
               </div>

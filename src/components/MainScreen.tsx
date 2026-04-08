@@ -56,7 +56,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const [displayWord, setDisplayWord] = useState('');
   const [isTyping, setIsTyping]     = useState(false);
   const [knownCount, setKnownCount] = useState(0);
-  const [levelUpTitle, setLevelUpTitle] = useState<string | null>(null);
+  const [levelUp, setLevelUp] = useState<{ title: string; description: string } | null>(null);
   const [xpToastKey, setXpToastKey] = useState(0); // каждый инкремент — новая анимация
   const [showXpToast, setShowXpToast] = useState(false);
   const xpToastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -255,7 +255,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         const newLvl = getCurrentLevel(tentative);
         if (newLvl.title !== prevLevelRef.current) {
           prevLevelRef.current = newLvl.title;
-          setTimeout(() => { playLevelUp(); setLevelUpTitle(newLvl.title); }, 800);
+          setTimeout(() => { playLevelUp(); setLevelUp({ title: newLvl.title, description: newLvl.description }); }, 800);
         }
       }
 
@@ -279,7 +279,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         const newLvl = getCurrentLevel(newKnown);
         if (newLvl.title !== prevLevelRef.current) {
           prevLevelRef.current = newLvl.title;
-          setTimeout(() => { playLevelUp(); setLevelUpTitle(newLvl.title); }, 800);
+          setTimeout(() => { playLevelUp(); setLevelUp({ title: newLvl.title, description: newLvl.description }); }, 800);
         }
       }
     } else {
@@ -293,7 +293,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       const newLvl = getCurrentLevel(newKnown);
       if (newLvl.title !== prevLevelRef.current) {
         prevLevelRef.current = newLvl.title;
-        setTimeout(() => { playLevelUp(); setLevelUpTitle(newLvl.title); }, 800);
+        setTimeout(() => { playLevelUp(); setLevelUp({ title: newLvl.title, description: newLvl.description }); }, 800);
       }
     }
 
@@ -340,7 +340,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     if (newLvl.title !== prevLevelRef.current) {
       prevLevelRef.current = newLvl.title;
       playLevelUp();
-      setLevelUpTitle(newLvl.title);
+      setLevelUp({ title: newLvl.title, description: newLvl.description });
     }
     setDebugOpen(false);
   };
@@ -352,7 +352,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     const newLvl = getCurrentLevel(next);
     prevLevelRef.current = newLvl.title;
     playLevelUp();
-    setLevelUpTitle(newLvl.title);
+    setLevelUp({ title: newLvl.title, description: newLvl.description });
     setDebugOpen(false);
   };
 
@@ -531,10 +531,11 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
 
       {/* XP toast */}
       {/* Level up popup */}
-      {levelUpTitle && (
+      {levelUp && (
         <LevelUpPopup
-          title={levelUpTitle}
-          onClose={() => setLevelUpTitle(null)}
+          title={levelUp.title}
+          description={levelUp.description}
+          onClose={() => setLevelUp(null)}
         />
       )}
 

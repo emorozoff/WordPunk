@@ -794,11 +794,25 @@ button {
   width: 14px;
   flex-shrink: 0;
   text-align: center;
+  margin-top: 2px;
+}
+
+.level-row-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .level-row-title {
-  flex: 1;
   font-size: 13px;
+  line-height: 1.3;
+}
+
+.level-row-desc {
+  font-size: 11px;
+  opacity: 0.55;
+  font-weight: 400;
   line-height: 1.3;
 }
 
@@ -806,6 +820,8 @@ button {
   font-size: 11px;
   opacity: 0.4;
   flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 2px;
 }
 
 .level-row-past {
@@ -822,12 +838,76 @@ button {
   font-size: 14px;
 }
 
+.level-row-current .level-row-desc {
+  opacity: 0.7;
+}
+
 .level-row-current .level-row-icon {
   color: var(--accent-green);
 }
 
 .level-row-future {
-  opacity: 0.35;
+  opacity: 0.3;
+}
+
+/* Текущий уровень — карточка в LevelsModal */
+.levels-current-card {
+  background: rgba(0, 255, 136, 0.05);
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.levels-current-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-green);
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.levels-current-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--accent-green);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.levels-current-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.levels-current-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.levels-current-track {
+  height: 3px;
+  background: rgba(0, 255, 136, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.levels-current-fill {
+  height: 100%;
+  background: var(--accent-green);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.levels-current-until {
+  font-size: 11px;
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 .topic-item {
@@ -1088,7 +1168,8 @@ button {
 
 .levelup-icon { font-size: 48px; margin-bottom: 10px; }
 .levelup-label { font-size: 9px; color: var(--text-muted); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
-.levelup-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--accent-amber); letter-spacing: 2px; margin-bottom: 24px; line-height: 1.3; }
+.levelup-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--accent-amber); letter-spacing: 2px; margin-bottom: 10px; line-height: 1.3; }
+.levelup-description { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 24px; }
 .levelup-btn {
   background: rgba(255,170,0,0.1);
   border: 1px solid var(--accent-amber);
