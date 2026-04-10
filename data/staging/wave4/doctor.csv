@@ -1,0 +1,80 @@
+cardiologist,кардиолог,The **cardiologist** reviewed his heart scan results carefully.,3,doctor
+neurologist,невролог,A **neurologist** diagnosed her chronic migraine condition.,3,doctor
+oncologist,онколог,The **oncologist** explained the next treatment phase.,3,doctor
+dermatologist,дерматолог,Her **dermatologist** prescribed cream for the stubborn eczema.,3,doctor
+endocrinologist,эндокринолог,The **endocrinologist** adjusted his daily insulin dose.,4,doctor
+gastroenterologist,гастроэнтеролог,A **gastroenterologist** should examine that stomach pain.,4,doctor
+urologist,уролог,The **urologist** ordered a kidney function test.,3,doctor
+pulmonologist,пульмонолог,A **pulmonologist** treats serious lung diseases every day.,4,doctor
+rheumatologist,ревматолог,The **rheumatologist** confirmed his joint inflammation diagnosis.,4,doctor
+gynecologist,гинеколог,She scheduled her yearly **gynecologist** exam next week.,3,doctor
+obstetrician,акушер,The **obstetrician** delivered their first baby last night.,3,doctor
+pediatrician,педиатр,Our **pediatrician** gave the toddler her routine shots.,3,doctor
+radiologist,рентгенолог,The **radiologist** examined her chest scan images closely.,3,doctor
+anesthesiologist,анестезиолог,The **anesthesiologist** monitored vital signs during surgery.,4,doctor
+ophthalmologist,офтальмолог,Her **ophthalmologist** detected early signs of glaucoma.,4,doctor
+psychiatrist,психиатр,A **psychiatrist** prescribed antidepressants for his condition.,3,doctor
+podiatrist,подиатр,The **podiatrist** treated his painful ingrown toenail.,4,doctor
+hematologist,гематолог,A **hematologist** studies blood disorders and diseases.,4,doctor
+nephrologist,нефролог,The **nephrologist** placed him on dialysis treatment.,4,doctor
+angiogram,ангиограмма,His **angiogram** showed two blocked coronary arteries.,4,doctor
+angioplasty,ангиопластика,Doctors performed an emergency **angioplasty** to clear the artery.,4,doctor
+catheter,катетер,The nurse inserted a **catheter** before the procedure.,3,doctor
+laparoscopy,лапароскопия,A **laparoscopy** is less invasive than open surgery.,4,doctor
+chemotherapy,химиотерапия,Her **chemotherapy** caused severe nausea and hair loss.,3,doctor
+radiotherapy,лучевая терапия,Daily **radiotherapy** sessions shrank the brain tumor.,4,doctor
+immunotherapy,иммунотерапия,**Immunotherapy** helps the body fight cancer cells naturally.,4,doctor
+dialysis,диализ,He goes to **dialysis** three times every week.,3,doctor
+transplant,трансплантация,The kidney **transplant** saved his life last year.,3,doctor
+amputation,ампутация,The **amputation** was the only remaining option.,4,doctor
+eeg,ээг,An **eeg** recorded unusual brain wave activity.,4,doctor
+echocardiogram,эхокардиограмма,An **echocardiogram** shows how the heart valves move.,4,doctor
+urinalysis,анализ мочи,A routine **urinalysis** detected traces of blood.,4,doctor
+cholesterol,холестерин,His **cholesterol** level remains dangerously high today.,3,doctor
+carcinoma,карцинома,The biopsy confirmed a small skin **carcinoma**.,4,doctor
+leukemia,лейкемия,Childhood **leukemia** has become much more treatable.,4,doctor
+lymphoma,лимфома,The **lymphoma** responded well to immunotherapy treatment.,4,doctor
+hypertension,гипертония,Chronic **hypertension** can damage your kidneys and heart.,3,doctor
+arrhythmia,аритмия,His **arrhythmia** was controlled with daily medication.,4,doctor
+aneurysm,аневризма,Doctors discovered a small aortic **aneurysm** during screening.,4,doctor
+embolism,эмболия,A pulmonary **embolism** can be rapidly fatal.,4,doctor
+pneumonia,пневмония,The elderly patient developed **pneumonia** after surgery.,3,doctor
+bronchitis,бронхит,Her chronic **bronchitis** worsens during cold weather.,3,doctor
+tuberculosis,туберкулёз,**Tuberculosis** still affects millions of people worldwide.,3,doctor
+hepatitis,гепатит,He tested positive for **hepatitis** during his checkup.,3,doctor
+cirrhosis,цирроз,Heavy drinking caused his advanced liver **cirrhosis**.,4,doctor
+osteoporosis,остеопороз,**Osteoporosis** makes bones fragile and easily broken.,4,doctor
+dementia,деменция,Her grandmother struggles with early stage **dementia**.,3,doctor
+melanoma,меланома,Early detection of **melanoma** saves countless lives.,4,doctor
+sepsis,сепсис,The wound infection progressed to severe **sepsis**.,4,doctor
+analgesic,обезболивающее,The dentist gave him a strong **analgesic** afterward.,4,doctor
+antiviral,противовирусное,The **antiviral** medication shortened her flu symptoms.,3,doctor
+antifungal,противогрибковое,An **antifungal** cream cleared up her skin rash.,4,doctor
+antihistamine,антигистамин,She takes an **antihistamine** for her seasonal allergies.,3,doctor
+decongestant,противозастойное,A nasal **decongestant** helped clear his blocked nose.,3,doctor
+diuretic,диуретик,The **diuretic** reduced his swelling and blood pressure.,4,doctor
+insulin,инсулин,He injects **insulin** every morning before breakfast.,3,doctor
+placebo,плацебо,The **placebo** group showed surprising improvement anyway.,3,doctor
+jaundice,желтуха,The baby developed mild **jaundice** right after birth.,4,doctor
+lesion,повреждение,The **lesion** on his arm needed a biopsy.,4,doctor
+spasm,спазм,A sudden muscle **spasm** made him drop the glass.,3,doctor
+tremor,тремор,His hand **tremor** worsened over the last year.,3,doctor
+paralysis,паралич,The stroke caused temporary **paralysis** on her left side.,4,doctor
+vertigo,головокружение,Severe **vertigo** left him unable to stand upright.,4,doctor
+diarrhea,диарея,The child had **diarrhea** for three straight days.,2,doctor
+constipation,запор,Fiber really helps prevent **constipation** in older adults.,3,doctor
+tachycardia,тахикардия,**Tachycardia** means the heart beats too quickly.,4,doctor
+ventilator,аппарат ивл,The patient needed a **ventilator** to breathe properly.,3,doctor
+cpr,сердечно-лёгочная реанимация,The bystander performed **cpr** until the ambulance arrived.,3,doctor
+defibrillator,дефибриллятор,The **defibrillator** restored his normal heart rhythm instantly.,4,doctor
+transfusion,переливание крови,He received a blood **transfusion** after the accident.,3,doctor
+donor,донор,The organ **donor** saved three different lives.,3,doctor
+chronic,хронический,She has suffered from **chronic** back pain for years.,3,doctor
+acute,острый,The **acute** appendicitis required immediate surgical intervention.,3,doctor
+benign,доброкачественный,Thankfully the tumor turned out to be **benign**.,3,doctor
+malignant,злокачественный,The cells were identified as **malignant** under microscope.,4,doctor
+remission,ремиссия,Her cancer has been in full **remission** for years.,4,doctor
+quarantine,карантин,Infected patients remained in **quarantine** for two weeks.,3,doctor
+contagious,заразный,The measles virus is highly **contagious** among children.,3,doctor
+antibody,антитело,The blood test measured his **antibody** levels precisely.,3,doctor
+chiropractor,хиропрактик,The **chiropractor** adjusted his lower back gently.,3,doctor

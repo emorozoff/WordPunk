@@ -1,0 +1,80 @@
+stoppayment,приказ о приостановке платежа,"She issued a **stoppayment** on the lost check.",3,bank
+uncleared,неочищенный,"The **uncleared** funds appeared in her balance briefly.",3,bank
+pending,в обработке,"Your wire transfer is still **pending** until morning.",2,bank
+nsf,недостаточно средств,"The check bounced with an **nsf** notice attached.",3,bank
+insufficient,недостаточный,"His account had **insufficient** funds to cover rent.",2,bank
+bankdraft,банковская тратта,"He paid the tuition with a **bankdraft** yesterday.",3,bank
+moneyorder,денежный перевод,"She mailed a **moneyorder** to her grandmother.",2,bank
+bounced,отклонён,"Her rent check **bounced** twice last month.",2,bank
+demand,по требованию,"This is a **demand** deposit paying no interest.",2,bank
+magstripe,магнитная полоса,"The **magstripe** on my card stopped working.",3,bank
+embossed,тиснёный,"His name was **embossed** on the gold card.",3,bank
+expiry,срок действия,"Check the **expiry** date before using the card.",2,bank
+cvv,код CVV,"Never share your **cvv** over the phone.",2,bank
+tokenization,токенизация,"**Tokenization** replaces card numbers during online checkout.",4,bank
+cloning,клонирование,"Card **cloning** is a serious fraud problem today.",3,bank
+fraudulent,мошеннический,"The bank flagged several **fraudulent** charges quickly.",3,bank
+mutual,взаимный,"He invested his savings in a **mutual** fund.",2,bank
+ticker,биржевой тикер,"The **ticker** scrolled across the screen all morning.",2,bank
+divest,продавать активы,"She decided to **divest** from risky holdings.",4,bank
+rebalance,ребалансировать,"He chose to **rebalance** his portfolio every quarter.",4,bank
+vesting,переход прав,"The stock **vesting** period lasts four full years.",4,bank
+devaluation,девальвация,"The **devaluation** wiped out half his savings.",4,bank
+pegged,привязанный,"Their currency is **pegged** to the dollar.",3,bank
+floating,плавающий,"Most countries use a **floating** exchange rate today.",3,bank
+correspondent,корреспондент,"The **correspondent** bank handled the foreign transfer.",4,bank
+interbank,межбанковский,"The **interbank** rate moved sharply this morning.",4,bank
+eurobond,еврооблигация,"He bought a **eurobond** for steady coupon income.",4,bank
+eurodollar,евродоллар,"The **eurodollar** market trades dollars held abroad.",5,bank
+petrodollar,нефтедоллар,"Oil exporters recycled their **petrodollar** surpluses heavily.",5,bank
+crossrate,кросс-курс,"The **crossrate** between yen and euro shifted today.",4,bank
+exchangerate,обменный курс,"The **exchangerate** changed twice during the afternoon.",2,bank
+moneymarket,денежный рынок,"She parked savings in a **moneymarket** account briefly.",3,bank
+rating,рейтинг,"His credit **rating** improved after paying debts.",2,bank
+downgrade,понижение,"The agency issued a **downgrade** on the bond.",3,bank
+benchmark,эталонная ставка,"The loan tracks a global **benchmark** rate monthly.",3,bank
+bankruptcy,банкротство,"The company filed for **bankruptcy** last week.",3,bank
+stimulus,стимул,"The **stimulus** checks arrived during the recession.",3,bank
+deflation,дефляция,"Long **deflation** can devastate any modern economy.",4,bank
+creditworthy,кредитоспособный,"Only **creditworthy** borrowers receive the lowest rates.",3,bank
+billing,биллинг,"Check the **billing** statement before paying anything.",2,bank
+offshore,оффшорный,"He held funds in an **offshore** account.",3,bank
+onshore,внутренний,"**Onshore** banking rules are stricter than offshore ones.",3,bank
+haven,убежище,"Switzerland was once a famous tax **haven**.",3,bank
+fiduciary,доверительный,"Advisors owe a **fiduciary** duty to their clients.",4,bank
+reinvest,реинвестировать,"She chose to **reinvest** the dividend automatically.",3,bank
+capitalize,капитализировать,"Small banks struggle to **capitalize** themselves properly.",3,bank
+listing,листинг,"The company pursued a **listing** on the exchange.",3,bank
+prospectus,проспект эмиссии,"Read the **prospectus** before buying any bond.",4,bank
+tranche,транш,"The senior **tranche** gets paid first every month.",4,bank
+syndicate,синдикат,"A **syndicate** of banks financed the huge loan.",4,bank
+nostro,ностро-счёт,"Our **nostro** account holds euros at their bank.",5,bank
+vostro,востро-счёт,"Their **vostro** account lets them access our rubles.",5,bank
+obligor,должник,"The **obligor** failed to make the payment.",4,bank
+obligation,обязательство,"He signed the **obligation** without reading it carefully.",2,bank
+dovish,мягкая политика,"The **dovish** central banker favored lower rates.",5,bank
+hawkish,жёсткая политика,"Her **hawkish** speech pushed bond yields higher.",5,bank
+securitize,секьюритизировать,"Banks often **securitize** their mortgage portfolios.",5,bank
+accrual,начисление,"Interest **accrual** starts on the settlement day.",4,bank
+accrue,начислять,"Penalties **accrue** daily on overdue accounts.",3,bank
+inward,входящий,"The **inward** remittance arrived from overseas today.",3,bank
+outward,исходящий,"He blocked the **outward** wire at the last minute.",3,bank
+disclosure,раскрытие информации,"The **disclosure** listed every single account fee.",3,bank
+bankbook,сберегательная книжка,"Grandma still keeps an old **bankbook** in her drawer.",2,bank
+compounding,сложные проценты,"**Compounding** interest turns small savings into big sums.",3,bank
+roundup,округление,"The **roundup** app saves spare change automatically.",2,bank
+platinum,платиновый,"He qualified for the **platinum** rewards card.",2,bank
+bullion,банковские слитки,"The vault stored tons of gold **bullion**.",3,bank
+ingot,слиток,"Each silver **ingot** weighs exactly one kilogram.",3,bank
+hallmark,клеймо,"The **hallmark** confirms the gold bar is genuine.",3,bank
+fiat,фиатные деньги,"**Fiat** money has no intrinsic commodity value.",4,bank
+cashflow,денежный поток,"Her small business needed better **cashflow** this quarter.",3,bank
+lockbox,абонентский ящик,"The company rented a **lockbox** for customer payments.",3,bank
+stake,доля,"He bought a small **stake** in the startup.",2,bank
+shareholder,акционер,"Every **shareholder** received a voting ballot yesterday.",2,bank
+stockholder,владелец акций,"The **stockholder** attended the annual meeting remotely.",2,bank
+buyback,обратный выкуп,"The board announced a massive share **buyback** today.",3,bank
+haircut,дисконт,"Creditors agreed to a thirty percent **haircut**.",4,bank
+writeoff,списание,"The bank booked a huge loan **writeoff** this quarter.",3,bank
+goodwill,деловая репутация,"**Goodwill** represents brand value on the balance sheet.",3,bank
+overnight,овернайт,"The **overnight** rate dropped sharply after the meeting.",3,bank

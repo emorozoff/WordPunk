@@ -204,3 +204,84 @@ operation,операция,The **operation** went smoothly and lasted two hours.
 doctors,врачи,The **doctors** worked hard to save his life.,2
 patients,пациенты,The doctor sees many **patients** each day.,2
 treatment,лечение,The doctor recommended a new **treatment** for the illness.,3
+treated,лечил,The doctor **treated** my broken arm,3
+cardiologist,кардиолог,The **cardiologist** reviewed his heart scan results carefully.,3
+neurologist,невролог,A **neurologist** diagnosed her chronic migraine condition.,3
+oncologist,онколог,The **oncologist** explained the next treatment phase.,3
+dermatologist,дерматолог,Her **dermatologist** prescribed cream for the stubborn eczema.,3
+endocrinologist,эндокринолог,The **endocrinologist** adjusted his daily insulin dose.,4
+gastroenterologist,гастроэнтеролог,A **gastroenterologist** should examine that stomach pain.,4
+urologist,уролог,The **urologist** ordered a kidney function test.,3
+pulmonologist,пульмонолог,A **pulmonologist** treats serious lung diseases every day.,4
+rheumatologist,ревматолог,The **rheumatologist** confirmed his joint inflammation diagnosis.,4
+gynecologist,гинеколог,She scheduled her yearly **gynecologist** exam next week.,3
+obstetrician,акушер,The **obstetrician** delivered their first baby last night.,3
+pediatrician,педиатр,Our **pediatrician** gave the toddler her routine shots.,3
+radiologist,рентгенолог,The **radiologist** examined her chest scan images closely.,3
+anesthesiologist,анестезиолог,The **anesthesiologist** monitored vital signs during surgery.,4
+ophthalmologist,офтальмолог,Her **ophthalmologist** detected early signs of glaucoma.,4
+psychiatrist,психиатр,A **psychiatrist** prescribed antidepressants for his condition.,3
+podiatrist,подиатр,The **podiatrist** treated his painful ingrown toenail.,4
+hematologist,гематолог,A **hematologist** studies blood disorders and diseases.,4
+nephrologist,нефролог,The **nephrologist** placed him on dialysis treatment.,4
+angiogram,ангиограмма,His **angiogram** showed two blocked coronary arteries.,4
+angioplasty,ангиопластика,Doctors performed an emergency **angioplasty** to clear the artery.,4
+catheter,катетер,The nurse inserted a **catheter** before the procedure.,3
+laparoscopy,лапароскопия,A **laparoscopy** is less invasive than open surgery.,4
+chemotherapy,химиотерапия,Her **chemotherapy** caused severe nausea and hair loss.,3
+radiotherapy,лучевая терапия,Daily **radiotherapy** sessions shrank the brain tumor.,4
+immunotherapy,иммунотерапия,**Immunotherapy** helps the body fight cancer cells naturally.,4
+dialysis,диализ,He goes to **dialysis** three times every week.,3
+transplant,трансплантация,The kidney **transplant** saved his life last year.,3
+amputation,ампутация,The **amputation** was the only remaining option.,4
+eeg,ээг,An **eeg** recorded unusual brain wave activity.,4
+echocardiogram,эхокардиограмма,An **echocardiogram** shows how the heart valves move.,4
+urinalysis,анализ мочи,A routine **urinalysis** detected traces of blood.,4
+cholesterol,холестерин,His **cholesterol** level remains dangerously high today.,3
+carcinoma,карцинома,The biopsy confirmed a small skin **carcinoma**.,4
+leukemia,лейкемия,Childhood **leukemia** has become much more treatable.,4
+lymphoma,лимфома,The **lymphoma** responded well to immunotherapy treatment.,4
+hypertension,гипертония,Chronic **hypertension** can damage your kidneys and heart.,3
+arrhythmia,аритмия,His **arrhythmia** was controlled with daily medication.,4
+aneurysm,аневризма,Doctors discovered a small aortic **aneurysm** during screening.,4
+embolism,эмболия,A pulmonary **embolism** can be rapidly fatal.,4
+pneumonia,пневмония,The elderly patient developed **pneumonia** after surgery.,3
+bronchitis,бронхит,Her chronic **bronchitis** worsens during cold weather.,3
+tuberculosis,туберкулёз,**Tuberculosis** still affects millions of people worldwide.,3
+hepatitis,гепатит,He tested positive for **hepatitis** during his checkup.,3
+cirrhosis,цирроз,Heavy drinking caused his advanced liver **cirrhosis**.,4
+osteoporosis,остеопороз,**Osteoporosis** makes bones fragile and easily broken.,4
+dementia,деменция,Her grandmother struggles with early stage **dementia**.,3
+melanoma,меланома,Early detection of **melanoma** saves countless lives.,4
+sepsis,сепсис,The wound infection progressed to severe **sepsis**.,4
+analgesic,обезболивающее,The dentist gave him a strong **analgesic** afterward.,4
+antiviral,противовирусное,The **antiviral** medication shortened her flu symptoms.,3
+antifungal,противогрибковое,An **antifungal** cream cleared up her skin rash.,4
+antihistamine,антигистамин,She takes an **antihistamine** for her seasonal allergies.,3
+decongestant,противозастойное,A nasal **decongestant** helped clear his blocked nose.,3
+diuretic,диуретик,The **diuretic** reduced his swelling and blood pressure.,4
+insulin,инсулин,He injects **insulin** every morning before breakfast.,3
+placebo,плацебо,The **placebo** group showed surprising improvement anyway.,3
+jaundice,желтуха,The baby developed mild **jaundice** right after birth.,4
+lesion,повреждение,The **lesion** on his arm needed a biopsy.,4
+spasm,спазм,A sudden muscle **spasm** made him drop the glass.,3
+tremor,тремор,His hand **tremor** worsened over the last year.,3
+paralysis,паралич,The stroke caused temporary **paralysis** on her left side.,4
+vertigo,головокружение,Severe **vertigo** left him unable to stand upright.,4
+diarrhea,диарея,The child had **diarrhea** for three straight days.,2
+constipation,запор,Fiber really helps prevent **constipation** in older adults.,3
+tachycardia,тахикардия,**Tachycardia** means the heart beats too quickly.,4
+ventilator,аппарат ивл,The patient needed a **ventilator** to breathe properly.,3
+cpr,сердечно-лёгочная реанимация,The bystander performed **cpr** until the ambulance arrived.,3
+defibrillator,дефибриллятор,The **defibrillator** restored his normal heart rhythm instantly.,4
+transfusion,переливание крови,He received a blood **transfusion** after the accident.,3
+donor,донор,The organ **donor** saved three different lives.,3
+chronic,хронический,She has suffered from **chronic** back pain for years.,3
+acute,острый,The **acute** appendicitis required immediate surgical intervention.,3
+benign,доброкачественный,Thankfully the tumor turned out to be **benign**.,3
+malignant,злокачественный,The cells were identified as **malignant** under microscope.,4
+remission,ремиссия,Her cancer has been in full **remission** for years.,4
+quarantine,карантин,Infected patients remained in **quarantine** for two weeks.,3
+contagious,заразный,The measles virus is highly **contagious** among children.,3
+antibody,антитело,The blood test measured his **antibody** levels precisely.,3
+chiropractor,хиропрактик,The **chiropractor** adjusted his lower back gently.,3

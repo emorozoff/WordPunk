@@ -202,3 +202,87 @@ computer,компьютер,My **computer** is running very slowly today.,1
 access,доступ,You need a password to get **access**.,3
 checking,проверяю,I'm **checking** my email for new messages.,2
 media,медиа,Social **media** has changed how we communicate.,3
+text,сообщение,Send me a **text** when you arrive,1
+issues,проблемы,We have some **issues** with the internet,2
+connected,соединён,My phone is **connected** to wifi,2
+secure,безопасный,Please keep your password in a **secure** place.,3
+frontend,фронтенд,The **frontend** team rebuilt the whole dashboard last sprint.,3
+backend,бэкенд,Our **backend** crashed when users uploaded huge files.,3
+fullstack,фулстек,She works as a **fullstack** developer at a startup.,4
+endpoint,эндпоинт,This API **endpoint** returns user data in seconds.,4
+payload,пейлоад,"Check the request **payload**, it might be malformed.",4
+webhook,вебхук,The service sends a **webhook** when orders complete.,4
+polling,опрос,Long **polling** keeps clients synced without websockets.,4
+websocket,веб-сокет,We switched chat to **websocket** for instant messaging.,4
+graphql,графкуэль,The **graphql** query returns exactly what the client needs.,5
+microservice,микросервис,Each **microservice** handles one specific business domain.,4
+monolith,монолит,"Our old **monolith** ran fine, but scaling hurt badly.",4
+deployment,деплоймент,The **deployment** failed because of a missing config file.,3
+rollout,раскатка,Gradual **rollout** helps catch bugs before full release.,4
+hotfix,хотфикс,"We shipped a **hotfix** overnight, fixing the crash.",4
+repository,репозиторий,Clone the **repository** and run the setup script first.,3
+bundler,бандлер,A modern **bundler** tree-shakes unused code automatically.,5
+transpile,транспайлить,We **transpile** modern javascript for older browsers still.,5
+polyfill,полифил,This **polyfill** adds support for missing browser features.,5
+serverless,бессерверный,The **serverless** function runs only when triggered.,4
+failover,аварийное переключение,"Automatic **failover** kicks in, minimizing service downtime.",5
+autoscaling,автомасштабирование,"With **autoscaling**, capacity grows under heavy traffic.",5
+ttl,время жизни,Cache **ttl** determines how long data stays valid.,5
+tls,шифрование TLS,Every connection now uses **tls** for secure transport.,5
+handshake,рукопожатие,"The **handshake** failed, so the secure session died.",4
+symmetric,симметричный,A **symmetric** key encrypts and decrypts with the same secret.,4
+asymmetric,асимметричный,"**Asymmetric** encryption uses two keys, public and private.",5
+keypair,ключевая пара,Generate a new **keypair** before pushing any commits.,5
+schema,схема,Update the database **schema** before running migrations.,3
+migration,миграция,The **migration** added a new column to users.,3
+sharding,шардирование,"With **sharding**, data splits across many database servers.",5
+replication,репликация,Database **replication** keeps a hot standby ready always.,4
+eventual,конечный,Eventual consistency trades **eventual** freshness for speed.,5
+embedding,векторное представление,Each word gets an **embedding** vector in high dimensions.,5
+inference,инференс,Model **inference** runs on dedicated graphics cards.,5
+hallucinate,галлюцинировать,Language models sometimes **hallucinate** facts that sound real.,5
+virality,вирусность,Content **virality** depends on timing and emotional hooks.,5
+blockchain,блокчейн,The **blockchain** records every transaction permanently and publicly.,4
+tooltip,подсказка,Hover any icon to see its **tooltip** appear.,3
+skeleton,скелетон,A loading **skeleton** shows where content will appear.,3
+spinner,спиннер,A small **spinner** indicates the page is loading now.,3
+clone,клонировать,Let me **clone** the repository to my local machine.,2
+rebase,ребейз,"Before merging, always **rebase** onto the latest main branch.",5
+revert,откатить,We had to **revert** that commit after production broke.,3
+resolve,разрешить конфликт,Please **resolve** the merge conflicts before pushing again.,3
+telemetry,телеметрия,Server **telemetry** helps diagnose weird production issues fast.,5
+trace,трассировка,A distributed **trace** shows the request across services.,4
+uptime,время работы,Our **uptime** hit 99.9 percent last quarter finally.,3
+downtime,простой,Planned **downtime** happens every Sunday at midnight sharp.,3
+postmortem,разбор инцидента,The **postmortem** revealed a silent cache invalidation bug.,5
+debug,отлаживать,I had to **debug** the payment flow all night.,3
+heap,куча,The **heap** kept growing until the process finally crashed.,4
+throughput,пропускная способность,Higher **throughput** means more requests handled per second.,5
+proxy,прокси,The **proxy** server filters requests before forwarding them onward.,3
+gateway,шлюз,The API **gateway** routes traffic to many services.,4
+middleware,промежуточное ПО,Authentication **middleware** runs before every protected route handler.,5
+decorator,декоратор,This **decorator** adds logging to the function automatically.,4
+paywall,пейвол,A strict **paywall** blocks articles after two free reads.,4
+bitrate,битрейт,Higher **bitrate** streams give clearer audio and video.,4
+peering,пиринг,Network **peering** cuts the cost of carrying traffic.,5
+backbone,магистраль,Fiber **backbone** cables carry most international internet traffic.,4
+hostname,имя хоста,Check the **hostname** before connecting to that server.,4
+subdomain,поддомен,The blog lives on a separate **subdomain** from marketing.,4
+passkey,ключ доступа,A **passkey** replaces passwords with secure device authentication.,4
+honeypot,ловушка,A **honeypot** attracts attackers to study their techniques.,5
+darknet,даркнет,The **darknet** hosts marketplaces invisible to normal browsers.,4
+torrent,торрент,Downloading via **torrent** splits files across many peers.,3
+keyframe,ключевой кадр,Each **keyframe** stores a complete video frame fully.,5
+encoder,кодировщик,The video **encoder** compressed the file by half.,4
+compression,сжатие,Good **compression** saves bandwidth without ruining image quality.,3
+lossless,без потерь,**Lossless** formats preserve every audio detail without any loss.,4
+checksum,контрольная сумма,Verify the **checksum** to make sure downloads are clean.,4
+filesystem,файловая система,The **filesystem** ran out of space during the build.,4
+daemon,демон,A background **daemon** handles all scheduled database backups.,5
+hypervisor,гипервизор,The **hypervisor** runs many virtual machines on one host.,5
+container,контейнер,Every service ships inside its own isolated **container** now.,3
+wireframe,вайрфрейм,Designers shared a **wireframe** before writing production code.,4
+mockup,макет,Review the **mockup** before we build the real screen.,3
+viewport,область просмотра,The **viewport** meta tag controls mobile display scaling behavior.,4
+flexbox,флексбокс,Modern layouts use **flexbox** for responsive element alignment.,4
+crawler,краулер,A search **crawler** indexes new pages across the web.,4
