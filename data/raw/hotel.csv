@@ -1,0 +1,101 @@
+english,russian,sentence,difficulty
+lobby,холл,The hotel **lobby** was very crowded.,2
+reception,ресепшен,The **reception** is open all night.,2
+receptionist,администратор,The **receptionist** handed me the keys.,3
+concierge,консьерж,Ask the **concierge** for restaurant tips.,4
+porter,носильщик,A **porter** carried my heavy bags.,3
+bellhop,посыльный,The **bellhop** brought luggage to my room.,4
+doorman,швейцар,The **doorman** opened the glass doors.,3
+maid,горничная,The **maid** cleans rooms every morning.,2
+housekeeper,экономка,The **housekeeper** changed the sheets daily.,3
+valet,парковщик,The **valet** parked my car quickly.,4
+guest,гость,Each **guest** received a welcome drink.,1
+visitor,посетитель,Every **visitor** must sign the register.,2
+tourist,турист,A **tourist** asked me for directions.,2
+traveller,путешественник,The **traveller** arrived late at night.,3
+lodger,постоялец,The **lodger** stayed for three weeks.,4
+patron,клиент,Each **patron** enjoyed excellent service here.,4
+room,номер,My **room** has a beautiful view.,1
+suite,люкс,We reserved a **suite** for honeymoon.,3
+villa,вилла,The **villa** had its own pool.,3
+bungalow,бунгало,The beach **bungalow** overlooks the waves.,4
+chalet,шале,We rented a **chalet** in Alps.,4
+cottage,коттедж,A cozy **cottage** sits by lake.,3
+inn,гостиница,We stopped at a small **inn**.,3
+motel,мотель,The **motel** near the highway was cheap.,2
+hostel,хостел,Young backpackers sleep in this **hostel**.,2
+resort,курорт,The tropical **resort** has five pools.,3
+spa,спа,I booked a **spa** treatment today.,2
+venue,место,This **venue** hosts many weddings yearly.,4
+lodging,жильё,We need **lodging** for three nights.,4
+accommodation,размещение,Our **accommodation** included breakfast and parking.,4
+stay,проживание,Our **stay** was absolutely wonderful overall.,2
+reserve,бронировать,I want to **reserve** two rooms.,3
+booking,бронь,Your **booking** is confirmed for Friday.,3
+arrival,прибытие,The **arrival** time is three o'clock.,3
+departure,отъезд,The **departure** is scheduled for morning.,3
+checkout,выезд,Please complete **checkout** before noon tomorrow.,2
+confirm,подтвердить,Please **confirm** your reservation by email.,3
+occupancy,заполняемость,The **occupancy** rate is very high.,5
+vacant,свободный,The room is currently **vacant** now.,3
+available,доступный,Only two rooms are **available** tonight.,2
+unavailable,недоступный,That suite is **unavailable** until Sunday.,3
+rate,тариф,The weekend **rate** is much higher.,3
+fare,плата,The shuttle **fare** is ten dollars.,3
+deposit,залог,The hotel requires a security **deposit**.,3
+rebate,возврат,We received a **rebate** for problems.,5
+upgrade,повышение,They gave us a free **upgrade**.,3
+amenities,удобства,The **amenities** include pool and sauna.,4
+facilities,оснащение,Excellent **facilities** await every hotel guest.,4
+service,обслуживание,Room **service** arrived within ten minutes.,2
+extra,дополнительный,We paid **extra** for a crib.,2
+surcharge,доплата,A small **surcharge** covers weekend nights.,5
+invoice,счёт-фактура,The **invoice** shows every charge separately.,4
+elevator,лифт,Take the **elevator** to fifth floor.,2
+escalator,эскалатор,The **escalator** leads to main lobby.,3
+corridor,коридор,The long **corridor** felt quite dark.,3
+entrance,вход,Guests use the main **entrance** here.,2
+exit,выход,Emergency **exit** signs glow in red.,2
+foyer,фойе,The marble **foyer** looked truly elegant.,4
+mezzanine,антресоль,The **mezzanine** overlooks the main lobby.,5
+terrace,терраса,The **terrace** offers mountain views daily.,3
+patio,патио,We ate breakfast on the **patio**.,3
+sauna,сауна,The hotel **sauna** relaxes tired muscles.,3
+jacuzzi,джакузи,The **jacuzzi** bubbled near the pool.,3
+laundry,прачечная,The **laundry** is on basement level.,3
+linen,бельё,Fresh **linen** is provided every morning.,4
+robe,халат,A soft **robe** hung in closet.,3
+slippers,тапочки,Hotel **slippers** were waiting by bed.,2
+toiletries,туалетные принадлежности,Free **toiletries** are placed in bathroom.,4
+minibar,мини-бар,The **minibar** contains snacks and juices.,3
+safe,сейф,Store valuables in the room **safe**.,3
+hanger,вешалка,Each closet has a metal **hanger**.,3
+mattress,матрас,The **mattress** was soft and comfortable.,3
+duvet,одеяло,The fluffy **duvet** kept me warm.,4
+blinds,жалюзи,Close the **blinds** before going out.,3
+remote,пульт,The TV **remote** was on table.,3
+hairdryer,фен,A **hairdryer** hangs inside the bathroom.,3
+keycard,карта-ключ,Insert the **keycard** to open door.,3
+chambermaid,горничная,A **chambermaid** knocked before she entered.,5
+janitor,уборщик,The **janitor** fixed a leaking pipe.,4
+ledger,журнал,The night **ledger** lists all guests.,5
+noisy,шумный,My neighbor was very **noisy** last night.,2
+front,передний,The **front** desk closes at midnight.,2
+view,вид,The **view** from our balcony was stunning.,2
+view,просматривать,I want to **view** the room first.,3
+book,бронировать,We want to **book** two nights.,2
+luggage,багаж,Leave your **luggage** by the door.,2
+baggage,багаж,Our **baggage** arrived on wrong flight.,3
+trolley,тележка,The porter pushed a heavy **trolley**.,3
+vending,торговый,The **vending** machine sold cold drinks.,4
+booklet,буклет,A small **booklet** explains local attractions.,4
+complimentary,бесплатный,The breakfast was **complimentary** every morning.,5
+upscale,элитный,The hotel felt very **upscale** indeed.,5
+deluxe,делюкс,We booked a **deluxe** double room.,3
+standard,стандартный,A **standard** room sleeps two people.,2
+wing,крыло,Our room sits in west **wing**.,3
+block,корпус,The new **block** was built last year.,3
+reserve,резерв,The hotel keeps a **reserve** of linen.,4
+vacate,освободить,Guests must **vacate** the room by noon.,5
+register,регистрировать,Please **register** before taking the elevator.,3
+lounge,салон,The **lounge** serves drinks until midnight.,3

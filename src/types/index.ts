@@ -3,7 +3,7 @@ export interface Card {
   english: string;
   russian: string;
   synonyms: string[];
-  example?: string;
+  example?: string; // Sentence; target word may be wrapped in **bold** markers
   topicId: string;
   isCustom: boolean;
   difficulty?: number; // 1–6, соответствует A1–C2

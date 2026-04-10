@@ -94,7 +94,16 @@ export function processLevel0Answer(
   }
 }
 
-// Build the session queue
+// Build the session queue.
+// Sentence-first cards (example contains **word** markers) always use en-ru:
+// the user sees the English sentence with the target word highlighted and picks
+// the Russian translation. Legacy/custom cards without markers use the requested direction.
+function pickDirection(card: Card, requested: 'mixed' | 'en-ru' | 'ru-en'): 'en-ru' | 'ru-en' {
+  if (card.example && card.example.includes('**')) return 'en-ru';
+  if (requested === 'mixed') return Math.random() < 0.5 ? 'en-ru' : 'ru-en';
+  return requested;
+}
+
 export function buildQueue(
   dueProgress: CardProgress[],
   newCards: Card[],
@@ -110,18 +119,12 @@ export function buildQueue(
   for (const p of dueProgress) {
     const card = cardMap.get(p.cardId);
     if (!card) continue;
-    const dir = direction === 'mixed'
-      ? (Math.random() < 0.5 ? 'en-ru' : 'ru-en')
-      : direction;
-    queue.push({ card, direction: dir, isRetry: false });
+    queue.push({ card, direction: pickDirection(card, direction), isRetry: false });
   }
 
   // 2. New cards
   for (const card of newCards) {
-    const dir = direction === 'mixed'
-      ? (Math.random() < 0.5 ? 'en-ru' : 'ru-en')
-      : direction;
-    queue.push({ card, direction: dir, isRetry: false });
+    queue.push({ card, direction: pickDirection(card, direction), isRetry: false });
   }
 
   // Shuffle
