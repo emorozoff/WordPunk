@@ -191,7 +191,7 @@ export function generateOptions(
   // a legacy review from a previously enabled topic.
   // The correct card is always allowed through regardless of its topic weight.
   const pool = prefs
-    ? allCards.filter(c => c.id === correctCard.id || getWeight(prefs, c.topicId) > 0)
+    ? allCards.filter(c => c.id === correctCard.id || c.topicIds.some(t => getWeight(prefs, t) > 0))
     : allCards;
 
   const scored = pool
@@ -199,7 +199,7 @@ export function generateOptions(
     .map(c => {
       const text = direction === 'en-ru' ? c.russian : c.english;
       const wordCount = text.trim().split(/\s+/).length;
-      let score = distractorScore(correctAnswer, text, c.topicId === correctCard.topicId);
+      let score = distractorScore(correctAnswer, text, c.topicIds.some(t => correctCard.topicIds.includes(t)));
       // Same word count is a hard preference
       if (wordCount === correctWordCount) score += 10;
       return { text, norm: normalizeText(text), score };

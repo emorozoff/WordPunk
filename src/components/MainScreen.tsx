@@ -146,7 +146,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
 
     // New cards — weighted by topic prefs, grouped by difficulty
     const eligibleNew = cards.filter(c =>
-      c.topicId !== 'custom' && !progressMap.has(c.id) && getWeight(prefs, c.topicId) > 0
+      c.topicId !== 'custom' && !progressMap.has(c.id) && c.topicIds.some(t => getWeight(prefs, t) > 0)
     ).sort((a, b) => (a.difficulty ?? 6) - (b.difficulty ?? 6));
 
     // Group by difficulty, shuffle within each group, then concat
@@ -162,7 +162,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       // Weighted shuffle within difficulty group
       const weighted: Card[] = [];
       for (const card of group) {
-        const w = getWeight(prefs, card.topicId);
+        const w = Math.max(...card.topicIds.map(t => getWeight(prefs, t)));
         for (let i = 0; i < w; i++) weighted.push(card);
       }
       for (let i = weighted.length - 1; i > 0; i--) {
@@ -420,7 +420,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.58</span>
+          <span className="header-version">v0.59</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>

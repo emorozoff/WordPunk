@@ -59,7 +59,7 @@ for (const file of files) {
       console.warn(`SKIP malformed line in ${file}: ${line.slice(0, 60)}`);
       continue;
     }
-    const [english, russian, sentence, difficulty] = fields;
+    const [english, russian, sentence, difficulty, extraTopics] = fields;
     if (!english || !russian || !sentence) {
       console.warn(`SKIP empty fields in ${file}: ${line.slice(0, 60)}`);
       continue;
@@ -67,12 +67,18 @@ for (const file of files) {
     idx++;
     const enTrim = english.trim();
     const freqLevel = freqLevels[enTrim.toLowerCase()] ?? 9;
+    // topicIds: primary (filename) + optional extras from 5th CSV column (pipe-separated)
+    const extraIds = extraTopics
+      ? extraTopics.trim().split('|').map(t => t.trim()).filter(Boolean)
+      : [];
+    const topicIds = [topicId, ...extraIds.filter(t => t !== topicId)];
     allCards.push({
       id: `${topicId}_${String(idx).padStart(3, '0')}`,
       english: enTrim,
       russian: russian.trim(),
       sentence: sentence.trim(),
       topicId,
+      topicIds,
       isCustom: false,
       difficulty: parseInt(difficulty, 10) || 1,
       freqLevel,
@@ -95,9 +101,10 @@ console.log(`\nUnique English words: ${uniqueEng.size}`);
 
 // Write words.ts
 function esc(s) { return s.replace(/\\/g, '\\\\').replace(/'/g, "\\'"); }
-const lines = allCards.map(c =>
-  `  { id: '${esc(c.id)}', english: '${esc(c.english)}', russian: '${esc(c.russian)}', synonyms: [], example: '${esc(c.sentence)}', topicId: '${esc(c.topicId)}', isCustom: ${c.isCustom}, difficulty: ${c.difficulty}, freqLevel: ${c.freqLevel} },`
-);
+const lines = allCards.map(c => {
+  const topicIdsStr = c.topicIds.map(t => `'${esc(t)}'`).join(', ');
+  return `  { id: '${esc(c.id)}', english: '${esc(c.english)}', russian: '${esc(c.russian)}', synonyms: [], example: '${esc(c.sentence)}', topicId: '${esc(c.topicId)}', topicIds: [${topicIdsStr}], isCustom: ${c.isCustom}, difficulty: ${c.difficulty}, freqLevel: ${c.freqLevel} },`;
+});
 const output = `import type { Card } from '../types';\n\nexport const WORDS: Card[] = [\n${lines.join('\n')}\n];\n`;
 writeFileSync(OUT, output);
 console.log(`\nWrote ${OUT}`);

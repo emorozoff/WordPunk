@@ -49,7 +49,7 @@ const TopicModal: FC<Props> = ({ onClose }) => {
       const knownSet = new Set(progress.filter(p => p.level >= 1).map(p => p.cardId));
       const result: Record<string, TopicStats> = {};
       for (const topic of TOPICS) {
-        const topicCards = cards.filter(c => c.topicId === topic.id);
+        const topicCards = cards.filter(c => c.topicIds.includes(topic.id));
         result[topic.id] = {
           total: topicCards.length,
           known: topicCards.filter(c => knownSet.has(c.id)).length,

@@ -24,6 +24,7 @@ const AddWordModal: FC<Props> = ({ onClose, onAdded }) => {
       synonyms: synonyms.split(',').map(s => s.trim()).filter(Boolean),
       example: example.trim() || undefined,
       topicId,
+      topicIds: [topicId],
       isCustom: true,
     };
     await putCard(card);

@@ -4,7 +4,8 @@ export interface Card {
   russian: string;
   synonyms: string[];
   example?: string; // Sentence; target word may be wrapped in **bold** markers
-  topicId: string;
+  topicId: string;  // Primary topic (= CSV filename). Kept for backward compat and ID generation.
+  topicIds: string[]; // All topics this card belongs to (always includes topicId as first element).
   isCustom: boolean;
   difficulty?: number; // 1–6, соответствует A1–C2 (субъективная оценка агентом при генерации)
   freqLevel?: number; // 1–10, рассчитывается из SUBTLEX-частотности (внутренняя сортировка)
