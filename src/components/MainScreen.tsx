@@ -90,7 +90,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const [archiveConfirm, setArchiveConfirm] = useState<{ english: string; russian: string; cardId: string } | null>(null);
   const [lpOpt, setLpOpt] = useState<string | null>(null);
   const lpTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const lpCompletedRef = useRef(false);
+  // Set to true when the 600ms timer fires — prevents the subsequent touchend
+  // from being treated as a tap and triggering handleAnswer.
+  const lpFiredRef = useRef(false);
 
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
@@ -462,7 +464,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.67</span>
+          <span className="header-version">v0.68</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -573,27 +575,29 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
               }
               if (lpOpt === opt) cls += ' lp-pressing';
 
-              const correctAnswer = currentCard
-                ? (currentCard.direction === 'en-ru' ? currentCard.card.russian : currentCard.card.english)
-                : '';
-              const isCorrectOpt = !answered && [correctAnswer, ...(currentCard?.card.synonyms ?? [])].some(
-                s => s.toLowerCase() === opt.toLowerCase()
-              );
+              const cancelLp = () => {
+                if (lpTimerRef.current) { clearTimeout(lpTimerRef.current); lpTimerRef.current = null; }
+                setLpOpt(null);
+              };
 
               return (
                 <button
                   key={i}
                   className={cls}
+                  // Click fires after touchend — skip if long-press already opened the modal
                   onClick={() => {
-                    if (lpCompletedRef.current) { lpCompletedRef.current = false; return; }
+                    if (lpFiredRef.current) { lpFiredRef.current = false; return; }
                     handleAnswer(opt);
                   }}
-                  onPointerDown={() => {
-                    if (answered || !isCorrectOpt || !currentCard) return;
+                  onTouchStart={e => {
+                    if (answered || !currentCard) return;
+                    e.preventDefault(); // prevent ghost click delay on iOS
                     setLpOpt(opt);
+                    lpFiredRef.current = false;
                     lpTimerRef.current = setTimeout(() => {
-                      lpCompletedRef.current = true;
+                      lpFiredRef.current = true;
                       setLpOpt(null);
+                      // Always archive the CURRENT CARD, not the button pressed
                       setArchiveConfirm({
                         english: currentCard.card.english,
                         russian: currentCard.card.russian,
@@ -601,14 +605,8 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
                       });
                     }, 600);
                   }}
-                  onPointerUp={() => {
-                    if (lpTimerRef.current) { clearTimeout(lpTimerRef.current); lpTimerRef.current = null; }
-                    setLpOpt(null);
-                  }}
-                  onPointerLeave={() => {
-                    if (lpTimerRef.current) { clearTimeout(lpTimerRef.current); lpTimerRef.current = null; }
-                    setLpOpt(null);
-                  }}
+                  onTouchEnd={cancelLp}
+                  onTouchCancel={cancelLp}
                   onContextMenu={e => e.preventDefault()}
                   disabled={!!answered}
                   style={answered ? { pointerEvents: 'none' } : undefined}
