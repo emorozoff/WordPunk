@@ -176,6 +176,39 @@ function normalizeText(s: string): string {
   return s.trim().toLowerCase().replace(/\s+/g, ' ');
 }
 
+// Same-lemma detection: morphologically related forms of the same word
+// (e.g. получает / получать, gets / getting) are too easy to confuse with
+// the correct answer — the user knows the word but taps the wrong form.
+// We exclude any candidate that looks like a different inflection of the
+// correct answer.
+function isSameLemma(correct: string, candidate: string, direction: 'en-ru' | 'ru-en'): boolean {
+  const a = correct.trim().toLowerCase();
+  const b = candidate.trim().toLowerCase();
+  if (a === b) return true;
+
+  // Common prefix length
+  let prefix = 0;
+  for (let i = 0; i < Math.min(a.length, b.length); i++) {
+    if (a[i] === b[i]) prefix++;
+    else break;
+  }
+
+  if (direction === 'en-ru') {
+    // Russian options: rich suffix morphology — 5+ char common prefix
+    // catches almost all same-root variants:
+    //   получает / получать / получил / получение → "получ" = 5 chars
+    return prefix >= 5;
+  } else {
+    // English options: prefix-based morphology (gets/getting/get/play/played).
+    // For short words (<4 chars) require the shorter to be a complete prefix
+    // of the longer. For longer words require 4+ char prefix and small length diff.
+    const minLen = Math.min(a.length, b.length);
+    const lenDiff = Math.abs(a.length - b.length);
+    if (minLen < 4) return prefix === minLen && lenDiff <= 4;
+    return prefix >= 4 && lenDiff <= 5;
+  }
+}
+
 export function generateOptions(
   correctCard: Card,
   direction: 'en-ru' | 'ru-en',
@@ -204,10 +237,13 @@ export function generateOptions(
       if (wordCount === correctWordCount) score += 10;
       return { text, norm: normalizeText(text), score };
     })
-    // Hard rule: a distractor that equals the correct answer (case/whitespace
+    // Hard rule 1: a distractor that equals the correct answer (case/whitespace
     // insensitive) would be a *second* correct option — drop it. This catches
     // synonyms/duplicates across the DB (e.g. multiple cards translated "удар").
-    .filter(d => d.norm !== correctNorm);
+    .filter(d => d.norm !== correctNorm)
+    // Hard rule 2: a distractor that's a different inflection of the same word
+    // (получает/получать, gets/getting) is too easy to confuse — drop it.
+    .filter(d => !isSameLemma(correctAnswer, d.text, direction));
 
   // Sort by score desc, take top bucket and shuffle to add variety
   scored.sort((a, b) => b.score - a.score);
