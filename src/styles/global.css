@@ -1385,11 +1385,13 @@ button {
 }
 
 .option-btn.lp-pressing .lp-fill-bar {
-  animation: lp-fill 0.6s linear forwards;
+  animation: lp-fill 0.45s linear forwards;
+  animation-delay: 0.15s;
 }
 
 .option-btn.lp-pressing {
   border-color: rgba(0, 255, 136, 0.5);
+  transition: border-color 0.15s 0.15s;
 }
 
 /* Archive confirm overlay */
