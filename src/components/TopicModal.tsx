@@ -39,6 +39,7 @@ const TopicModal: FC<Props> = ({ onClose }) => {
   const [prefs, setPrefs] = useState<TopicPrefs>(() => loadTopicPrefs());
   const [stats, setStats] = useState<Record<string, TopicStats>>({});
   const [showBasicWarning, setShowBasicWarning] = useState(false);
+  const [devilFlashes, setDevilFlashes] = useState<number[]>([]);
   const sheetRef = useRef<HTMLDivElement>(null);
   const dragStartY = useRef(0);
   const isDragging = useRef(false);
@@ -70,6 +71,12 @@ const TopicModal: FC<Props> = ({ onClose }) => {
     const updated = { ...prefs, [topicId]: next };
     setPrefs(updated);
     saveTopicPrefs(updated);
+
+    if (topicId === 'swearing' && next !== 0) {
+      const id = Date.now() + Math.random();
+      setDevilFlashes(prev => [...prev, id]);
+      setTimeout(() => setDevilFlashes(prev => prev.filter(x => x !== id)), 800);
+    }
   };
 
   const selectAll = () => {
@@ -218,12 +225,17 @@ const TopicModal: FC<Props> = ({ onClose }) => {
                     </div>
                     <div className="topic-item-right">
                       <span className="topic-progress-count">{s.known}/{s.total}</span>
-                      <button
-                        className={`pref-toggle pref-toggle-${pref}`}
-                        onClick={() => toggle(topic.id)}
-                      >
-                        {PREF_LABELS[pref]}
-                      </button>
+                      <div style={{ position: 'relative', display: 'inline-flex' }}>
+                        {topic.id === 'swearing' && devilFlashes.map(id => (
+                          <span key={id} className="devil-glitch">😈</span>
+                        ))}
+                        <button
+                          className={`pref-toggle pref-toggle-${pref}`}
+                          onClick={() => toggle(topic.id)}
+                        >
+                          {PREF_LABELS[pref]}
+                        </button>
+                      </div>
                     </div>
                   </div>
                   <div className="topic-progress-bar">
