@@ -372,22 +372,21 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   }, [allCards, setupCard]);
 
   const handleFlag = useCallback(async () => {
-    if (!currentCard) return;
-    const correctAnswer = currentCard.direction === 'en-ru'
-      ? currentCard.card.russian
-      : currentCard.card.english;
+    const sc = queue[queueIdx];
+    if (!sc) return;
+    const correctAnswer = sc.direction === 'en-ru' ? sc.card.russian : sc.card.english;
     await putFlagged({
-      cardId: currentCard.card.id,
-      english: currentCard.card.english,
-      russian: currentCard.card.russian,
-      example: currentCard.card.example,
+      cardId: sc.card.id,
+      english: sc.card.english,
+      russian: sc.card.russian,
+      example: sc.card.example,
       options,
       correctAnswer,
       timestamp: Date.now(),
     });
     setFlagged(true);
     setTimeout(() => setFlagged(false), 900);
-  }, [currentCard, options]);
+  }, [queue, queueIdx, options]);
 
   const handleArchive = useCallback(async () => {
     const sc = queue[queueIdx];
