@@ -170,6 +170,12 @@ function distractorScore(
   return score;
 }
 
+// Normalize a translation for duplicate detection: lowercase + collapse whitespace.
+// Used to make sure no distractor is also a valid answer to the prompt.
+function normalizeText(s: string): string {
+  return s.trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
 export function generateOptions(
   correctCard: Card,
   direction: 'en-ru' | 'ru-en',
@@ -177,6 +183,7 @@ export function generateOptions(
   prefs?: TopicPrefs,
 ): string[] {
   const correctAnswer = direction === 'en-ru' ? correctCard.russian : correctCard.english;
+  const correctNorm = normalizeText(correctAnswer);
   const correctWordCount = correctAnswer.trim().split(/\s+/).length;
 
   // Distractor pool must respect topic prefs: words from disabled topics (weight=0)
@@ -195,21 +202,35 @@ export function generateOptions(
       let score = distractorScore(correctAnswer, text, c.topicId === correctCard.topicId);
       // Same word count is a hard preference
       if (wordCount === correctWordCount) score += 10;
-      return { text, score };
-    });
+      return { text, norm: normalizeText(text), score };
+    })
+    // Hard rule: a distractor that equals the correct answer (case/whitespace
+    // insensitive) would be a *second* correct option — drop it. This catches
+    // synonyms/duplicates across the DB (e.g. multiple cards translated "удар").
+    .filter(d => d.norm !== correctNorm);
 
   // Sort by score desc, take top bucket and shuffle to add variety
   scored.sort((a, b) => b.score - a.score);
   const topBucket = scored.slice(0, Math.min(15, scored.length));
   const shuffled = topBucket.sort(() => Math.random() - 0.5);
-  const distractors = shuffled.slice(0, 3).map(d => d.text);
 
-  // Fallback
+  // Pick up to 3 distractors, deduping by normalized text so no two options
+  // share the same answer string either.
+  const distractors: string[] = [];
+  const seen = new Set<string>([correctNorm]);
+  for (const d of shuffled) {
+    if (distractors.length >= 3) break;
+    if (seen.has(d.norm)) continue;
+    seen.add(d.norm);
+    distractors.push(d.text);
+  }
+
+  // Fallback: walk the rest of the scored list if the top bucket didn't yield enough
   if (distractors.length < 3) {
-    const used = new Set(distractors);
-    const rest = scored.filter(d => !used.has(d.text));
-    for (const d of rest) {
+    for (const d of scored) {
       if (distractors.length >= 3) break;
+      if (seen.has(d.norm)) continue;
+      seen.add(d.norm);
       distractors.push(d.text);
     }
   }
