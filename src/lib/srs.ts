@@ -1,4 +1,5 @@
 import type { Card, CardProgress, SessionCard } from '../types';
+import { getWeight, type TopicPrefs } from './topicPrefs';
 
 // Level 0 = новое слово (до 3 показов в сессии)
 // Level 1 = +1 день, 2 = +3 дня, 3 = +7 дней, 4 = +30 дней, 5 = +180 дней
@@ -172,12 +173,21 @@ function distractorScore(
 export function generateOptions(
   correctCard: Card,
   direction: 'en-ru' | 'ru-en',
-  allCards: Card[]
+  allCards: Card[],
+  prefs?: TopicPrefs,
 ): string[] {
   const correctAnswer = direction === 'en-ru' ? correctCard.russian : correctCard.english;
   const correctWordCount = correctAnswer.trim().split(/\s+/).length;
 
-  const scored = allCards
+  // Distractor pool must respect topic prefs: words from disabled topics (weight=0)
+  // must not appear as wrong-answer options, even if the correct card itself is
+  // a legacy review from a previously enabled topic.
+  // The correct card is always allowed through regardless of its topic weight.
+  const pool = prefs
+    ? allCards.filter(c => c.id === correctCard.id || getWeight(prefs, c.topicId) > 0)
+    : allCards;
+
+  const scored = pool
     .filter(c => c.id !== correctCard.id)
     .map(c => {
       const text = direction === 'en-ru' ? c.russian : c.english;

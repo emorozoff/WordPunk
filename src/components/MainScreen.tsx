@@ -193,7 +193,8 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   };
 
   const setupCard = useCallback((sc: SessionCard, cards: Card[]) => {
-    setOptions(generateOptions(sc.card, sc.direction, cards));
+    const prefs = loadTopicPrefs();
+    setOptions(generateOptions(sc.card, sc.direction, cards, prefs));
     setAnswered(null);
     if (sc.direction === 'ru-en') {
       typeWord(sc.card.russian);
@@ -419,7 +420,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.56</span>
+          <span className="header-version">v0.57</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
