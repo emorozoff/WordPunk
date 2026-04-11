@@ -2,25 +2,25 @@ english,russian,sentence,difficulty
 atom,атом,Every **atom** has a tiny nucleus.,2
 molecule,молекула,A water **molecule** contains three atoms.,2
 energy,энергия,The sun gives us pure **energy**.,1
-speed,скорость,Light travels at enormous **speed**.,1
-heat,тепло,The stove gives off strong **heat**.,1
-weight,вес,The stone has heavy **weight**.,1
+speed,скорость,Light travels at enormous **speed**.,1,driving
+heat,тепло,The stove gives off strong **heat**.,1,kitchen
+weight,вес,The stone has heavy **weight**.,1,health
 metal,металл,This **metal** conducts electricity well.,1
-sky,небо,Stars shine in the dark **sky**.,1
+sky,небо,Stars shine in the dark **sky**.,1,nature
 life,жизнь,**Life** exists on planet Earth.,1
 gas,газ,Oxygen is a colorless **gas**.,1
 liquid,жидкость,Water is a simple **liquid**.,1
-cell,клетка,Every **cell** has a nucleus inside.,2
+cell,клетка,Every **cell** has a nucleus inside.,2,school
 cell,камера,The prisoner sat in his **cell**.,3
 mass,масса,**Mass** and weight are different things.,2
 mass,множество,A **mass** of people gathered outside.,4
 force,сила,Gravity is a natural **force**.,2
 force,принуждать,You cannot **force** him to agree.,2
 power,сила,This engine has great **power** indeed.,2
-power,электричество,We lost **power** during the storm.,2
+power,электричество,We lost **power** during the storm.,2,home
 current,ток,Electric **current** flows through the wire.,3
 current,текущий,The **current** year is almost over.,3
-wave,волна,Each sound **wave** travels through air.,2
+wave,волна,Each sound **wave** travels through air.,2,nature
 wave,махать,Children **wave** their hands goodbye.,2
 solution,раствор,We mixed salt into the **solution**.,3
 solution,решение,We found a clever **solution** finally.,2
@@ -28,7 +28,7 @@ compound,соединение,Water is a chemical **compound**.,4
 compound,составной,This is a **compound** word example.,4
 element,элемент,Oxygen is a vital **element**.,2
 element,стихия,Fire is a destructive **element**.,4
-species,вид,This **species** of frog is rare.,3
+species,вид,This **species** of frog is rare.,3,nature
 gravity,гравитация,The moon has weaker **gravity**.,3
 gravity,серьёзность,Nobody understood the **gravity** of this.,5
 matter,материя,All **matter** consists of atoms.,3
@@ -39,14 +39,14 @@ neutron,нейтрон,The **neutron** has no charge.,4
 electron,электрон,An **electron** orbits around the atom.,3
 particle,частица,A tiny **particle** floats in air.,4
 beam,луч,A sun **beam** warmed my face.,3
-beam,балка,The wooden **beam** holds the roof.,4
+beam,балка,The wooden **beam** holds the roof.,4,home
 ray,луч,A single **ray** lit the room.,3
 glow,свечение,The fire made a warm **glow**.,4
-glow,светиться,Fireflies **glow** brightly at night.,4
+glow,светиться,Fireflies **glow** brightly at night.,4,nature
 reflect,отражать,Mirrors **reflect** light very clearly.,3
 refract,преломлять,Prisms **refract** light into many colors.,5
 orbit,орбита,The moon moves along its **orbit**.,3
-planet,планета,Mars is a red **planet**.,2
+planet,планета,Mars is a red **planet**.,2,nature
 galaxy,галактика,Our **galaxy** contains billions of stars.,3
 universe,вселенная,The **universe** is expanding every day.,4
 comet,комета,A bright **comet** passed near us.,4
@@ -58,18 +58,18 @@ satellite,спутник,A **satellite** orbits our home planet.,3
 astronaut,астронавт,The **astronaut** floats inside the station.,3
 acid,кислота,This **acid** can damage your skin.,3
 alkali,щёлочь,An **alkali** is the opposite of acid.,5
-crystal,кристалл,A snow **crystal** has six sides.,3
+crystal,кристалл,A snow **crystal** has six sides.,3,nature
 powder,порошок,Grind the stone into fine **powder**.,3
 spark,искра,A tiny **spark** started the fire.,3
 flame,пламя,The candle **flame** danced gently.,2
 ash,пепел,Only **ash** remained after the fire.,3
-mist,туман,Morning **mist** covered the quiet lake.,4
+mist,туман,Morning **mist** covered the quiet lake.,4,nature
 vapor,пар,Water **vapor** floats in the atmosphere.,4
 drop,капля,A single **drop** fell from above.,2
 drop,ронять,Do not **drop** this fragile tube.,2
 bubble,пузырь,A soap **bubble** floated through air.,3
-freeze,замораживать,Low temperatures **freeze** water into ice.,2
-dissolve,растворять,Sugar will **dissolve** in hot water.,4
+freeze,замораживать,Low temperatures **freeze** water into ice.,2,kitchen
+dissolve,растворять,Sugar will **dissolve** in hot water.,4,kitchen
 absorb,поглощать,Sponges **absorb** water very quickly.,4
 release,выпускать,Plants **release** oxygen during daytime.,3
 expand,расширять,Gases **expand** when heated strongly.,4
@@ -80,71 +80,71 @@ measure,измерять,Scientists **measure** temperature using thermometers.,
 observe,наблюдать,Scientists **observe** stars through telescopes.,4
 predict,предсказывать,We can **predict** weather patterns now.,3
 prove,доказывать,He will **prove** his bold theory.,3
-theory,теория,Einstein created his famous **theory**.,3
-law,закон,Newton discovered a basic **law**.,2
-experiment,эксперимент,We did an **experiment** in class.,3
+theory,теория,Einstein created his famous **theory**.,3,school
+law,закон,Newton discovered a basic **law**.,2,politics
+experiment,эксперимент,We did an **experiment** in class.,3,school
 discovery,открытие,Her **discovery** changed modern science.,3
 invention,изобретение,The wheel was a great **invention**.,3
-research,исследование,Her **research** focuses on rare diseases.,4
-data,данные,The scientists collected **data** carefully.,4
-method,метод,Use the scientific **method** properly.,4
-goggles,защитные очки,Wear **goggles** during every experiment.,5
+research,исследование,Her **research** focuses on rare diseases.,4,school
+data,данные,The scientists collected **data** carefully.,4,internet
+method,метод,Use the scientific **method** properly.,4,school
+goggles,защитные очки,Wear **goggles** during every experiment.,5,sports
 tube,трубка,Pour liquid into the test **tube**.,3
 beaker,мензурка,A glass **beaker** held blue liquid.,5
 flask,колба,The **flask** contained a green mixture.,5
-funnel,воронка,Use a **funnel** to pour liquid.,4
-wire,провод,The copper **wire** carries electricity.,3
+funnel,воронка,Use a **funnel** to pour liquid.,4,kitchen
+wire,провод,The copper **wire** carries electricity.,3,home
 magnet,магнит,A strong **magnet** attracts iron nails.,3
 lens,линза,Each **lens** bends the passing light.,4
-species,род,Humans belong to a unique **species**.,4
-genome,геном,The human **genome** contains many genes.,5
-evolve,эволюционировать,Species slowly **evolve** over many generations.,5
-lava,лава,Hot **lava** flowed slowly down the mountainside.,3
-magma,магма,Deep underground the **magma** stays extremely hot.,3
-volcano,вулкан,The ancient **volcano** erupted last summer.,2
-earthquake,землетрясение,A strong **earthquake** shook the entire city.,2
+species,род,Humans belong to a unique **species**.,4,nature
+genome,геном,The human **genome** contains many genes.,5,health
+evolve,эволюционировать,Species slowly **evolve** over many generations.,5,nature
+lava,лава,Hot **lava** flowed slowly down the mountainside.,3,nature
+magma,магма,Deep underground the **magma** stays extremely hot.,3,nature
+volcano,вулкан,The ancient **volcano** erupted last summer.,2,nature
+earthquake,землетрясение,A strong **earthquake** shook the entire city.,2,nature
 crater,кратер,The meteor left a huge **crater** behind.,3
-geyser,гейзер,A steaming **geyser** sprayed water into the sky.,4
-fossil,окаменелость,Scientists found a dinosaur **fossil** in the cliff.,3
-sediment,осадок,Thick **sediment** settled at the bottom of the lake.,3
-erosion,эрозия,Soil **erosion** happens quickly on bare hillsides.,3
+geyser,гейзер,A steaming **geyser** sprayed water into the sky.,4,nature
+fossil,окаменелость,Scientists found a dinosaur **fossil** in the cliff.,3,nature
+sediment,осадок,Thick **sediment** settled at the bottom of the lake.,3,nature
+erosion,эрозия,Soil **erosion** happens quickly on bare hillsides.,3,nature
 alloy,сплав,Bronze is an **alloy** of copper and tin.,4
-bacteria,бактерии,Harmful **bacteria** can grow in warm water.,3
-enzyme,фермент,An **enzyme** helps break down food in the stomach.,4
-gene,ген,Each **gene** carries specific biological information.,4
-dna,днк,Human **dna** contains billions of tiny instructions.,4
-chromosome,хромосома,Each **chromosome** holds many important genes.,5
+bacteria,бактерии,Harmful **bacteria** can grow in warm water.,3,health
+enzyme,фермент,An **enzyme** helps break down food in the stomach.,4,health
+gene,ген,Each **gene** carries specific biological information.,4,health
+dna,днк,Human **dna** contains billions of tiny instructions.,4,health
+chromosome,хромосома,Each **chromosome** holds many important genes.,5,health
 membrane,мембрана,The cell **membrane** controls what enters the cell.,4
-tissue,ткань,Muscle **tissue** is made of long thin fibers.,3
-fungus,гриб,A strange **fungus** was growing on the log.,3
-algae,водоросли,Green **algae** covered the surface of the pond.,3
-plankton,планктон,Tiny **plankton** float near the ocean surface.,4
-larva,личинка,A young **larva** hatches from the tiny egg.,4
-microbe,микроб,This tiny **microbe** can only be seen under glass.,4
+tissue,ткань,Muscle **tissue** is made of long thin fibers.,3,health
+fungus,гриб,A strange **fungus** was growing on the log.,3,nature
+algae,водоросли,Green **algae** covered the surface of the pond.,3,nature
+plankton,планктон,Tiny **plankton** float near the ocean surface.,4,nature
+larva,личинка,A young **larva** hatches from the tiny egg.,4,nature
+microbe,микроб,This tiny **microbe** can only be seen under glass.,4,health
 mold,плесень,Green **mold** was growing on the old bread.,3
-spore,спора,A single **spore** can grow into a new fungus.,4
-mammal,млекопитающее,A whale is a large ocean **mammal**.,3
-reptile,рептилия,A snake is a cold-blooded **reptile**.,3
-amphibian,земноводное,A frog is a common **amphibian** near ponds.,4
-insect,насекомое,The beetle is a hard-shelled **insect**.,2
-vertebrate,позвоночное,A dog is a four-legged **vertebrate**.,4
-invertebrate,беспозвоночное,A worm is a soft **invertebrate** without bones.,5
-herbivore,травоядное,A rabbit is a small gentle **herbivore**.,4
-carnivore,хищник,The tiger is a powerful **carnivore**.,3
-omnivore,всеядное,A bear is an **omnivore** that eats almost anything.,4
-parasite,паразит,A tick is a blood-sucking **parasite**.,4
-photosynthesis,фотосинтез,Green plants make food through **photosynthesis**.,5
-chlorophyll,хлорофилл,The **chlorophyll** gives leaves their green color.,5
-respiration,дыхание,Cellular **respiration** releases energy from food.,4
+spore,спора,A single **spore** can grow into a new fungus.,4,nature
+mammal,млекопитающее,A whale is a large ocean **mammal**.,3,nature
+reptile,рептилия,A snake is a cold-blooded **reptile**.,3,nature
+amphibian,земноводное,A frog is a common **amphibian** near ponds.,4,nature
+insect,насекомое,The beetle is a hard-shelled **insect**.,2,nature
+vertebrate,позвоночное,A dog is a four-legged **vertebrate**.,4,nature
+invertebrate,беспозвоночное,A worm is a soft **invertebrate** without bones.,5,nature
+herbivore,травоядное,A rabbit is a small gentle **herbivore**.,4,nature
+carnivore,хищник,The tiger is a powerful **carnivore**.,3,nature
+omnivore,всеядное,A bear is an **omnivore** that eats almost anything.,4,nature
+parasite,паразит,A tick is a blood-sucking **parasite**.,4,nature
+photosynthesis,фотосинтез,Green plants make food through **photosynthesis**.,5,nature|school
+chlorophyll,хлорофилл,The **chlorophyll** gives leaves their green color.,5,nature
+respiration,дыхание,Cellular **respiration** releases energy from food.,4,health
 fermentation,брожение,Yeast causes the **fermentation** of sugar into alcohol.,5
-mitochondria,митохондрии,The **mitochondria** produce energy inside every cell.,5
+mitochondria,митохондрии,The **mitochondria** produce energy inside every cell.,5,health
 specimen,образец,She placed a plant **specimen** on the glass slide.,4
-biome,биом,A desert is a very dry **biome**.,4
-biodiversity,биоразнообразие,This jungle has amazing **biodiversity**.,5
-phylum,тип,Each animal **phylum** shares certain basic features.,5
-genus,род,**genus** is a group of closely related species.,5
-adaptation,адаптация,Long fur is a useful **adaptation** for cold climates.,4
-mutation,мутация,A random **mutation** changed the color of the fly.,4
+biome,биом,A desert is a very dry **biome**.,4,nature
+biodiversity,биоразнообразие,This jungle has amazing **biodiversity**.,5,nature
+phylum,тип,Each animal **phylum** shares certain basic features.,5,nature
+genus,род,**genus** is a group of closely related species.,5,nature
+adaptation,адаптация,Long fur is a useful **adaptation** for cold climates.,4,nature
+mutation,мутация,A random **mutation** changed the color of the fly.,4,health
 pipette,пипетка,A glass **pipette** sits on the lab bench.,4
 burette,бюретка,A tall glass **burette** drips slowly into the beaker.,5
 centrifuge,центрифуга,The **centrifuge** spins tubes at very high speed.,4
@@ -166,12 +166,12 @@ hydrogen,водород,**hydrogen** is the lightest known element.,4
 nitrogen,азот,Plants need **nitrogen** to grow healthy leaves.,4
 plasma,плазма,Hot **plasma** fills the core of every star.,4
 isotope,изотоп,This radioactive **isotope** decays very slowly.,5
-radiation,радиация,Harmful **radiation** comes from some heavy metals.,4
+radiation,радиация,Harmful **radiation** comes from some heavy metals.,4,health
 radioactive,радиоактивный,A **radioactive** isotope glows inside the sealed container.,5
 fusion,синтез,Stars produce energy through nuclear **fusion**.,5
 fission,деление,Uranium can split through nuclear **fission**.,5
-velocity,скорость,High **velocity** can be dangerous for drivers.,4
-acceleration,ускорение,The rocket showed amazing **acceleration** during launch.,4
+velocity,скорость,High **velocity** can be dangerous for drivers.,4,driving
+acceleration,ускорение,The rocket showed amazing **acceleration** during launch.,4,driving
 momentum,импульс,A heavy truck has huge **momentum** on the road.,4
 friction,трение,**friction** between the wheels and road slows the car.,3
 pressure,давление,The deep ocean has very high **pressure**.,3
@@ -187,23 +187,23 @@ amplitude,амплитуда,A large **amplitude** means a very loud sound.,5
 prism,призма,A glass **prism** splits sunlight into many colors.,4
 electromagnetic,электромагнитный,An **electromagnetic** signal travels at light speed.,5
 equilibrium,равновесие,Stable **equilibrium** means the forces balance each other.,5
-thermodynamics,термодинамика,**thermodynamics** studies heat and energy flow.,5
+thermodynamics,термодинамика,**thermodynamics** studies heat and energy flow.,5,school
 trajectory,траектория,A curved **trajectory** carried the rocket into space.,5
 sublimation,сублимация,**sublimation** turns dry ice directly into gas.,5
 meteorite,метеорит,A small **meteorite** landed in the desert.,4
 nebula,туманность,The huge colorful **nebula** shines through the telescope.,5
-astronomy,астрономия,**astronomy** studies stars and distant galaxies.,3
-geology,геология,**geology** explains how rocks and mountains form.,3
-ecology,экология,**ecology** studies how living things share the earth.,3
+astronomy,астрономия,**astronomy** studies stars and distant galaxies.,3,school
+geology,геология,**geology** explains how rocks and mountains form.,3,school
+ecology,экология,**ecology** studies how living things share the earth.,3,school|nature
 magnetism,магнетизм,**magnetism** pulls iron objects toward the bar.,4
 conductor,проводник,Copper wire is an excellent **conductor** of electricity.,4
 insulator,изолятор,Rubber is a good electrical **insulator**.,4
 seismograph,сейсмограф,A **seismograph** measures the strength of earthquakes.,5
-earth,земля,The **earth** goes around the sun.,2
-science,наука,She loves **science** and dreams of becoming a doctor.,2
+earth,земля,The **earth** goes around the sun.,2,nature
+science,наука,She loves **science** and dreams of becoming a doctor.,2,school
 discovered,обнаружил,Scientists **discovered** a new planet last year.,3
 humans,люди,**Humans** have explored space for decades.,2
-technology,технология,Modern **technology** changes very fast,2
+technology,технология,Modern **technology** changes very fast,2,internet
 alien,инопланетянин,A green **alien** landed on Earth,3
 solid,твёрдый,Ice is the **solid** form of water.,2
 quark,кварк,Each proton contains three tiny **quark** particles bound together.,5
@@ -264,33 +264,33 @@ meiosis,мейоз,**Meiosis** produces cells with half the chromosome count.,5
 mitosis,митоз,**Mitosis** divides one cell into two identical copies.,4
 gamete,гамета,Sperm and egg are specialized **gamete** cells.,4
 zygote,зигота,A fertilized **zygote** grows into a whole organism.,4
-embryo,эмбрион,The **embryo** develops rapidly during the first weeks.,3
-synapse,синапс,A **synapse** passes signals between two brain neurons.,4
-axon,аксон,The **axon** carries electrical impulses away from the neuron.,4
-dendrite,дендрит,Each **dendrite** receives signals from neighboring cells.,5
-neurotransmitter,нейромедиатор,Serotonin is a **neurotransmitter** that affects mood.,5
-cortisol,кортизол,Stress floods the body with **cortisol** hormone quickly.,4
-adrenaline,адреналин,Fear triggers an **adrenaline** rush through the bloodstream.,3
-organism,организм,Every living **organism** needs energy to survive.,3
-carbohydrate,углевод,Bread provides a quick **carbohydrate** source of energy.,3
-glucose,глюкоза,Cells burn **glucose** to power their daily activities.,3
+embryo,эмбрион,The **embryo** develops rapidly during the first weeks.,3,health
+synapse,синапс,A **synapse** passes signals between two brain neurons.,4,health
+axon,аксон,The **axon** carries electrical impulses away from the neuron.,4,health
+dendrite,дендрит,Each **dendrite** receives signals from neighboring cells.,5,health
+neurotransmitter,нейромедиатор,Serotonin is a **neurotransmitter** that affects mood.,5,health
+cortisol,кортизол,Stress floods the body with **cortisol** hormone quickly.,4,health
+adrenaline,адреналин,Fear triggers an **adrenaline** rush through the bloodstream.,3,health
+organism,организм,Every living **organism** needs energy to survive.,3,nature
+carbohydrate,углевод,Bread provides a quick **carbohydrate** source of energy.,3,health
+glucose,глюкоза,Cells burn **glucose** to power their daily activities.,3,health
 nucleotide,нуклеотид,DNA is built from a four-letter **nucleotide** alphabet.,5
 ribosome,рибосома,The **ribosome** reads RNA and builds protein chains.,4
-chloroplast,хлоропласт,Each plant cell contains a green **chloroplast** organelle.,4
-metabolism,метаболизм,Exercise can speed up your resting **metabolism** noticeably.,3
-hormone,гормон,Insulin is a **hormone** that regulates blood sugar.,3
-gland,железа,The thyroid **gland** controls your metabolic rate.,3
-pathogen,патоген,A dangerous **pathogen** spreads through contaminated drinking water.,4
-antigen,антиген,Vaccines train the body against a harmless **antigen**.,4
+chloroplast,хлоропласт,Each plant cell contains a green **chloroplast** organelle.,4,nature
+metabolism,метаболизм,Exercise can speed up your resting **metabolism** noticeably.,3,health
+hormone,гормон,Insulin is a **hormone** that regulates blood sugar.,3,health
+gland,железа,The thyroid **gland** controls your metabolic rate.,3,health|doctor
+pathogen,патоген,A dangerous **pathogen** spreads through contaminated drinking water.,4,health
+antigen,антиген,Vaccines train the body against a harmless **antigen**.,4,health
 pulsar,пульсар,A rotating **pulsar** emits regular radio pulses.,5
 quasar,квазар,A distant **quasar** shines brighter than entire galaxies.,5
 supernova,сверхновая,A massive star ends life in a bright **supernova**.,4
 exoplanet,экзопланета,Scientists discovered another Earth-like **exoplanet** last year.,4
-skull,череп,Scientists discovered an ancient human **skull** in the cave.,4
+skull,череп,Scientists discovered an ancient human **skull** in the cave.,4,health
 scientists,учёные,**Scientists** discovered a new species in the Amazon.,3
-cells,клетки,Human skin **cells** regenerate every few weeks.,3
+cells,клетки,Human skin **cells** regenerate every few weeks.,3,health
 existence,существование,Scientists debate the **existence** of life on other planets.,4
-impact,воздействие,Climate change has a huge **impact** on our planet.,3
+impact,воздействие,Climate change has a huge **impact** on our planet.,3,nature
 invented,изобрёл,Edison **invented** many useful devices during his life.,3
 humanity,человечество,Scientists hope the vaccine will benefit all of **humanity**.,5
 scientific,научный,The study followed a strict **scientific** method to ensure accurate results.,4
@@ -298,15 +298,15 @@ capture,запечатлеть,The documentary tried to **capture** the daily li
 exists,существует,No scientific proof **exists** that the treatment actually works.,4
 deeper,глубже,Scientists are drilling **deeper** into the ice to study ancient climate.,4
 latin,латинский,Many medical terms come from **Latin** and are used worldwide.,4
-pole,полюс,Temperatures at the South **Pole** can drop below minus sixty degrees.,4
-scientist,учёный,The **scientist** spent years studying the effects of plastic on ocean life.,3
+pole,полюс,Temperatures at the South **Pole** can drop below minus sixty degrees.,4,nature
+scientist,учёный,The **scientist** spent years studying the effects of plastic on ocean life.,3,work
 core,ядро,Understanding the **core** idea of the theory took us several hours.,4
 superior,превосходящий,This new processor is clearly **superior** to the previous generation.,4
 proved,доказал,The scientist finally **proved** his theory after years of research.,4
 causes,причины,Scientists are still debating the **causes** of the mass extinction.,4
 constant,постоянный,"The machine produces a **constant** low hum, day and night.",3
-solar,солнечный,The house runs entirely on **solar** energy from rooftop panels.,3
-chemical,химический,Workers must wear protective gloves when handling **chemical** substances.,4
+solar,солнечный,The house runs entirely on **solar** energy from rooftop panels.,3,home
+chemical,химический,Workers must wear protective gloves when handling **chemical** substances.,4,work
 contrary,вопреки,"**Contrary** to popular belief, goldfish can have a memory of several months.",4
 explode,взрываться,The gas pipe could **explode** if it is not repaired immediately.,4
 mankind,человечество,The discovery was hailed as one of the greatest breakthroughs in the history of **mankind**.,4

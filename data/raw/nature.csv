@@ -5,7 +5,7 @@ cow,корова,The **cow** gives us fresh milk.,1
 horse,лошадь,A brown **horse** runs across the field.,1
 sheep,овца,White **sheep** graze on the hill.,1
 pig,свинья,The pink **pig** is very hungry.,1
-chicken,курица,The **chicken** laid a brown egg.,1
+chicken,курица,The **chicken** laid a brown egg.,1,kitchen
 duck,утка,A **duck** swims on the pond.,1
 rabbit,кролик,A small **rabbit** hides in bushes.,2
 mouse,мышь,A tiny **mouse** ran under the table.,2
@@ -37,18 +37,18 @@ grass,трава,Green **grass** covers the whole field.,1
 leaf,лист,One yellow **leaf** fell from branches.,2
 leaf,страница,I turned a new **leaf** today.,4
 branch,ветка,A heavy **branch** broke in storm.,2
-branch,филиал,The bank **branch** opens at nine.,4
+branch,филиал,The bank **branch** opens at nine.,4,bank
 root,корень,The tree **root** goes deep underground.,3
 seed,семя,A tiny **seed** becomes big plant.,2
-fruit,фрукт,This sweet **fruit** grows on trees.,1
+fruit,фрукт,This sweet **fruit** grows on trees.,1,kitchen
 rose,роза,She picked a red **rose** yesterday.,2
 rose,розовый,She wore a **rose** colored dress.,4
 oak,дуб,The mighty **oak** is very old.,3
 pine,сосна,Tall **pine** trees smell very fresh.,3
 pine,тосковать,I **pine** for my home country.,4
 sun,солнце,The warm **sun** shines every morning.,1
-moon,луна,A full **moon** lights the night.,1
-star,звезда,One bright **star** appeared in sky.,1
+moon,луна,A full **moon** lights the night.,1,science
+star,звезда,One bright **star** appeared in sky.,1,science
 star,знаменитость,The movie **star** signed my book.,3
 cloud,облако,A gray **cloud** covered the sun.,2
 rain,дождь,Heavy **rain** falls on the roof.,1
@@ -67,7 +67,7 @@ valley,долина,The green **valley** stretched for miles.,3
 forest,лес,Dark **forest** surrounds our little village.,2
 desert,пустыня,The hot **desert** has no water.,2
 desert,покидать,Soldiers should never **desert** their friends.,4
-beach,пляж,We walked along the sandy **beach**.,2
+beach,пляж,We walked along the sandy **beach**.,2,leisure
 ocean,океан,The deep **ocean** covers much earth.,2
 sea,море,The warm **sea** is very calm.,1
 lake,озеро,A clear **lake** reflects the mountains.,2
@@ -131,7 +131,7 @@ glacier,ледник,The ancient **glacier** slowly melted each summer.,3
 canyon,каньон,Wind howled through the deep **canyon**.,3
 waterfall,водопад,We swam beneath the cold **waterfall**.,2
 brook,ручей,A tiny **brook** trickled past our tent.,3
-rapids,пороги,The kayak raced through dangerous **rapids**.,4
+rapids,пороги,The kayak raced through dangerous **rapids**.,4,sports
 tide,прилив,The rising **tide** covered our footprints.,2
 ripple,рябь,Each **ripple** spread across the calm lake.,3
 beaver,бобр,A **beaver** built a dam on the stream.,3
@@ -155,7 +155,7 @@ ivy,плющ,Green **ivy** climbed the old brick wall.,3
 thorn,шип,A sharp **thorn** scratched my bare ankle.,2
 blossom,цветок,The apple **blossom** filled the air with fragrance.,3
 bud,бутон,A tight rose **bud** opened in the sun.,3
-pollen,пыльца,Yellow **pollen** dusted the bee's legs.,3
+pollen,пыльца,Yellow **pollen** dusted the bee's legs.,3,science
 sap,сок,Sticky **sap** dripped from the wounded tree.,3
 migrate,мигрировать,Geese **migrate** south every cold autumn.,3
 hibernate,впадать в спячку,Bears **hibernate** throughout the long winter.,3
@@ -168,7 +168,7 @@ prey,добыча,The eagle spotted its **prey** from above.,3
 dusk,сумерки,Bats appeared at the edge of **dusk**.,3
 dawn,рассвет,Birds sang loudly at the first **dawn**.,2
 twilight,сумерки,The sky glowed pink during **twilight**.,3
-constellation,созвездие,He pointed to a bright **constellation** overhead.,4
+constellation,созвездие,He pointed to a bright **constellation** overhead.,4,science
 rugged,суровый,The **rugged** coastline attracted brave surfers.,4
 barren,бесплодный,Nothing grew on the **barren** rocky slope.,4
 lush,пышный,A **lush** green forest surrounded the village.,3
@@ -183,14 +183,14 @@ herd,стадо,A **herd** of deer crossed the meadow.,3
 swarm,рой,A **swarm** of bees left the hive.,3
 burrow,нора,The fox hid inside its deep **burrow**.,3
 den,логово,Wolves rested safely in their warm **den**.,3
-habitat,среда обитания,This wetland is an important bird **habitat**.,3
+habitat,среда обитания,This wetland is an important bird **habitat**.,3,science
 wildlife,дикая природа,The park protects many kinds of **wildlife**.,3
 predator,хищник,Every **predator** needs a steady food supply.,3
-extinct,вымерший,Many large animals are now **extinct**.,3
-endangered,под угрозой исчезновения,Pandas remain an **endangered** species today.,3
-pollution,загрязнение,Air **pollution** harms plants and animals.,3
-conservation,охрана природы,Local groups support forest **conservation** efforts.,4
-ecosystem,экосистема,A healthy reef is a complex **ecosystem**.,4
+extinct,вымерший,Many large animals are now **extinct**.,3,science
+endangered,под угрозой исчезновения,Pandas remain an **endangered** species today.,3,science
+pollution,загрязнение,Air **pollution** harms plants and animals.,3,science
+conservation,охрана природы,Local groups support forest **conservation** efforts.,4,science
+ecosystem,экосистема,A healthy reef is a complex **ecosystem**.,4,science
 shore,берег,We walked along the rocky **shore** at sunset.,2
 coast,побережье,Fishermen lived near the windy **coast**.,2
 reef,риф,Colorful fish darted around the coral **reef**.,3
@@ -201,17 +201,17 @@ orchard,сад,Apples ripened in the old **orchard**.,3
 grove,роща,We picnicked in a small olive **grove**.,4
 ground,земля,The apple fell to the **ground**.,2
 blow,дуть,The wind will **blow** hard tonight.,2
-green,зелёный,The grass is very **green** in spring.,1
+green,зелёный,The grass is very **green** in spring.,1,basic
 village,деревня,My grandparents live in a small **village**.,3
 animals,животные,Wild **animals** live in this forest.,1
 nature,природа,I love walking in **nature** on weekends.,2
 dogs,собаки,Two **dogs** were playing in the park.,1
 animal,животное,A strange **animal** appeared in our garden.,1
 flowers,цветы,He brought her red **flowers** for her birthday.,1
-stars,звёзды,The **stars** are bright tonight in the sky.,2
+stars,звёзды,The **stars** are bright tonight in the sky.,2,science
 leaves,листья,The tree **leaves** turn red in autumn.,2
-female,женский,The **female** lion hunts for the pride.,3
-male,мужской,The **male** bird has brighter colors than the female.,3
+female,женский,The **female** lion hunts for the pride.,3,basic
+male,мужской,The **male** bird has brighter colors than the female.,3,basic
 birds,птицы,Colorful **birds** sing in our garden every morning.,1
 falling,падающий,The leaves are **falling** from the trees now.,2
 horses,лошади,Three **horses** were running across the field.,2
@@ -219,13 +219,13 @@ path,тропинка,Follow the narrow **path** through the woods.,2
 trees,деревья,The park has hundreds of old **trees**.,1
 farm,ферма,My uncle owns a small **farm** in the countryside.,2
 woods,лес,The children played in the **woods** near home.,2
-forces,силы,Strong winds are natural **forces** of nature.,3
+forces,силы,Strong winds are natural **forces** of nature.,3,science
 changing,меняющийся,The weather is **changing** very quickly today.,2
 clears,очищает,The wind **clears** the smoke from the valley.,3
 golden,золотой,The **golden** sunset painted the entire sky.,2
 appear,появляться,Stars **appear** in the sky after sunset.,2
 trap,ловушка,The hunter set a **trap** for the fox.,2
-poison,яд,"Some mushrooms contain deadly **poison**, so be careful.",3
+poison,яд,"Some mushrooms contain deadly **poison**, so be careful.",3,health
 hunt,охота,They went on a deer **hunt** last weekend.,3
 rat,крыса,A **rat** was hiding behind the trash can.,2
 source,источник,This river is the main water **source** for the town.,3
@@ -256,34 +256,34 @@ shine,сиять,The stars **shine** brightly above the quiet lake tonight.,2
 mighty,могучий,The **mighty** river carved a deep canyon through the rock.,4
 protecting,защищающий,The mother bird is **protecting** her babies from the storm.,2
 creatures,существа,Strange **creatures** live deep in the ocean near volcanic vents.,3
-orange,оранжевый,The leaves turn **orange** and red every autumn season.,1
-throughout,на протяжении,It rained **throughout** the entire weekend.,3
+orange,оранжевый,The leaves turn **orange** and red every autumn season.,1,basic
+throughout,на протяжении,It rained **throughout** the entire weekend.,3,basic
 burns,горит,Wood **burns** faster than coal in the fireplace.,3
 distant,далёкий,We could hear **distant** thunder over the hills.,3
 surrounded,окружённый,The small village is **surrounded** by tall mountains.,3
 struck,ударил,Lightning **struck** the tree in our backyard.,3
-temperature,температура,The **temperature** dropped below zero last night.,2
+temperature,температура,The **temperature** dropped below zero last night.,2,science
 waves,волны,Big **waves** crashed against the rocky shore.,2
 tribe,племя,An ancient **tribe** once lived in this valley.,3
-incredibly,невероятно,The mountain view was **incredibly** beautiful at sunset.,3
+incredibly,невероятно,The mountain view was **incredibly** beautiful at sunset.,3,basic
 tracks,следы,The hunter followed fresh **tracks** through the snow.,3
-environment,окружающая среда,We must protect the **environment** from pollution.,3
+environment,окружающая среда,We must protect the **environment** from pollution.,3,science
 territory,территория,The wolves defended their **territory** from intruders.,3
-gray,серый,The sky turned **gray** just before the storm hit.,1
+gray,серый,The sky turned **gray** just before the storm hit.,1,basic
 shelter,приют,Homeless families need **shelter** during harsh winter nights.,3
 appeared,появился,A rainbow **appeared** after the storm finally ended.,2
 flies,летает,A small bird **flies** past my window every morning.,2
-kit,комплект снаряжения,"The camping **kit** included a tent, sleeping bag, and water filter.",3
+kit,комплект снаряжения,"The camping **kit** included a tent, sleeping bag, and water filter.",3,leisure
 clouds,облака,Dark **clouds** gathered on the horizon before the storm hit.,2
 extreme,экстремальный,The hikers were not prepared for the **extreme** cold at the summit.,3
-grey,серый,The sky turned **grey** and heavy just before the afternoon downpour.,2
+grey,серый,The sky turned **grey** and heavy just before the afternoon downpour.,2,basic
 stable,конюшня,The horses were kept in a **stable** behind the old farmhouse.,3
 attacks,нападает,The dog **attacks** strangers whenever it is left off its leash.,3
 destruction,разрушение,The flood caused massive **destruction** throughout the coastal town.,4
 protected,защищённый,These rare birds are **protected** by law and cannot be hunted.,3
-southern,южный,The **southern** coast of the island has the most beautiful beaches.,3
-matches,спички,We forgot to bring **matches** so we could not light the campfire.,2
-supplies,припасы,The team packed enough **supplies** for a five-day hiking trip.,3
+southern,южный,The **southern** coast of the island has the most beautiful beaches.,3,basic
+matches,спички,We forgot to bring **matches** so we could not light the campfire.,2,leisure
+supplies,припасы,The team packed enough **supplies** for a five-day hiking trip.,3,leisure
 waters,воды,The boat sailed through the calm **waters** of the bay at sunset.,3
 peaceful,мирный,The park by the river is the most **peaceful** spot in the city.,2
 goat,коза,The children laughed as the **goat** tried to eat the farmer's hat.,2
@@ -291,22 +291,22 @@ tend,ухаживать,The gardener came twice a week to **tend** to the rose b
 survival,выживание,The hikers took a course in **survival** skills before their expedition.,4
 exposed,незащищённый,The hikers were **exposed** to freezing wind on the open ridge.,3
 bears,медведи,Hikers were warned that **bears** had been spotted near the campsite.,3
-magnificent,великолепный,The view from the top of the mountain was absolutely **magnificent**.,3
+magnificent,великолепный,The view from the top of the mountain was absolutely **magnificent**.,3,basic
 native,местный,The guide showed us plants that were **native** to this region of the forest.,3
-colors,цвета,The autumn leaves turned brilliant **colors** of red orange and gold.,1
-halfway,на полпути,We were **halfway** through the hike when it started to rain.,3
+colors,цвета,The autumn leaves turned brilliant **colors** of red orange and gold.,1,basic
+halfway,на полпути,We were **halfway** through the hike when it started to rain.,3,basic
 barn,амбар,The farmer stored all the hay inside the old **barn** for the winter.,3
-farmer,фермер,The **farmer** woke up before sunrise to feed the animals every morning.,2
+farmer,фермер,The **farmer** woke up before sunrise to feed the animals every morning.,2,work
 sticks,палки,The children collected **sticks** from the forest to build a small shelter.,2
 drops,падает,The temperature **drops** sharply at night in the desert.,3
 fires,пожары,Forest **fires** spread rapidly during the dry summer months.,4
-vast,огромный,The **vast** desert stretched for hundreds of kilometers in every direction.,4
-marine,морской,He served as a **marine** biologist studying coral reefs.,3
+vast,огромный,The **vast** desert stretched for hundreds of kilometers in every direction.,4,basic
+marine,морской,He served as a **marine** biologist studying coral reefs.,3,science
 rising,растущий,**Rising** temperatures are affecting agriculture across the region.,3
-region,регион,This **region** is known for its wine production and mild climate.,3
+region,регион,This **region** is known for its wine production and mild climate.,3,basic
 sunshine,солнечный свет,The children ran outside to enjoy the **sunshine** after the rain.,2
 roses,розы,He brought her a bouquet of red **roses** for their anniversary.,2
-northern,северный,The **northern** regions of the country are covered in snow for months.,3
+northern,северный,The **northern** regions of the country are covered in snow for months.,3,basic
 sunny,солнечный,It was a beautiful **sunny** day and everyone was in a good mood.,1
 ranch,ранчо,They spent the summer working on a **ranch** in Texas.,3
 ashes,пепел,After the fire the house was nothing but **ashes**.,3
@@ -314,9 +314,9 @@ boats,лодки,Several small **boats** were anchored near the dock.,2
 cattle,скот,The farmer moved the **cattle** to a fresh field every week.,3
 shadows,тени,The trees cast long **shadows** across the road in the evening.,2
 hunger,голод,After hiking for six hours they felt real **hunger** for the first time.,2
-vital,жизненно важный,Fresh water is **vital** for survival in the desert.,3
+vital,жизненно важный,Fresh water is **vital** for survival in the desert.,3,basic
 drown,тонуть,Always wear a life jacket so you do not **drown** if the boat tips over.,3
-splendid,великолепный,The view from the top of the hill was absolutely **splendid**.,3
+splendid,великолепный,The view from the top of the hill was absolutely **splendid**.,3,basic
 hut,хижина,They found shelter in a small wooden **hut** at the edge of the forest.,3
 planted,посаженный,She **planted** flowers along the garden path last spring.,2
 islands,острова,"The **islands** in the Pacific are known for their beautiful beaches, coral reefs, and warm waters.",3

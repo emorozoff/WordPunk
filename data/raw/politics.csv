@@ -1,12 +1,12 @@
 english,russian,sentence,difficulty
 vote,голосовать,Citizens **vote** on election day.,1
 law,закон,The new **law** protects workers.,1
-leader,лидер,The **leader** spoke to citizens.,1
-country,страна,Our **country** held fair elections.,1
+leader,лидер,The **leader** spoke to citizens.,1,work
+country,страна,Our **country** held fair elections.,1,basic
 president,президент,The **president** signed the document.,1
-people,народ,The **people** chose their leaders.,1
-news,новости,The **news** reported on elections.,1
-rule,правило,Every **rule** must be clear.,1
+people,народ,The **people** chose their leaders.,1,basic
+news,новости,The **news** reported on elections.,1,basic
+rule,правило,Every **rule** must be clear.,1,basic
 power,власть,He gained political **power** quickly.,1
 flag,флаг,The **flag** hangs above the building.,1
 voter,избиратель,Every **voter** has equal rights.,2
@@ -14,43 +14,43 @@ election,выборы,The **election** happens every four years.,2
 party,партия,She joined a political **party**.,2
 support,поддержка,The mayor needs public **support**.,2
 poll,опрос,The **poll** showed mixed opinions.,2
-debate,дебаты,The **debate** lasted two hours.,2
-choice,выбор,Voters made a clear **choice**.,2
-voice,голос,Every citizen has a **voice**.,2
+debate,дебаты,The **debate** lasted two hours.,2,school
+choice,выбор,Voters made a clear **choice**.,2,basic
+voice,голос,Every citizen has a **voice**.,2,basic
 freedom,свобода,They fought for their **freedom**.,2
 nation,нация,The **nation** celebrated its anniversary.,2
-union,союз,Many countries formed a **union**.,2
+union,союз,Many countries formed a **union**.,2,work
 peace,мир,The treaty brought lasting **peace**.,2
 war,война,The **war** ended last year.,2
 army,армия,The **army** defends the borders.,2
 mayor,мэр,The **mayor** opened the library.,2
 court,суд,The **court** announced its decision.,2
-judge,судья,The **judge** read the verdict aloud.,2
+judge,судья,The **judge** read the verdict aloud.,2,work
 crime,преступление,The **crime** rate dropped sharply.,2
 police,полиция,The **police** protect public order.,2
 citizen,гражданин,Every **citizen** pays taxes.,2
-public,общественный,The park is a **public** space.,2
-private,частный,This is a **private** meeting.,2
+public,общественный,The park is a **public** space.,2,basic
+private,частный,This is a **private** meeting.,2,basic
 government,правительство,The **government** raised the budget.,2
-speech,речь,The mayor gave a short **speech**.,2
+speech,речь,The mayor gave a short **speech**.,2,school
 rally,митинг,A small **rally** gathered downtown.,2
 state,штат,Each **state** has its own laws.,3
-right,право,Every worker has this **right**.,3
+right,право,Every worker has this **right**.,3,basic
 bill,законопроект,The **bill** passed by a vote.,3
 term,срок,His **term** ends next spring.,3
-office,должность,She holds high public **office**.,3
+office,должность,She holds high public **office**.,3,work
 cabinet,кабинет,The **cabinet** discussed new policies.,3
 pledge,обещание,The candidate made a clear **pledge**.,3
 motion,предложение,The **motion** was rejected today.,3
-campaign,кампания,Her **campaign** focused on health.,3
-policy,политика,The new **policy** helps families.,3
+campaign,кампания,Her **campaign** focused on health.,3,work
+policy,политика,The new **policy** helps families.,3,work
 senate,сенат,The **senate** approved the law.,3
 council,совет,The city **council** meets weekly.,3
-candidate,кандидат,The **candidate** answered tough questions.,3
+candidate,кандидат,The **candidate** answered tough questions.,3,work
 ballot,бюллетень,She marked her **ballot** carefully.,3
 treaty,договор,Both nations signed the **treaty**.,3
-border,граница,Guards patrol the **border**.,3
-embassy,посольство,The **embassy** opened early today.,3
+border,граница,Guards patrol the **border**.,3,airport
+embassy,посольство,The **embassy** opened early today.,3,airport
 protest,протест,The **protest** was peaceful.,3
 reform,реформа,The new **reform** helps students.,3
 minister,министр,The **minister** visited the factory.,3
@@ -73,7 +73,7 @@ parliament,парламент,The **parliament** debated the law.,4
 democracy,демократия,True **democracy** needs active voters.,4
 republic,республика,The **republic** turned fifty years old.,4
 monarchy,монархия,The **monarchy** lasted many centuries.,4
-diplomat,дипломат,A skilled **diplomat** resolved the issue.,4
+diplomat,дипломат,A skilled **diplomat** resolved the issue.,4,work
 diplomacy,дипломатия,Careful **diplomacy** prevented the conflict.,4
 sanction,санкция,The new **sanction** limits trade.,4
 regime,режим,The **regime** fell peacefully.,4
@@ -84,7 +84,7 @@ veto,вето,The president used his **veto**.,4
 treason,измена,The trial involved **treason** charges.,4
 verdict,вердикт,The jury reached a **verdict**.,4
 tribunal,трибунал,The **tribunal** heard the case.,4
-delegate,делегат,Each **delegate** received a badge.,4
+delegate,делегат,Each **delegate** received a badge.,4,work
 petition,петиция,They signed a public **petition**.,4
 sovereignty,суверенитет,The nation defended its **sovereignty**.,4
 coalition,коалиция,The parties formed a **coalition**.,4
@@ -98,7 +98,7 @@ autocracy,автократия,An **autocracy** limits personal freedom.,5
 plebiscite,плебисцит,The region held a **plebiscite**.,5
 demagogue,демагог,A clever **demagogue** misled voters.,5
 ideology,идеология,Each party has its **ideology**.,5
-bureaucracy,бюрократия,The **bureaucracy** slowed the process.,5
+bureaucracy,бюрократия,The **bureaucracy** slowed the process.,5,work
 senator,сенатор,The **senator** gave a short speech today.,3
 governor,губернатор,Our **governor** signed the new education law.,3
 lawmaker,законодатель,Each **lawmaker** votes on proposed bills.,4
@@ -108,19 +108,19 @@ enact,принять,Leaders plan to **enact** new safety rules.,4
 repeal,отменить,Voters wanted to **repeal** the old tax.,4
 clause,пункт,That **clause** protects small business owners.,3
 legislature,законодательное собрание,The state **legislature** meets twice each year.,4
-deregulation,дерегулирование,Some leaders favor **deregulation** of the banking sector.,5
+deregulation,дерегулирование,Some leaders favor **deregulation** of the banking sector.,5,bank
 welfare,социальное обеспечение,The program expands **welfare** for low-income families.,3
-committee,комитет,The budget **committee** reviewed the proposal today.,3
-assembly,собрание,The national **assembly** debated the new law.,3
+committee,комитет,The budget **committee** reviewed the proposal today.,3,work
+assembly,собрание,The national **assembly** debated the new law.,3,work
 chamber,палата,The upper **chamber** rejected the amendment.,3
-session,сессия,Parliament opens a new **session** next month.,3
+session,сессия,Parliament opens a new **session** next month.,3,work
 ministry,министерство,The education **ministry** issued new guidelines.,3
-deputy,заместитель,The **deputy** answered questions from reporters.,3
-aide,помощник,A senior **aide** briefed the press yesterday.,3
-staffer,сотрудник аппарата,Each **staffer** prepared a short report.,4
+deputy,заместитель,The **deputy** answered questions from reporters.,3,work
+aide,помощник,A senior **aide** briefed the press yesterday.,3,work
+staffer,сотрудник аппарата,Each **staffer** prepared a short report.,4,work
 scandal,скандал,A political **scandal** forced his early resignation.,3
 bribery,взяточничество,Authorities opened a **bribery** investigation last week.,4
-accountability,подотчётность,Public **accountability** helps prevent abuse of power.,4
+accountability,подотчётность,Public **accountability** helps prevent abuse of power.,4,work
 transparency,прозрачность,Citizens demand more **transparency** from local officials.,4
 whistleblower,информатор,A brave **whistleblower** exposed the hidden contracts.,5
 dissent,несогласие,The judge voiced **dissent** against the ruling.,4
@@ -133,7 +133,7 @@ federalism,федерализм,**federalism** divides power between central and
 rights,права,Citizens fought for basic civic **rights**.,2
 activism,активизм,Youth **activism** shaped the new climate policy.,4
 activist,активист,Every **activist** joined the peaceful march downtown.,3
-lobbyist,лоббист,A paid **lobbyist** met with several lawmakers.,4
+lobbyist,лоббист,A paid **lobbyist** met with several lawmakers.,4,work
 advocate,защитник,She became an **advocate** for housing reform.,3
 caucus,фракция,Members of the **caucus** agreed on a strategy.,4
 runoff,второй тур,A **runoff** decided the close mayoral race.,4
@@ -141,7 +141,7 @@ recount,пересчёт,Officials ordered a **recount** after the narrow loss.,
 landslide,убедительная победа,Her party won by a **landslide** last month.,4
 concession,признание поражения,His **concession** speech praised the winning candidate.,4
 pollster,социолог,The **pollster** published daily approval numbers.,5
-negotiation,переговоры,Long **negotiation** produced a fragile peace.,3
+negotiation,переговоры,Long **negotiation** produced a fragile peace.,3,work
 accord,соглашение,Both sides signed a trade **accord** last week.,4
 pact,договор,They formed a defensive **pact** for mutual support.,3
 bloc,блок,A regional **bloc** coordinated their response together.,4
@@ -172,19 +172,19 @@ independence,независимость,The colony celebrated its **independence
 amnesty,амнистия,The government offered **amnesty** to nonviolent offenders.,4
 pardon,помилование,A presidential **pardon** released him from prison.,3
 clemency,помилование,The prisoner requested **clemency** from the governor.,5
-nepotism,непотизм,Critics accused him of **nepotism** and favoritism.,5
+nepotism,непотизм,Critics accused him of **nepotism** and favoritism.,5,work
 patronage,покровительство,Political **patronage** often rewards loyal supporters.,5
 inauguration,инаугурация,The **inauguration** ceremony drew a large crowd.,4
 pundit,эксперт,A political **pundit** predicted the surprise result.,4
-briefing,брифинг,The morning **briefing** covered the new legislation.,3
+briefing,брифинг,The morning **briefing** covered the new legislation.,3,work
 speaker,спикер,The **speaker** of the house opened debate.,2
-recess,перерыв,Parliament went into **recess** for the holidays.,3
+recess,перерыв,Parliament went into **recess** for the holidays.,3,school
 hearing,слушание,The public **hearing** lasted almost four hours.,3
 testimony,показания,Her **testimony** shaped the final committee report.,4
 witness,свидетель,The key **witness** answered questions calmly.,3
 subpoena,повестка,A court **subpoena** required his attendance.,5
 jury,присяжные,The **jury** reached a verdict after two days.,3
-prosecutor,прокурор,The **prosecutor** presented strong evidence to the court.,4
+prosecutor,прокурор,The **prosecutor** presented strong evidence to the court.,4,work
 defendant,ответчик,The **defendant** denied all the accusations firmly.,4
 plaintiff,истец,The **plaintiff** filed a civil rights case.,4
 appeal,апелляция,The lawyer filed an **appeal** to higher court.,3
@@ -192,62 +192,62 @@ precedent,прецедент,The ruling sets an important legal **precedent**.,4
 ordinance,постановление,A local **ordinance** limits noise after ten.,4
 provision,положение,One **provision** protects small family farms.,4
 enforcement,правоприменение,Law **enforcement** responded to the emergency quickly.,4
-compliance,соблюдение,Full **compliance** with regulations is mandatory.,4
+compliance,соблюдение,Full **compliance** with regulations is mandatory.,4,work
 oversight,надзор,Congressional **oversight** reviews agency spending each year.,4
 watchdog,надзорный орган,An independent **watchdog** monitors government contracts.,4
-agency,агентство,A federal **agency** handles disaster response operations.,3
+agency,агентство,A federal **agency** handles disaster response operations.,3,work
 federal,федеральный,The **federal** court accepted the new case.,3
 municipal,муниципальный,The **municipal** council approved new bicycle lanes.,4
 constituency,электорат,She meets her **constituency** every Saturday morning.,5
-society,общество,Modern **society** values technology more than ever.,4
+society,общество,Modern **society** values technology more than ever.,4,basic
 political,политический,They discussed **political** issues during dinner.,3
-statement,заявление,The president made an important **statement** today.,3
-officers,офицеры,Police **officers** patrol the neighborhood at night.,2
-official,официальный,The **official** ceremony begins at noon tomorrow.,3
+statement,заявление,The president made an important **statement** today.,3,basic
+officers,офицеры,Police **officers** patrol the neighborhood at night.,2,work
+official,официальный,The **official** ceremony begins at noon tomorrow.,3,basic
 charges,обвинения,The police dropped all **charges** against him.,3
-threat,угроза,The storm poses a serious **threat** to the coast.,3
-enemies,враги,The two countries have been **enemies** for years.,3
+threat,угроза,The storm poses a serious **threat** to the coast.,3,basic
+enemies,враги,The two countries have been **enemies** for years.,3,basic
 violence,насилие,The movie had too much **violence** for kids.,3
 prime,премьер,The **prime** minister gave a speech today.,3
-talks,разговоры,Peace **talks** begin next week,3
+talks,разговоры,Peace **talks** begin next week,3,basic
 politics,политика,He is not interested in **politics** at all,3
 authority,власть,The mayor has full **authority** over the city,3
-revolution,революция,The French **Revolution** changed European history.,4
+revolution,революция,The French **Revolution** changed European history.,4,school
 laws,законы,Citizens must obey the **laws** of their country.,2
 civil,гражданский,Every citizen must know their **civil** rights.,3
 assault,нападение,The victim survived a brutal **assault** near the subway station.,4
 charity,благотворительность,They donated all the money to a local **charity** last week.,3
 kidnapped,похищенный,The billionaire's daughter was **kidnapped** last Friday evening.,4
-nuclear,ядерный,Several countries are still developing **nuclear** weapons today.,4
+nuclear,ядерный,Several countries are still developing **nuclear** weapons today.,4,science
 blast,взрыв,A massive **blast** shook the whole building around midnight.,4
-wounded,раненый,Several soldiers were **wounded** during the long battle yesterday.,4
-crisis,кризис,The country is facing a serious economic **crisis** now.,4
+wounded,раненый,Several soldiers were **wounded** during the long battle yesterday.,4,health
+crisis,кризис,The country is facing a serious economic **crisis** now.,4,basic
 crimes,преступления,The detective solved several cold **crimes** last year alone.,3
 surrender,сдаваться,The enemy soldiers were forced to **surrender** at dawn.,3
-equal,равный,All citizens should have **equal** rights under the law.,3
+equal,равный,All citizens should have **equal** rights under the law.,3,basic
 traitor,предатель,The **traitor** sold secrets to the enemy.,4
 citizens,граждане,All **citizens** must pay their taxes on time.,3
-officially,официально,The new law **officially** takes effect next Monday.,3
-developed,развитый,Finland has a highly **developed** education system.,3
+officially,официально,The new law **officially** takes effect next Monday.,3,basic
+developed,развитый,Finland has a highly **developed** education system.,3,basic
 congress,конгресс,The United States **congress** voted on the defense budget.,3
 congressman,конгрессмен,Our local **congressman** visited the school last week.,3
 congresswoman,конгрессвумен,The **congresswoman** introduced a bill on clean energy.,4
 judiciary,судебная система,An independent **judiciary** protects citizens from abuse.,4
-ambassador,посол,The French **ambassador** met the foreign minister today.,3
-spokesperson,пресс-секретарь,A White House **spokesperson** answered questions from reporters.,4
+ambassador,посол,The French **ambassador** met the foreign minister today.,3,work
+spokesperson,пресс-секретарь,A White House **spokesperson** answered questions from reporters.,4,work
 libertarian,либертарианец,A **libertarian** candidate joined the televised debate.,5
 nationalist,националист,The **nationalist** party gained seats in the recent election.,4
 populist,популист,A **populist** leader often blames elites for economic problems.,4
 conservatism,консерватизм,Traditional **conservatism** emphasizes order and gradual change.,5
 socialist,социалист,A young **socialist** won the primary by a wide margin.,4
-capitalist,капиталист,The **capitalist** system rewards innovation and risk-taking.,4
+capitalist,капиталист,The **capitalist** system rewards innovation and risk-taking.,4,bank
 centrism,центризм,His brand of **centrism** appealed to undecided voters.,5
 ideological,идеологический,The debate revealed deep **ideological** differences between parties.,5
 partisan,пристрастный,The bill passed along strict **partisan** lines yesterday.,4
 bipartisan,двухпартийный,Both sides reached a rare **bipartisan** agreement on infrastructure.,5
 gridlock,тупик,Political **gridlock** delayed the budget for months.,5
 stalemate,безвыходное положение,Negotiations ended in a frustrating **stalemate** last night.,4
-tariff,тариф,The government imposed a new **tariff** on imported steel.,4
+tariff,тариф,The government imposed a new **tariff** on imported steel.,4,bank
 embargo,эмбарго,An oil **embargo** damaged the country's struggling economy.,5
 ceasefire,прекращение огня,Both sides agreed to a temporary **ceasefire** yesterday.,4
 armistice,перемирие,The **armistice** ended four years of brutal fighting.,5
@@ -256,7 +256,7 @@ superpower,сверхдержава,The country emerged as a global **superpower
 bilateral,двусторонний,The two nations signed a **bilateral** trade agreement.,5
 multilateral,многосторонний,A **multilateral** effort addressed the refugee crisis effectively.,5
 envoy,посланник,A special **envoy** traveled to the region for peace talks.,5
-consulate,консульство,The **consulate** issued emergency visas to stranded travelers.,4
+consulate,консульство,The **consulate** issued emergency visas to stranded travelers.,4,airport
 dictator,диктатор,The **dictator** ruled the country with an iron fist.,3
 dictatorship,диктатура,Life under the **dictatorship** was harsh and fearful.,4
 tyranny,тирания,Citizens rose up against years of cruel **tyranny**.,4
@@ -270,10 +270,10 @@ extremism,экстремизм,Growing **extremism** worried security officials 
 overthrow,свержение,The **overthrow** of the king surprised many international observers.,4
 boycott,бойкот,Activists organized a **boycott** of the state-owned airline.,4
 propaganda,пропаганда,State **propaganda** praised the leader every single day.,4
-embezzlement,растрата,He was charged with **embezzlement** of public funds.,5
-cronyism,кумовство,Accusations of **cronyism** tainted the construction contracts.,5
+embezzlement,растрата,He was charged with **embezzlement** of public funds.,5,bank
+cronyism,кумовство,Accusations of **cronyism** tainted the construction contracts.,5,work
 corruption,коррупция,Widespread **corruption** undermined public trust in officials.,3
-taxpayer,налогоплательщик,Every **taxpayer** deserves transparent use of public money.,4
+taxpayer,налогоплательщик,Every **taxpayer** deserves transparent use of public money.,4,bank
 patriot,патриот,A true **patriot** puts the country before personal gain.,3
 naturalization,натурализация,She completed the **naturalization** process after five years.,5
 conscription,воинская повинность,Wartime **conscription** drafted thousands of young men.,5
@@ -304,35 +304,35 @@ demonstrator,демонстрант,A peaceful **demonstrator** handed flowers t
 demonstration,демонстрация,Thousands joined the **demonstration** for voting rights.,3
 protester,протестующий,One **protester** held a sign about climate policy.,3
 grassroots,низовое,A **grassroots** movement elected several new city council members.,4
-lobbying,лоббирование,Corporate **lobbying** influenced the final version of the bill.,4
+lobbying,лоббирование,Corporate **lobbying** influenced the final version of the bill.,4,work
 electorate,электорат,The rural **electorate** strongly favored the incumbent candidate.,5
 anarchy,анархия,The country fell into **anarchy** after the government collapsed.,4
-fascism,фашизм,Historians still study the rise of **fascism** in Europe.,5
+fascism,фашизм,Historians still study the rise of **fascism** in Europe.,5,school
 imperialism,империализм,Economic **imperialism** shaped relations between powerful and poor nations.,5
 colonialism,колониализм,Centuries of **colonialism** left lasting scars on the region.,5
-intense,напряжённый,The debate between the two candidates was **intense** and lasted over two hours.,4
+intense,напряжённый,The debate between the two candidates was **intense** and lasted over two hours.,4,basic
 bombs,бомбы,The city was evacuated after police found **bombs** in the subway.,4
 testify,давать показания,The witness agreed to **testify** in court about what she had seen.,4
 liberty,свобода,Freedom of speech is one of the core **liberties** in a democracy.,4
 suspects,подозреваемые,Police have identified three **suspects** and are questioning them now.,4
-aid,помощь,The government sent **aid** to the flood victims last week.,3
-resistance,сопротивление,The new policy faced strong **resistance** from the union workers.,4
-global,глобальный,Climate change is a **global** challenge that requires international cooperation.,4
+aid,помощь,The government sent **aid** to the flood victims last week.,3,basic
+resistance,сопротивление,The new policy faced strong **resistance** from the union workers.,4,basic
+global,глобальный,Climate change is a **global** challenge that requires international cooperation.,4,basic
 votes,голоса,The candidate needed five hundred more **votes** to win the election.,4
 abuse,злоупотребление,The report revealed widespread **abuse** of power within the department.,5
-areas,районы,The city invested in improving infrastructure in the poorer **areas**.,3
-counts,считает,Every vote **counts** in a close election — make sure you register.,3
-covering,накрывая,The soldiers were **covering** each other as they moved through the street.,4
-exposed,выявленный,The journalist **exposed** the corruption scheme in a front-page article.,4
-leaders,лидеры,World **leaders** gathered in Geneva to discuss the climate agreement.,4
-promises,обещания,Politicians often make **promises** during campaigns that they never keep.,3
+areas,районы,The city invested in improving infrastructure in the poorer **areas**.,3,basic
+counts,считает,Every vote **counts** in a close election — make sure you register.,3,basic
+covering,накрывая,The soldiers were **covering** each other as they moved through the street.,4,basic
+exposed,выявленный,The journalist **exposed** the corruption scheme in a front-page article.,4,basic
+leaders,лидеры,World **leaders** gathered in Geneva to discuss the climate agreement.,4,work
+promises,обещания,Politicians often make **promises** during campaigns that they never keep.,3,basic
 combat,бороться,The new law aims to **combat** rising levels of air pollution.,4
-soviet,советский,The museum has a large collection of **Soviet**-era posters and artwork.,5
+soviet,советский,The museum has a large collection of **Soviet**-era posters and artwork.,5,school
 conspiracy,заговор,The film is about a government **conspiracy** to hide the truth.,4
 retreat,отступать,The army decided to **retreat** rather than risk further losses.,4
 voted,проголосовавший,More than half the country **voted** in favour of the new law.,3
-denied,отрицать,He **denied** ever seeing the document before the trial.,4
+denied,отрицать,He **denied** ever seeing the document before the trial.,4,basic
 comrades,товарищи,The soldiers trusted their **comrades** completely in battle.,4
 supreme,высший,The case was eventually brought before the **supreme** court for a final ruling.,5
-deaths,смерти,"The war caused thousands of civilian **deaths**, which shocked the international community.",5
-revealed,раскрытый,The investigation **revealed** that the money had been transferred to an offshore account.,4
+deaths,смерти,"The war caused thousands of civilian **deaths**, which shocked the international community.",5,health
+revealed,раскрытый,The investigation **revealed** that the money had been transferred to an offshore account.,4,basic

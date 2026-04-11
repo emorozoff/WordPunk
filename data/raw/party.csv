@@ -1,22 +1,22 @@
 english,russian,sentence,difficulty
-cake,торт,She baked a huge **cake** for me.,1
-candle,свеча,Blow out every **candle** on the cake.,1
-bride,невеста,The **bride** wore a long white dress.,1
-groom,жених,The **groom** kissed her on the cheek.,1
+cake,торт,She baked a huge **cake** for me.,1,kitchen
+candle,свеча,Blow out every **candle** on the cake.,1,home
+bride,невеста,The **bride** wore a long white dress.,1,family
+groom,жених,The **groom** kissed her on the cheek.,1,family
 balloon,шар,A red **balloon** floated to the ceiling.,1
 party,вечеринка,The **party** went on until dawn.,1
-party,партия,The green **party** won the vote.,4
-couple,пара,The young **couple** cut the cake together.,1
+party,партия,The green **party** won the vote.,4,politics
+couple,пара,The young **couple** cut the cake together.,1,family
 joke,шутка,He told one more funny **joke**.,1
-gift,подарок,I wrapped his **gift** in blue paper.,1
+gift,подарок,I wrapped his **gift** in blue paper.,1,shopping
 merry,веселый,We all had a very **merry** night.,1
-holiday,праздник,Christmas is my favorite **holiday**.,2
-birthday,день рождения,Today is my tenth **birthday**.,2
+holiday,праздник,Christmas is my favorite **holiday**.,2,leisure
+birthday,день рождения,Today is my tenth **birthday**.,2,family
 hostess,хозяйка,Our **hostess** poured drinks for everyone.,2
-ceremony,церемония,The wedding **ceremony** lasted thirty minutes.,2
-vows,клятвы,They exchanged **vows** under the arch.,2
+ceremony,церемония,The wedding **ceremony** lasted thirty minutes.,2,family
+vows,клятвы,They exchanged **vows** under the arch.,2,family
 bouquet,букет,She caught the flower **bouquet**.,2
-festival,фестиваль,The music **festival** lasted three days.,2
+festival,фестиваль,The music **festival** lasted three days.,2,leisure
 fireworks,фейерверк,The **fireworks** lit up the sky.,2
 theme,тема,The **theme** of the night was Hawaii.,2
 invitation,приглашение,I sent the **invitation** by email.,2
@@ -24,56 +24,56 @@ costume,костюм,Her cat **costume** was really cute.,2
 ribbon,лента,A red **ribbon** tied the box shut.,2
 wrap,заворачивать,Please **wrap** the gift in gold paper.,2
 wrap,обертка,The gold **wrap** looked so festive.,3
-greet,приветствовать,I will **greet** every guest at the door.,2
+greet,приветствовать,I will **greet** every guest at the door.,2,basic
 rhythm,ритм,The **rhythm** made everyone dance.,2
-crowd,толпа,A huge **crowd** filled the room.,2
+crowd,толпа,A huge **crowd** filled the room.,2,basic
 pop,хлопать,The balloons began to **pop** loudly.,2
 toast,тост,He gave a short **toast** to friends.,2
 applaud,аплодировать,The crowd began to **applaud** loudly.,2
-decoration,украшение,Every **decoration** matched the gold theme.,2
+decoration,украшение,Every **decoration** matched the gold theme.,2,home
 announce,объявлять,He will **announce** the winner soon.,2
 confetti,конфетти,Pink **confetti** fell from the ceiling.,2
-champagne,шампанское,He poured the cold **champagne** carefully.,2
+champagne,шампанское,He poured the cold **champagne** carefully.,2,restaurant
 cheers,ура,Everyone said **cheers** before drinking.,2
-cupcake,кекс,Each kid got a pink **cupcake**.,2
-veil,фата,Her white **veil** touched the floor.,3
+cupcake,кекс,Each kid got a pink **cupcake**.,2,kitchen
+veil,фата,Her white **veil** touched the floor.,3,family
 tuxedo,смокинг,He wore a black **tuxedo** to dinner.,3
-gown,платье,Her long **gown** looked like silk.,3
-bridesmaid,подружка невесты,Each **bridesmaid** wore a pink dress.,3
-groomsman,шафер,Every **groomsman** gave a short speech.,3
-honeymoon,медовый месяц,They went to Rome for their **honeymoon**.,3
+gown,платье,Her long **gown** looked like silk.,3,shopping
+bridesmaid,подружка невесты,Each **bridesmaid** wore a pink dress.,3,family
+groomsman,шафер,Every **groomsman** gave a short speech.,3,family
+honeymoon,медовый месяц,They went to Rome for their **honeymoon**.,3,family
 bash,вечеринка,We threw a huge **bash** last night.,3
 bash,удар,He took a hard **bash** to the knee.,3
 parade,парад,The town held a big **parade**.,3
 bow,бант,A pink **bow** sat on the gift.,3
 bow,поклон,He gave a deep **bow** after singing.,3
 unwrap,разворачивать,He watched her **unwrap** the small box.,3
-engage,помолвить,They **engage** right after college.,3
-punch,пунш,The fruit **punch** tasted really sweet.,3
-punch,удар,He threw one hard **punch** in the fight.,3
-pop,поп,She loves to dance to **pop** music.,3
-disco,диско,They danced in a small **disco** club.,3
-karaoke,караоке,We all sang at **karaoke** night.,3
-singer,певец,The **singer** had a lovely voice.,3
+engage,помолвить,They **engage** right after college.,3,family
+punch,пунш,The fruit **punch** tasted really sweet.,3,restaurant
+punch,удар,He threw one hard **punch** in the fight.,3,sports
+pop,поп,She loves to dance to **pop** music.,3,leisure
+disco,диско,They danced in a small **disco** club.,3,leisure
+karaoke,караоке,We all sang at **karaoke** night.,3,leisure
+singer,певец,The **singer** had a lovely voice.,3,leisure
 clink,чокаться,They **clink** their glasses and smile.,3
-buffet,фуршет,The **buffet** had ten kinds of food.,3
+buffet,фуршет,The **buffet** had ten kinds of food.,3,restaurant
 fancy,нарядный,She wore a very **fancy** dress tonight.,3
 fancy,любить,I really **fancy** that new cake.,3
 glitter,блестки,Her dress had gold **glitter** all over.,3
 glow,свечение,The candles gave a warm **glow**.,3
 sparkle,сверкать,The lights **sparkle** like tiny stars.,3
-feast,пир,A huge **feast** waited on the table.,3
+feast,пир,A huge **feast** waited on the table.,3,restaurant
 feast,пировать,They **feast** until the early morning.,4
 crown,корона,The queen wore a gold **crown**.,3
 crown,короновать,They will **crown** her queen tomorrow.,3
 revel,веселиться,They **revel** all night without sleep.,4
 revel,наслаждаться,I **revel** in the warm spring sun.,4
-cater,обслуживать,They **cater** every wedding in town.,4
+cater,обслуживать,They **cater** every wedding in town.,4,work
 cater,угождать,I will not **cater** to his bad mood.,4
 host,принимать,We will **host** her for the weekend.,4
 gift,дар,He has a rare **gift** for music.,4
 crush,увлечение,She has a secret **crush** on him.,4
-jam,затор,We got stuck in a traffic **jam**.,4
+jam,затор,We got stuck in a traffic **jam**.,4,driving
 crash,вторгаться,Don't **crash** the private wedding please.,4
 mingle,общаться,Try to **mingle** with new people tonight.,4
 mingle,смешивать,You should **mingle** the red and white paints.,4
@@ -90,9 +90,9 @@ sparkler,бенгальский огонь,Each kid held a bright **sparkler**.,
 twirl,кружиться,She loves to **twirl** in her new dress.,5
 sway,качаться,They **sway** slowly to the music.,4
 thrill,трепет,The **thrill** of the night was amazing.,4
-platter,блюдо,She placed the fruit **platter** on the table.,4
-ornament,украшение,She hung a glass **ornament** on the tree.,4
-banquet,банкет,The royal **banquet** lasted four hours.,5
+platter,блюдо,She placed the fruit **platter** on the table.,4,kitchen
+ornament,украшение,She hung a glass **ornament** on the tree.,4,home
+banquet,банкет,The royal **banquet** lasted four hours.,5,restaurant
 mob,толпа,A happy **mob** surrounded the bride.,5
 mistletoe,омела,We kissed under the **mistletoe**.,5
 tinsel,мишура,Silver **tinsel** covered the whole tree.,5
@@ -103,11 +103,11 @@ pinata,пиньята,The children took turns hitting the **pinata**.,2
 noisemaker,шумелка,He blew his **noisemaker** at midnight.,3
 emcee,ведущий,The **emcee** announced the next act loudly.,3
 jubilee,юбилей,The queen celebrated her silver **jubilee** yesterday.,4
-eulogy,надгробная речь,His brother gave a touching **eulogy**.,4
-wake,поминки,Friends gathered at the **wake** after midnight.,3
-officiant,распорядитель церемонии,The **officiant** guided them through the vows.,4
-altar,алтарь,The couple exchanged rings at the **altar**.,3
-chapel,часовня,They married in a tiny stone **chapel**.,3
+eulogy,надгробная речь,His brother gave a touching **eulogy**.,4,family
+wake,поминки,Friends gathered at the **wake** after midnight.,3,family
+officiant,распорядитель церемонии,The **officiant** guided them through the vows.,4,family
+altar,алтарь,The couple exchanged rings at the **altar**.,3,family
+chapel,часовня,They married in a tiny stone **chapel**.,3,family
 pew,скамья,Guests filled every **pew** in the church.,3
 ballroom,бальный зал,The grand **ballroom** glittered with golden lights.,3
 marquee,шатёр,A huge white **marquee** covered the garden.,3
@@ -142,9 +142,9 @@ ruckus,шум,Kids made a happy **ruckus** near cake.,4
 ovation,овация,The speech received a standing **ovation**.,4
 serenade,серенада,He sang a soft **serenade** to her.,4
 carol,колядка,Children sang a Christmas **carol** at door.,3
-anthem,гимн,Guests stood for the national **anthem** proudly.,3
+anthem,гимн,Guests stood for the national **anthem** proudly.,3,politics
 jukebox,музыкальный автомат,An old **jukebox** played vintage party songs.,3
-deejay,диджей,The **deejay** mixed tracks all night long.,3
+deejay,диджей,The **deejay** mixed tracks all night long.,3,leisure
 boombox,магнитофон,He brought an old **boombox** to party.,3
 amp,усилитель,The speakers needed a louder **amp** tonight.,3
 speaker,колонка,The huge **speaker** pumped out dance music.,2
@@ -153,7 +153,7 @@ floodlight,прожектор,A bright **floodlight** lit the outdoor stage.,4
 lanterns,фонарики,Paper **lanterns** swayed gently above the tables.,3
 festoon,гирлянда,A paper **festoon** hung above the dining table.,5
 bunting,флажки,Red and white **bunting** decorated the hall.,4
-drapes,драпировка,Silk **drapes** framed the wedding photo booth.,4
+drapes,драпировка,Silk **drapes** framed the wedding photo booth.,4,home
 backdrop,фон,Guests posed in front of the flower **backdrop**.,3
 archway,арка,A floral **archway** stood near the altar.,3
 canopy,навес,The bride walked under a white **canopy**.,3
@@ -166,10 +166,10 @@ bowtie,галстук-бабочка,The groom adjusted his black silk **bowtie*
 cummerbund,пояс к смокингу,He wore a red silk **cummerbund** tonight.,5
 honoree,виновник торжества,The **honoree** received a beautiful bouquet of roses.,4
 debutante,дебютантка,The young **debutante** danced with her father.,4
-bestman,шафер,The **bestman** gave a funny speech tonight.,3
-maidofhonor,подружка невесты,The **maidofhonor** walked slowly down the aisle.,3
-ringbearer,мальчик с кольцами,The little **ringbearer** nervously carried the golden rings.,3
-flowergirl,девочка с цветами,The tiny **flowergirl** scattered petals down the aisle.,3
+bestman,шафер,The **bestman** gave a funny speech tonight.,3,family
+maidofhonor,подружка невесты,The **maidofhonor** walked slowly down the aisle.,3,family
+ringbearer,мальчик с кольцами,The little **ringbearer** nervously carried the golden rings.,3,family
+flowergirl,девочка с цветами,The tiny **flowergirl** scattered petals down the aisle.,3,family
 crasher,незваный гость,A party **crasher** sneaked in through the window.,4
 wallflower,стеснительный гость,She stood alone like a shy **wallflower**.,4
 plusone,спутник,He brought his new girlfriend as **plusone**.,4
@@ -183,38 +183,38 @@ conga,конга,Everyone joined the **conga** line around tables.,3
 limbo,лимбо,The kids played **limbo** under the stick.,3
 hora,хора,Family lifted them during the traditional **hora** dance.,5
 jig,джига,Grandpa danced a lively Irish **jig** happily.,4
-promnight,выпускной,Her **promnight** dress cost way too much.,3
-homecoming,возвращение домой,He took Lisa to the **homecoming** dance.,3
-graduation,выпуск,The **graduation** party lasted until late Saturday night.,2
-retirement,выход на пенсию,His **retirement** party featured many old colleagues.,2
-housewarming,новоселье,We brought wine to their **housewarming** party.,3
-farewell,прощание,Coworkers threw a **farewell** lunch for her.,3
-bridalshower,девичник,Her sister planned the **bridalshower** last Saturday.,3
-babyshower,детский душ,The **babyshower** had cute blue balloons everywhere.,3
+promnight,выпускной,Her **promnight** dress cost way too much.,3,school
+homecoming,возвращение домой,He took Lisa to the **homecoming** dance.,3,school
+graduation,выпуск,The **graduation** party lasted until late Saturday night.,2,school
+retirement,выход на пенсию,His **retirement** party featured many old colleagues.,2,work
+housewarming,новоселье,We brought wine to their **housewarming** party.,3,home
+farewell,прощание,Coworkers threw a **farewell** lunch for her.,3,work
+bridalshower,девичник,Her sister planned the **bridalshower** last Saturday.,3,family
+babyshower,детский душ,The **babyshower** had cute blue balloons everywhere.,3,family
 potluck,вечеринка со своей едой,Each guest brought one dish to **potluck**.,3
 luau,луау,They hosted a Hawaiian **luau** by the pool.,4
 masquerade,маскарад,Guests wore masks to the elegant **masquerade**.,4
-carnival,карнавал,The street **carnival** attracted thousands of cheerful dancers.,3
+carnival,карнавал,The street **carnival** attracted thousands of cheerful dancers.,3,leisure
 fiesta,фиеста,The Mexican **fiesta** had music and dancing.,3
 hoedown,деревенская вечеринка,They held a country **hoedown** in the barn.,4
 eventful,насыщенный,It was a truly **eventful** wedding weekend overall.,3
 drunk,пьяный,He got really **drunk** at the party.,2
-dancing,танцующий,We spent all night **dancing** at the wedding.,1
+dancing,танцующий,We spent all night **dancing** at the wedding.,1,leisure
 invited,приглашённый,We **invited** all our friends to the wedding.,2
 invite,пригласить,I want to **invite** you to my birthday party.,2
 guests,гости,Our **guests** arrived early for the party.,2
-midnight,полночь,The party continued past **midnight**.,2
+midnight,полночь,The party continued past **midnight**.,2,basic
 parties,вечеринки/партии,We went to two **parties** last Saturday.,2
-attractive,привлекательный,She wore a very **attractive** red dress.,3
+attractive,привлекательный,She wore a very **attractive** red dress.,3,basic
 wore,носил,She **wore** a beautiful blue dress to the wedding.,2
-makeup,макияж,She applied her **makeup** before going to the party.,2
-outfit,наряд,She wore a beautiful **outfit** to the wedding.,3
-gifts,подарки,She wrapped all the **gifts** for the birthday party.,1
-toastmaster,тамада,Our **toastmaster** kept every wedding speech short and funny.,5
+makeup,макияж,She applied her **makeup** before going to the party.,2,shopping
+outfit,наряд,She wore a beautiful **outfit** to the wedding.,3,shopping
+gifts,подарки,She wrapped all the **gifts** for the birthday party.,1,shopping
+toastmaster,тамада,Our **toastmaster** kept every wedding speech short and funny.,5,family
 merrymaker,гуляка,Every **merrymaker** raised a tall glass when the clock struck midnight.,5
 celebrant,именинник,"The **celebrant** blew out the candles, then cut the cake.",4
 partythrower,устроитель вечеринки,My neighbor is a famous **partythrower** in our town.,4
-partyplanner,организатор вечеринок,She hired a **partyplanner** for her fortieth birthday bash.,4
+partyplanner,организатор вечеринок,She hired a **partyplanner** for her fortieth birthday bash.,4,work
 guestlist,список гостей,Your name was already on the **guestlist** tonight.,3
 inviteonly,только по приглашениям,"This bash is strictly **inviteonly**, no walk-ins allowed.",4
 afterparty,афтепати,Come to the **afterparty** at my place tonight.,3
@@ -222,7 +222,7 @@ pregaming,выпивка перед выходом,We were **pregaming** in the 
 preparty,предвечеринка,We met at the **preparty** before heading to the club.,4
 warmup,разогрев,"The DJ played a soft **warmup** set, then went hard.",3
 ragers,шумные вечеринки,College kids love huge weekend **ragers** near the campus.,4
-housewarmer,новосел,The **housewarmer** invited us to see his new apartment.,4
+housewarmer,новосел,The **housewarmer** invited us to see his new apartment.,4,home
 barhopper,любитель обходить бары,My cousin is a serious **barhopper** on Friday nights.,4
 pubcrawl,обход пабов,We did a five-stop **pubcrawl** through downtown last Saturday.,4
 clubgoer,завсегдатай клубов,Every young **clubgoer** knew the bouncer by his first name.,4
@@ -231,31 +231,31 @@ velvetrope,бархатный канат,A bouncer lifted the **velvetrope** for
 doorcharge,плата за вход,The **doorcharge** included one free drink ticket at the bar.,4
 openbar,бесплатный бар,"There's an **openbar** until midnight, then cash only.",3
 cashbar,платный бар,The venue only offered a **cashbar** for the reception.,4
-happyhour,счастливый час,We grabbed cheap drinks during **happyhour** before the show.,3
-lastcall,последний заказ,The bartender announced the **lastcall** at exactly two sharp.,4
+happyhour,счастливый час,We grabbed cheap drinks during **happyhour** before the show.,3,restaurant
+lastcall,последний заказ,The bartender announced the **lastcall** at exactly two sharp.,4,restaurant
 closingtime,время закрытия,"By **closingtime**, only a few stragglers still remained.",4
 dresscode,дресс-код,The **dresscode** for tonight's gala is black tie only.,3
 blacktie,строгий вечерний наряд,The charity fundraiser is a formal **blacktie** affair.,4
 redcarpet,красная дорожка,Celebrities strolled down the **redcarpet** at last night's premiere.,3
-stilettos,шпильки,She kicked off her painful **stilettos** and started dancing.,4
-attire,наряд,Formal **attire** is required for this charity ball.,3
-ensemble,ансамбль одежды,His vintage **ensemble** fit the seventies theme perfectly tonight.,4
+stilettos,шпильки,She kicked off her painful **stilettos** and started dancing.,4,shopping
+attire,наряд,Formal **attire** is required for this charity ball.,3,shopping
+ensemble,ансамбль одежды,His vintage **ensemble** fit the seventies theme perfectly tonight.,4,shopping
 dapper,щеголеватый,He looked incredibly **dapper** in his tailored navy suit.,4
 suave,галантный,The host was charming and **suave** all evening long.,4
 ravishing,сногсшибательный,You look absolutely **ravishing** in that red silk dress.,5
 stunner,красотка,The bride was a complete **stunner** in her lace gown.,4
 dazzling,ослепительный,The ballroom looked **dazzling** under all the crystal chandeliers.,4
 discoball,зеркальный шар,The spinning **discoball** scattered silver light across the dance floor.,4
-stringlights,гирлянда огоньков,Warm **stringlights** crisscrossed the garden above our dinner table.,4
+stringlights,гирлянда огоньков,Warm **stringlights** crisscrossed the garden above our dinner table.,4,home
 classy,шикарный,She threw a wonderfully **classy** engagement dinner last Friday.,3
 highend,высокого класса,It was a **highend** affair with valet parking included.,4
 lowkey,неформальный,We kept the birthday party pretty **lowkey** this year.,3
 gettogether,посиделки,We're having a small **gettogether** at my place Saturday.,3
-meetup,встреча,The company **meetup** lasted well into the late evening.,3
+meetup,встреча,The company **meetup** lasted well into the late evening.,3,work
 throwdown,гулянка,They had an epic **throwdown** to celebrate Mark's promotion.,4
-bubbly,шампанское,Let's pop some **bubbly** to celebrate your big promotion.,4
-prosecco,просекко,She always prefers Italian **prosecco** over French champagne.,4
-bartab,счёт в баре,"By midnight, my **bartab** was already over two hundred dollars.",4
+bubbly,шампанское,Let's pop some **bubbly** to celebrate your big promotion.,4,restaurant
+prosecco,просекко,She always prefers Italian **prosecco** over French champagne.,4,restaurant
+bartab,счёт в баре,"By midnight, my **bartab** was already over two hundred dollars.",4,restaurant
 wingman,друг для знакомства,My best **wingman** helped me go talk to her.,4
 flirt,флиртовать,She loves to **flirt** at every single cocktail party.,3
 fling,интрижка,They had a brief **fling** after the wedding reception ended.,4
@@ -274,11 +274,11 @@ goodiebag,подарочный пакет,The kids loved their colorful birthday
 partyhat,праздничный колпак,She wore a ridiculous paper **partyhat** all night long.,2
 photobooth,фотобудка,The **photobooth** was easily the hit of the wedding.,3
 partyvenue,место проведения вечеринки,They rented a lakeside **partyvenue** for the wedding reception.,4
-centerpieces,украшения в центре стола,Every table had elegant flower **centerpieces** in crystal vases.,3
-tablescape,композиция на столе,Her gorgeous **tablescape** featured candles and white roses.,5
+centerpieces,украшения в центре стола,Every table had elegant flower **centerpieces** in crystal vases.,3,home
+tablescape,композиция на столе,Her gorgeous **tablescape** featured candles and white roses.,5,home
 bandstand,эстрада,The jazz quartet set up on the wooden **bandstand** outside.,4
 coatcheck,гардероб,Please leave your jacket at the **coatcheck** near the entrance.,4
-cheerleader,заводила,"At every party, Jake is the natural **cheerleader** of the crew.",3
+cheerleader,заводила,"At every party, Jake is the natural **cheerleader** of the crew.",3,sports
 partyanimal,тусовщик,My roommate is a total **partyanimal** on the weekends.,3
 lifeoftheparty,душа компании,Sarah is always the **lifeoftheparty** at family reunions.,4
 cohost,сохозяин,My sister will **cohost** the baby shower with me.,4

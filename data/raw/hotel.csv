@@ -3,209 +3,209 @@ lobby,холл,The hotel **lobby** was very crowded.,2
 reception,ресепшен,The **reception** is open all night.,2
 receptionist,администратор,The **receptionist** handed me the keys.,3
 concierge,консьерж,Ask the **concierge** for restaurant tips.,4
-porter,носильщик,A **porter** carried my heavy bags.,3
+porter,носильщик,A **porter** carried my heavy bags.,3,airport
 bellhop,посыльный,The **bellhop** brought luggage to my room.,4
 doorman,швейцар,The **doorman** opened the glass doors.,3
 maid,горничная,The **maid** cleans rooms every morning.,2
-housekeeper,экономка,The **housekeeper** changed the sheets daily.,3
+housekeeper,экономка,The **housekeeper** changed the sheets daily.,3,home
 valet,парковщик,The **valet** parked my car quickly.,4
-guest,гость,Each **guest** received a welcome drink.,1
+guest,гость,Each **guest** received a welcome drink.,1,party
 visitor,посетитель,Every **visitor** must sign the register.,2
-tourist,турист,A **tourist** asked me for directions.,2
-traveller,путешественник,The **traveller** arrived late at night.,3
+tourist,турист,A **tourist** asked me for directions.,2,leisure
+traveller,путешественник,The **traveller** arrived late at night.,3,leisure
 lodger,постоялец,The **lodger** stayed for three weeks.,4
-patron,клиент,Each **patron** enjoyed excellent service here.,4
-room,номер,My **room** has a beautiful view.,1
+patron,клиент,Each **patron** enjoyed excellent service here.,4,restaurant
+room,номер,My **room** has a beautiful view.,1,home
 suite,люкс,We reserved a **suite** for honeymoon.,3
-villa,вилла,The **villa** had its own pool.,3
-bungalow,бунгало,The beach **bungalow** overlooks the waves.,4
-chalet,шале,We rented a **chalet** in Alps.,4
-cottage,коттедж,A cozy **cottage** sits by lake.,3
+villa,вилла,The **villa** had its own pool.,3,home
+bungalow,бунгало,The beach **bungalow** overlooks the waves.,4,home
+chalet,шале,We rented a **chalet** in Alps.,4,home
+cottage,коттедж,A cozy **cottage** sits by lake.,3,home
 inn,гостиница,We stopped at a small **inn**.,3
-motel,мотель,The **motel** near the highway was cheap.,2
-hostel,хостел,Young backpackers sleep in this **hostel**.,2
-resort,курорт,The tropical **resort** has five pools.,3
-spa,спа,I booked a **spa** treatment today.,2
-venue,место,This **venue** hosts many weddings yearly.,4
+motel,мотель,The **motel** near the highway was cheap.,2,driving
+hostel,хостел,Young backpackers sleep in this **hostel**.,2,leisure
+resort,курорт,The tropical **resort** has five pools.,3,leisure
+spa,спа,I booked a **spa** treatment today.,2,health
+venue,место,This **venue** hosts many weddings yearly.,4,party
 lodging,жильё,We need **lodging** for three nights.,4
 accommodation,размещение,Our **accommodation** included breakfast and parking.,4
 stay,проживание,Our **stay** was absolutely wonderful overall.,2
-reserve,бронировать,I want to **reserve** two rooms.,3
-booking,бронь,Your **booking** is confirmed for Friday.,3
-arrival,прибытие,The **arrival** time is three o'clock.,3
-departure,отъезд,The **departure** is scheduled for morning.,3
-checkout,выезд,Please complete **checkout** before noon tomorrow.,2
+reserve,бронировать,I want to **reserve** two rooms.,3,restaurant
+booking,бронь,Your **booking** is confirmed for Friday.,3,airport
+arrival,прибытие,The **arrival** time is three o'clock.,3,airport
+departure,отъезд,The **departure** is scheduled for morning.,3,airport
+checkout,выезд,Please complete **checkout** before noon tomorrow.,2,shopping
 confirm,подтвердить,Please **confirm** your reservation by email.,3
 occupancy,заполняемость,The **occupancy** rate is very high.,5
 vacant,свободный,The room is currently **vacant** now.,3
-available,доступный,Only two rooms are **available** tonight.,2
+available,доступный,Only two rooms are **available** tonight.,2,basic
 unavailable,недоступный,That suite is **unavailable** until Sunday.,3
-rate,тариф,The weekend **rate** is much higher.,3
-fare,плата,The shuttle **fare** is ten dollars.,3
-deposit,залог,The hotel requires a security **deposit**.,3
-rebate,возврат,We received a **rebate** for problems.,5
+rate,тариф,The weekend **rate** is much higher.,3,bank
+fare,плата,The shuttle **fare** is ten dollars.,3,driving
+deposit,залог,The hotel requires a security **deposit**.,3,bank
+rebate,возврат,We received a **rebate** for problems.,5,shopping
 upgrade,повышение,They gave us a free **upgrade**.,3
 amenities,удобства,The **amenities** include pool and sauna.,4
 facilities,оснащение,Excellent **facilities** await every hotel guest.,4
-service,обслуживание,Room **service** arrived within ten minutes.,2
-extra,дополнительный,We paid **extra** for a crib.,2
+service,обслуживание,Room **service** arrived within ten minutes.,2,restaurant
+extra,дополнительный,We paid **extra** for a crib.,2,basic
 surcharge,доплата,A small **surcharge** covers weekend nights.,5
-invoice,счёт-фактура,The **invoice** shows every charge separately.,4
-elevator,лифт,Take the **elevator** to fifth floor.,2
-escalator,эскалатор,The **escalator** leads to main lobby.,3
-corridor,коридор,The long **corridor** felt quite dark.,3
-entrance,вход,Guests use the main **entrance** here.,2
-exit,выход,Emergency **exit** signs glow in red.,2
-foyer,фойе,The marble **foyer** looked truly elegant.,4
+invoice,счёт-фактура,The **invoice** shows every charge separately.,4,work
+elevator,лифт,Take the **elevator** to fifth floor.,2,home
+escalator,эскалатор,The **escalator** leads to main lobby.,3,shopping
+corridor,коридор,The long **corridor** felt quite dark.,3,home
+entrance,вход,Guests use the main **entrance** here.,2,basic
+exit,выход,Emergency **exit** signs glow in red.,2,basic
+foyer,фойе,The marble **foyer** looked truly elegant.,4,home
 mezzanine,антресоль,The **mezzanine** overlooks the main lobby.,5
-terrace,терраса,The **terrace** offers mountain views daily.,3
-patio,патио,We ate breakfast on the **patio**.,3
-sauna,сауна,The hotel **sauna** relaxes tired muscles.,3
-jacuzzi,джакузи,The **jacuzzi** bubbled near the pool.,3
-laundry,прачечная,The **laundry** is on basement level.,3
-linen,бельё,Fresh **linen** is provided every morning.,4
-robe,халат,A soft **robe** hung in closet.,3
-slippers,тапочки,Hotel **slippers** were waiting by bed.,2
-toiletries,туалетные принадлежности,Free **toiletries** are placed in bathroom.,4
+terrace,терраса,The **terrace** offers mountain views daily.,3,home
+patio,патио,We ate breakfast on the **patio**.,3,home
+sauna,сауна,The hotel **sauna** relaxes tired muscles.,3,health
+jacuzzi,джакузи,The **jacuzzi** bubbled near the pool.,3,health
+laundry,прачечная,The **laundry** is on basement level.,3,home
+linen,бельё,Fresh **linen** is provided every morning.,4,home
+robe,халат,A soft **robe** hung in closet.,3,home
+slippers,тапочки,Hotel **slippers** were waiting by bed.,2,home
+toiletries,туалетные принадлежности,Free **toiletries** are placed in bathroom.,4,home
 minibar,мини-бар,The **minibar** contains snacks and juices.,3
-safe,сейф,Store valuables in the room **safe**.,3
-hanger,вешалка,Each closet has a metal **hanger**.,3
-mattress,матрас,The **mattress** was soft and comfortable.,3
-duvet,одеяло,The fluffy **duvet** kept me warm.,4
-blinds,жалюзи,Close the **blinds** before going out.,3
-remote,пульт,The TV **remote** was on table.,3
-hairdryer,фен,A **hairdryer** hangs inside the bathroom.,3
+safe,сейф,Store valuables in the room **safe**.,3,bank
+hanger,вешалка,Each closet has a metal **hanger**.,3,home
+mattress,матрас,The **mattress** was soft and comfortable.,3,home
+duvet,одеяло,The fluffy **duvet** kept me warm.,4,home
+blinds,жалюзи,Close the **blinds** before going out.,3,home
+remote,пульт,The TV **remote** was on table.,3,home
+hairdryer,фен,A **hairdryer** hangs inside the bathroom.,3,home
 keycard,карта-ключ,Insert the **keycard** to open door.,3
 chambermaid,горничная,A **chambermaid** knocked before she entered.,5
-janitor,уборщик,The **janitor** fixed a leaking pipe.,4
+janitor,уборщик,The **janitor** fixed a leaking pipe.,4,work
 ledger,журнал,The night **ledger** lists all guests.,5
-noisy,шумный,My neighbor was very **noisy** last night.,2
-front,передний,The **front** desk closes at midnight.,2
-view,вид,The **view** from our balcony was stunning.,2
-view,просматривать,I want to **view** the room first.,3
-book,бронировать,We want to **book** two nights.,2
-luggage,багаж,Leave your **luggage** by the door.,2
-baggage,багаж,Our **baggage** arrived on wrong flight.,3
-trolley,тележка,The porter pushed a heavy **trolley**.,3
+noisy,шумный,My neighbor was very **noisy** last night.,2,basic
+front,передний,The **front** desk closes at midnight.,2,basic
+view,вид,The **view** from our balcony was stunning.,2,basic
+view,просматривать,I want to **view** the room first.,3,basic
+book,бронировать,We want to **book** two nights.,2,basic
+luggage,багаж,Leave your **luggage** by the door.,2,airport
+baggage,багаж,Our **baggage** arrived on wrong flight.,3,airport
+trolley,тележка,The porter pushed a heavy **trolley**.,3,airport
 vending,торговый,The **vending** machine sold cold drinks.,4
 booklet,буклет,A small **booklet** explains local attractions.,4
 complimentary,бесплатный,The breakfast was **complimentary** every morning.,5
 upscale,элитный,The hotel felt very **upscale** indeed.,5
 deluxe,делюкс,We booked a **deluxe** double room.,3
-standard,стандартный,A **standard** room sleeps two people.,2
+standard,стандартный,A **standard** room sleeps two people.,2,basic
 wing,крыло,Our room sits in west **wing**.,3
 block,корпус,The new **block** was built last year.,3
 reserve,резерв,The hotel keeps a **reserve** of linen.,4
 vacate,освободить,Guests must **vacate** the room by noon.,5
 register,регистрировать,Please **register** before taking the elevator.,3
-lounge,салон,The **lounge** serves drinks until midnight.,3
-hotel,отель,The **hotel** stands beside the main square.,1
+lounge,салон,The **lounge** serves drinks until midnight.,3,airport
+hotel,отель,The **hotel** stands beside the main square.,1,basic
 hotelier,отельер,The **hotelier** greeted us with warm smiles.,4
 innkeeper,хозяин гостиницы,The **innkeeper** handed me an old brass key.,3
 guesthouse,гостевой дом,We stayed at a quiet **guesthouse** last summer.,3
-penthouse,пентхаус,The **penthouse** overlooks the whole sparkling city.,3
-loft,лофт,Their **loft** has tall windows and exposed brick.,3
-studio,студия,I booked a small **studio** for one night.,2
-bunk,койка,He claimed the top **bunk** near the window.,3
-cot,раскладушка,The staff brought an extra **cot** for Mia.,3
-futon,футон,The spare room has a comfortable **futon**.,3
+penthouse,пентхаус,The **penthouse** overlooks the whole sparkling city.,3,home
+loft,лофт,Their **loft** has tall windows and exposed brick.,3,home
+studio,студия,I booked a small **studio** for one night.,2,home
+bunk,койка,He claimed the top **bunk** near the window.,3,home
+cot,раскладушка,The staff brought an extra **cot** for Mia.,3,home
+futon,футон,The spare room has a comfortable **futon**.,3,home
 rollaway,раскладная кровать,They added a **rollaway** for our older son.,4
-canopy,балдахин,The bed had a silky white **canopy** above.,4
-nightstand,тумбочка,My phone charges on the **nightstand** nightly.,3
-dresser,комод,She folded clothes into the oak **dresser**.,2
-bureau,бюро,Hotel keys sit on the polished **bureau**.,4
-armoire,шкаф,An antique **armoire** dominated the guest bedroom.,4
-vanity,туалетный столик,She touched up makeup at the **vanity** mirror.,3
-chaise,шезлонг,He relaxed on the **chaise** beside our bed.,4
-divan,диван,A velvet **divan** sat under the tall window.,4
-sconce,бра,Each wall holds a beautiful brass **sconce**.,4
-chandelier,люстра,A crystal **chandelier** hangs over the marble lobby.,4
-pendant,подвесной светильник,A copper **pendant** lit the cozy sitting area.,4
+canopy,балдахин,The bed had a silky white **canopy** above.,4,home
+nightstand,тумбочка,My phone charges on the **nightstand** nightly.,3,home
+dresser,комод,She folded clothes into the oak **dresser**.,2,home
+bureau,бюро,Hotel keys sit on the polished **bureau**.,4,home
+armoire,шкаф,An antique **armoire** dominated the guest bedroom.,4,home
+vanity,туалетный столик,She touched up makeup at the **vanity** mirror.,3,home
+chaise,шезлонг,He relaxed on the **chaise** beside our bed.,4,home
+divan,диван,A velvet **divan** sat under the tall window.,4,home
+sconce,бра,Each wall holds a beautiful brass **sconce**.,4,home
+chandelier,люстра,A crystal **chandelier** hangs over the marble lobby.,4,home
+pendant,подвесной светильник,A copper **pendant** lit the cozy sitting area.,4,home
 plush,роскошный,Our room felt **plush** from floor to ceiling.,3
-spacious,просторный,The suite was unexpectedly **spacious** and bright.,2
-cramped,тесный,The cheap room felt **cramped** and dark.,3
+spacious,просторный,The suite was unexpectedly **spacious** and bright.,2,home
+cramped,тесный,The cheap room felt **cramped** and dark.,3,home
 ornate,богато украшенный,Gold frames decorated the **ornate** entryway.,4
-marble,мраморный,The bathroom had shiny black **marble** floors.,3
-granite,гранитный,The counter was cut from solid **granite**.,3
-airy,просторный и светлый,Our room felt bright and **airy** inside.,3
-stuffy,душный,The old room was small and **stuffy**.,3
-drafty,продуваемый,The **drafty** window let in cold morning air.,4
-soundproof,звуконепроницаемый,The walls are fully **soundproof** between rooms.,3
+marble,мраморный,The bathroom had shiny black **marble** floors.,3,home
+granite,гранитный,The counter was cut from solid **granite**.,3,home
+airy,просторный и светлый,Our room felt bright and **airy** inside.,3,home
+stuffy,душный,The old room was small and **stuffy**.,3,home
+drafty,продуваемый,The **drafty** window let in cold morning air.,4,home
+soundproof,звуконепроницаемый,The walls are fully **soundproof** between rooms.,3,home
 posh,шикарный,We stayed at a **posh** seaside place.,3
 swanky,роскошный,Tourists often flock to this **swanky** destination.,4
 opulent,роскошный,The ballroom felt **opulent** and completely timeless.,4
 regal,царственный,Red velvet made the hall look **regal**.,4
-grand,грандиозный,We crossed the **grand** entrance together slowly.,2
-stunning,потрясающий,The sunset view was absolutely **stunning** tonight.,2
-charming,очаровательный,The little inn felt **charming** and homey.,2
+grand,грандиозный,We crossed the **grand** entrance together slowly.,2,basic
+stunning,потрясающий,The sunset view was absolutely **stunning** tonight.,2,basic
+charming,очаровательный,The little inn felt **charming** and homey.,2,basic
 rustic,деревенский,The cabin had a warm **rustic** feeling.,3
-historic,исторический,We toured a **historic** mansion turned inn.,2
+historic,исторический,We toured a **historic** mansion turned inn.,2,leisure
 butler,дворецкий,Every suite includes a personal **butler** at night.,3
 bellboy,коридорный,The **bellboy** carried our bags upstairs quickly.,3
 bellman,швейцар-носильщик,The **bellman** directed us toward the front desk.,4
-auditor,ночной аудитор,The night **auditor** checked us in after midnight.,4
-interpreter,переводчик,The **interpreter** helped us talk with the manager.,3
-entertainer,артист,An **entertainer** performed songs near the pool.,3
-performer,исполнитель,A local **performer** sang by the fireplace.,3
-caretaker,смотритель,The **caretaker** waters plants every early morning.,3
-maintenance,техобслуживание,The **maintenance** crew fixed our leaking tap.,3
-groundskeeper,садовник,The **groundskeeper** trims the hedges every morning.,4
-breakfast,завтрак,**breakfast** is served between seven and ten.,1
-brunch,поздний завтрак,Sunday **brunch** runs until two in the afternoon.,2
-continental,континентальный,We enjoyed a simple **continental** breakfast downstairs.,3
-teapot,чайник,A tiny **teapot** sat on our bedside tray.,2
-mug,кружка,I sipped cocoa from a heavy **mug**.,2
-porcelain,фарфор,They serve tea in delicate white **porcelain**.,3
-china,фарфор,Dinner came on fine old floral **china**.,3
-dining,ресторан,The **dining** room opens at six sharp.,2
-pillowcase,наволочка,She swapped the wrinkled **pillowcase** for a clean one.,3
-bedsheet,простыня,Housekeeping changed the **bedsheet** after our nap.,3
-headboard,изголовье,The carved wooden **headboard** caught my eye.,3
-footboard,изножье,A soft blanket draped over the **footboard**.,4
-bathrobe,халат,A fluffy white **bathrobe** hung behind the door.,2
-washcloth,мочалка,Each guest gets a folded **washcloth** too.,3
-nightgown,ночная сорочка,She packed a silk **nightgown** for evenings.,3
+auditor,ночной аудитор,The night **auditor** checked us in after midnight.,4,work
+interpreter,переводчик,The **interpreter** helped us talk with the manager.,3,work
+entertainer,артист,An **entertainer** performed songs near the pool.,3,party
+performer,исполнитель,A local **performer** sang by the fireplace.,3,party
+caretaker,смотритель,The **caretaker** waters plants every early morning.,3,work
+maintenance,техобслуживание,The **maintenance** crew fixed our leaking tap.,3,work
+groundskeeper,садовник,The **groundskeeper** trims the hedges every morning.,4,work
+breakfast,завтрак,**breakfast** is served between seven and ten.,1,restaurant
+brunch,поздний завтрак,Sunday **brunch** runs until two in the afternoon.,2,restaurant
+continental,континентальный,We enjoyed a simple **continental** breakfast downstairs.,3,restaurant
+teapot,чайник,A tiny **teapot** sat on our bedside tray.,2,kitchen
+mug,кружка,I sipped cocoa from a heavy **mug**.,2,kitchen
+porcelain,фарфор,They serve tea in delicate white **porcelain**.,3,kitchen
+china,фарфор,Dinner came on fine old floral **china**.,3,kitchen
+dining,ресторан,The **dining** room opens at six sharp.,2,restaurant
+pillowcase,наволочка,She swapped the wrinkled **pillowcase** for a clean one.,3,home
+bedsheet,простыня,Housekeeping changed the **bedsheet** after our nap.,3,home
+headboard,изголовье,The carved wooden **headboard** caught my eye.,3,home
+footboard,изножье,A soft blanket draped over the **footboard**.,4,home
+bathrobe,халат,A fluffy white **bathrobe** hung behind the door.,2,home
+washcloth,мочалка,Each guest gets a folded **washcloth** too.,3,home
+nightgown,ночная сорочка,She packed a silk **nightgown** for evenings.,3,home
 rooftop,крыша,The **rooftop** bar serves cocktails until midnight.,2
 fountain,фонтан,A stone **fountain** splashes in the inner garden.,2
-pool,бассейн,The outdoor **pool** closes at ten sharp.,1
+pool,бассейн,The outdoor **pool** closes at ten sharp.,1,sports
 pillar,колонна,A tall marble **pillar** stood by the entrance.,3
 column,колонна,Each **column** was carved with tiny flowers.,3
 arch,арка,A grand **arch** welcomed arriving guests warmly.,3
 archway,проход под аркой,We walked through the stone **archway** together.,3
-arcade,пассаж,Shops line the covered **arcade** beside the lobby.,4
-courtyard,внутренний двор,The hidden **courtyard** had olive trees and benches.,3
+arcade,пассаж,Shops line the covered **arcade** beside the lobby.,4,shopping
+courtyard,внутренний двор,The hidden **courtyard** had olive trees and benches.,3,home
 dome,купол,Sunlight poured through the glass **dome** above.,3
 turret,башенка,The castle hotel has one round **turret**.,4
 tower,башня,Our room sat high in the west **tower**.,2
 plaza,площадь,The inn faces the lively central **plaza**.,3
-whirlpool,гидромассажная ванна,The suite includes a private **whirlpool** on the balcony.,4
-bathhouse,баня,Guests enjoy a traditional **bathhouse** on site.,4
-stairwell,лестничный пролёт,I took the back **stairwell** to my floor.,3
+whirlpool,гидромассажная ванна,The suite includes a private **whirlpool** on the balcony.,4,health
+bathhouse,баня,Guests enjoy a traditional **bathhouse** on site.,4,health
+stairwell,лестничный пролёт,I took the back **stairwell** to my floor.,3,home
 hospitality,гостеприимство,Their warm **hospitality** made us feel at home.,2
 hospitable,гостеприимный,The owners were kind and incredibly **hospitable**.,3
-friendly,дружелюбный,All staff members seemed cheerful and **friendly**.,1
+friendly,дружелюбный,All staff members seemed cheerful and **friendly**.,1,basic
 inviting,уютный,The lobby looked warm and **inviting** at dusk.,2
 welcoming,гостеприимный,The front desk felt bright and **welcoming**.,2
-scenic,живописный,We chose a **scenic** lodge beside the lake.,2
-panoramic,панорамный,Our suite offers a **panoramic** mountain view.,3
+scenic,живописный,We chose a **scenic** lodge beside the lake.,2,nature
+panoramic,панорамный,Our suite offers a **panoramic** mountain view.,3,nature
 secluded,уединённый,We love their **secluded** bungalows by the river.,3
 nestled,расположенный,The inn is **nestled** between two green hills.,3
-picturesque,живописный,The village looked **picturesque** at dawn and dusk.,3
-breathtaking,захватывающий дух,The **breathtaking** ocean view greeted us immediately.,3
-vista,панорама,The balcony opened to a stunning **vista** below.,4
-horizon,горизонт,From our room the **horizon** glowed orange.,2
+picturesque,живописный,The village looked **picturesque** at dawn and dusk.,3,nature
+breathtaking,захватывающий дух,The **breathtaking** ocean view greeted us immediately.,3,nature
+vista,панорама,The balcony opened to a stunning **vista** below.,4,nature
+horizon,горизонт,From our room the **horizon** glowed orange.,2,nature
 outlook,вид,The **outlook** from room four is incredible.,3
 gazebo,беседка,A white **gazebo** stands near the hotel garden.,4
 pergola,пергола,Vines cover the wooden **pergola** behind us.,4
 ensuite,с собственной ванной,We prefer rooms with an **ensuite** bathroom.,3
-stayed,остался,We **stayed** at a lovely hotel in Paris.,2
-per,за,The hotel charges fifty dollars **per** night.,2
-location,местоположение,The hotel has an excellent **location** downtown.,2
-rooms,комнаты,The hotel has forty **rooms**,1
-flexible,гибкий,The hotel offers a **flexible** cancellation policy for guests.,2
+stayed,остался,We **stayed** at a lovely hotel in Paris.,2,basic
+per,за,The hotel charges fifty dollars **per** night.,2,basic
+location,местоположение,The hotel has an excellent **location** downtown.,2,basic
+rooms,комнаты,The hotel has forty **rooms**,1,home
+flexible,гибкий,The hotel offers a **flexible** cancellation policy for guests.,2,basic
 guestroom,гостевой номер,Each **guestroom** features a balcony and ocean view.,2
-gameroom,игровая комната,Kids love the **gameroom** on the second floor.,2
-creche,детская комната,"The resort has a **creche** for toddlers, fully supervised.",3
+gameroom,игровая комната,Kids love the **gameroom** on the second floor.,2,leisure
+creche,детская комната,"The resort has a **creche** for toddlers, fully supervised.",3,family
 jacquard,жаккард,The curtains are woven from luxury **jacquard** fabric.,4
 brocade,парча,Heavy **brocade** drapes hang in the grand ballroom.,4
 damask,дамаст,White **damask** tablecloths cover the dining tables.,4
@@ -214,111 +214,111 @@ pima,пима хлопок,The sheets are made of premium **pima** cotton.,4
 percale,перкаль,Crisp **percale** bedding gives a hotel-quality feel.,4
 quilted,стеганый,A **quilted** bedspread covered the king-size mattress.,3
 eiderdown,гагачий пух,Every suite includes a warm **eiderdown** comforter.,5
-afghan,плед,A knitted **afghan** was folded at the bed's foot.,3
-cashmere,кашемир,The bathrobes are woven from pure **cashmere** wool.,3
-lotion,лосьон,A small bottle of **lotion** sits on the vanity.,2
-moisturizer,увлажнитель,The bathroom kit included a face **moisturizer** sample.,3
-loofah,мочалка,A natural **loofah** hung beside the shower.,3
-sunscreen,солнцезащитный крем,The pool attendant handed me free **sunscreen**.,2
-sunblock,солнцезащитный крем,Apply **sunblock** before swimming in the pool.,2
-repellent,репеллент,Insect **repellent** is provided for outdoor guests.,3
+afghan,плед,A knitted **afghan** was folded at the bed's foot.,3,home
+cashmere,кашемир,The bathrobes are woven from pure **cashmere** wool.,3,shopping
+lotion,лосьон,A small bottle of **lotion** sits on the vanity.,2,health
+moisturizer,увлажнитель,The bathroom kit included a face **moisturizer** sample.,3,health
+loofah,мочалка,A natural **loofah** hung beside the shower.,3,home
+sunscreen,солнцезащитный крем,The pool attendant handed me free **sunscreen**.,2,health
+sunblock,солнцезащитный крем,Apply **sunblock** before swimming in the pool.,2,health
+repellent,репеллент,Insect **repellent** is provided for outdoor guests.,3,nature
 kimono,кимоно,Each room features a silk **kimono** instead of robes.,3
 yukata,юката,The ryokan provides a cotton **yukata** for guests.,5
 monogram,монограмма,Every towel bears the resort's gold **monogram**.,3
-bathmat,коврик для ванной,Step onto the fluffy **bathmat** after bathing.,2
-highchair,детский стульчик,The restaurant provided a wooden **highchair** for the baby.,2
-swedish,шведский,She booked a relaxing **Swedish** massage appointment.,3
-thai,тайский,I tried a traditional **Thai** massage at the spa.,2
-tanning,загар,The rooftop offers a **tanning** deck with lounge chairs.,3
-solarium,солярий,"A glass **solarium** overlooks the gardens, bright and warm.",4
-infrared,инфракрасный,The spa includes an **infrared** sauna cabin.,3
-plunge,бассейн с холодной водой,After the sauna guests use the cold **plunge** pool.,3
+bathmat,коврик для ванной,Step onto the fluffy **bathmat** after bathing.,2,home
+highchair,детский стульчик,The restaurant provided a wooden **highchair** for the baby.,2,restaurant
+swedish,шведский,She booked a relaxing **Swedish** massage appointment.,3,health
+thai,тайский,I tried a traditional **Thai** massage at the spa.,2,health
+tanning,загар,The rooftop offers a **tanning** deck with lounge chairs.,3,health
+solarium,солярий,"A glass **solarium** overlooks the gardens, bright and warm.",4,health
+infrared,инфракрасный,The spa includes an **infrared** sauna cabin.,3,health
+plunge,бассейн с холодной водой,After the sauna guests use the cold **plunge** pool.,3,health
 lounger,шезлонг,She reserved a poolside **lounger** early this morning.,3
-parasol,пляжный зонт,A striped **parasol** shaded the outdoor table.,3
-sunbed,лежак,Every **sunbed** comes with a complimentary beach towel.,3
-bidet,биде,Each bathroom features a modern ceramic **bidet**.,4
-washbasin,раковина,The marble **washbasin** gleamed under the mirror.,3
-hydromassage,гидромассаж,The wellness center offers underwater **hydromassage** therapy.,5
-shiatsu,шиацу,Book a **shiatsu** session with our Japanese therapist.,5
-footbath,ванночка для ног,Each pedicure begins with a warm **footbath**.,3
-cryotherapy,криотерапия,The spa offers whole-body **cryotherapy** sessions daily.,5
-chromotherapy,цветотерапия,Her suite included a **chromotherapy** shower with colored lights.,5
-halotherapy,галотерапия,The salt room provides **halotherapy** for respiratory health.,5
-exfoliator,эксфолиант,The gift bag included a sugar **exfoliator** sample.,4
-bubblebath,пенная ванна,She relaxed in a hot **bubblebath** before bed.,2
+parasol,пляжный зонт,A striped **parasol** shaded the outdoor table.,3,leisure
+sunbed,лежак,Every **sunbed** comes with a complimentary beach towel.,3,leisure
+bidet,биде,Each bathroom features a modern ceramic **bidet**.,4,home
+washbasin,раковина,The marble **washbasin** gleamed under the mirror.,3,home
+hydromassage,гидромассаж,The wellness center offers underwater **hydromassage** therapy.,5,health
+shiatsu,шиацу,Book a **shiatsu** session with our Japanese therapist.,5,health
+footbath,ванночка для ног,Each pedicure begins with a warm **footbath**.,3,health
+cryotherapy,криотерапия,The spa offers whole-body **cryotherapy** sessions daily.,5,health
+chromotherapy,цветотерапия,Her suite included a **chromotherapy** shower with colored lights.,5,health
+halotherapy,галотерапия,The salt room provides **halotherapy** for respiratory health.,5,health
+exfoliator,эксфолиант,The gift bag included a sugar **exfoliator** sample.,4,health
+bubblebath,пенная ванна,She relaxed in a hot **bubblebath** before bed.,2,home
 folio,счет гостя,"Please check your guest **folio** at reception, sir.",4
 incidentals,дополнительные расходы,A deposit covers minibar and other **incidentals** charges.,5
-refundable,возвратный,"We selected the fully **refundable** rate, just in case.",3
-nonrefundable,невозвратный,"This **nonrefundable** booking saves twenty percent, note that.",4
+refundable,возвратный,"We selected the fully **refundable** rate, just in case.",3,shopping
+nonrefundable,невозвратный,"This **nonrefundable** booking saves twenty percent, note that.",4,shopping
 portering,услуги носильщика,The hotel charges a small **portering** fee per bag.,5
-minibus,микроавтобус,A complimentary **minibus** runs between airport and hotel.,3
-larder,кладовая,The chef checked the **larder** for fresh ingredients.,4
-scullery,моечная,Dirty dishes pile up in the busy **scullery**.,5
+minibus,микроавтобус,A complimentary **minibus** runs between airport and hotel.,3,driving
+larder,кладовая,The chef checked the **larder** for fresh ingredients.,4,kitchen
+scullery,моечная,Dirty dishes pile up in the busy **scullery**.,5,kitchen
 dumbwaiter,малый грузовой лифт,Room service travels via a small **dumbwaiter**.,5
-servery,буфет,Breakfast is laid out along the **servery** counter.,5
-seater,столик на двоих,"Please show me to a two **seater** table, please.",3
-headwaiter,метрдотель,The **headwaiter** escorted us to a window table.,4
-cellar,винный погреб,The wine **cellar** holds three thousand rare bottles.,3
-busboy,помощник официанта,The **busboy** cleared plates quickly after dessert.,3
-vintner,виноторговец,"The resort partners with a local **vintner**, offering tastings.",5
-cellarman,работник винного погреба,The **cellarman** proudly showed us his oldest vintages.,5
+servery,буфет,Breakfast is laid out along the **servery** counter.,5,restaurant
+seater,столик на двоих,"Please show me to a two **seater** table, please.",3,restaurant
+headwaiter,метрдотель,The **headwaiter** escorted us to a window table.,4,restaurant
+cellar,винный погреб,The wine **cellar** holds three thousand rare bottles.,3,restaurant
+busboy,помощник официанта,The **busboy** cleared plates quickly after dessert.,3,restaurant
+vintner,виноторговец,"The resort partners with a local **vintner**, offering tastings.",5,restaurant
+cellarman,работник винного погреба,The **cellarman** proudly showed us his oldest vintages.,5,restaurant
 poolside,у бассейна,We ordered cocktails at the **poolside** bar.,2
 poolhouse,павильон у бассейна,Changing rooms are inside the shaded **poolhouse**.,3
-swimwear,купальник,Guests must wear proper **swimwear** in the pool.,3
-confirmed,подтверждённый,The hotel already **confirmed** my reservation by email.,3
-slipped,поскользнулся,He **slipped** on the wet tiles near the hotel pool and hurt his knee.,3
+swimwear,купальник,Guests must wear proper **swimwear** in the pool.,3,sports
+confirmed,подтверждённый,The hotel already **confirmed** my reservation by email.,3,basic
+slipped,поскользнулся,He **slipped** on the wet tiles near the hotel pool and hurt his knee.,3,basic
 escort,сопровождать,Security officers were asked to **escort** the VIP guests to their seats.,4
-fabulous,потрясающий,The view from the rooftop terrace was absolutely **fabulous**.,3
-visitors,посетители,The museum welcomes over a million **visitors** every year.,3
-currently,в настоящее время,The hotel is **currently** undergoing renovation but stays fully open.,3
-inner,внутренний (пространственный),The **inner** courtyard of the hotel was quiet and beautifully decorated.,3
+fabulous,потрясающий,The view from the rooftop terrace was absolutely **fabulous**.,3,basic
+visitors,посетители,The museum welcomes over a million **visitors** every year.,3,leisure
+currently,в настоящее время,The hotel is **currently** undergoing renovation but stays fully open.,3,basic
+inner,внутренний (пространственный),The **inner** courtyard of the hotel was quiet and beautifully decorated.,3,basic
 quarters,жилые помещения,The crew returned to their **quarters** after a long shift at sea.,4
-entertainment,развлечение,The resort offers a wide range of **entertainment** for guests of all ages.,3
+entertainment,развлечение,The resort offers a wide range of **entertainment** for guests of all ages.,3,leisure
 registered,зарегистрированный,All guests must be **registered** at the front desk before entering.,3
-closely,внимательно,She studied the map **closely** before leaving the hotel.,2
-priority,приоритет,Finding a place to sleep was our first **priority** after landing.,3
+closely,внимательно,She studied the map **closely** before leaving the hotel.,2,basic
+priority,приоритет,Finding a place to sleep was our first **priority** after landing.,3,basic
 muffled,приглушённый,They heard **muffled** voices coming from the room next door.,4
 adjoining,смежный,"The two **adjoining** rooms share a connecting door, perfect for families.",3
 connecting,соединяющий,We booked **connecting** rooms so the kids could stay close.,3
-cloakroom,гардероб,Leave your coat in the **cloakroom** near the main entrance.,2
-pedicure,педикюр,She booked a **pedicure** at the hotel spa after her long flight.,2
-manicure,маникюр,A complimentary **manicure** is included in every deluxe package.,2
-salon,салон красоты,The **salon** on the ground floor offers cuts and colour treatments.,2
-hairdresser,парикмахер,The hotel **hairdresser** styled her hair before the gala dinner.,3
-beautician,косметолог,The **beautician** recommended a facial after the long flight.,3
-prepayment,предоплата,A **prepayment** of one night is required to hold your reservation.,3
-authorization,авторизация,"The front desk ran a credit card **authorization** at check-in, not a charge.",4
+cloakroom,гардероб,Leave your coat in the **cloakroom** near the main entrance.,2,restaurant
+pedicure,педикюр,She booked a **pedicure** at the hotel spa after her long flight.,2,health
+manicure,маникюр,A complimentary **manicure** is included in every deluxe package.,2,health
+salon,салон красоты,The **salon** on the ground floor offers cuts and colour treatments.,2,health
+hairdresser,парикмахер,The hotel **hairdresser** styled her hair before the gala dinner.,3,work
+beautician,косметолог,The **beautician** recommended a facial after the long flight.,3,work
+prepayment,предоплата,A **prepayment** of one night is required to hold your reservation.,3,bank
+authorization,авторизация,"The front desk ran a credit card **authorization** at check-in, not a charge.",4,bank
 lodge,лесной отель,The mountain **lodge** offered cosy rooms and a log fire.,3
-manor,поместье,The family converted the historic **manor** into a boutique hotel.,3
-retreat,уединённый отель,The wellness **retreat** offers digital detox packages for stressed professionals.,4
-vase,ваза,Fresh lilies were arranged in a tall **vase** on the reception desk.,2
+manor,поместье,The family converted the historic **manor** into a boutique hotel.,3,home
+retreat,уединённый отель,The wellness **retreat** offers digital detox packages for stressed professionals.,4,health
+vase,ваза,Fresh lilies were arranged in a tall **vase** on the reception desk.,2,home
 artwork,произведение искусства,Original **artwork** by local painters decorates every corridor wall.,3
-cushion,подушка,Extra **cushion** covers are kept in the wardrobe for guest use.,2
-bolster,валик,A cylindrical **bolster** rested at the head of the bed.,4
+cushion,подушка,Extra **cushion** covers are kept in the wardrobe for guest use.,2,home
+bolster,валик,A cylindrical **bolster** rested at the head of the bed.,4,home
 turndown,вечерняя уборка номера,Evening **turndown** service includes chocolates placed on your pillow.,4
-duplex,двухуровневый номер,The **duplex** suite has a bedroom on each level connected by a private stair.,4
+duplex,двухуровневый номер,The **duplex** suite has a bedroom on each level connected by a private stair.,4,home
 porterage,услуга носильщика,A flat **porterage** fee of five dollars applies per bag at check-in.,5
 courtesy,вежливость,The **courtesy** shuttle runs between the hotel and downtown every hour.,3
-dolly,тележка для багажа,The porter loaded our trunks onto a **dolly** and wheeled them to the lift.,3
+dolly,тележка для багажа,The porter loaded our trunks onto a **dolly** and wheeled them to the lift.,3,airport
 cabana,кабана,We reserved a poolside **cabana** for the afternoon to escape the sun.,4
-daybed,кушетка,A white **daybed** on the terrace overlooked the turquoise sea.,3
-sunlounger,шезлонг,Every **sunlounger** by the pool comes with a fresh towel and parasol.,2
-promenade,прогулочная аллея,Guests stroll along the beachside **promenade** in the evenings.,3
-boardwalk,деревянный настил,The seaside hotel sits directly on the **boardwalk** above the sand.,3
-jetty,причал,A small wooden **jetty** extends from the resort into the calm bay.,3
+daybed,кушетка,A white **daybed** on the terrace overlooked the turquoise sea.,3,home
+sunlounger,шезлонг,Every **sunlounger** by the pool comes with a fresh towel and parasol.,2,leisure
+promenade,прогулочная аллея,Guests stroll along the beachside **promenade** in the evenings.,3,leisure
+boardwalk,деревянный настил,The seaside hotel sits directly on the **boardwalk** above the sand.,3,leisure
+jetty,причал,A small wooden **jetty** extends from the resort into the calm bay.,3,nature
 marina,марина,Guests with yachts can dock at the private **marina** beside the hotel.,4
-cove,бухта,The beach hotel is tucked into a sheltered **cove** on the coastline.,3
+cove,бухта,The beach hotel is tucked into a sheltered **cove** on the coastline.,3,nature
 walkway,дорожка,A covered **walkway** connects the main building to the spa pavilion.,3
-trellis,шпалера,Climbing roses cover the wooden **trellis** in the hotel garden.,3
-arbour,беседка с вьющимися растениями,We had afternoon tea in the shaded **arbour** at the garden's edge.,4
-topiary,топиарий,Neatly trimmed **topiary** animals line the entrance to the estate hotel.,4
-lily pond,пруд с лилиями,Guests meditate beside the tranquil **lily pond** in the courtyard.,3
-koi pond,пруд с карпами кои,The Japanese garden features a beautiful **koi pond** near the pavilion.,3
-fishpond,декоративный пруд,A stone **fishpond** sits in the centre of the inner courtyard.,3
-rockery,рокарий,The hotel grounds include a Japanese **rockery** with mossy stones.,4
+trellis,шпалера,Climbing roses cover the wooden **trellis** in the hotel garden.,3,nature
+arbour,беседка с вьющимися растениями,We had afternoon tea in the shaded **arbour** at the garden's edge.,4,nature
+topiary,топиарий,Neatly trimmed **topiary** animals line the entrance to the estate hotel.,4,nature
+lily pond,пруд с лилиями,Guests meditate beside the tranquil **lily pond** in the courtyard.,3,nature
+koi pond,пруд с карпами кои,The Japanese garden features a beautiful **koi pond** near the pavilion.,3,nature
+fishpond,декоративный пруд,A stone **fishpond** sits in the centre of the inner courtyard.,3,nature
+rockery,рокарий,The hotel grounds include a Japanese **rockery** with mossy stones.,4,nature
 bellcart,тележка носильщика,The porter brought our bags upstairs on a polished wooden **bellcart**.,4
-coatrack,вешалка для пальто,Hang your jackets on the **coatrack** beside the entrance to the lounge.,2
-glassware,стеклянные изделия,Crystal **glassware** sparkled on every table in the grand dining room.,3
+coatrack,вешалка для пальто,Hang your jackets on the **coatrack** beside the entrance to the lounge.,2,home
+glassware,стеклянные изделия,Crystal **glassware** sparkled on every table in the grand dining room.,3,kitchen
 duplex suite,двухуровневый люкс,"The **duplex suite** spans two floors, with a private staircase inside.",4
 bridal suite,свадебный люкс,"The **bridal suite** includes a Jacuzzi, champagne, and a panoramic view.",3
 garden view,вид на сад,We paid a little extra for a **garden view** room overlooking the roses.,2
@@ -327,24 +327,24 @@ sea view,вид на море,Every room in the new wing offers a stunning **sea
 pool view,вид на бассейн,The **pool view** rooms are perfect for families who spend time outside.,2
 mountain view,вид на горы,We chose a **mountain view** cabin at the lodge for our anniversary.,3
 room rate,стоимость номера,The **room rate** includes a continental breakfast for two guests.,3
-night audit,ночной аудит,The night manager runs the **night audit** to reconcile all daily charges.,5
-duty roster,список дежурств,The **duty roster** for housekeeping staff is posted in the back office.,5
+night audit,ночной аудит,The night manager runs the **night audit** to reconcile all daily charges.,5,work
+duty roster,список дежурств,The **duty roster** for housekeeping staff is posted in the back office.,5,work
 late checkout,поздний выезд,"I requested a **late checkout** at two, and the hotel agreed for a small fee.",3
 early check-in,ранний заезд,**Early check-in** was available for a surcharge if the room was ready.,3
-luggage room,камера хранения,Leave your bags in the **luggage room** while you explore the city.,2
-lost property,бюро находок,Report missing items to the **lost property** office on the ground floor.,3
+luggage room,камера хранения,Leave your bags in the **luggage room** while you explore the city.,2,airport
+lost property,бюро находок,Report missing items to the **lost property** office on the ground floor.,3,airport
 concierge desk,стойка консьержа,Ask at the **concierge desk** for show tickets and restaurant bookings.,3
 front desk,стойка регистрации,Return your keycard to the **front desk** when you check out today.,2
 bell desk,стойка носильщика,Your bags were sent to the **bell desk** and will be brought up shortly.,3
-night manager,ночной менеджер,Contact the **night manager** if you experience any issues after midnight.,3
-duty manager,дежурный менеджер,The **duty manager** offered a complimentary upgrade after the noise complaint.,4
+night manager,ночной менеджер,Contact the **night manager** if you experience any issues after midnight.,3,work
+duty manager,дежурный менеджер,The **duty manager** offered a complimentary upgrade after the noise complaint.,4,work
 housekeeping cart,тележка горничной,The maid pushed her **housekeeping cart** quietly along the corridor.,3
 do not disturb,не беспокоить,Hang the **do not disturb** sign outside your door for uninterrupted sleep.,2
 make up room,прибраться в номере,She hung the **make up room** card so staff would clean while she was out.,2
-in-room dining,обслуживание в номере,"**In-room dining** is available around the clock, with a full menu.",3
+in-room dining,обслуживание в номере,"**In-room dining** is available around the clock, with a full menu.",3,restaurant
 butler service,услуга дворецкого,Every penthouse guest receives personalised **butler service** around the clock.,4
 pillow menu,меню подушек,The **pillow menu** lets guests choose from memory foam to buckwheat options.,4
-welcome drink,приветственный напиток,Each arriving guest was handed a cold **welcome drink** at the entrance.,2
+welcome drink,приветственный напиток,Each arriving guest was handed a cold **welcome drink** at the entrance.,2,party
 welcome amenity,приветственный подарок,A **welcome amenity** of fruit and chocolates awaited us in the room.,3
 pillow chocolates,шоколадки на подушке,Housekeeping left two **pillow chocolates** during the evening turndown.,3
 bath menu,меню для ванны,The spa hotel offers a **bath menu** with aromatherapy salts and oils.,4

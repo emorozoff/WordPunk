@@ -2,28 +2,28 @@ english,russian,sentence,difficulty
 airport,аэропорт,The **airport** is very big today.,1
 plane,самолёт,The **plane** landed on time.,1
 ticket,билет,I lost my **ticket** somewhere.,1
-passport,паспорт,Show me your **passport** please.,2
-luggage,багаж,My **luggage** is too heavy.,2
-suitcase,чемодан,She packed her **suitcase** quickly.,2
-pilot,пилот,The **pilot** spoke to passengers.,1
+passport,паспорт,Show me your **passport** please.,2,hotel
+luggage,багаж,My **luggage** is too heavy.,2,hotel
+suitcase,чемодан,She packed her **suitcase** quickly.,2,hotel
+pilot,пилот,The **pilot** spoke to passengers.,1,work
 passenger,пассажир,Every **passenger** got a meal.,2
 aisle,проход,He walked down the **aisle**.,3
 row,ряд,My seat is in **row** ten.,2
-row,грести,They **row** the boat together.,3
+row,грести,They **row** the boat together.,3,sports
 boarding,посадка,**Boarding** starts in ten minutes.,3
 board,садиться,We **board** the plane now.,3
 terminal,терминал,Our **terminal** is across the street.,3
-terminal,смертельный,The disease was **terminal** sadly.,5
+terminal,смертельный,The disease was **terminal** sadly.,5,health|doctor
 flight,рейс,My **flight** leaves at noon.,2
-flight,полёт,The **flight** of the eagle is beautiful.,3
+flight,полёт,The **flight** of the eagle is beautiful.,3,nature
 delay,задержка,There was a long **delay** yesterday.,3
-delay,откладывать,Please do not **delay** the meeting.,3
+delay,откладывать,Please do not **delay** the meeting.,3,work
 cabin,салон,The **cabin** was full of people.,3
 cabin,каюта,The ship **cabin** was small.,3
 crew,экипаж,The **crew** greeted every passenger.,3
-crew,съёмочная группа,The film **crew** worked all night.,4
+crew,съёмочная группа,The film **crew** worked all night.,4,work
 carrier,авиакомпания,This **carrier** flies to many cities.,4
-carrier,носитель,He is a **carrier** of the virus.,4
+carrier,носитель,He is a **carrier** of the virus.,4,health|doctor
 runway,взлётная полоса,The **runway** was wet from rain.,4
 takeoff,взлёт,The **takeoff** was very smooth.,3
 landing,посадка,Our **landing** was a bit rough.,3
@@ -32,27 +32,27 @@ tarmac,лётное поле,The plane waited on the **tarmac**.,5
 customs,таможня,We went through **customs** fast.,3
 security,безопасность,**Security** checked every bag.,3
 scanner,сканер,Put the bag in the **scanner**.,3
-baggage,багаж,Claim your **baggage** downstairs.,3
+baggage,багаж,Claim your **baggage** downstairs.,3,hotel
 carousel,лента выдачи,Wait at the baggage **carousel**.,5
-stewardess,стюардесса,The **stewardess** served drinks.,4
-steward,стюард,The **steward** helped an old lady.,4
-attendant,бортпроводник,The flight **attendant** smiled at me.,4
+stewardess,стюардесса,The **stewardess** served drinks.,4,work
+steward,стюард,The **steward** helped an old lady.,4,work
+attendant,бортпроводник,The flight **attendant** smiled at me.,4,work
 departure,отправление,The **departure** board shows delays.,3
 arrival,прибытие,Our **arrival** time is six.,3
 domestic,внутренний,This is a **domestic** flight only.,4
-international,международный,The **international** zone is upstairs.,3
+international,международный,The **international** zone is upstairs.,3,politics
 connection,пересадка,My **connection** is in Paris.,3
 layover,пересадка,I had a long **layover** in Rome.,4
 transit,транзит,We stayed in **transit** for hours.,4
 turbulence,турбулентность,The **turbulence** shook the plane.,4
-altitude,высота,We flew at high **altitude** today.,4
+altitude,высота,We flew at high **altitude** today.,4,nature
 cockpit,кабина пилота,The **cockpit** door was locked.,4
-wing,крыло,The **wing** of the plane is huge.,3
-tail,хвост,The **tail** of the plane is red.,3
-engine,двигатель,The **engine** made a loud noise.,3
+wing,крыло,The **wing** of the plane is huge.,3,nature
+tail,хвост,The **tail** of the plane is red.,3,nature
+engine,двигатель,The **engine** made a loud noise.,3,driving
 propeller,пропеллер,The **propeller** started to spin.,4
-fuel,топливо,The plane needs more **fuel**.,3
-fuel,заправлять,They **fuel** the plane every morning.,4
+fuel,топливо,The plane needs more **fuel**.,3,driving
+fuel,заправлять,They **fuel** the plane every morning.,4,driving
 fuselage,фюзеляж,The **fuselage** was freshly painted.,5
 helicopter,вертолёт,A **helicopter** landed near us.,2
 jet,реактивный самолёт,A small **jet** took off.,3
@@ -63,37 +63,37 @@ declare,декларировать,Do you **declare** any gifts today?,4
 declare,заявлять,He will **declare** the winner soon.,4
 duty,пошлина,I paid the **duty** on the watch.,4
 duty,долг,Helping friends is our **duty**.,3
-visa,виза,I need a **visa** for Japan.,3
+visa,виза,I need a **visa** for Japan.,3,politics
 stamp,штамп,The officer put a **stamp** on my passport.,3
 stamp,марка,She stuck a **stamp** on the letter.,3
-immigration,иммиграция,**Immigration** asked many questions.,3
-officer,офицер,The **officer** checked my bag.,3
-border,граница,The **border** is closed today.,3
-foreign,иностранный,A **foreign** man sat next to me.,3
+immigration,иммиграция,**Immigration** asked many questions.,3,politics
+officer,офицер,The **officer** checked my bag.,3,politics
+border,граница,The **border** is closed today.,3,politics
+foreign,иностранный,A **foreign** man sat next to me.,3,politics
 abroad,за границу,She went **abroad** for work.,3
 voyage,путешествие,The long **voyage** was tiring.,4
 journey,путешествие,The **journey** took three days.,3
 destination,пункт назначения,Our **destination** is very far.,4
-arrive,прибывать,We will **arrive** at eight.,2
+arrive,прибывать,We will **arrive** at eight.,2,basic
 depart,отправляться,The train will **depart** soon.,3
 airfare,стоимость перелёта,The **airfare** to Italy dropped.,4
-agent,агент,The travel **agent** helped us a lot.,3
+agent,агент,The travel **agent** helped us a lot.,3,work
 booth,кабинка,Wait inside the **booth** please.,4
 strap,ремешок,The **strap** of the bag broke.,3
-buckle,пряжка,The seatbelt **buckle** was broken.,4
-tray,поднос,She placed the food on a **tray**.,3
+buckle,пряжка,The seatbelt **buckle** was broken.,4,driving
+tray,поднос,She placed the food on a **tray**.,3,kitchen|restaurant
 trolley,тележка,The food **trolley** rolled past us.,3
 overhead,верхний,Put the bag in the **overhead** bin.,4
-oxygen,кислород,The **oxygen** masks dropped suddenly.,4
-mask,маска,The pilot wore a **mask** on board.,2
+oxygen,кислород,The **oxygen** masks dropped suddenly.,4,science
+mask,маска,The pilot wore a **mask** on board.,2,health
 nonstop,беспересадочный,We took a **nonstop** flight home.,4
 redeye,ночной рейс,I hate a long **redeye** flight.,5
 upgrade,повышение класса,She got an **upgrade** to business.,4
 coach,эконом,I always sit in **coach** class.,4
-coach,тренер,The **coach** yelled at the team.,3
+coach,тренер,The **coach** yelled at the team.,3,sports
 economy,эконом,**Economy** class was fully booked.,3
-business,бизнес,**Business** class was almost empty.,2
-first,первый,**First** class had free drinks.,1
+business,бизнес,**Business** class was almost empty.,2,work
+first,первый,**First** class had free drinks.,1,basic
 fare,тариф,The **fare** went up again.,4
 standby,лист ожидания,I flew on **standby** last night.,5
 overbooked,перепроданный,Our flight was **overbooked** again.,5
@@ -115,26 +115,26 @@ recline,откидываться,The chair in front began to **recline** suddenl
 overhead,верхняя полка,Place your small backpack in the **overhead** compartment.,2
 stow,убрать,Please **stow** your laptop before we depart.,3
 fasten,пристегнуть,Passengers must **fasten** their belts during takeoff.,3
-oxygen,кислород,An **oxygen** mask dropped during the emergency drill.,3
+oxygen,кислород,An **oxygen** mask dropped during the emergency drill.,3,science
 turbulent,неспокойный,The flight became **turbulent** above the mountains.,4
 choppy,тряский,We hit a **choppy** patch above the sea.,4
-headwind,встречный ветер,A strong **headwind** slowed our morning journey.,4
-tailwind,попутный ветер,A good **tailwind** helped us arrive early.,4
-jetlag,джетлаг,I always suffer from **jetlag** after long trips.,2
+headwind,встречный ветер,A strong **headwind** slowed our morning journey.,4,nature
+tailwind,попутный ветер,A good **tailwind** helped us arrive early.,4,nature
+jetlag,джетлаг,I always suffer from **jetlag** after long trips.,2,health
 frisk,обыск,The guard did a quick **frisk** at security.,4
 screening,досмотр,Everyone must pass the **screening** before the gates.,2
 contraband,контрабанда,Dogs help officers find hidden **contraband** at checkpoints.,5
 stamped,проштампован,My document was finally **stamped** by the officer.,3
 expired,просрочен,Her document was **expired** when she tried flying.,3
 renew,обновить,I need to **renew** my document before summer trips.,3
-foreigner,иностранец,The **foreigner** struggled with the local language.,3
-resident,резидент,Only a **resident** can use this quicker line.,3
-deportation,депортация,The man faced **deportation** after the long hearing.,5
-asylum,убежище,She requested **asylum** upon reaching the border.,4
+foreigner,иностранец,The **foreigner** struggled with the local language.,3,politics
+resident,резидент,Only a **resident** can use this quicker line.,3,politics
+deportation,депортация,The man faced **deportation** after the long hearing.,5,politics
+asylum,убежище,She requested **asylum** upon reaching the border.,4,politics
 embark,садиться,Travelers began to **embark** onto the small craft.,4
 onboard,на борту,There was free tea **onboard** the small craft.,2
-galley,кухня самолёта,The crew prepared meals in the small **galley**.,4
-lavatory,туалет,The **lavatory** sign glowed bright red during takeoff.,3
+galley,кухня самолёта,The crew prepared meals in the small **galley**.,4,kitchen
+lavatory,туалет,The **lavatory** sign glowed bright red during takeoff.,3,home
 recliner,откидное кресло,Her **recliner** tilted slightly backward during the movie.,3
 armrests,подлокотники,She rested her hands on the small **armrests**.,3
 legroom,место для ног,The first row offers much more **legroom**.,3
@@ -142,7 +142,7 @@ sickbag,гигиенический пакет,A **sickbag** is tucked behind eve
 wingtip,законцовка крыла,The blinking **wingtip** light flashed through the window.,5
 rudder,руль направления,The **rudder** helps control the direction of flying.,5
 throttle,дроссель,The captain pushed the **throttle** forward for takeoff.,5
-thrust,тяга,Strong **thrust** pushed everyone back into their chairs.,4
+thrust,тяга,Strong **thrust** pushed everyone back into their chairs.,4,science
 turbine,турбина,A loud **turbine** hummed outside my tiny window.,4
 aircraft,воздушное судно,This **aircraft** carries three hundred people easily.,3
 airborne,в воздухе,We became **airborne** within minutes of pushing back.,4
@@ -155,24 +155,24 @@ upgraded,повышенный,She got **upgraded** to first for the trip.,3
 windowside,у окна,He loves a **windowside** spot for the views.,3
 aislespot,место у прохода,She prefers an **aislespot** to walk around freely.,3
 bulkhead,переборка,The **bulkhead** row offers extra space for families.,5
-bassinet,люлька,A **bassinet** can be requested for babies onboard.,5
+bassinet,люлька,A **bassinet** can be requested for babies onboard.,5,family
 rollaboard,чемодан на колёсиках,He dragged his **rollaboard** across the shiny floor.,4
 duffel,сумка,She packed her small **duffel** with flying essentials.,4
 carryon,ручная кладь,Each person gets one free **carryon** piece today.,3
 checked,сданный,He had two **checked** bags for the long trip.,3
-handler,грузчик,The **handler** carefully loaded bags into the plane.,4
-groundcrew,наземный персонал,The **groundcrew** signaled the plane out of position.,4
+handler,грузчик,The **handler** carefully loaded bags into the plane.,4,work
+groundcrew,наземный персонал,The **groundcrew** signaled the plane out of position.,4,work
 marshaller,маршаллер,A **marshaller** guided the jet with lighted sticks.,5
 chock,тормозной башмак,Each **chock** keeps the plane from rolling away.,5
 tugtruck,тягач,A small **tugtruck** pushed the plane from the gates.,5
-catering,кейтеринг,The **catering** truck delivered meals before our flight.,4
+catering,кейтеринг,The **catering** truck delivered meals before our flight.,4,restaurant
 refueling,заправка,**Refueling** takes place before every long flight.,4
 deicing,противообледенительная обработка,Winter **deicing** sprayed the plane before takeoff.,5
 pushback,отгон от гейта,**Pushback** happens just before the plane starts moving.,4
 clearance,разрешение,The tower gave **clearance** for immediate takeoff.,3
 sim,тренажёр,Every captain must train in the **sim** regularly.,4
 cruise,крейсерский полёт,We reached **cruise** height above the thick clouds.,3
-mach,число маха,The jet flew at **mach** point seven today.,5
+mach,число маха,The jet flew at **mach** point seven today.,5,science
 knots,узлы,Our speed was two hundred fifty **knots** steady.,4
 skycap,носильщик,A friendly **skycap** helped with our heavy bags.,5
 concourse,зал ожидания,The main **concourse** was crowded with waiting people.,4
@@ -180,12 +180,12 @@ shuttlebus,шаттл,A free **shuttlebus** runs between the main buildings.,3
 tram,поезд метро,A small **tram** moves people between distant buildings.,3
 skybridge,телетрап,A long **skybridge** connects the gates to the plane.,4
 peoplemover,траволатор,The **peoplemover** carried tired travelers across the hallway.,4
-cart,тележка,She pushed a luggage **cart** toward the exit signs.,3
+cart,тележка,She pushed a luggage **cart** toward the exit signs.,3,shopping
 trolleydolly,тележка-чемодан,Her small **trolleydolly** rolled smoothly across polished tiles.,5
 holdroom,зал ожидания гейта,Passengers waited quietly in the crowded **holdroom**.,4
 nonrev,служебный пассажир,The **nonrev** traveler waited until all seats filled.,5
-voucher,талон,The airline gave her a meal **voucher** for delays.,3
-compensation,компенсация,Travelers demanded **compensation** after the long morning delay.,3
+voucher,талон,The airline gave her a meal **voucher** for delays.,3,shopping
+compensation,компенсация,Travelers demanded **compensation** after the long morning delay.,3,work
 disruption,сбой,A weather **disruption** caused massive problems at gates.,4
 holding,ожидание в воздухе,Our plane entered **holding** for twenty tense minutes.,4
 stacking,ожидание кругами,Planes were **stacking** above the busy airfield.,5
@@ -196,7 +196,7 @@ manifest,манифест,The crew checked every name on the **manifest**.,4
 callsign,позывной,Every plane uses a unique **callsign** with tower.,4
 squawk,код ответчика,The jet set a new **squawk** code promptly.,5
 transponder,транспондер,The **transponder** sends the plane's position to radar.,5
-radar,радар,A giant **radar** spins above the tall tower.,3
+radar,радар,A giant **radar** spins above the tall tower.,3,science
 tower,вышка,Our captain spoke to the control **tower** calmly.,3
 ramp,перрон,Trucks drove carefully across the wet **ramp** area.,3
 jetbridge,телетрап,The **jetbridge** connects the terminal to the plane door.,3
@@ -205,15 +205,15 @@ bollard,столбик-ограничитель,A yellow **bollard** blocks cars
 kerbside,у тротуара,She waited **kerbside** with her suitcase and ticket.,4
 forecourt,привокзальная площадь,Taxis lined up in the airport **forecourt**.,4
 chute,жёлоб для багажа,Bags tumbled down the metal **chute** to the carousel.,3
-crosswind,боковой ветер,The pilot fought a strong **crosswind** on landing.,4
-downdraft,нисходящий поток,A sudden **downdraft** shook the plane badly.,5
+crosswind,боковой ветер,The pilot fought a strong **crosswind** on landing.,4,nature
+downdraft,нисходящий поток,A sudden **downdraft** shook the plane badly.,5,nature
 contrail,инверсионный след,A white **contrail** streaked across the blue sky.,4
 altimeter,высотомер,The pilot watched the **altimeter** during descent.,4
 glideslope,глиссада,The plane followed the **glideslope** toward the runway.,5
 frisking,обыск,Security started **frisking** the nervous passenger.,4
 patdown,личный досмотр,She got a quick **patdown** after the alarm.,4
-biometric,биометрический,The gate used **biometric** scans to verify passengers.,4
-retinal,сетчатки,A **retinal** scan confirmed the traveler's identity.,4
+biometric,биометрический,The gate used **biometric** scans to verify passengers.,4,science
+retinal,сетчатки,A **retinal** scan confirmed the traveler's identity.,4,health
 fingerprint,отпечаток пальца,The officer took his **fingerprint** at the border.,3
 empennage,хвостовое оперение,The **empennage** of the plane was damaged by ice.,5
 flap,закрылок,The **flap** on the wing extended for landing.,3
@@ -223,55 +223,55 @@ nacelle,гондола двигателя,Smoke poured from the engine **nacelle
 pylon,пилон крепления двигателя,The engine hangs from a **pylon** under the wing.,4
 winglet,законцовка крыла,The curved **winglet** reduces drag during cruise.,4
 fairing,обтекатель,A loose **fairing** caused the odd noise.,5
-purser,старший бортпроводник,The **purser** greeted us at the cabin door.,4
-dispatcher,диспетчер,The **dispatcher** filed the flight plan before departure.,4
-loadmaster,авиационный грузчик,The **loadmaster** balanced the cargo carefully.,5
-fueler,заправщик,The **fueler** pumped kerosene into the wing tank.,4
-palletize,паковать на поддон,Workers **palletize** the boxes before loading them.,5
-forwarder,грузовой экспедитор,The **forwarder** handled all our shipping paperwork.,4
+purser,старший бортпроводник,The **purser** greeted us at the cabin door.,4,work
+dispatcher,диспетчер,The **dispatcher** filed the flight plan before departure.,4,work
+loadmaster,авиационный грузчик,The **loadmaster** balanced the cargo carefully.,5,work
+fueler,заправщик,The **fueler** pumped kerosene into the wing tank.,4,work
+palletize,паковать на поддон,Workers **palletize** the boxes before loading them.,5,work
+forwarder,грузовой экспедитор,The **forwarder** handled all our shipping paperwork.,4,work
 towbar,водило буксира,The tug attached a **towbar** to the nose wheel.,4
 deicer,антиобледенитель,The **deicer** sprayed the wings before takeoff.,4
-glycol,гликоль,The **glycol** fluid melts ice from the wings.,5
+glycol,гликоль,The **glycol** fluid melts ice from the wings.,5,science
 diversion,отклонение от маршрута,Fog forced an unplanned **diversion** to Madrid.,4
 rerouting,изменение маршрута,The storm caused hours of flight **rerouting**.,4
 overbooking,овербукинг,Airlines practice **overbooking** to fill every seat.,4
 misconnection,пропущенная пересадка,The delay led to a painful **misconnection**.,4
 rebooking,перебронирование,Staff helped with **rebooking** after the cancellation.,3
-foggy,туманный,The flight was delayed by **foggy** conditions.,2
-hazy,мглистый,A **hazy** sky made takeoff feel strange.,3
-rainy,дождливый,Planes still land in **rainy** weather here.,2
-stormy,штормовой,Flights were canceled due to **stormy** conditions.,2
-snowy,снежный,The **snowy** runway needed constant plowing.,2
-windy,ветреный,Landing on such a **windy** day felt scary.,2
-gusty,порывистый,The pilot warned us about **gusty** winds ahead.,3
-frosty,морозный,Ice covered the wings on this **frosty** morning.,3
-icy,обледенелый,An **icy** runway forced the plane to skid slightly.,3
+foggy,туманный,The flight was delayed by **foggy** conditions.,2,nature
+hazy,мглистый,A **hazy** sky made takeoff feel strange.,3,nature
+rainy,дождливый,Planes still land in **rainy** weather here.,2,nature
+stormy,штормовой,Flights were canceled due to **stormy** conditions.,2,nature
+snowy,снежный,The **snowy** runway needed constant plowing.,2,nature
+windy,ветреный,Landing on such a **windy** day felt scary.,2,nature
+gusty,порывистый,The pilot warned us about **gusty** winds ahead.,3,nature
+frosty,морозный,Ice covered the wings on this **frosty** morning.,3,nature
+icy,обледенелый,An **icy** runway forced the plane to skid slightly.,3,nature
 slippery,скользкий,The terminal floor was **slippery** after mopping.,2
-damp,сырой,The air felt **damp** when we stepped outside.,2
-humid,влажный,The tropical airport was hot and **humid**.,2
-frigid,ледяной,We shivered in the **frigid** airport lounge.,3
-tropical,тропический,The **tropical** storm closed the airport for hours.,2
+damp,сырой,The air felt **damp** when we stepped outside.,2,nature
+humid,влажный,The tropical airport was hot and **humid**.,2,nature
+frigid,ледяной,We shivered in the **frigid** airport lounge.,3,nature
+tropical,тропический,The **tropical** storm closed the airport for hours.,2,nature
 swabbing,взятие мазка,Security was **swabbing** bags for explosives.,5
 interrogation,допрос,The **interrogation** at customs lasted two hours.,4
 profiling,профилирование,Some travelers complain about unfair **profiling** at borders.,4
 scanning,сканирование,Body **scanning** is now standard at most airports.,3
 sniffer,служебная собака,A **sniffer** dog checked every bag in line.,3
 hover,зависать,The helicopter began to **hover** above the pad.,3
-maneuver,маневрировать,The pilot had to **maneuver** around the storm.,3
+maneuver,маневрировать,The pilot had to **maneuver** around the storm.,3,driving
 descend,снижаться,We will **descend** into Paris in ten minutes.,3
 ascend,набирать высоту,The plane began to **ascend** through the clouds.,3
-refuel,дозаправлять,They had to **refuel** the plane before takeoff.,3
+refuel,дозаправлять,They had to **refuel** the plane before takeoff.,3,driving
 tanker,заправщик,A **tanker** truck pulled up beside the jet.,3
 pressurize,герметизировать,Crews **pressurize** the cabin before every flight.,4
 compartment,отсек,She stored her coat in the overhead **compartment**.,2
-aviator,лётчик,The old **aviator** had flown for forty years.,3
+aviator,лётчик,The old **aviator** had flown for forty years.,3,work
 airliner,пассажирский лайнер,A huge **airliner** taxied slowly to the gate.,3
-glider,планер,The **glider** circled silently above the field.,3
+glider,планер,The **glider** circled silently above the field.,3,sports
 turboprop,турбовинтовой самолёт,A small **turboprop** carried us to the island.,4
-parachute,парашют,Every jet has a drag **parachute** for emergency landings.,3
+parachute,парашют,Every jet has a drag **parachute** for emergency landings.,3,sports
 airstrip,взлётно-посадочная полоса,The remote **airstrip** served only small planes.,3
 liftoff,взлёт,We felt a smooth **liftoff** from the runway.,3
-braking,торможение,The pilot used reverse **braking** after touchdown.,3
+braking,торможение,The pilot used reverse **braking** after touchdown.,3,driving
 cancellation,отмена,The flight **cancellation** ruined our holiday plans.,3
 postponement,перенос,The weather forced a long **postponement** of our flight.,4
 weary,усталый,The **weary** travelers dragged their bags through customs.,3
@@ -279,15 +279,15 @@ drained,опустошённый,After the long flight we felt totally **drained
 earplugs,беруши,She wore **earplugs** to block the engine noise.,3
 blindfold,повязка на глаза,He used a **blindfold** to sleep on the plane.,3
 doze,дремать,I like to **doze** during long flights.,3
-direct,прямой,Take a **direct** flight to Paris,3
+direct,прямой,Take a **direct** flight to Paris,3,basic
 proceed,продолжать,Please **proceed** to gate twelve for boarding.,3
 flew,летел,The plane **flew** above the clouds for hours.,2
-terrorist,террорист,Airport security was increased after a **terrorist** threat was reported.,5
+terrorist,террорист,Airport security was increased after a **terrorist** threat was reported.,5,politics
 dragged,тащить,"She **dragged** her suitcase up the stairs, exhausted after the flight.",3
-upper,верхний,Please put your carry-on bag in the **upper** compartment above your seat.,2
-shortly,вскоре,The flight to Amsterdam will depart **shortly** from gate fourteen.,2
-paperwork,бумажная работа,Applying for a visa involves a lot of tedious **paperwork**.,3
-check-in,регистрация,She arrived early to complete **check-in** before the long queue formed.,2
+upper,верхний,Please put your carry-on bag in the **upper** compartment above your seat.,2,basic
+shortly,вскоре,The flight to Amsterdam will depart **shortly** from gate fourteen.,2,basic
+paperwork,бумажная работа,Applying for a visa involves a lot of tedious **paperwork**.,3,work
+check-in,регистрация,She arrived early to complete **check-in** before the long queue formed.,2,hotel
 boarding pass,посадочный талон,The agent scanned her **boarding pass** and waved her through.,2
 window seat,место у окна,He always requests a **window seat** so he can watch the clouds.,2
 middle seat,среднее место,The **middle seat** between two strangers made the flight feel longer.,3
@@ -310,18 +310,18 @@ fast track,ускоренный досмотр,A premium pass gives access to th
 e-ticket,электронный билет,You can present your **e-ticket** directly from your phone at the gate.,3
 self-service,самообслуживание,Most airports now offer **self-service** bag drop for online check-in.,3
 deplane,выходить из самолёта,Passengers were asked to **deplane** from the rear exit first.,4
-airsick,укачанный в самолёте,She felt **airsick** during the rough patch over the mountains.,3
-pressurization,герметизация,**Pressurization** keeps the cabin comfortable at high altitude.,5
+airsick,укачанный в самолёте,She felt **airsick** during the rough patch over the mountains.,3,health
+pressurization,герметизация,**Pressurization** keeps the cabin comfortable at high altitude.,5,science
 aerobridge,телескопический трап,We walked through the **aerobridge** directly into the terminal.,4
 airside,зона вылета,Once through security you are in the **airside** part of the terminal.,5
 landside,зона прилёта,Shops and cafes are available on the **landside** before you check in.,5
 hub,узловой аэропорт,Frankfurt is a major **hub** for transatlantic flights in Europe.,3
-beverage,напиток,The flight attendant offered a complimentary **beverage** to each passenger.,3
+beverage,напиток,The flight attendant offered a complimentary **beverage** to each passenger.,3,restaurant
 brace position,поза безопасности,The crew demonstrated the **brace position** before the emergency landing.,4
 safety demo,инструктаж безопасности,Please pay attention to the **safety demo** at the start of every flight.,3
 zip-lock bag,пакет с zip-застёжкой,Liquids must be carried in a clear **zip-lock bag** through security.,3
-gel,гель,Hair **gel** counts as a liquid and must go in the small plastic bag.,3
-overweight,перевес,The scale showed her suitcase was **overweight** by three kilograms.,3
+gel,гель,Hair **gel** counts as a liquid and must go in the small plastic bag.,3,shopping
+overweight,перевес,The scale showed her suitcase was **overweight** by three kilograms.,3,health
 waiver,отказ от претензий,The airline offered a fee **waiver** to passengers affected by the cancellation.,5
 lounge access,доступ в зал ожидания,Gold card members enjoy free **lounge access** at most major airports.,4
 departure lounge,зал вылета,Passengers relaxed in the **departure lounge** while waiting for their gate.,3
@@ -344,10 +344,10 @@ life vest,спасательный жилет,The attendant showed us how to inf
 oxygen mask,кислородная маска,In an emergency the **oxygen mask** will drop automatically from above.,3
 emergency exit,аварийный выход,Always locate the nearest **emergency exit** when you board a new plane.,3
 tray table,откидной столик,Please fold your **tray table** and return your seat to the upright position.,2
-duty-free,беспошлинный,She bought perfume at the **duty-free** shop near the departure gate.,2
+duty-free,беспошлинный,She bought perfume at the **duty-free** shop near the departure gate.,2,shopping
 duty-free allowance,беспошлинная норма,Exceeding your **duty-free allowance** means paying import tax on arrival.,4
-air traffic controller,авиадиспетчер,The **air traffic controller** directed the plane to runway two for departure.,4
-co-pilot,второй пилот,The **co-pilot** took over the controls while the captain had a rest.,3
+air traffic controller,авиадиспетчер,The **air traffic controller** directed the plane to runway two for departure.,4,work
+co-pilot,второй пилот,The **co-pilot** took over the controls while the captain had a rest.,3,work
 frequent flyer,участник бонусной программы,As a **frequent flyer** she earned points on every international trip.,3
 low-cost carrier,лоукостер,A **low-cost carrier** often charges extra for bags and seat selection.,3
 business class,бизнес-класс,She treated herself to **business class** on the twelve-hour overnight flight.,3
@@ -366,6 +366,6 @@ gate change,смена выхода на посадку,A sudden **gate change**
 diverted flight,отклонённый рейс,Bad fog forced a **diverted flight** to land at a nearby regional airport.,4
 taxiing,руление,The aircraft spent twenty minutes **taxiing** to the runway before takeoff.,3
 in-flight,во время полёта,The **in-flight** entertainment system offered hundreds of films and TV shows.,3
-packing,упаковка / сборка вещей,She started **packing** her suitcase the night before the flight.,2
+packing,упаковка / сборка вещей,She started **packing** her suitcase the night before the flight.,2,home
 passengers,пассажиры,All **passengers** must fasten their seatbelts during takeoff.,2
-realised,осознал,She **realised** she had left her passport at home only at the airport.,3
+realised,осознал,She **realised** she had left her passport at home only at the airport.,3,basic

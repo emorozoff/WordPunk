@@ -1,77 +1,77 @@
 english,russian,sentence,difficulty
 waiter,официант,The **waiter** brought us the menu.,1
 waitress,официантка,A friendly **waitress** took our order.,1
-chef,шеф-повар,The **chef** prepared an amazing dinner.,2
-cook,повар,My brother works as a **cook**.,1
+chef,шеф-повар,The **chef** prepared an amazing dinner.,2,kitchen
+cook,повар,My brother works as a **cook**.,1,kitchen
 host,администратор,The **host** showed us to our table.,2
 server,официант,Our **server** was very polite tonight.,2
-customer,клиент,Every **customer** deserves good service.,1
+customer,клиент,Every **customer** deserves good service.,1,shopping
 bill,счёт,Can we have the **bill** please?,1
 check,счёт,Please bring the **check** to us.,2
-receipt,чек,Keep the **receipt** for your records.,2
+receipt,чек,Keep the **receipt** for your records.,2,shopping
 tip,чаевые,I left a big **tip** for her.,2
 tip,совет,Thanks for the cooking **tip**.,2
 gratuity,чаевые,The **gratuity** is included in bill.,3
-reservation,бронь,I made a **reservation** for seven.,2
+reservation,бронь,I made a **reservation** for seven.,2,hotel
 table,столик,We got a nice **table** by window.,1
 seat,место,Please take a **seat** near bar.,1
-menu,меню,The **menu** has many options today.,1
+menu,меню,The **menu** has many options today.,1,kitchen
 special,спецпредложение,Today's **special** is grilled salmon.,3
-cuisine,кухня,Italian **cuisine** is my favorite.,3
-starter,закуска,We ordered soup as a **starter**.,2
-appetizer,закуска,This **appetizer** tastes really good.,3
-soup,суп,The **soup** is hot and delicious.,1
-salad,салат,I'll have a green **salad** please.,1
-dessert,десерт,Chocolate cake is my favorite **dessert**.,1
-snack,перекус,Nuts make a healthy **snack**.,2
-steak,стейк,He ordered **steak** with potatoes.,1
-fish,рыба,The **fish** was fresh and tasty.,1
-beef,говядина,This **beef** stew is excellent.,2
-pork,свинина,I don't eat **pork** for religious reasons.,2
-lamb,баранина,**Lamb** is popular in Greek cooking.,2
-pasta,паста,Italian **pasta** is known worldwide.,1
-rice,рис,Brown **rice** is healthier than white.,1
-bread,хлеб,Fresh **bread** smells wonderful.,1
-cheese,сыр,French **cheese** is world famous.,1
-egg,яйцо,I want one **egg** for breakfast.,1
-vegetable,овощ,Every **vegetable** contains vitamins.,1
-fruit,фрукт,An apple is a common **fruit**.,1
-sauce,соус,This **sauce** is too salty.,1
-dressing,заправка,Italian **dressing** on my salad please.,2
-herbs,травы,Fresh **herbs** make food taste better.,2
-spices,специи,Indian **spices** are very aromatic.,2
-salt,соль,Pass the **salt** please.,1
-pepper,перец,Add some black **pepper** to eggs.,1
-oil,масло,Olive **oil** is good for health.,1
-vinegar,уксус,Add **vinegar** to your salad.,2
-juice,сок,Orange **juice** is full of vitamins.,1
+cuisine,кухня,Italian **cuisine** is my favorite.,3,kitchen
+starter,закуска,We ordered soup as a **starter**.,2,kitchen
+appetizer,закуска,This **appetizer** tastes really good.,3,kitchen
+soup,суп,The **soup** is hot and delicious.,1,kitchen
+salad,салат,I'll have a green **salad** please.,1,kitchen
+dessert,десерт,Chocolate cake is my favorite **dessert**.,1,kitchen
+snack,перекус,Nuts make a healthy **snack**.,2,kitchen
+steak,стейк,He ordered **steak** with potatoes.,1,kitchen
+fish,рыба,The **fish** was fresh and tasty.,1,kitchen
+beef,говядина,This **beef** stew is excellent.,2,kitchen
+pork,свинина,I don't eat **pork** for religious reasons.,2,kitchen
+lamb,баранина,**Lamb** is popular in Greek cooking.,2,kitchen
+pasta,паста,Italian **pasta** is known worldwide.,1,kitchen
+rice,рис,Brown **rice** is healthier than white.,1,kitchen
+bread,хлеб,Fresh **bread** smells wonderful.,1,kitchen
+cheese,сыр,French **cheese** is world famous.,1,kitchen
+egg,яйцо,I want one **egg** for breakfast.,1,kitchen
+vegetable,овощ,Every **vegetable** contains vitamins.,1,kitchen
+fruit,фрукт,An apple is a common **fruit**.,1,kitchen
+sauce,соус,This **sauce** is too salty.,1,kitchen
+dressing,заправка,Italian **dressing** on my salad please.,2,kitchen
+herbs,травы,Fresh **herbs** make food taste better.,2,kitchen
+spices,специи,Indian **spices** are very aromatic.,2,kitchen
+salt,соль,Pass the **salt** please.,1,kitchen
+pepper,перец,Add some black **pepper** to eggs.,1,kitchen
+oil,масло,Olive **oil** is good for health.,1,kitchen
+vinegar,уксус,Add **vinegar** to your salad.,2,kitchen
+juice,сок,Orange **juice** is full of vitamins.,1,kitchen
 soda,газировка,I'll have a **soda** with ice.,2
-wine,вино,Red **wine** pairs well with steak.,1
-beer,пиво,A cold **beer** after work is great.,1
-coffee,кофе,I drink **coffee** every morning.,1
-tea,чай,Green **tea** is very healthy.,1
-milk,молоко,Add some **milk** to my coffee.,1
-smoothie,смузи,Banana **smoothie** is delicious.,2
-cocktail,коктейль,She ordered a fruity **cocktail**.,2
-raw,сырой,I prefer **raw** vegetables in salad.,2
-cooked,приготовленный,The meat is well **cooked**.,2
-fried,жареный,**Fried** chicken is my guilty pleasure.,2
-grilled,на гриле,**Grilled** fish is healthy and tasty.,2
-boiled,варёный,**Boiled** eggs are simple to make.,2
-baked,запечённый,**Baked** potatoes with butter are amazing.,2
-roasted,жареный,**Roasted** chicken smells wonderful.,3
-steamed,на пару,**Steamed** vegetables keep their vitamins.,3
-smoked,копчёный,**Smoked** salmon goes well with bread.,3
-pickled,маринованный,**Pickled** cucumbers are crispy.,3
+wine,вино,Red **wine** pairs well with steak.,1,party
+beer,пиво,A cold **beer** after work is great.,1,party
+coffee,кофе,I drink **coffee** every morning.,1,kitchen
+tea,чай,Green **tea** is very healthy.,1,kitchen
+milk,молоко,Add some **milk** to my coffee.,1,kitchen
+smoothie,смузи,Banana **smoothie** is delicious.,2,kitchen
+cocktail,коктейль,She ordered a fruity **cocktail**.,2,party
+raw,сырой,I prefer **raw** vegetables in salad.,2,kitchen
+cooked,приготовленный,The meat is well **cooked**.,2,kitchen
+fried,жареный,**Fried** chicken is my guilty pleasure.,2,kitchen
+grilled,на гриле,**Grilled** fish is healthy and tasty.,2,kitchen
+boiled,варёный,**Boiled** eggs are simple to make.,2,kitchen
+baked,запечённый,**Baked** potatoes with butter are amazing.,2,kitchen
+roasted,жареный,**Roasted** chicken smells wonderful.,3,kitchen
+steamed,на пару,**Steamed** vegetables keep their vitamins.,3,kitchen
+smoked,копчёный,**Smoked** salmon goes well with bread.,3,kitchen
+pickled,маринованный,**Pickled** cucumbers are crispy.,3,kitchen
 fresh,свежий,This bread is very **fresh**.,1
-frozen,замороженный,**Frozen** berries work for smoothies.,2
-spicy,острый,Thai food is very **spicy**.,2
+frozen,замороженный,**Frozen** berries work for smoothies.,2,kitchen
+spicy,острый,Thai food is very **spicy**.,2,kitchen
 sweet,сладкий,This dessert is too **sweet**.,1
 sour,кислый,Lemons taste extremely **sour**.,2
 bitter,горький,Dark chocolate is slightly **bitter**.,2
 salty,солёный,The soup is too **salty** today.,2
-order,заказывать,I want to **order** the pasta.,1
-order,заказ,Your **order** will arrive soon.,2
+order,заказывать,I want to **order** the pasta.,1,shopping
+order,заказ,Your **order** will arrive soon.,2,shopping
 serve,подавать,They **serve** breakfast until noon.,2
 taste,пробовать,Would you like to **taste** this wine?,2
 taste,вкус,This soup has a strange **taste**.,2
@@ -90,20 +90,20 @@ bland,пресный,The pasta was a bit **bland**.,3
 rich,насыщенный,This chocolate cake is very **rich**.,3
 light,лёгкий,Salad is a **light** lunch option.,2
 heavy,тяжёлый,Pizza is a **heavy** dinner choice.,2
-plate,тарелка,Please pass the empty **plate**.,1
-fork,вилка,Use a **fork** for the pasta.,1
-knife,нож,Cut the steak with your **knife**.,1
-spoon,ложка,Eat soup with a **spoon**.,1
-napkin,салфетка,Wipe your mouth with the **napkin**.,2
-glass,стакан,Fill my **glass** with water please.,1
-cup,чашка,A **cup** of tea would be nice.,1
-kitchen,кухня,The **kitchen** closes at eleven.,1
-dish,блюдо,This **dish** is their specialty.,2
+plate,тарелка,Please pass the empty **plate**.,1,kitchen
+fork,вилка,Use a **fork** for the pasta.,1,kitchen
+knife,нож,Cut the steak with your **knife**.,1,kitchen
+spoon,ложка,Eat soup with a **spoon**.,1,kitchen
+napkin,салфетка,Wipe your mouth with the **napkin**.,2,kitchen
+glass,стакан,Fill my **glass** with water please.,1,kitchen
+cup,чашка,A **cup** of tea would be nice.,1,kitchen
+kitchen,кухня,The **kitchen** closes at eleven.,1,kitchen
+dish,блюдо,This **dish** is their specialty.,2,kitchen
 portion,порция,The **portion** size is really big.,2
 bistro,бистро,We grabbed dinner at a small French **bistro**.,2
 diner,закусочная,The old **diner** served pancakes all day.,2
 tavern,таверна,The cozy **tavern** had live folk music.,3
-pub,паб,We met friends at the corner **pub**.,1
+pub,паб,We met friends at the corner **pub**.,1,party
 brewery,пивоварня,Their **brewery** makes excellent craft beer.,3
 steakhouse,стейкхаус,He took her to an expensive **steakhouse**.,3
 gastropub,гастропаб,This **gastropub** serves upscale comfort food.,4
@@ -114,22 +114,22 @@ osteria,остерия,This **osteria** focuses on regional Italian dishes.,5
 brasserie,брассери,The **brasserie** stays open until midnight.,4
 taqueria,такерия,Let's grab lunch at the **taqueria**.,4
 izakaya,идзакая,A Japanese **izakaya** opened near my office.,5
-ramen,рамен,She ordered spicy **ramen** with extra pork.,2
-sushi,суши,He prefers **sushi** over other Japanese food.,1
+ramen,рамен,She ordered spicy **ramen** with extra pork.,2,kitchen
+sushi,суши,He prefers **sushi** over other Japanese food.,1,kitchen
 pizzeria,пиццерия,The neighborhood **pizzeria** delivers until ten.,2
-deli,кулинария,I bought a sandwich from the **deli**.,2
+deli,кулинария,I bought a sandwich from the **deli**.,2,shopping
 kiosk,киоск,A food **kiosk** sells hot dogs nearby.,2
 cart,тележка,A street **cart** offers fresh dumplings.,3
 sommelier,сомелье,The **sommelier** suggested a dry red wine.,4
-barista,бариста,The **barista** made beautiful latte art.,2
-bartender,бармен,The **bartender** shook our cocktails vigorously.,2
+barista,бариста,The **barista** made beautiful latte art.,2,work
+bartender,бармен,The **bartender** shook our cocktails vigorously.,2,party
 busser,помощник официанта,The **busser** cleared our empty plates.,4
 expediter,экспедитор,The kitchen **expediter** coordinates every order.,5
 runner,подавальщик,The food **runner** brought our entrees quickly.,3
 greeter,встречающий,A friendly **greeter** welcomed us inside.,3
 maitre,метрдотель,The **maitre** d seated us by the window.,5
 mixologist,миксолог,The **mixologist** crafted a signature drink.,5
-owner,владелец,The restaurant **owner** visited every table.,2
+owner,владелец,The restaurant **owner** visited every table.,2,work
 patronize,посещать,Locals **patronize** this place every weekend.,4
 entree,основное блюдо,My **entree** arrived beautifully plated.,3
 amuse,закуска-сюрприз,The chef sent an **amuse** bouche first.,5
@@ -137,29 +137,29 @@ palate,вкус,This wine is for a refined **palate**.,4
 tasting,дегустация,We booked a seven-course **tasting** menu.,3
 pairing,сочетание,The wine **pairing** complemented every course.,4
 course,блюдо,Each **course** arrived with careful timing.,2
-aperitif,аперитив,He sipped an **aperitif** before dinner.,5
-digestif,дижестив,They offered a complimentary **digestif** afterward.,5
-nightcap,рюмка на ночь,Let's have one **nightcap** before leaving.,4
-mocktail,безалкогольный коктейль,She ordered a pineapple **mocktail** instead.,3
-rocks,кубики льда,He takes whiskey on the **rocks**.,3
-neat,без льда,I'll have bourbon **neat** please.,3
-chilled,охлажденный,The champagne came perfectly **chilled**.,2
-stemware,бокалы на ножке,Expensive **stemware** filled the cabinet.,5
-flute,бокал для шампанского,She raised her champagne **flute** for a toast.,3
-tumbler,стакан,He poured whiskey into a heavy **tumbler**.,4
-goblet,кубок,The medieval **goblet** held red wine.,4
-jug,кувшин,Our **jug** of water needed refilling.,2
-carafe,графин,The waiter left a **carafe** of wine.,4
-decanter,декантер,Old wines breathe better in a **decanter**.,5
-ramekin,розетка,She baked custard in a small **ramekin**.,5
-saucer,блюдце,The teacup sat on a delicate **saucer**.,2
-tongs,щипцы,Use the **tongs** to grab the salad.,3
-skewer,шампур,Chicken pieces slid off the **skewer**.,3
-silverware,столовое серебро,The **silverware** gleamed under soft lights.,3
-flatware,столовые приборы,Polished **flatware** sat beside each setting.,4
-cutlery,столовые приборы,Please bring me clean **cutlery**.,3
-crockery,посуда,Fine **crockery** decorated the dining room.,5
-chopsticks,палочки для еды,He handled **chopsticks** with impressive skill.,2
+aperitif,аперитив,He sipped an **aperitif** before dinner.,5,party
+digestif,дижестив,They offered a complimentary **digestif** afterward.,5,party
+nightcap,рюмка на ночь,Let's have one **nightcap** before leaving.,4,party
+mocktail,безалкогольный коктейль,She ordered a pineapple **mocktail** instead.,3,party
+rocks,кубики льда,He takes whiskey on the **rocks**.,3,party
+neat,без льда,I'll have bourbon **neat** please.,3,party
+chilled,охлажденный,The champagne came perfectly **chilled**.,2,party
+stemware,бокалы на ножке,Expensive **stemware** filled the cabinet.,5,kitchen
+flute,бокал для шампанского,She raised her champagne **flute** for a toast.,3,party
+tumbler,стакан,He poured whiskey into a heavy **tumbler**.,4,kitchen
+goblet,кубок,The medieval **goblet** held red wine.,4,kitchen
+jug,кувшин,Our **jug** of water needed refilling.,2,kitchen
+carafe,графин,The waiter left a **carafe** of wine.,4,kitchen
+decanter,декантер,Old wines breathe better in a **decanter**.,5,kitchen
+ramekin,розетка,She baked custard in a small **ramekin**.,5,kitchen
+saucer,блюдце,The teacup sat on a delicate **saucer**.,2,kitchen
+tongs,щипцы,Use the **tongs** to grab the salad.,3,kitchen
+skewer,шампур,Chicken pieces slid off the **skewer**.,3,kitchen
+silverware,столовое серебро,The **silverware** gleamed under soft lights.,3,kitchen
+flatware,столовые приборы,Polished **flatware** sat beside each setting.,4,kitchen
+cutlery,столовые приборы,Please bring me clean **cutlery**.,3,kitchen
+crockery,посуда,Fine **crockery** decorated the dining room.,5,kitchen
+chopsticks,палочки для еды,He handled **chopsticks** with impressive skill.,2,kitchen
 bib,нагрудник,Lobster diners wear a paper **bib**.,3
 walkin,без записи,The restaurant accepts **walkin** customers too.,3
 waitlist,лист ожидания,Add my name to the **waitlist** please.,3
@@ -169,14 +169,14 @@ quaint,причудливый,The **quaint** bistro charmed every tourist.,4
 dimly,тускло,The **dimly** lit room felt romantic.,4
 candlelit,освещенный свечами,Every table was **candlelit** for dinner.,4
 ambiance,атмосфера,I love the warm **ambiance** here.,4
-decor,декор,The rustic **decor** made us feel welcome.,3
-lively,оживленный,The pub had a **lively** atmosphere tonight.,3
-rowdy,шумный,A **rowdy** group sat at the bar.,4
-veranda,веранда,We prefer the outdoor **veranda** seating.,3
+decor,декор,The rustic **decor** made us feel welcome.,3,home
+lively,оживленный,The pub had a **lively** atmosphere tonight.,3,party
+rowdy,шумный,A **rowdy** group sat at the bar.,4,party
+veranda,веранда,We prefer the outdoor **veranda** seating.,3,home
 alfresco,на свежем воздухе,Dining **alfresco** feels wonderful in summer.,5
 communal,общий,The restaurant offers **communal** tables downstairs.,4
-counter,стойка,He ate alone at the **counter**.,2
-barstool,барный стул,She climbed onto the **barstool** slowly.,3
+counter,стойка,He ate alone at the **counter**.,2,kitchen
+barstool,барный стул,She climbed onto the **barstool** slowly.,3,party
 peruse,изучать,Guests **peruse** the menu before ordering.,4
 hail,подозвать,He raised his hand to **hail** the waiter.,3
 beckon,подзывать,The host will **beckon** you over shortly.,4
@@ -192,17 +192,17 @@ sip,глоток,She took a careful **sip** of wine.,2
 munch,жевать,Children **munch** on breadsticks while waiting.,3
 slurp,хлюпать,It's okay to **slurp** noodles in Japan.,3
 dine,обедать,Where shall we **dine** this evening.,3
-bouncer,вышибала,The **bouncer** checked IDs at the door.,4
+bouncer,вышибала,The **bouncer** checked IDs at the door.,4,party
 clientele,клиентура,This restaurant attracts an upscale **clientele**.,4
 doggy bag,контейнер с остатками,I asked for a **doggy bag** for leftovers.,3
 lunch,обед,Let's grab **lunch** at the new cafe.,1
 restaurant,ресторан,We had dinner at a nice **restaurant** last night.,1
 ordered,заказал,He **ordered** a pizza for the whole team.,2
-drinks,напитки,They serve cold **drinks** at the bar.,2
+drinks,напитки,They serve cold **drinks** at the bar.,2,party
 meal,еда,We enjoyed a delicious **meal** at the restaurant.,2
 regular,обычный,I am a **regular** customer at this cafe.,2
-pizza,пицца,We ordered a large **pizza** for dinner.,1
-chocolate,шоколад,She loves dark **chocolate** with almonds.,1
+pizza,пицца,We ordered a large **pizza** for dinner.,1,kitchen
+chocolate,шоколад,She loves dark **chocolate** with almonds.,1,kitchen
 indian,индийский,We ordered some spicy **Indian** food for dinner.,2
 italian,итальянский,I love **Italian** pasta and pizza.,2
 refuse,отказываться,I **refuse** to eat cold soup,2
@@ -211,33 +211,33 @@ staring,уставившись,He kept **staring** at the menu,2
 mixed,смешанный,I ordered a **mixed** salad for lunch today.,2
 atmosphere,атмосфера,The restaurant has a cozy **atmosphere** with soft music.,3
 chophouse,стейк-хаус,This downtown **chophouse** serves dry-aged steaks and classic cocktails.,4
-alehouse,пивная,We stopped at the local **alehouse** for a pint after work.,4
-taphouse,крафтовый бар,The new **taphouse** offers over thirty rotating craft beers.,4
-speakeasy,тайный бар,A hidden **speakeasy** behind the bookshelf served prohibition-era cocktails.,5
+alehouse,пивная,We stopped at the local **alehouse** for a pint after work.,4,party
+taphouse,крафтовый бар,The new **taphouse** offers over thirty rotating craft beers.,4,party
+speakeasy,тайный бар,A hidden **speakeasy** behind the bookshelf served prohibition-era cocktails.,5,party
 roadhouse,придорожный ресторан,We stopped at a Texas **roadhouse** for ribs and cold beer.,4
 carryout,еда с собой,Their lunch **carryout** is ready in under ten minutes.,3
 takeaway,еда навынос,Let's grab Chinese **takeaway** and eat at home tonight.,2
-meze,мезе,The Turkish **meze** platter featured hummus and stuffed grape leaves.,5
-antipasto,антипасто,Our **antipasto** plate had cured meats and marinated olives.,4
-sashimi,сашими,The tuna **sashimi** melted on my tongue like butter.,3
-tempura,темпура,Shrimp **tempura** should be crunchy on the outside and juicy inside.,3
-fondue,фондю,We dipped bread into the bubbling cheese **fondue**.,3
-gnocchi,ньокки,Homemade potato **gnocchi** came in a light sage butter sauce.,4
-risotto,ризотто,The mushroom **risotto** was creamy and perfectly seasoned.,3
-gumbo,гамбо,Louisiana **gumbo** combines seafood with okra and smoked sausage.,4
-dumpling,пельмешек,Each pork **dumpling** was steamed in a bamboo basket.,2
-panfried,обжаренный на сковороде,The **panfried** sea bass had a golden crispy skin.,3
-chargrilled,жареный на углях,The **chargrilled** octopus tasted wonderfully smoky and perfectly tender.,4
-broiled,запечённый под грилем,The **broiled** lobster tail came with drawn butter.,3
-simmered,томлёный,The sauce **simmered** gently on the back burner for an hour.,3
-blanched,бланшированный,Briefly **blanched** asparagus stayed bright green and crisp.,4
-marinated,маринованный,The **marinated** chicken soaked in yogurt and spices overnight.,3
-whipped,взбитый,Freshly **whipped** cream crowned the delicate strawberry shortcake dessert.,3
-mashed,протёртый,Creamy garlic **mashed** potatoes accompanied the tender roast beef.,2
+meze,мезе,The Turkish **meze** platter featured hummus and stuffed grape leaves.,5,kitchen
+antipasto,антипасто,Our **antipasto** plate had cured meats and marinated olives.,4,kitchen
+sashimi,сашими,The tuna **sashimi** melted on my tongue like butter.,3,kitchen
+tempura,темпура,Shrimp **tempura** should be crunchy on the outside and juicy inside.,3,kitchen
+fondue,фондю,We dipped bread into the bubbling cheese **fondue**.,3,kitchen
+gnocchi,ньокки,Homemade potato **gnocchi** came in a light sage butter sauce.,4,kitchen
+risotto,ризотто,The mushroom **risotto** was creamy and perfectly seasoned.,3,kitchen
+gumbo,гамбо,Louisiana **gumbo** combines seafood with okra and smoked sausage.,4,kitchen
+dumpling,пельмешек,Each pork **dumpling** was steamed in a bamboo basket.,2,kitchen
+panfried,обжаренный на сковороде,The **panfried** sea bass had a golden crispy skin.,3,kitchen
+chargrilled,жареный на углях,The **chargrilled** octopus tasted wonderfully smoky and perfectly tender.,4,kitchen
+broiled,запечённый под грилем,The **broiled** lobster tail came with drawn butter.,3,kitchen
+simmered,томлёный,The sauce **simmered** gently on the back burner for an hour.,3,kitchen
+blanched,бланшированный,Briefly **blanched** asparagus stayed bright green and crisp.,4,kitchen
+marinated,маринованный,The **marinated** chicken soaked in yogurt and spices overnight.,3,kitchen
+whipped,взбитый,Freshly **whipped** cream crowned the delicate strawberry shortcake dessert.,3,kitchen
+mashed,протёртый,Creamy garlic **mashed** potatoes accompanied the tender roast beef.,2,kitchen
 succulent,сочный,Every bite of the **succulent** lamb was rich and tender.,4
 plated,сервированный,Each course was beautifully **plated** with microgreens and edible flowers.,3
 garnished,украшенный,The cocktail came **garnished** with a twist of lemon peel.,3
-drizzled,политый тонкой струйкой,Warm honey was **drizzled** across the goat cheese salad.,3
+drizzled,политый тонкой струйкой,Warm honey was **drizzled** across the goat cheese salad.,3,kitchen
 stale,чёрствый,"The bread tasted **stale**, so we asked for a fresh basket.",2
 savory,пикантный,This **savory** tart combined goat cheese and caramelized onions.,3
 flavorful,ароматный,The broth was deeply **flavorful** from hours of slow cooking.,3
@@ -247,7 +247,7 @@ scrumptious,пальчики оближешь,The apple pie was **scrumptious** 
 mouthwatering,аппетитный,The **mouthwatering** aroma of fresh pizza filled the room.,3
 inedible,несъедобный,The burnt fish was completely **inedible** and we sent it back.,4
 flavorless,безвкусный,The watery soup was **flavorless** and deeply disappointing for us.,3
-reheated,разогретый,The pasta tasted **reheated** rather than freshly prepared.,3
+reheated,разогретый,The pasta tasted **reheated** rather than freshly prepared.,3,kitchen
 gamey,с привкусом дичи,The venison had a strong **gamey** taste I enjoyed.,4
 smoky,дымный,The **smoky** flavor of the barbecue ribs was irresistible.,3
 peppery,перечный,The arugula salad had a pleasantly **peppery** bite.,3
@@ -261,11 +261,11 @@ malty,солодовый,This dark ale has a rich **malty** finish.,4
 runny,жидкий,The yolk of a poached egg should stay nicely **runny**.,3
 oily,жирный,The fries were overly **oily** and left grease on my napkin.,3
 marbled,мраморный,The finely **marbled** wagyu beef was incredibly tender and rich.,4
-starchy,крахмалистый,Potatoes and rice are considered **starchy** side dishes.,3
+starchy,крахмалистый,Potatoes and rice are considered **starchy** side dishes.,3,health
 chunky,с кусочками,The **chunky** tomato sauce had big pieces of vegetables.,3
 hearty,сытный,This **hearty** beef stew is perfect for a cold evening.,3
 satisfying,сытный,That bowl of ramen was incredibly **satisfying** after a long day.,3
-nutritious,питательный,Grilled salmon makes a **nutritious** and delicious main course.,3
+nutritious,питательный,Grilled salmon makes a **nutritious** and delicious main course.,3,health
 substitute,заменить,Can I **substitute** fries with a green salad please.,3
 customize,персонализировать,Guests can **customize** their pizza with any toppings they like.,3
 modify,изменить,Feel free to **modify** the dish if you have any allergies.,3
@@ -277,45 +277,45 @@ courteous,учтивый,The sommelier remained **courteous** even when we hesit
 unhelpful,бесполезный,The **unhelpful** server rolled his eyes when we asked about ingredients.,3
 wilted,увядший,The side salad looked **wilted** and clearly wasn't fresh.,3
 tepid,чуть тёплый,My latte arrived **tepid** instead of steaming hot.,4
-bouillabaisse,буйабес,Marseille is famous for its classic fish **bouillabaisse**.,5
-ratatouille,рататуй,Provencal **ratatouille** combines tomatoes with zucchini and eggplant.,4
-bruschetta,брускетта,The **bruschetta** was topped with diced tomatoes and basil.,4
-carpaccio,карпаччо,Beef **carpaccio** consists of thinly sliced raw meat.,5
-goulash,гуляш,Hungarian **goulash** is a rich beef stew with paprika.,4
-tiramisu,тирамису,The **tiramisu** was layered with coffee-soaked ladyfingers and mascarpone.,3
-chips,картошка фри,The fish and **chips** at that seaside restaurant were absolutely delicious.,2
+bouillabaisse,буйабес,Marseille is famous for its classic fish **bouillabaisse**.,5,kitchen
+ratatouille,рататуй,Provencal **ratatouille** combines tomatoes with zucchini and eggplant.,4,kitchen
+bruschetta,брускетта,The **bruschetta** was topped with diced tomatoes and basil.,4,kitchen
+carpaccio,карпаччо,Beef **carpaccio** consists of thinly sliced raw meat.,5,kitchen
+goulash,гуляш,Hungarian **goulash** is a rich beef stew with paprika.,4,kitchen
+tiramisu,тирамису,The **tiramisu** was layered with coffee-soaked ladyfingers and mascarpone.,3,kitchen
+chips,картошка фри,The fish and **chips** at that seaside restaurant were absolutely delicious.,2,kitchen
 serving,подавать на стол,The waiter was **serving** the main course when the lights went out.,3
 divine,божественный,Everyone agreed the chocolate mousse tasted absolutely **divine**.,3
-whiskey,виски,He ordered a glass of **whiskey** and sat down at the bar alone.,3
+whiskey,виски,He ordered a glass of **whiskey** and sat down at the bar alone.,3,party
 treating,угощать,He was **treating** his team to lunch after the successful product launch.,3
-booked,забронировал,We **booked** a table at the restaurant for Saturday evening.,2
+booked,забронировал,We **booked** a table at the restaurant for Saturday evening.,2,hotel
 various,различный,The menu offers **various** options for vegetarians and meat lovers alike.,3
 finest,лучший,This restaurant serves some of the **finest** seafood in the region.,4
-vodka,водка,**Vodka** is a clear spirit commonly used in cocktails.,3
+vodka,водка,**Vodka** is a clear spirit commonly used in cocktails.,3,party
 combination,сочетание,"The dish uses an unusual **combination** of spices, but it works perfectly.",3
-burger,бургер,He ordered a **burger** and fries at the diner.,1
+burger,бургер,He ordered a **burger** and fries at the diner.,1,kitchen
 set menu,комплексное меню,"The **set menu** offered three courses at a fixed price, which was great value.",3
 tasting menu,дегустационное меню,We splurged on the twelve-course **tasting menu** to celebrate our anniversary.,5
-side dish,гарнир,She ordered mashed potatoes as a **side dish** with her steak.,2
-charcuterie,мясная нарезка,The **charcuterie** board featured cured sausages and imported cheeses.,4
-microgreens,микрозелень,The chef scattered **microgreens** across the plate to add colour and freshness.,4
-entrée,основное блюдо,"For her **entrée**, she chose the pan-seared salmon with lemon butter sauce.",3
-poached,пашот,The **poached** egg sat perfectly on top of the smoked salmon toast.,3
-confit,конфи,Duck **confit** is slow-cooked in its own fat until the meat is silky and tender.,5
-sautéed,обжаренный,The **sautéed** mushrooms were tossed in garlic and fresh thyme.,3
-prosciutto,прошутто,Thin slices of **prosciutto** were draped over the melon as a classic Italian starter.,4
+side dish,гарнир,She ordered mashed potatoes as a **side dish** with her steak.,2,kitchen
+charcuterie,мясная нарезка,The **charcuterie** board featured cured sausages and imported cheeses.,4,kitchen
+microgreens,микрозелень,The chef scattered **microgreens** across the plate to add colour and freshness.,4,kitchen
+entrée,основное блюдо,"For her **entrée**, she chose the pan-seared salmon with lemon butter sauce.",3,kitchen
+poached,пашот,The **poached** egg sat perfectly on top of the smoked salmon toast.,3,kitchen
+confit,конфи,Duck **confit** is slow-cooked in its own fat until the meat is silky and tender.,5,kitchen
+sautéed,обжаренный,The **sautéed** mushrooms were tossed in garlic and fresh thyme.,3,kitchen
+prosciutto,прошутто,Thin slices of **prosciutto** were draped over the melon as a classic Italian starter.,4,kitchen
 maître d,метрдотель,The **maître d** welcomed us warmly and led us to our reserved table.,5
-floor manager,управляющий зала,The **floor manager** walked through the dining room to make sure every guest was happy.,4
+floor manager,управляющий зала,The **floor manager** walked through the dining room to make sure every guest was happy.,4,work
 high top,высокий столик,They seated us at a **high top** near the bar while we waited for our reserved table.,3
 al fresco,на свежем воздухе,Dining **al fresco** on the stone terrace was the highlight of our Italian holiday.,4
 garden seating,места в саду,We requested **garden seating** and were shown to a table beneath a canopy of vines.,3
 walk-in,без бронирования,"We didn't have a reservation, but they accepted us as a **walk-in** right away.",3
 ambience,атмосфера,The candlelight and soft piano gave the restaurant a warm and inviting **ambience**.,4
-plant-based,растительный,The new **plant-based** menu is popular with both vegans and curious meat-eaters.,3
-meat-free,без мяса,The chef designed a creative **meat-free** section that satisfied even dedicated carnivores.,3
-gluten-free,без глютена,"He requested a **gluten-free** pasta, and the kitchen prepared it without any problem.",3
-dairy-free,без молочных продуктов,"She ordered the **dairy-free** dessert, which was made with coconut cream instead.",3
-intolerance,непереносимость,"Please mention any food **intolerance** when you make your reservation, so we can prepare.",4
+plant-based,растительный,The new **plant-based** menu is popular with both vegans and curious meat-eaters.,3,health
+meat-free,без мяса,The chef designed a creative **meat-free** section that satisfied even dedicated carnivores.,3,health
+gluten-free,без глютена,"He requested a **gluten-free** pasta, and the kitchen prepared it without any problem.",3,health
+dairy-free,без молочных продуктов,"She ordered the **dairy-free** dessert, which was made with coconut cream instead.",3,health
+intolerance,непереносимость,"Please mention any food **intolerance** when you make your reservation, so we can prepare.",4,health
 halal,халяльный,The restaurant is fully **halal** certified and uses only approved suppliers.,4
 kosher,кошерный,They opened a **kosher** menu section to cater to their new neighbourhood customers.,4
 ethical sourcing,этичные поставки,The menu notes explain the chef's commitment to **ethical sourcing** of all ingredients.,4
@@ -324,53 +324,53 @@ house wine,вино заведения,"We ordered a carafe of **house wine**, w
 sparkling water,газированная вода,The waiter asked whether we preferred still or **sparkling water** with our meal.,2
 tap water,вода из-под крана,"Could we have some **tap water** while we look at the menu, please?",1
 greasy,жирный,The pizza was far too **greasy** and left an oily residue on every napkin.,2
-medium,средняя прожарка,"He ordered the burger **medium**, so the patty was juicy and slightly pink inside.",2
+medium,средняя прожарка,"He ordered the burger **medium**, so the patty was juicy and slightly pink inside.",2,kitchen
 lukewarm,чуть тёплый,My soup arrived **lukewarm** rather than hot; the waiter apologised and replaced it.,4
-caramelised,карамелизованный,The **caramelised** onions on top of the French onion soup were wonderfully sweet and rich.,4
+caramelised,карамелизованный,The **caramelised** onions on top of the French onion soup were wonderfully sweet and rich.,4,kitchen
 melt-in-your-mouth,тающий во рту,The slow-cooked beef was so **melt-in-your-mouth** that no knife was needed at all.,4
 all-you-can-eat,всё включено,We chose the **all-you-can-eat** brunch for a fixed price and tried dozens of dishes.,3
-staff meal,еда для персонала,Before service begins the whole kitchen team sits down for a quick **staff meal** together.,4
+staff meal,еда для персонала,Before service begins the whole kitchen team sits down for a quick **staff meal** together.,4,work
 food truck,фудтрак,A popular Korean **food truck** parks outside the office building every Friday.,3
 pop-up,временное заведение,A well-known chef opened a **pop-up** restaurant in the art gallery for a weekend.,4
 sushi bar,суши-бар,We sat at the **sushi bar** and watched the chef prepare rolls right in front of us.,3
 service charge,сервисный сбор,"A ten percent **service charge** was already included in the bill, as the menu stated.",4
-cash only,только наличные,The owner apologised: the café is **cash only** because the card reader is broken.,3
+cash only,только наличные,The owner apologised: the café is **cash only** because the card reader is broken.,3,shopping
 go Dutch,платить каждый за себя,"Since it was an informal dinner with colleagues, we decided to **go Dutch** and split evenly.",4
 split the bill,разделить счёт,"Four of us ate together, so we asked the waiter to **split the bill** four ways.",3
-dietary restriction,пищевые ограничения,Please inform us of any **dietary restriction** so the kitchen can accommodate your needs.,3
+dietary restriction,пищевые ограничения,Please inform us of any **dietary restriction** so the kitchen can accommodate your needs.,3,health
 seating,рассадка,The **seating** arrangement was flexible and could be adjusted for large groups.,3
 table for two,столик на двоих,I called ahead and booked a **table for two** by the window for seven o'clock.,2
 walk-up,без записи,The restaurant takes no reservations and operates on a **walk-up** basis only.,3
 on the house,за счёт заведения,The owner sent over a dessert **on the house** to celebrate our anniversary dinner.,3
-leftovers,остатки,She boxed up her **leftovers** and enjoyed the pasta for lunch the next day.,2
+leftovers,остатки,She boxed up her **leftovers** and enjoyed the pasta for lunch the next day.,2,kitchen
 takeout,еда навынос,"Since the restaurant was full, we ordered **takeout** and ate in the park.",2
 curbside pickup,самовывоз,The restaurant added a **curbside pickup** option so customers could collect orders from their car.,4
 dine-in,ужин в ресторане,The chef's special is only available for **dine-in** guests at the restaurant.,3
-two-for-one,два по цене одного,The café runs a **two-for-one** deal on cocktails every Tuesday evening.,3
-happy hour,счастливый час,During **happy hour** all cocktails are half price at this bar.,3
+two-for-one,два по цене одного,The café runs a **two-for-one** deal on cocktails every Tuesday evening.,3,shopping
+happy hour,счастливый час,During **happy hour** all cocktails are half price at this bar.,3,party
 prix fixe,фиксированное меню,The chef designed a seasonal **prix fixe** menu with five carefully paired courses.,5
 à la carte,блюда на выбор,We preferred to order **à la carte** rather than choosing the fixed-price set menu.,5
 breadbasket,хлебная корзина,The waiter brought a warm **breadbasket** with olive oil and butter right away.,3
 amuse-bouche,амюз-буш,The kitchen sent out an **amuse-bouche** of cucumber mousse as a welcome bite.,5
-mise en place,всё на своём месте,Good chefs rely on thorough **mise en place** before service to ensure smooth cooking.,5
-front of house,зал обслуживания,She manages the entire **front of house** team and makes sure guests feel welcome.,5
-back of house,кухня,The **back of house** staff work tirelessly behind the scenes to prepare every dish.,5
-sous chef,су-шеф,The **sous chef** stepped in to run the kitchen while the head chef was away.,5
-head chef,шеф-повар,The **head chef** created a new spring menu featuring only local seasonal ingredients.,4
-line cook,повар на линии,Every **line cook** had a specific station and knew exactly what to prepare.,4
-prep cook,повар на заготовке,The **prep cook** spent the morning chopping vegetables and portioning meat.,4
-pastry chef,кондитер,The talented **pastry chef** created desserts that looked like miniature works of art.,4
-jus,мясной сок,The beef was served with a rich **jus** made from the roasting pan drippings.,5
-reduction,соус из уварённого бульона,The chef finished the dish with a balsamic **reduction** drizzled across the plate.,5
-infused,настоянный,The oil was **infused** with rosemary and garlic for extra flavour.,4
-vinaigrette,винегрет,The house **vinaigrette** was a bright mix of Dijon mustard and red wine vinegar.,4
-crust,корочка,The parmesan **crust** on the baked chicken was golden and wonderfully crunchy.,3
+mise en place,всё на своём месте,Good chefs rely on thorough **mise en place** before service to ensure smooth cooking.,5,kitchen
+front of house,зал обслуживания,She manages the entire **front of house** team and makes sure guests feel welcome.,5,work
+back of house,кухня,The **back of house** staff work tirelessly behind the scenes to prepare every dish.,5,kitchen
+sous chef,су-шеф,The **sous chef** stepped in to run the kitchen while the head chef was away.,5,kitchen
+head chef,шеф-повар,The **head chef** created a new spring menu featuring only local seasonal ingredients.,4,kitchen
+line cook,повар на линии,Every **line cook** had a specific station and knew exactly what to prepare.,4,kitchen
+prep cook,повар на заготовке,The **prep cook** spent the morning chopping vegetables and portioning meat.,4,kitchen
+pastry chef,кондитер,The talented **pastry chef** created desserts that looked like miniature works of art.,4,kitchen
+jus,мясной сок,The beef was served with a rich **jus** made from the roasting pan drippings.,5,kitchen
+reduction,соус из уварённого бульона,The chef finished the dish with a balsamic **reduction** drizzled across the plate.,5,kitchen
+infused,настоянный,The oil was **infused** with rosemary and garlic for extra flavour.,4,kitchen
+vinaigrette,винегрет,The house **vinaigrette** was a bright mix of Dijon mustard and red wine vinegar.,4,kitchen
+crust,корочка,The parmesan **crust** on the baked chicken was golden and wonderfully crunchy.,3,kitchen
 seasonal,сезонный,The menu changes monthly to reflect only the finest **seasonal** ingredients available.,3
 locally sourced,местного производства,"The chef proudly uses **locally sourced** produce, supporting nearby farms whenever possible.",4
 farm-to-table,из фермы на стол,The restaurant's **farm-to-table** philosophy means everything is harvested within fifty kilometres.,5
-al dente,аль денте,Italian cooks always insist that pasta must be cooked **al dente** to have the right bite.,4
-medium rare,с кровью,He ordered his ribeye **medium rare** so that the centre stayed pink and juicy.,3
-well done,хорошо прожаренный,She prefers her steak **well done** with no pink visible anywhere in the meat.,2
-finger food,закуска руками,The cocktail party was catered with elegant **finger food** that guests could eat standing up.,3
-tapas,тапас,We shared several small plates of **tapas** while sipping cold Spanish wine.,3
+al dente,аль денте,Italian cooks always insist that pasta must be cooked **al dente** to have the right bite.,4,kitchen
+medium rare,с кровью,He ordered his ribeye **medium rare** so that the centre stayed pink and juicy.,3,kitchen
+well done,хорошо прожаренный,She prefers her steak **well done** with no pink visible anywhere in the meat.,2,kitchen
+finger food,закуска руками,The cocktail party was catered with elegant **finger food** that guests could eat standing up.,3,party
+tapas,тапас,We shared several small plates of **tapas** while sipping cold Spanish wine.,3,party
 sharing plate,общее блюдо,"Rather than individual orders, we chose a few **sharing plates** for the whole table.",3

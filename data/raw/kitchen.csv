@@ -1,11 +1,11 @@
 english,russian,sentence,difficulty
 chop,рубить,Please **chop** the onions finely.,2
-chop,отбивная,I grilled a pork **chop** today.,3
+chop,отбивная,I grilled a pork **chop** today.,3,restaurant
 slice,нарезать,**Slice** the bread for sandwiches.,2
 slice,ломтик,I ate a **slice** of cake.,2
 dice,нарезать кубиками,**Dice** the carrots for the soup.,3
 mince,измельчать,**Mince** the garlic very finely.,3
-mince,фарш,I bought beef **mince** today.,4
+mince,фарш,I bought beef **mince** today.,4,shopping
 grate,тереть,**Grate** the cheese over the pasta.,3
 peel,чистить,Please **peel** the potatoes first.,2
 peel,кожура,Orange **peel** smells wonderful.,3
@@ -22,7 +22,7 @@ season,приправлять,**Season** the chicken with herbs.,3
 marinate,мариновать,**Marinate** the meat for two hours.,4
 stuff,фаршировать,**Stuff** the peppers with rice.,3
 dip,макать,**Dip** the bread in olive oil.,2
-dip,соус для макания,This **dip** tastes amazing.,3
+dip,соус для макания,This **dip** tastes amazing.,3,restaurant
 coat,обваливать,**Coat** the fish in flour.,3
 coat,слой,A thin **coat** of chocolate covered it.,3
 sprinkle,посыпать,**Sprinkle** sugar on the cake.,3
@@ -32,41 +32,41 @@ boil,кипятить,**Boil** the water for tea.,2
 fry,жарить,**Fry** the eggs in butter.,2
 bake,печь,I **bake** bread every Sunday.,2
 roast,запекать,**Roast** the chicken for an hour.,3
-roast,жаркое,Sunday **roast** is our tradition.,4
+roast,жаркое,Sunday **roast** is our tradition.,4,restaurant
 grill,жарить на гриле,**Grill** the fish on high heat.,2
-grill,гриль,Clean the **grill** after cooking.,3
+grill,гриль,Clean the **grill** after cooking.,3,restaurant
 braise,тушить,**Braise** the beef in red wine.,4
 toast,подрумянить,**Toast** the almonds in the pan.,3
 toast,тост,I ate **toast** with butter.,2
-reheat,разогревать,**Reheat** the soup in the microwave.,3
-defrost,размораживать,**Defrost** the meat overnight.,3
+reheat,разогревать,**Reheat** the soup in the microwave.,3,home
+defrost,размораживать,**Defrost** the meat overnight.,3,home
 preserve,консервировать,Grandma likes to **preserve** tomatoes.,3
 brew,заваривать,I **brew** coffee every morning.,3
 flour,мука,Add more **flour** to the dough.,2
 flour,обваливать в муке,**Flour** the fish before frying.,4
-sugar,сахар,Put two spoons of **sugar**.,1
-butter,масло,Spread **butter** on the toast.,1
+sugar,сахар,Put two spoons of **sugar**.,1,restaurant
+butter,масло,Spread **butter** on the toast.,1,restaurant
 butter,намазывать маслом,**Butter** both sides of the bread.,3
 yeast,дрожжи,Bread needs **yeast** to rise.,3
-garlic,чеснок,I love **garlic** in my pasta.,2
-onion,лук,Cut the **onion** into small pieces.,2
-ginger,имбирь,Fresh **ginger** adds great flavor.,3
-lemon,лимон,Squeeze the **lemon** over fish.,1
-honey,мёд,I add **honey** to my tea.,1
-syrup,сироп,Pour maple **syrup** on pancakes.,3
-cream,сливки,Whip the **cream** until stiff.,2
-yogurt,йогурт,I eat **yogurt** for breakfast.,1
+garlic,чеснок,I love **garlic** in my pasta.,2,restaurant
+onion,лук,Cut the **onion** into small pieces.,2,restaurant
+ginger,имбирь,Fresh **ginger** adds great flavor.,3,restaurant
+lemon,лимон,Squeeze the **lemon** over fish.,1,restaurant
+honey,мёд,I add **honey** to my tea.,1,restaurant
+syrup,сироп,Pour maple **syrup** on pancakes.,3,restaurant
+cream,сливки,Whip the **cream** until stiff.,2,restaurant
+yogurt,йогурт,I eat **yogurt** for breakfast.,1,restaurant
 dough,тесто,Let the **dough** rise for an hour.,3
 batter,жидкое тесто,Mix the pancake **batter** well.,4
-broth,бульон,The chicken **broth** smells good.,3
-stock,концентрированный бульон,Make **stock** from fish bones.,4
-gravy,подливка,Pour **gravy** over the potatoes.,3
+broth,бульон,The chicken **broth** smells good.,3,restaurant
+stock,концентрированный бульон,Make **stock** from fish bones.,4,restaurant
+gravy,подливка,Pour **gravy** over the potatoes.,3,restaurant
 ladle,половник,Serve soup with a **ladle**.,4
 grater,тёрка,Use the **grater** for the cheese.,3
 peeler,овощечистка,The **peeler** is in the drawer.,3
-blender,блендер,Put fruit in the **blender**.,2
+blender,блендер,Put fruit in the **blender**.,2,home
 blend,взбивать в блендере,**Blend** the fruits for a smoothie.,3
-mixer,миксер,Use the **mixer** for the cream.,2
+mixer,миксер,Use the **mixer** for the cream.,2,home
 mix,смешивать,**Mix** the flour and water.,2
 mix,смесь,Add the cake **mix** to water.,3
 beat,взбалтывать,**Beat** the eggs with a fork.,3
@@ -74,14 +74,14 @@ fold,осторожно вмешивать,**Fold** the cream into the mixture.,
 scale,весы,Weigh the flour on the **scale**.,3
 sieve,сито,Pass the sauce through a **sieve**.,4
 colander,дуршлаг,Drain the pasta in a **colander**.,4
-foil,фольга,Wrap the fish in **foil**.,3
+foil,фольга,Wrap the fish in **foil**.,3,home
 lid,крышка,Put the **lid** on the pot.,2
 handle,ручка,The pan **handle** is hot.,2
 blade,лезвие,The knife **blade** is very sharp.,3
-ripe,спелый,The tomatoes are finally **ripe**.,3
-crispy,хрустящий,I love **crispy** bacon in the morning.,3
-tender,нежный,The meat is very **tender** today.,3
-juicy,сочный,This steak is so **juicy**.,2
+ripe,спелый,The tomatoes are finally **ripe**.,3,shopping
+crispy,хрустящий,I love **crispy** bacon in the morning.,3,restaurant
+tender,нежный,The meat is very **tender** today.,3,restaurant
+juicy,сочный,This steak is so **juicy**.,2,restaurant
 burnt,подгоревший,The **burnt** toast tastes awful.,3
 tablespoon,столовая ложка,Add one **tablespoon** of oil.,2
 teaspoon,чайная ложка,Use a **teaspoon** of salt.,2
@@ -114,7 +114,7 @@ caramelize,карамелизировать,Slowly **caramelize** the sugar in t
 baste,поливать,**Baste** the turkey with its own juices.,4
 deglaze,выпаривать,**Deglaze** the pan with a splash of wine.,5
 whip,взбей,**Whip** the cream until soft peaks form.,3
-garnish,украсить,**Garnish** the soup with fresh herbs.,3
+garnish,украсить,**Garnish** the soup with fresh herbs.,3,restaurant
 zest,цедру,Add lemon **zest** to brighten the flavor.,3
 zester,терку,Grate the orange peel with a **zester**.,4
 thyme,тимьяна,Sprinkle dried **thyme** over the roasted potatoes.,3
@@ -147,7 +147,7 @@ flaky,слоистым,The pastry should be light and **flaky**.,3
 gooey,тягучим,The melted cheese becomes wonderfully **gooey** inside.,4
 silky,шелковистым,The sauce turned out smooth and **silky**.,3
 chewy,жевательным,Homemade bagels have a perfectly **chewy** texture.,3
-creamy,кремовым,The risotto should be **creamy** but firm.,2
+creamy,кремовым,The risotto should be **creamy** but firm.,2,restaurant
 fluffy,пышным,The pancakes turned out light and **fluffy**.,2
 crumbly,рассыпчатым,The shortbread cookies are delightfully **crumbly** inside.,3
 mushy,размякшими,Don't overcook the vegetables or they become **mushy**.,3
@@ -156,7 +156,7 @@ shred,нашинковать,**Shred** the cabbage finely for the slaw.,3
 pit,косточку,Remove the **pit** from each ripe peach.,3
 trim,обрежь,**Trim** the fat from the pork chops.,2
 debone,удали,**Debone** the chicken thighs before marinating them.,4
-fillet,филе,Slice the fish into thin **fillet** pieces.,3
+fillet,филе,Slice the fish into thin **fillet** pieces.,3,restaurant
 grinder,кофемолке,Grind the beans in a manual **grinder**.,3
 steamer,пароварке,Cook the dumplings in a bamboo **steamer**.,3
 frosting,глазурью,Spread the chocolate **frosting** on the cake.,3
@@ -167,9 +167,9 @@ combine,соедини,**Combine** the dry ingredients in a bowl.,2
 masher,толкушкой,Crush the potatoes with a hand **masher**.,3
 tenderizer,молотком,Pound the meat with a **tenderizer** mallet.,4
 nutcracker,щипцы,Crack the walnuts with a metal **nutcracker**.,3
-thermometer,термометром,Check the meat with a kitchen **thermometer**.,2
+thermometer,термометром,Check the meat with a kitchen **thermometer**.,2,health
 skimmer,шумовкой,Remove the foam with a **skimmer** spoon.,4
-corkscrew,штопором,Open the wine bottle with a **corkscrew**.,3
+corkscrew,штопором,Open the wine bottle with a **corkscrew**.,3,restaurant
 curd,творог,Strain the **curd** through a cheesecloth carefully.,4
 ganache,ганаш,Pour chocolate **ganache** over the glazed cake.,5
 fondant,мастику,Roll the **fondant** to cover the cake.,5
@@ -199,27 +199,27 @@ kernel,зернышки,Each popcorn **kernel** pops when heated enough.,4
 crumb,крошек,Not a single **crumb** was left behind.,3
 mash,разомни,**Mash** the bananas for the muffin batter.,2
 chill,охлади,**Chill** the dough before rolling it out.,2
-dinner,ужин,What's for **dinner** tonight?,1
+dinner,ужин,What's for **dinner** tonight?,1,restaurant
 cover,накрыть,Please **cover** the food with foil.,2
-meat,мясо,I don't eat **meat** but I love fish.,1
+meat,мясо,I don't eat **meat** but I love fish.,1,restaurant|shopping
 prepare,готовить,I need to **prepare** dinner before guests arrive.,2
-nuts,орехи,I like to eat mixed **nuts** as a snack.,2
-eggs,яйца,She bought a dozen **eggs** at the store.,1
+nuts,орехи,I like to eat mixed **nuts** as a snack.,2,shopping
+eggs,яйца,She bought a dozen **eggs** at the store.,1,shopping
 ate,съел,I **ate** the whole pizza by myself last night.,1
 disgusting,отвратительный,The old milk tasted absolutely **disgusting**.,3
-cooking,готовка,I enjoy **cooking** Italian food on weekends.,1
+cooking,готовка,I enjoy **cooking** Italian food on weekends.,1,leisure
 burned,сгорел,The toast **burned** because I forgot about it.,2
-pie,пирог,She baked an apple **pie** for dessert,1
+pie,пирог,She baked an apple **pie** for dessert,1,restaurant
 eaten,съеденный,All the cake has been **eaten**,2
-apple,яблоко,I eat a red **apple** every morning.,1
+apple,яблоко,I eat a red **apple** every morning.,1,shopping
 flesh,плоть,The **flesh** of this fruit is very sweet.,3
 cutting,резка,He was **cutting** vegetables for dinner.,2
-sandwich,бутерброд,I made a cheese **sandwich** for my lunch.,1
+sandwich,бутерброд,I made a cheese **sandwich** for my lunch.,1,restaurant
 steel,сталь,This knife is made of the finest **steel**.,3
-turkey,индейка,We roast a **turkey** every Thanksgiving dinner.,2
+turkey,индейка,We roast a **turkey** every Thanksgiving dinner.,2,party
 rotten,гнилой,Throw away that **rotten** apple before it stinks up the bowl.,3
-dishes,посуда,I will wash the **dishes** after we finish dinner.,1
-juicer,соковыжималка,I bought a powerful **juicer** to make fresh orange juice every morning.,3
+dishes,посуда,I will wash the **dishes** after we finish dinner.,1,home
+juicer,соковыжималка,I bought a powerful **juicer** to make fresh orange juice every morning.,3,home
 slicer,слайсер,The deli **slicer** cuts ham into paper-thin pieces very quickly.,3
 chopper,измельчитель,A small electric **chopper** saves time when preparing onions and garlic.,3
 cleaver,тесак,The butcher used a heavy **cleaver** to split the chicken in half.,4
@@ -247,24 +247,24 @@ basting,поливание соком,Regular **basting** keeps the roast turkey
 poaching,варка в воде,Gentle **poaching** is the best method for cooking delicate fish fillets.,4
 reducing,уваривание,Slow **reducing** concentrates the flavor of the wine sauce beautifully.,4
 caramelizing,карамелизация,**Caramelizing** onions takes patience but creates incredible sweetness and depth.,5
-scrambled,омлет,I had **scrambled** eggs with buttered toast for breakfast today.,2
-braised,тушёный,The **braised** short ribs melted right off the bone at dinner.,4
+scrambled,омлет,I had **scrambled** eggs with buttered toast for breakfast today.,2,restaurant
+braised,тушёный,The **braised** short ribs melted right off the bone at dinner.,4,restaurant
 stewed,тушёный,**Stewed** apples with cinnamon taste wonderful over vanilla ice cream.,3
-sauteed,пассерованный,Quickly **sauteed** mushrooms make a simple but elegant side dish.,4
+sauteed,пассерованный,Quickly **sauteed** mushrooms make a simple but elegant side dish.,4,restaurant
 cured,вяленый,Italian **cured** meats hang in the shop window for months.,4
 fermented,ферментированный,Kimchi is a classic Korean **fermented** vegetable dish with spicy flavor.,4
 brined,засоленный,A **brined** turkey always turns out juicier than an unbrined one.,4
 seasoned,приправленный,Well **seasoned** fries need no extra salt on the side.,2
 stuffed,фаршированный,Mom baked **stuffed** bell peppers filled with rice and meat yesterday.,3
 breaded,панированный,The **breaded** chicken cutlets fried up crispy and perfectly golden brown.,3
-battered,в кляре,"The deep-fried **battered** fish, served hot, is a British classic.",4
+battered,в кляре,"The deep-fried **battered** fish, served hot, is a British classic.",4,restaurant
 glazed,глазированный,The **glazed** donuts shone under the bakery display case lights.,3
 caramelized,карамелизованный,Top the tart with **caramelized** apple slices for an elegant finish.,5
 charred,обугленный,Slightly **charred** peppers taste smoky and wonderful in salsa.,4
-undercooked,недоваренный,"Sadly, the pasta was **undercooked** and too hard to chew.",3
+undercooked,недоваренный,"Sadly, the pasta was **undercooked** and too hard to chew.",3,restaurant
 overcooked,переваренный,Don't leave the broccoli too long or it becomes **overcooked** and mushy.,3
 browned,обжаренный,Properly **browned** meat forms the flavor base of any great stew.,3
-seared,обжаренный,A quickly **seared** tuna steak stays pink and tender in the middle.,4
+seared,обжаренный,A quickly **seared** tuna steak stays pink and tender in the middle.,4,restaurant
 crunchy,хрустящий,I love the **crunchy** texture of fresh celery sticks with dip.,2
 soggy,раскисший,Nobody enjoys **soggy** cereal floating in warm milk for breakfast.,3
 stringy,волокнистый,Old celery becomes **stringy** and hard to chew at the table.,4
@@ -279,11 +279,11 @@ morsel,кусочек,Not a single **morsel** of cake was left on the plate.,4
 tidbit,лакомство,Grandma saves the tastiest **tidbit** of roast beef for the dog.,5
 sliver,тонкий ломтик,Cut a thin **sliver** of lime for the cocktail garnish.,4
 shaving,стружка,Top the risotto with a delicate **shaving** of black truffle.,4
-refrigerator,холодильник,Store the leftover soup in the **refrigerator** for up to three days.,2
-baker,пекарь,The local **baker** starts kneading dough at four in the morning.,2
+refrigerator,холодильник,Store the leftover soup in the **refrigerator** for up to three days.,2,home
+baker,пекарь,The local **baker** starts kneading dough at four in the morning.,2,work
 cookery,кулинария,Italian **cookery** relies on a few simple fresh ingredients.,4
-kitchenware,кухонная утварь,My aunt collects vintage **kitchenware** from the nineteen fifties.,4
-crockpot,мультиварка,"Before work, throw everything into the **crockpot** for dinner tonight.",4
+kitchenware,кухонная утварь,My aunt collects vintage **kitchenware** from the nineteen fifties.,4,home
+crockpot,мультиварка,"Before work, throw everything into the **crockpot** for dinner tonight.",4,home
 microwavable,пригодный для микроволновки,"Buy **microwavable** containers for the office, they save so much time.",4
 ovenproof,жаропрочный,Use only **ovenproof** dishes when baking at high temperatures.,4
 sprig,веточка,Garnish the cocktail with a fresh **sprig** of mint leaves.,4
@@ -297,20 +297,20 @@ render,вытапливать,**Render** the bacon fat slowly over very low heat
 emulsify,эмульгировать,Slowly whisk in olive oil to **emulsify** the vinaigrette properly.,5
 macerate,вымачивать,**Macerate** the strawberries in sugar for about twenty minutes.,5
 brine,рассол,Soak the pickles in salty **brine** with garlic and dill.,4
-smoker,коптильня,Dad built a wooden **smoker** in the backyard last summer.,4
+smoker,коптильня,Dad built a wooden **smoker** in the backyard last summer.,4,home
 mortar,ступка,Crush the spices in a stone **mortar** to release their aroma.,4
-rotisserie,вертел,A **rotisserie** chicken from the supermarket saves busy weeknight dinners.,4
+rotisserie,вертел,A **rotisserie** chicken from the supermarket saves busy weeknight dinners.,4,shopping
 chaos,хаос,The kitchen was in complete **chaos** after the dinner party last night.,3
-dates,финики,She added **dates** and nuts to the energy bars for natural sweetness.,3
-tastes,на вкус как,The soup **tastes** a bit bland — try adding more salt and pepper.,2
-corn,кукуруза,We grilled **corn** on the cob for the summer barbecue.,2
-plates,тарелки,Could you clear the **plates** from the table before we bring dessert?,1
-beans,бобы,Add two cans of **beans** to the soup and let it simmer for twenty minutes.,2
-cookies,печенье,She baked a fresh batch of **cookies** for the school fundraiser.,2
-potatoes,картошка,Peel and boil the **potatoes** until they are soft enough to mash.,2
+dates,финики,She added **dates** and nuts to the energy bars for natural sweetness.,3,shopping
+tastes,на вкус как,The soup **tastes** a bit bland — try adding more salt and pepper.,2,restaurant
+corn,кукуруза,We grilled **corn** on the cob for the summer barbecue.,2,shopping
+plates,тарелки,Could you clear the **plates** from the table before we bring dessert?,1,restaurant|home
+beans,бобы,Add two cans of **beans** to the soup and let it simmer for twenty minutes.,2,shopping
+cookies,печенье,She baked a fresh batch of **cookies** for the school fundraiser.,2,shopping
+potatoes,картошка,Peel and boil the **potatoes** until they are soft enough to mash.,2,shopping
 bits,кусочки,She cut the chicken into small **bits** before adding it to the stew.,2
 eats,есть,He **eats** breakfast at seven every morning before heading to work.,1
-technique,техника / приём,The chef taught us his **technique** for making a perfect omelette.,3
-potato,картофель,She peeled the **potato** and cut it into small cubes.,1
-bacon,бекон,She fried some **bacon** and eggs for breakfast.,1
-banana,банан,He peeled a **banana** and added it to his morning smoothie.,1
+technique,техника / приём,The chef taught us his **technique** for making a perfect omelette.,3,work
+potato,картофель,She peeled the **potato** and cut it into small cubes.,1,shopping
+bacon,бекон,She fried some **bacon** and eggs for breakfast.,1,shopping
+banana,банан,He peeled a **banana** and added it to his morning smoothie.,1,shopping

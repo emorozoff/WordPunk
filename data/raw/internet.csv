@@ -1,29 +1,29 @@
 english,russian,sentence,difficulty
 internet,интернет,I can't live without the **internet**.,1
 website,сайт,This **website** loads very fast.,1
-email,имейл,She sent me a long **email**.,1
+email,имейл,She sent me a long **email**.,1,work
 password,пароль,Never share your **password** with anyone.,1
 online,онлайн,My brother is always **online**.,1
 download,скачать,I want to **download** this song.,1
 chat,чат,We talked in the group **chat**.,1
-video,видео,This **video** is really funny.,1
+video,видео,This **video** is really funny.,1,leisure
 wifi,вайфай,The **wifi** here is really fast.,1
 app,приложение,This **app** is really useful.,1
 photo,фото,I posted a new **photo** today.,2
 message,сообщение,He sent me a short **message**.,2
 upload,загрузить,Please **upload** the photo here.,2
-laptop,ноутбук,My **laptop** needs a new battery.,2
+laptop,ноутбук,My **laptop** needs a new battery.,2,work
 click,кликать,Just **click** on this link.,2
 post,пост,Her last **post** got many likes.,2
 post,публиковать,I will **post** it later tonight.,2
 like,лайк,My photo got one hundred **likes**.,2
-like,нравиться,I really **like** your new page.,2
+like,нравиться,I really **like** your new page.,2,basic
 comment,комментарий,He left a rude **comment** below.,2
 follow,подписаться,I want to **follow** her blog.,2
 profile,профиль,Update your **profile** photo please.,2
 profile,анкета,Fill out your dating **profile** carefully.,3
 feed,лента,My news **feed** is full of ads.,2
-feed,кормить,Don't forget to **feed** the dog.,2
+feed,кормить,Don't forget to **feed** the dog.,2,home
 link,ссылка,Send me the **link** right now.,2
 link,связь,There is a clear **link** between them.,2
 spam,спам,Delete all the **spam** emails please.,2
@@ -36,30 +36,30 @@ data,данные,Save your **data** before closing.,2
 browser,браузер,My favorite **browser** is very fast.,2
 tab,вкладка,Open a new **tab** please.,2
 web,веб,The modern **web** has changed everything.,3
-web,паутина,A spider made a beautiful **web**.,3
+web,паутина,A spider made a beautiful **web**.,3,nature
 cloud,облако,Save your files to the **cloud**.,3
-cloud,туча,A dark **cloud** covered the sky.,3
+cloud,туча,A dark **cloud** covered the sky.,3,nature
 surf,серфить,I like to **surf** the web daily.,3
-surf,серфинг,He loves **surf** at the beach.,3
-hit,хит,This song became a huge **hit**.,3
+surf,серфинг,He loves **surf** at the beach.,3,sports
+hit,хит,This song became a huge **hit**.,3,leisure
 hit,удар,She took a hard **hit** yesterday.,3
 cookie,куки,This site uses tracking **cookies**.,3
-cookie,печенье,Grandma baked a sweet **cookie**.,3
+cookie,печенье,Grandma baked a sweet **cookie**.,3,kitchen
 bug,баг,There is a **bug** in the app.,3
-bug,жук,A little **bug** crawled on my wall.,3
+bug,жук,A little **bug** crawled on my wall.,3,nature
 crash,сбой,The game had a sudden **crash**.,3
-crash,авария,There was a **crash** on the highway.,3
-stream,стрим,Her **stream** starts at eight tonight.,3
+crash,авария,There was a **crash** on the highway.,3,driving
+stream,стрим,Her **stream** starts at eight tonight.,3,leisure
 stream,поток,A huge **stream** of data flows here.,3
 troll,тролль,Don't feed the **troll** in comments.,3
 troll,дразнить,He likes to **troll** his friends.,3
 bookmark,закладка,Save this page as a **bookmark**.,3
-inbox,входящие,My **inbox** is full of junk.,3
-attachment,вложение,Check the **attachment** in my email.,3
+inbox,входящие,My **inbox** is full of junk.,3,work
+attachment,вложение,Check the **attachment** in my email.,3,work
 backup,бэкап,Make a **backup** of your photos.,3
 edit,редактировать,Let me **edit** my post quickly.,3
 icon,иконка,Tap the red **icon** to delete.,3
-meme,мем,That **meme** made me laugh loud.,3
+meme,мем,That **meme** made me laugh loud.,3,leisure
 hashtag,хештег,Add a **hashtag** to your post.,3
 blog,блог,She writes a cooking **blog**.,3
 subscribe,подписаться,Please **subscribe** to my channel.,3
@@ -74,7 +74,7 @@ unsubscribe,отписаться,I had to **unsubscribe** from ads.,4
 influencer,инфлюенсер,My sister wants to be an **influencer**.,4
 viral,вирусный,This meme went **viral** overnight.,4
 trend,тренд,Dark mode is a huge **trend**.,4
-vlog,влог,I watch his daily **vlog**.,4
+vlog,влог,I watch his daily **vlog**.,4,leisure
 reel,рилс,Her new **reel** got millions of views.,4
 avatar,аватар,I changed my **avatar** yesterday.,4
 username,никнейм,My **username** is already taken.,4
@@ -144,8 +144,8 @@ ringtone,рингтон,Her loud **ringtone** embarrassed everyone at dinner.,3
 homescreen,экран,Drag the app icon to your **homescreen**.,3
 unlock,разблокировать,Use your fingerprint to **unlock** the phone.,2
 passcode,пин-код,Never share your six-digit **passcode** with anyone.,2
-analytics,аналитика,She checks site **analytics** every single morning.,3
-metric,метрика,Engagement is our most important **metric** now.,3
+analytics,аналитика,She checks site **analytics** every single morning.,3,work
+metric,метрика,Engagement is our most important **metric** now.,3,work
 impression,показ,Every ad **impression** costs advertisers real money.,3
 algorithm,алгоритм,The **algorithm** shows you similar videos forever.,3
 explore,просматривать,Tap **explore** to see what is trending today.,3
@@ -155,7 +155,7 @@ autofill,автозаполнение,**Autofill** saved him from retyping long 
 prompt,запрос,Write a clearer **prompt** for better results.,3
 query,запрос,This database **query** returns millions of rows.,3
 keyword,ключевое,Pick the right **keyword** for better search results.,3
-seo,SEO,Good **seo** brings free traffic from search engines.,3
+seo,SEO,Good **seo** brings free traffic from search engines.,3,work
 sponsored,спонсорский,Every **sponsored** post must be clearly labeled.,3
 affiliate,партнёрский,Bloggers earn money through **affiliate** links.,3
 tracking,отслеживание,Block third-party **tracking** in your browser settings.,3
@@ -171,13 +171,13 @@ timeline,лента,His **timeline** is full of travel photos.,3
 repost,репост,One **repost** can spread rumors very quickly.,3
 mention,упоминание,She got a nice **mention** from a popular creator.,3
 bio,биография,Update your **bio** to include your new job.,2
-livestream,стрим,Thousands watched his gaming **livestream** last night.,3
-podcast,подкаст,I listen to a history **podcast** while running.,2
+livestream,стрим,Thousands watched his gaming **livestream** last night.,3,leisure
+podcast,подкаст,I listen to a history **podcast** while running.,2,leisure
 subscriber,подписчик,Every new **subscriber** gets a welcome email.,3
 thumbnail,превью,A bright **thumbnail** attracts more clicks easily.,3
 caption,подпись,Write a catchy **caption** for your photo.,3
-subtitle,субтитры,Turn on the English **subtitle** for this film.,2
-outbox,исходящие,Her email stuck in the **outbox** all morning.,3
+subtitle,субтитры,Turn on the English **subtitle** for this film.,2,leisure
+outbox,исходящие,Her email stuck in the **outbox** all morning.,3,work
 uninstall,удалить,**Uninstall** the app if it keeps crashing.,2
 passphrase,кодовая,A long **passphrase** is safer than a short password.,3
 encryption,шифрование,Strong **encryption** protects your private messages.,4
@@ -191,14 +191,14 @@ redirect,перенаправление,A broken **redirect** sent me to a dead 
 unfollow,отписаться,Just **unfollow** accounts that annoy you.,2
 buffering,загрузка,Slow **buffering** ruined the whole movie night.,3
 hotspot,точка,Share your phone **hotspot** with my laptop.,3
-binge,запой,He loves to **binge** crime shows on weekends.,3
-playlist,плейлист,Her workout **playlist** has eighty great songs.,2
+binge,запой,He loves to **binge** crime shows on weekends.,3,leisure
+playlist,плейлист,Her workout **playlist** has eighty great songs.,2,leisure
 clickbait,кликбейт,That headline is pure **clickbait** and nothing more.,3
 chatbot,чатбот,A friendly **chatbot** answered all my questions instantly.,3
 selfie,селфи,She took a quick **selfie** near the waterfall.,2
 tether,раздача,Use **tether** mode to share your phone data.,3
 system,система,Our computer **system** is down again.,3
-computer,компьютер,My **computer** is running very slowly today.,1
+computer,компьютер,My **computer** is running very slowly today.,1,work
 access,доступ,You need a password to get **access**.,3
 checking,проверяю,I'm **checking** my email for new messages.,2
 media,медиа,Social **media** has changed how we communicate.,3
@@ -206,9 +206,9 @@ text,сообщение,Send me a **text** when you arrive,1
 issues,проблемы,We have some **issues** with the internet,2
 connected,соединён,My phone is **connected** to wifi,2
 secure,безопасный,Please keep your password in a **secure** place.,3
-frontend,фронтенд,The **frontend** team rebuilt the whole dashboard last sprint.,3
-backend,бэкенд,Our **backend** crashed when users uploaded huge files.,3
-fullstack,фулстек,She works as a **fullstack** developer at a startup.,4
+frontend,фронтенд,The **frontend** team rebuilt the whole dashboard last sprint.,3,work
+backend,бэкенд,Our **backend** crashed when users uploaded huge files.,3,work
+fullstack,фулстек,She works as a **fullstack** developer at a startup.,4,work
 endpoint,эндпоинт,This API **endpoint** returns user data in seconds.,4
 payload,пейлоад,"Check the request **payload**, it might be malformed.",4
 webhook,вебхук,The service sends a **webhook** when orders complete.,4
@@ -217,9 +217,9 @@ websocket,веб-сокет,We switched chat to **websocket** for instant messag
 graphql,графкуэль,The **graphql** query returns exactly what the client needs.,5
 microservice,микросервис,Each **microservice** handles one specific business domain.,4
 monolith,монолит,"Our old **monolith** ran fine, but scaling hurt badly.",4
-deployment,деплоймент,The **deployment** failed because of a missing config file.,3
-rollout,раскатка,Gradual **rollout** helps catch bugs before full release.,4
-hotfix,хотфикс,"We shipped a **hotfix** overnight, fixing the crash.",4
+deployment,деплоймент,The **deployment** failed because of a missing config file.,3,work
+rollout,раскатка,Gradual **rollout** helps catch bugs before full release.,4,work
+hotfix,хотфикс,"We shipped a **hotfix** overnight, fixing the crash.",4,work
 repository,репозиторий,Clone the **repository** and run the setup script first.,3
 bundler,бандлер,A modern **bundler** tree-shakes unused code automatically.,5
 transpile,транспайлить,We **transpile** modern javascript for older browsers still.,5
@@ -238,8 +238,8 @@ migration,миграция,The **migration** added a new column to users.,3
 sharding,шардирование,"With **sharding**, data splits across many database servers.",5
 replication,репликация,Database **replication** keeps a hot standby ready always.,4
 eventual,конечный,Eventual consistency trades **eventual** freshness for speed.,5
-embedding,векторное представление,Each word gets an **embedding** vector in high dimensions.,5
-inference,инференс,Model **inference** runs on dedicated graphics cards.,5
+embedding,векторное представление,Each word gets an **embedding** vector in high dimensions.,5,science
+inference,инференс,Model **inference** runs on dedicated graphics cards.,5,science
 hallucinate,галлюцинировать,Language models sometimes **hallucinate** facts that sound real.,5
 virality,вирусность,Content **virality** depends on timing and emotional hooks.,5
 blockchain,блокчейн,The **blockchain** records every transaction permanently and publicly.,4
@@ -252,10 +252,10 @@ revert,откатить,We had to **revert** that commit after production broke.
 resolve,разрешить конфликт,Please **resolve** the merge conflicts before pushing again.,3
 telemetry,телеметрия,Server **telemetry** helps diagnose weird production issues fast.,5
 trace,трассировка,A distributed **trace** shows the request across services.,4
-uptime,время работы,Our **uptime** hit 99.9 percent last quarter finally.,3
-downtime,простой,Planned **downtime** happens every Sunday at midnight sharp.,3
-postmortem,разбор инцидента,The **postmortem** revealed a silent cache invalidation bug.,5
-debug,отлаживать,I had to **debug** the payment flow all night.,3
+uptime,время работы,Our **uptime** hit 99.9 percent last quarter finally.,3,work
+downtime,простой,Planned **downtime** happens every Sunday at midnight sharp.,3,work
+postmortem,разбор инцидента,The **postmortem** revealed a silent cache invalidation bug.,5,work
+debug,отлаживать,I had to **debug** the payment flow all night.,3,work
 heap,куча,The **heap** kept growing until the process finally crashed.,4
 throughput,пропускная способность,Higher **throughput** means more requests handled per second.,5
 proxy,прокси,The **proxy** server filters requests before forwarding them onward.,3
@@ -281,32 +281,32 @@ filesystem,файловая система,The **filesystem** ran out of space d
 daemon,демон,A background **daemon** handles all scheduled database backups.,5
 hypervisor,гипервизор,The **hypervisor** runs many virtual machines on one host.,5
 container,контейнер,Every service ships inside its own isolated **container** now.,3
-wireframe,вайрфрейм,Designers shared a **wireframe** before writing production code.,4
-mockup,макет,Review the **mockup** before we build the real screen.,3
+wireframe,вайрфрейм,Designers shared a **wireframe** before writing production code.,4,work
+mockup,макет,Review the **mockup** before we build the real screen.,3,work
 viewport,область просмотра,The **viewport** meta tag controls mobile display scaling behavior.,4
 flexbox,флексбокс,Modern layouts use **flexbox** for responsive element alignment.,4
 crawler,краулер,A search **crawler** indexes new pages across the web.,4
-network,сеть,Our office **network** went down again this morning unfortunately.,3
+network,сеть,Our office **network** went down again this morning unfortunately.,3,work
 version,версия,This is the latest **version** of the popular mobile app.,2
 designed,разработанный,This app was **designed** specifically for busy working parents.,3
 messages,сообщения,I have too many unread **messages** on my phone today.,1
 influence,влияние,Social media has a huge **influence** on teenagers.,3
 removed,удалённый,All the old files were **removed** from the server.,3
-status,статус,Check the delivery **status** on our website.,3
+status,статус,Check the delivery **status** on our website.,3,shopping
 attacks,атаки,The cybersecurity team defended the network against several **attacks** overnight.,5
 increase,увеличение,There has been a sharp **increase** in online shopping since last year.,3
-commercial,коммерческий,The app started as a hobby project but quickly gained **commercial** success.,4
+commercial,коммерческий,The app started as a hobby project but quickly gained **commercial** success.,4,work
 alpha,альфа,The new software is still in **alpha** and has many bugs to fix.,4
 string,строка,The programmer forgot a closing bracket at the end of the **string**.,4
-constantly,постоянно,My phone is **constantly** buzzing with notifications from work apps.,2
+constantly,постоянно,My phone is **constantly** buzzing with notifications from work apps.,2,basic
 connect,соединить,Please **connect** the cable to the back of the router to get Wi-Fi.,2
 solved,решённый,The engineer **solved** the bug within two hours of examining the code.,3
 sends,отправляет,The system automatically **sends** a confirmation email after each booking.,3
 function,функция,Each button on the keyboard has a specific **function** in the program.,3
 log,журнал,The server **log** showed an error at exactly midnight.,4
-computers,компьютеры,Modern **computers** can process billions of calculations per second.,3
-produced,произведённый,The documentary was **produced** by an independent studio with a tiny budget.,3
-directed,режиссёр,The film was **directed** by a young woman who had never made a feature before.,3
+computers,компьютеры,Modern **computers** can process billions of calculations per second.,3,work
+produced,произведённый,The documentary was **produced** by an independent studio with a tiny budget.,3,leisure
+directed,режиссёр,The film was **directed** by a young woman who had never made a feature before.,3,leisure
 posted,опубликованный,She **posted** a photo of her meal and it got hundreds of likes within an hour.,2
 error,ошибка,The computer displayed an **error** message and shut down.,3
 dated,устаревший,The design looked **dated** compared to modern websites.,3

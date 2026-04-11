@@ -3,43 +3,43 @@ manager,менеджер,Our **manager** leads the sales team.,2
 boss,босс,My **boss** called me this morning.,1
 employee,сотрудник,Every **employee** gets free coffee.,2
 employer,работодатель,My **employer** pays me weekly.,3
-doctor,врач,The **doctor** works at the hospital.,1
-teacher,учитель,Our **teacher** explains grammar clearly.,1
+doctor,врач,The **doctor** works at the hospital.,1,doctor
+teacher,учитель,Our **teacher** explains grammar clearly.,1,school
 engineer,инженер,The **engineer** fixed the broken machine.,2
 lawyer,юрист,The **lawyer** reviewed the contract carefully.,2
-nurse,медсестра,The **nurse** gave him medicine.,2
-chef,повар,The **chef** cooks amazing pasta.,2
-driver,водитель,The bus **driver** stopped at the station.,1
-plumber,сантехник,The **plumber** fixed the kitchen sink.,3
+nurse,медсестра,The **nurse** gave him medicine.,2,doctor
+chef,повар,The **chef** cooks amazing pasta.,2,restaurant
+driver,водитель,The bus **driver** stopped at the station.,1,driving
+plumber,сантехник,The **plumber** fixed the kitchen sink.,3,home
 designer,дизайнер,The **designer** created a new logo.,2
-accountant,бухгалтер,The **accountant** checked all the numbers.,3
-programmer,программист,The **programmer** wrote clean code.,2
+accountant,бухгалтер,The **accountant** checked all the numbers.,3,bank
+programmer,программист,The **programmer** wrote clean code.,2,internet
 secretary,секретарь,The **secretary** answered the phone politely.,3
 intern,стажёр,The **intern** started working last Monday.,3
 office,офис,I go to the **office** every morning.,1
-desk,стол,Her **desk** is near the window.,1
+desk,стол,Her **desk** is near the window.,1,school
 meeting,собрание,The **meeting** starts at nine sharp.,2
 conference,конференция,He spoke at a big **conference**.,3
-deadline,дедлайн,The **deadline** is next Friday evening.,3
-project,проект,This **project** will take three months.,2
-task,задача,I finished every **task** on time.,2
-report,отчёт,Please send me the monthly **report**.,2
+deadline,дедлайн,The **deadline** is next Friday evening.,3,school
+project,проект,This **project** will take three months.,2,school
+task,задача,I finished every **task** on time.,2,school
+report,отчёт,Please send me the monthly **report**.,2,school
 document,документ,Sign this **document** before leaving.,2
 client,клиент,The **client** loved our new design.,2
-customer,клиент,The **customer** asked for a refund.,2
-team,команда,Our **team** works very well together.,2
+customer,клиент,The **customer** asked for a refund.,2,shopping
+team,команда,Our **team** works very well together.,2,sports
 department,отдел,She runs the marketing **department**.,3
-branch,филиал,We opened a new **branch** downtown.,3
+branch,филиал,We opened a new **branch** downtown.,3,bank
 hire,нанимать,They plan to **hire** ten engineers.,3
 fire,увольнять,The boss may **fire** him tomorrow.,3
 quit,увольняться,She decided to **quit** her job.,3
-resign,уходить в отставку,The minister will **resign** next week.,4
+resign,уходить в отставку,The minister will **resign** next week.,4,politics
 retire,выходить на пенсию,My father will **retire** next year.,3
 promote,продвигать,They will **promote** her to director.,3
-train,обучать,We **train** new staff every month.,2
-salary,зарплата,My **salary** is paid on Fridays.,2
-lead,свинец,**Lead** is a very heavy metal.,3
-bonus,премия,Everyone got a holiday **bonus** this year.,3
+train,обучать,We **train** new staff every month.,2,school
+salary,зарплата,My **salary** is paid on Fridays.,2,bank
+lead,свинец,**Lead** is a very heavy metal.,3,science
+bonus,премия,Everyone got a holiday **bonus** this year.,3,bank
 raise,повышение,She got a big **raise** last month.,3
 contract,контракт,Please sign the **contract** today.,2
 interview,собеседование,The job **interview** went really well.,3
@@ -47,58 +47,58 @@ resume,резюме,Send your **resume** to the manager.,3
 vacancy,вакансия,There is a **vacancy** in our team.,4
 apply,подавать заявку,I will **apply** for the new position.,3
 qualify,квалифицироваться,She does not **qualify** for this role.,4
-draft,черновик,I wrote a **draft** of the letter.,3
-present,представлять,She will **present** the report tomorrow.,3
-schedule,расписание,My weekly **schedule** is very busy.,3
+draft,черновик,I wrote a **draft** of the letter.,3,school
+present,представлять,She will **present** the report tomorrow.,3,school
+schedule,расписание,My weekly **schedule** is very busy.,3,school
 organize,организовывать,Please **organize** the team meeting.,3
 plan,планировать,We need to **plan** the next quarter.,2
 manage,управлять,She will **manage** this new project.,3
 lead,вести,He will **lead** the sales team.,2
 supervise,контролировать,A senior engineer will **supervise** us.,4
-deliver,доставлять,The courier will **deliver** the package today.,3
-submit,подавать,Please **submit** the form by noon.,3
-attend,посещать,All staff must **attend** the training.,3
+deliver,доставлять,The courier will **deliver** the package today.,3,shopping
+submit,подавать,Please **submit** the form by noon.,3,school
+attend,посещать,All staff must **attend** the training.,3,school
 postpone,откладывать,We had to **postpone** the meeting.,4
 cancel,отменять,They had to **cancel** the event.,2
-negotiate,договариваться,We need to **negotiate** a better price.,4
+negotiate,договариваться,We need to **negotiate** a better price.,4,shopping
 sign,подписывать,Please **sign** your name here.,2
 approve,одобрять,The boss will **approve** the budget.,3
 review,рассматривать,I will **review** the documents tonight.,3
 finish,заканчивать,I will **finish** the task tonight.,2
 achieve,достигать,She can **achieve** any goal.,3
-busy,занятой,I am too **busy** to talk.,1
-stressed,напряжённый,He looks really **stressed** today.,3
-exhausted,изнурённый,I feel completely **exhausted** after work.,3
+busy,занятой,I am too **busy** to talk.,1,basic
+stressed,напряжённый,He looks really **stressed** today.,3,health
+exhausted,изнурённый,I feel completely **exhausted** after work.,3,health
 productive,продуктивный,Today was a very **productive** day.,3
 motivated,мотивированный,Our team is highly **motivated** now.,3
 lazy,ленивый,My coworker is incredibly **lazy**.,2
 ambitious,амбициозный,She is an **ambitious** young lawyer.,4
 colleague,коллега,My **colleague** helped me yesterday.,3
-staff,персонал,The hotel **staff** was very kind.,3
+staff,персонал,The hotel **staff** was very kind.,3,hotel
 shift,смена,My night **shift** starts at ten.,3
 overtime,сверхурочные,She worked **overtime** all last week.,4
-file,файл,Save this **file** in the folder.,2
+file,файл,Save this **file** in the folder.,2,internet
 file,подшивать,Please **file** these papers correctly.,4
-raise,поднимать,Please **raise** your hand to speak.,2
-break,перерыв,Let's take a short **break** now.,2
+raise,поднимать,Please **raise** your hand to speak.,2,school
+break,перерыв,Let's take a short **break** now.,2,school
 break,нарушать,Do not **break** the company rules.,3
-fire,огонь,A small **fire** started in the kitchen.,1
+fire,огонь,A small **fire** started in the kitchen.,1,kitchen
 board,совет директоров,The **board** approved our new plan.,4
-board,доска,Write the numbers on the **board**.,2
+board,доска,Write the numbers on the **board**.,2,school
 chair,председательствовать,She will **chair** tonight's meeting.,4
-chair,стул,Pull up a **chair** and sit down.,1
+chair,стул,Pull up a **chair** and sit down.,1,home
 head,возглавлять,He will **head** the finance department.,3
-head,голова,My **head** hurts after long meetings.,1
+head,голова,My **head** hurts after long meetings.,1,health
 run,управлять,She will **run** the whole company.,3
-pay,платить,They **pay** salaries every Friday.,1
-pay,зарплата,My monthly **pay** is enough.,2
-order,заказ,We received a big **order** today.,2
+pay,платить,They **pay** salaries every Friday.,1,bank
+pay,зарплата,My monthly **pay** is enough.,2,bank
+order,заказ,We received a big **order** today.,2,restaurant
 order,приказ,The boss gave a clear **order**.,3
-book,бронировать,Please **book** a meeting room now.,3
-hand in,сдавать,Please **hand in** your report today.,3
+book,бронировать,Please **book** a meeting room now.,3,hotel
+hand in,сдавать,Please **hand in** your report today.,3,school
 lay off,увольнять,They had to **lay off** twenty workers.,4
-present,подарок,He gave her a birthday **present**.,1
-train,поезд,I take the **train** to work.,1
+present,подарок,He gave her a birthday **present**.,1,party
+train,поезд,I take the **train** to work.,1,basic
 onboarding,адаптация,Her **onboarding** took two full weeks.,3
 offboarding,увольнение,The **offboarding** process includes an exit interview.,4
 hybrid,гибридный,We use a **hybrid** schedule this year.,2
@@ -117,12 +117,12 @@ timesheet,табель,Please submit your **timesheet** by Monday.,3
 quota,квота,She hit her sales **quota** in March.,3
 workload,нагрузка,His **workload** doubled after the merger.,3
 headcount,численность персонала,The **headcount** grew by ten this year.,4
-teleconference,телеконференция,The **teleconference** lasted almost two hours.,4
-videoconference,видеоконференция,We joined the **videoconference** from home.,3
+teleconference,телеконференция,The **teleconference** lasted almost two hours.,4,internet
+videoconference,видеоконференция,We joined the **videoconference** from home.,3,internet
 kpi,ключевой показатель,Each team tracks its own **kpi**.,4
 agile,гибкий,Our company uses an **agile** methodology.,3
 kanban,канбан,The team manages tasks with a **kanban** board.,4
-payroll,фонд оплаты труда,The **payroll** is processed every Friday.,3
+payroll,фонд оплаты труда,The **payroll** is processed every Friday.,3,bank
 severance,выходное пособие,She received generous **severance** after the layoff.,4
 compensation,компенсация,The **compensation** package includes stock options.,3
 stipend,стипендия,Interns receive a small monthly **stipend**.,4
@@ -134,60 +134,60 @@ demotion,понижение,The **demotion** hurt his confidence badly.,4
 resignation,отставка,She handed in her **resignation** yesterday morning.,3
 benefits,льготы,The **benefits** include health insurance and dental.,2
 allowance,надбавка,Remote workers get a home office **allowance**.,3
-reimbursement,возмещение,Submit receipts for travel **reimbursement** each month.,4
+reimbursement,возмещение,Submit receipts for travel **reimbursement** each month.,4,bank
 tenure,срок работы,Her **tenure** at the firm was impressive.,4
 probation,испытательный срок,New hires start with three months **probation**.,4
 sabbatical,творческий отпуск,He took a year-long **sabbatical** for research.,4
 furlough,принудительный отпуск,Many workers faced a temporary **furlough**.,5
-commission,комиссия,Sales reps earn a **commission** on deals.,3
+commission,комиссия,Sales reps earn a **commission** on deals.,3,bank
 incentive,стимул,The bonus served as a strong **incentive**.,3
 perks,бонусы,Free lunch is one of the **perks**.,3
-payslip,расчётный листок,Check your **payslip** for the tax deduction.,3
+payslip,расчётный листок,Check your **payslip** for the tax deduction.,3,bank
 appraisal,аттестация,The annual **appraisal** is scheduled for Friday.,4
 dismissal,увольнение,His sudden **dismissal** shocked the entire team.,4
 termination,прекращение,The **termination** letter was sent by courier.,4
-stapler,степлер,The **stapler** ran out of staples again.,2
-paperclip,скрепка,Please attach the pages with a **paperclip**.,2
+stapler,степлер,The **stapler** ran out of staples again.,2,school
+paperclip,скрепка,Please attach the pages with a **paperclip**.,2,school
 clipboard,планшет,The inspector carried a **clipboard** everywhere.,3
-whiteboard,маркерная доска,He sketched the idea on the **whiteboard**.,2
+whiteboard,маркерная доска,He sketched the idea on the **whiteboard**.,2,school
 cubicle,кабинка,Her **cubicle** sits right near the elevator.,3
 partition,перегородка,A glass **partition** separates the two offices.,4
 lanyard,шнурок для бейджа,His **lanyard** holds both keys and badges.,4
-highlighter,маркер,She used a yellow **highlighter** on the contract.,2
+highlighter,маркер,She used a yellow **highlighter** on the contract.,2,school
 envelope,конверт,Please seal the **envelope** before sending it.,2
 shredder,шредер,Old files go straight into the **shredder**.,3
 photocopier,ксерокс,The **photocopier** broke down this morning again.,3
-trashcan,мусорная корзина,The **trashcan** is already full with papers.,2
-keyboard,клавиатура,My **keyboard** needs a thorough cleaning today.,2
-monitor,монитор,The second **monitor** boosts my productivity significantly.,2
-headset,наушники с микрофоном,Please wear your **headset** during calls.,2
-mousepad,коврик для мыши,She bought a new ergonomic **mousepad**.,2
-notepad,блокнот,He always keeps a **notepad** nearby.,2
+trashcan,мусорная корзина,The **trashcan** is already full with papers.,2,home
+keyboard,клавиатура,My **keyboard** needs a thorough cleaning today.,2,internet
+monitor,монитор,The second **monitor** boosts my productivity significantly.,2,internet
+headset,наушники с микрофоном,Please wear your **headset** during calls.,2,internet
+mousepad,коврик для мыши,She bought a new ergonomic **mousepad**.,2,internet
+notepad,блокнот,He always keeps a **notepad** nearby.,2,school
 badge,бейдж,You need a visitor **badge** to enter.,3
 intercom,интерком,She called reception through the **intercom**.,3
 breakroom,комната отдыха,Coffee is free in the **breakroom** today.,3
 watercooler,кулер,People gossip around the **watercooler** every day.,3
-brainstorm,мозговой штурм,Let's **brainstorm** some ideas before the meeting.,3
+brainstorm,мозговой штурм,Let's **brainstorm** some ideas before the meeting.,3,school
 outsource,передавать на аутсорс,The company will **outsource** customer support next year.,4
 escalate,передать выше,Please **escalate** this issue to the manager.,4
 prioritize,расставлять приоритеты,We need to **prioritize** the urgent tasks first.,3
 mediate,посредничать,The HR manager will **mediate** the dispute.,4
 coordinate,координировать,She will **coordinate** the marketing team efforts.,3
 facilitate,содействовать,A good leader can **facilitate** open discussion.,4
-collaborate,сотрудничать,The teams **collaborate** on monthly reports together.,3
+collaborate,сотрудничать,The teams **collaborate** on monthly reports together.,3,school
 strategize,продумывать стратегию,The executives **strategize** during every quarterly retreat.,5
 execute,выполнять,We must **execute** the plan without delays.,3
-assign,назначать,The boss will **assign** new tasks tomorrow.,2
+assign,назначать,The boss will **assign** new tasks tomorrow.,2,school
 finalize,доработать,Let's **finalize** the proposal before lunch today.,3
-archive,архивировать,Please **archive** the old emails and reports.,3
+archive,архивировать,Please **archive** the old emails and reports.,3,internet
 debrief,подведение итогов,The team held a short **debrief** afterwards.,4
 memo,служебная записка,Read the internal **memo** about new policies.,3
 proposal,предложение,The client rejected our latest **proposal** yesterday.,3
 quote,расчёт стоимости,Please send me a **quote** by Thursday.,3
 estimate,смета,He gave a rough **estimate** of costs.,3
-spreadsheet,таблица,She updates the **spreadsheet** every single morning.,3
+spreadsheet,таблица,She updates the **spreadsheet** every single morning.,3,internet
 agenda,повестка,The **agenda** for tomorrow was just shared.,3
-handbook,справочник,The employee **handbook** explains all company policies.,3
+handbook,справочник,The employee **handbook** explains all company policies.,3,school
 template,шаблон,Use the official **template** for the report.,3
 trainee,стажёр,The new **trainee** learns fast and works hard.,3
 apprentice,подмастерье,The **apprentice** studied under a master craftsman.,4
@@ -196,7 +196,7 @@ consultant,консультант,The **consultant** charges two hundred dollars
 contractor,подрядчик,An outside **contractor** built our office system.,3
 vendor,поставщик,Our main **vendor** raised prices again.,3
 executive,руководитель,Every **executive** received stock options last year.,3
-analyst,аналитик,The financial **analyst** predicted steady growth ahead.,3
+analyst,аналитик,The financial **analyst** predicted steady growth ahead.,3,bank
 networking,налаживание связей,Good **networking** can open many new doors.,3
 commute,поездка на работу,Her daily **commute** takes forty-five minutes.,3
 job,работа,She got a new **job** at the bank,1
@@ -205,7 +205,7 @@ deal,сделка,We made a **deal** with the supplier.,2
 company,компания,She works for a big **company**.,3
 worked,работал,He **worked** here for twenty years.,2
 chief,начальник,The **chief** of police gave a statement.,3
-problems,проблемы,We have some serious **problems** at work.,2
+problems,проблемы,We have some serious **problems** at work.,2,basic
 offer,предложение,I got a great job **offer** today.,3
 position,положение,She got a new **position** at the company.,3
 involved,вовлечённый,He got **involved** in a new project.,3
@@ -220,12 +220,12 @@ papers,бумаги,Please sign these **papers** before you leave.,2
 career,карьера,She's building a successful **career** in medicine.,2
 records,записи,The company keeps detailed **records** of every transaction.,3
 finding,нахождение,**Finding** a good job takes real patience.,3
-ended,закончился,The meeting **ended** earlier than expected.,2
+ended,закончился,The meeting **ended** earlier than expected.,2,basic
 command,команда,The captain gave a **command** to his crew.,3
 purpose,цель,The **purpose** of this meeting is clear.,3
 issue,вопрос,We need to discuss this **issue** immediately.,3
 members,участники,All team **members** must attend the meeting.,2
-legal,законный,This contract is completely **legal** and binding.,3
+legal,законный,This contract is completely **legal** and binding.,3,politics
 assistant,помощник,My new **assistant** starts working on Monday morning.,2
 professional,профессиональный,She is a **professional** photographer with many awards.,3
 jobs,работа,Many young people are looking for good **jobs**.,2
@@ -243,18 +243,18 @@ becoming,становящийся,She is **becoming** a great doctor,2
 load,груз,The truck carries a heavy **load**,2
 former,бывший,He is a **former** president of the company,3
 considered,рассматривал,He **considered** all the options carefully,3
-files,файлы,Save the **files** on your computer,2
+files,файлы,Save the **files** on your computer,2,internet
 successful,успешный,She became a **successful** lawyer,3
 expert,эксперт,He is an **expert** in history,3
-reports,отчёты,Finish the **reports** by Friday,2
+reports,отчёты,Finish the **reports** by Friday,2,school
 reporter,репортёр,The **reporter** asked tough questions,3
 leading,ведущий,She is the **leading** expert in her field,3
 workers,рабочие,The factory **workers** demanded better conditions,2
 writer,писатель,The **writer** signed books for her fans,2
-customers,клиенты,Our **customers** are always our top priority,2
+customers,клиенты,Our **customers** are always our top priority,2,shopping
 design,дизайн,I love the **design** of this new phone,2
 clients,клиенты,Our **clients** expect high quality service,2
-earn,зарабатывать,She wants to **earn** more money this year,2
+earn,зарабатывать,She wants to **earn** more money this year,2,bank
 approach,подход,Your **approach** to this problem is interesting,3
 confidence,уверенность,She spoke with **confidence** during the interview.,3
 services,услуги,This company offers cleaning **services** to offices.,2
@@ -264,45 +264,45 @@ production,производство,The factory increased **production** of elec
 agents,агенты,Two **agents** arrived to investigate the case.,3
 bound,обязанный,He is **bound** by the rules of the contract.,4
 demand,требовать,Workers **demand** better pay and conditions.,3
-Thursday,четверг,We have a meeting every **Thursday** afternoon.,2
+Thursday,четверг,We have a meeting every **Thursday** afternoon.,2,basic
 decisions,решения,Making tough **decisions** under pressure is part of his job.,2
 considering,рассматривая,She is **considering** moving to another country for work.,3
 partners,партнёры,My business **partners** and I meet every Monday morning.,2
 conditions,условия,The working **conditions** at the factory have greatly improved lately.,3
 offering,предлагающий,The company is **offering** free training to all new employees.,3
 messed,испортил,He really **messed** up the project by missing the deadline.,2
-suits,костюмы,He wears expensive **suits** to every important business meeting.,2
+suits,костюмы,He wears expensive **suits** to every important business meeting.,2,shopping
 arrange,организовать,Can you **arrange** a meeting with the client tomorrow?,3
 launch,запустить,The company will **launch** a brand new product next month.,3
 shown,показанный,The new feature will be **shown** at next week's conference.,3
-print,печатать,Please **print** three copies of this report.,2
+print,печатать,Please **print** three copies of this report.,2,internet
 practically,практически,"It's **practically** impossible to finish this today, honestly.",3
 industry,промышленность,The car **industry** employs millions of workers.,3
 division,отдел,She works in the marketing **division** of our company.,3
 inform,информировать,Please **inform** me as soon as you arrive.,3
 construction,строительство,A new **construction** site opened near our house.,3
 headquarters,штаб-квартира,The company **headquarters** is located in New York.,4
-phones,телефоны,Please turn off your **phones** during the meeting.,1
+phones,телефоны,Please turn off your **phones** during the meeting.,1,basic
 complex,сложный,This problem is too **complex** to solve in one evening.,3
 unhappy,несчастный,The workers are **unhappy** about the new schedule changes.,2
 behalf,от имени,"I'm calling on **behalf** of my sister, who can't speak right now.",4
-dealer,дилер,The car **dealer** offered us a great discount on the sedan.,3
+dealer,дилер,The car **dealer** offered us a great discount on the sedan.,3,shopping
 organization,организация,She works for a nonprofit **organization** helping refugees.,3
 produce,производить,This factory can **produce** thousands of units each day.,3
-chairman,председатель,The **chairman** opened the meeting with a short speech.,4
+chairman,председатель,The **chairman** opened the meeting with a short speech.,4,politics
 lawyers,юристы,The **lawyers** prepared the contract very carefully.,3
-earned,заработал,She **earned** enough money to buy a new car.,2
+earned,заработал,She **earned** enough money to buy a new car.,2,bank
 worker,работник,Every **worker** deserves fair pay and safe conditions.,2
 companies,компании,Many **companies** offer remote work these days.,2
 fools,дурачить,He always **fools** his coworkers with harmless pranks on Fridays.,3
 previous,предыдущий,The manager reviewed the **previous** quarter's sales figures carefully.,3
-sales,продажи,The new product boosted **sales** by thirty percent in the first month.,3
+sales,продажи,The new product boosted **sales** by thirty percent in the first month.,3,shopping
 represent,представлять,The lawyer was hired to **represent** the company in court.,4
 facing,столкнувшись с,The startup is **facing** serious financial problems this quarter.,3
 interests,интересы,The contract should protect the **interests** of both parties equally.,4
 cheated,обманул,He felt devastated when he discovered his business partner had **cheated** him.,4
 technically,технически,The contract is **technically** valid but extremely difficult to enforce.,4
-pays,платит,The company **pays** its employees on the last Friday of every month.,2
+pays,платит,The company **pays** its employees on the last Friday of every month.,2,bank
 angle,точка зрения,Let's consider the problem from a different **angle** before deciding.,4
 respond,реагировать,The company failed to **respond** to customer complaints within forty-eight hours.,3
 unable,не в состоянии,The technician was **unable** to fix the printer before the deadline.,3
@@ -327,9 +327,9 @@ internal,внутренний,The company launched an **internal** investigation
 aid,помочь,"Without your **aid**, we could never have finished the project on time.",3
 core,суть,The **core** of the problem is a lack of communication between teams.,3
 guessing,угадывать,Stop **guessing** and just ask her what time the meeting starts.,2
-attached,прикреплённый,"Please find the report **attached** to this email, as requested.",3
+attached,прикреплённый,"Please find the report **attached** to this email, as requested.",3,internet
 brief,краткий,Could you give us a **brief** summary of the main findings?,3
-development,развитие,The new software **development** team hired five engineers last month.,4
+development,развитие,The new software **development** team hired five engineers last month.,4,internet
 images,изображения,She used bold **images** in her presentation to keep the audience engaged.,3
 nicely,хорошо,The new employee dressed **nicely** and always arrived on time.,2
 disturb,беспокоить,Please do not **disturb** me during the meeting — it lasts one hour.,2
@@ -365,7 +365,7 @@ wears,носить,"He always **wears** a suit to the office, even on Fridays.",
 phase,этап,The construction project is entering its final **phase** this month.,3
 fleet,флот,The company operates a **fleet** of thirty delivery vehicles.,4
 editor,редактор,The **editor** rejected the article because it lacked supporting evidence.,4
-october,октябрь,The conference is scheduled for the third week of **October**.,2
+october,октябрь,The conference is scheduled for the third week of **October**.,2,basic
 discussion,обсуждение,"After a long **discussion**, the committee reached a final decision.",3
 regarding,относительно,I am writing **regarding** the job vacancy posted on your website.,4
 sack,увольнять,The manager decided to **sack** him after three written warnings.,4

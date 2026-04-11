@@ -1,79 +1,79 @@
 english,russian,sentence,difficulty
-gym,спортзал,I go to the **gym** every morning.,1
-workout,тренировка,My **workout** lasted about two hours.,2
-exercise,упражнение,This **exercise** strengthens your back muscles.,1
-training,тренировка,Her **training** starts at six.,1
-jog,бегать трусцой,I **jog** in the park daily.,2
-lift,поднимать,He can **lift** heavy weights easily.,2
+gym,спортзал,I go to the **gym** every morning.,1,sports
+workout,тренировка,My **workout** lasted about two hours.,2,sports
+exercise,упражнение,This **exercise** strengthens your back muscles.,1,sports
+training,тренировка,Her **training** starts at six.,1,sports
+jog,бегать трусцой,I **jog** in the park daily.,2,sports
+lift,поднимать,He can **lift** heavy weights easily.,2,sports
 lift,подъёмник,We took the **lift** to the top.,2
-stretch,растягиваться,Always **stretch** before intense exercise.,2
+stretch,растягиваться,Always **stretch** before intense exercise.,2,sports
 stretch,участок,This **stretch** of road is dangerous.,3
-push,отжимание,I can do fifty **push** ups.,2
+push,отжимание,I can do fifty **push** ups.,2,sports
 push,толкать,Don't **push** me so hard.,1
-pull,подтягивание,He does twenty **pull** ups daily.,2
+pull,подтягивание,He does twenty **pull** ups daily.,2,sports
 pull,тянуть,**Pull** the rope with both hands.,1
-squat,приседание,Add **squat** exercises to your routine.,2
-lunge,выпад,Each **lunge** works your leg muscles.,3
-plank,планка,Hold the **plank** for one minute.,2
-sweat,пот,His shirt was soaked with **sweat**.,2
-muscle,мышца,My arm **muscle** is really sore.,1
-strength,сила,Yoga builds both **strength** and flexibility.,2
-cardio,кардио,I do **cardio** three times weekly.,2
-endurance,выносливость,Marathon running requires great **endurance**.,3
-stamina,выносливость,Her **stamina** has improved this month.,3
-flexibility,гибкость,Daily stretching improves your **flexibility**.,3
-balance,равновесие,Yoga helps improve your **balance**.,2
-balance,баланс,Check your account **balance** today.,2
+squat,приседание,Add **squat** exercises to your routine.,2,sports
+lunge,выпад,Each **lunge** works your leg muscles.,3,sports
+plank,планка,Hold the **plank** for one minute.,2,sports
+sweat,пот,His shirt was soaked with **sweat**.,2,sports
+muscle,мышца,My arm **muscle** is really sore.,1,sports
+strength,сила,Yoga builds both **strength** and flexibility.,2,sports
+cardio,кардио,I do **cardio** three times weekly.,2,sports
+endurance,выносливость,Marathon running requires great **endurance**.,3,sports
+stamina,выносливость,Her **stamina** has improved this month.,3,sports
+flexibility,гибкость,Daily stretching improves your **flexibility**.,3,sports
+balance,равновесие,Yoga helps improve your **balance**.,2,sports
+balance,баланс,Check your account **balance** today.,2,bank
 posture,осанка,Sitting straight improves your **posture**.,3
 diet,диета,She follows a strict **diet**.,1
-calorie,калория,Each apple has about eighty **calorie** units.,2
-protein,белок,Eggs are rich in **protein**.,2
-fat,жир,Too much **fat** is unhealthy.,1
+calorie,калория,Each apple has about eighty **calorie** units.,2,kitchen
+protein,белок,Eggs are rich in **protein**.,2,kitchen
+fat,жир,Too much **fat** is unhealthy.,1,kitchen
 fat,толстый,The **fat** cat slept all day.,1
-carb,углевод,Bread contains lots of **carb** energy.,2
-sugar,сахар,She avoids **sugar** in her coffee.,1
-fiber,клетчатка,Vegetables contain lots of **fiber**.,3
-vitamin,витамин,Oranges have plenty of **vitamin** C.,1
-mineral,минерал,Milk contains calcium and other **mineral** content.,3
-nutrient,питательное вещество,Broccoli is packed with every **nutrient**.,3
-organic,органический,I only buy **organic** vegetables now.,2
+carb,углевод,Bread contains lots of **carb** energy.,2,kitchen
+sugar,сахар,She avoids **sugar** in her coffee.,1,kitchen
+fiber,клетчатка,Vegetables contain lots of **fiber**.,3,kitchen
+vitamin,витамин,Oranges have plenty of **vitamin** C.,1,kitchen
+mineral,минерал,Milk contains calcium and other **mineral** content.,3,kitchen
+nutrient,питательное вещество,Broccoli is packed with every **nutrient**.,3,kitchen
+organic,органический,I only buy **organic** vegetables now.,2,shopping
 natural,натуральный,This juice is completely **natural**.,2
-processed,обработанный,Avoid **processed** food when possible.,3
-junk,вредная еда,Don't eat too much **junk** food.,2
+processed,обработанный,Avoid **processed** food when possible.,3,kitchen
+junk,вредная еда,Don't eat too much **junk** food.,2,kitchen
 healthy,здоровый,Eating vegetables keeps you **healthy**.,1
 unhealthy,нездоровый,Smoking is extremely **unhealthy**.,2
 balanced,сбалансированный,Try to eat a **balanced** diet.,2
-stress,стресс,Work **stress** affects her sleep.,1
+stress,стресс,Work **stress** affects her sleep.,1,work
 stress,подчёркивать,I must **stress** the importance of this.,3
-anxiety,тревога,Deep breathing reduces my **anxiety**.,3
+anxiety,тревога,Deep breathing reduces my **anxiety**.,3,doctor
 mindful,осознанный,Be **mindful** of what you eat.,3
 meditation,медитация,Daily **meditation** reduces stress significantly.,2
 breath,дыхание,Take a deep **breath** and relax.,1
 focus,концентрация,Exercise improves your mental **focus**.,2
 focus,фокус,The camera **focus** is blurry.,2
 mood,настроение,Exercise boosts your **mood** instantly.,2
-depression,депрессия,Therapy helps treat her **depression**.,3
+depression,депрессия,Therapy helps treat her **depression**.,3,doctor
 relax,расслабляться,Try to **relax** your shoulders.,1
 recharge,перезаряжаться,I need to **recharge** this weekend.,2
-burnout,выгорание,She quit due to **burnout**.,3
+burnout,выгорание,She quit due to **burnout**.,3,work
 nap,дремать,I took a short **nap** today.,2
 dream,сон,I had a strange **dream** last night.,1
 dream,мечта,Her **dream** is to travel everywhere.,1
 snore,храпеть,My husband tends to **snore** loudly.,3
-insomnia,бессонница,I suffer from chronic **insomnia**.,3
+insomnia,бессонница,I suffer from chronic **insomnia**.,3,doctor
 awake,бодрствующий,I stayed **awake** all night long.,2
 asleep,спящий,The baby is finally **asleep**.,1
 drowsy,сонный,This medicine makes me feel **drowsy**.,3
 alert,бодрый,Coffee keeps me **alert** at work.,2
 alert,тревога,The **alert** warned about the storm.,2
-fatigue,усталость,Chronic **fatigue** affects her daily life.,3
-yoga,йога,**Yoga** helps me feel centered.,1
-pilates,пилатес,My sister teaches **pilates** classes.,2
-hike,поход,We plan to **hike** this weekend.,2
-swim,плавать,Children learn to **swim** quickly.,1
-cycle,ездить на велосипеде,I **cycle** to work every day.,2
+fatigue,усталость,Chronic **fatigue** affects her daily life.,3,doctor
+yoga,йога,**Yoga** helps me feel centered.,1,sports
+pilates,пилатес,My sister teaches **pilates** classes.,2,sports
+hike,поход,We plan to **hike** this weekend.,2,nature
+swim,плавать,Children learn to **swim** quickly.,1,sports
+cycle,ездить на велосипеде,I **cycle** to work every day.,2,sports
 cycle,цикл,The sleep **cycle** lasts ninety minutes.,3
-dance,танцевать,Let's **dance** all night long.,1
+dance,танцевать,Let's **dance** all night long.,1,party
 weigh,взвешиваться,I **weigh** myself every morning.,2
 lose,терять,I need to **lose** ten kilos.,1
 gain,набирать,He wants to **gain** some muscle.,2
@@ -82,7 +82,7 @@ slim,стройный,She looks very **slim** these days.,2
 plump,пухлый,The baby has **plump** little cheeks.,3
 lean,стройный,Athletes have **lean** strong bodies.,2
 lean,наклоняться,Don't **lean** against the wet paint.,3
-toned,подтянутый,Her arms look really **toned** now.,3
+toned,подтянутый,Her arms look really **toned** now.,3,sports
 strong,сильный,Regular exercise makes you **strong**.,1
 weak,слабый,I feel **weak** after being sick.,1
 habit,привычка,Reading is a great **habit**.,1
@@ -95,40 +95,40 @@ sober,трезвый,She has been **sober** for years.,3
 hygiene,гигиена,Personal **hygiene** is extremely important.,3
 brush,чистить,Remember to **brush** your teeth twice.,1
 brush,кисть,Paint it with a soft **brush**.,2
-floss,чистить нитью,Dentists recommend you **floss** daily.,3
+floss,чистить нитью,Dentists recommend you **floss** daily.,3,doctor
 hydrate,увлажнять,Remember to **hydrate** during workouts.,3
 hydrated,увлажнённый,Stay **hydrated** in hot weather.,3
-heal,заживать,Wounds **heal** faster when clean.,2
-wholesome,полезный,A **wholesome** breakfast keeps you full till noon.,3
-nourish,питать,Fresh vegetables **nourish** your body every day.,3
-nourishing,питательный,She cooked a **nourishing** soup for her family.,3
-antioxidant,антиоксидант,Blueberries contain a powerful **antioxidant** compound.,4
-superfood,суперфуд,Many people call kale a trendy **superfood**.,3
-vegan,веган,My sister became a strict **vegan** last year.,2
-vegetarian,вегетарианец,He is a **vegetarian** but still eats eggs.,2
+heal,заживать,Wounds **heal** faster when clean.,2,doctor
+wholesome,полезный,A **wholesome** breakfast keeps you full till noon.,3,kitchen
+nourish,питать,Fresh vegetables **nourish** your body every day.,3,kitchen
+nourishing,питательный,She cooked a **nourishing** soup for her family.,3,kitchen
+antioxidant,антиоксидант,Blueberries contain a powerful **antioxidant** compound.,4,kitchen
+superfood,суперфуд,Many people call kale a trendy **superfood**.,3,kitchen
+vegan,веган,My sister became a strict **vegan** last year.,2,kitchen
+vegetarian,вегетарианец,He is a **vegetarian** but still eats eggs.,2,kitchen
 crave,жаждать,Pregnant women often **crave** salty pickles at night.,3
 craving,тяга,I had a sudden **craving** for dark chocolate.,3
-overeat,переедать,Do not **overeat** at holiday dinner parties.,3
-snacking,перекусы,Mindless **snacking** can ruin any weight-loss plan.,3
+overeat,переедать,Do not **overeat** at holiday dinner parties.,3,kitchen
+snacking,перекусы,Mindless **snacking** can ruin any weight-loss plan.,3,kitchen
 moderate,умеренный,Try to keep **moderate** portions at every meal.,3
 moderation,умеренность,Everything tastes better in healthy **moderation**.,3
-caffeine,кофеин,Too much **caffeine** can disrupt your night sleep.,3
-decaf,декаф,She orders **decaf** coffee after six in evening.,3
-hydration,гидратация,Proper **hydration** is essential during summer workouts.,3
+caffeine,кофеин,Too much **caffeine** can disrupt your night sleep.,3,kitchen
+decaf,декаф,She orders **decaf** coffee after six in evening.,3,restaurant
+hydration,гидратация,Proper **hydration** is essential during summer workouts.,3,sports
 dehydrated,обезвоженный,Hikers often become **dehydrated** under the hot sun.,4
-dehydration,обезвоживание,Severe **dehydration** can cause serious headaches.,4
-electrolyte,электролит,Sports drinks replace lost **electrolyte** minerals after exercise.,5
+dehydration,обезвоживание,Severe **dehydration** can cause serious headaches.,4,doctor
+electrolyte,электролит,Sports drinks replace lost **electrolyte** minerals after exercise.,5,sports
 supplement,добавка,He takes a daily vitamin **supplement** each morning.,3
 probiotic,пробиотик,Yogurt provides a natural **probiotic** boost for digestion.,4
 prebiotic,пребиотик,Garlic is a great **prebiotic** food for gut health.,5
-whey,сыворотка,Athletes often mix **whey** powder into their shakes.,4
-refined,рафинированный,Avoid foods with **refined** sugar and white flour.,3
+whey,сыворотка,Athletes often mix **whey** powder into their shakes.,4,sports
+refined,рафинированный,Avoid foods with **refined** sugar and white flour.,3,kitchen
 wellness,здоровье,Our gym offers a complete **wellness** program.,3
 wellbeing,благополучие,Daily walks improve your mental **wellbeing** greatly.,3
 thrive,процветать,People **thrive** when they sleep eight hours nightly.,3
-stride,шаг,Her long **stride** helped her finish the marathon.,3
-pace,темп,Keep a steady **pace** during your morning jog.,2
-agility,ловкость,Ladder drills improve your footwork and **agility**.,4
+stride,шаг,Her long **stride** helped her finish the marathon.,3,sports
+pace,темп,Keep a steady **pace** during your morning jog.,2,sports
+agility,ловкость,Ladder drills improve your footwork and **agility**.,4,sports
 mobility,подвижность,Daily stretching keeps your joint **mobility** high.,3
 breathe,дышать,Remember to **breathe** deeply through your nose.,2
 breathing,дыхание,Slow **breathing** helps calm your racing heart.,2
@@ -167,11 +167,11 @@ temptation,искушение,Keep sweets away to avoid evening **temptation**.,
 willpower,сила воли,Losing weight requires strong **willpower** every day.,3
 grit,упорство,Pure **grit** helped him finish the marathon.,3
 consistency,последовательность,**Consistency** beats intensity in any fitness plan.,3
-screening,скрининг,Regular **screening** catches health problems early on.,4
-immunity,иммунитет,Vitamin C may boost your natural **immunity**.,3
-prevention,профилактика,**Prevention** is always cheaper than long treatment.,3
+screening,скрининг,Regular **screening** catches health problems early on.,4,doctor
+immunity,иммунитет,Vitamin C may boost your natural **immunity**.,3,doctor
+prevention,профилактика,**Prevention** is always cheaper than long treatment.,3,doctor
 counseling,консультирование,Grief **counseling** helps people heal after loss.,4
-therapy,терапия,Weekly **therapy** sessions changed his whole perspective.,3
+therapy,терапия,Weekly **therapy** sessions changed his whole perspective.,3,doctor
 massage,массаж,A deep **massage** eased her aching shoulders.,3
 aromatherapy,ароматерапия,She uses lavender **aromatherapy** before bedtime.,4
 tension,напряжение,Stretching releases the **tension** in your neck.,3
@@ -182,7 +182,7 @@ supple,гибкий,A **supple** spine protects you from injury.,4
 upright,прямой,Sit in an **upright** position while working.,3
 slouch,сутулиться,Try not to **slouch** while using your phone.,3
 hunched,сгорбленный,His **hunched** shoulders showed years of office work.,4
-inhaler,ингалятор,He keeps an **inhaler** handy for sudden attacks.,3
+inhaler,ингалятор,He keeps an **inhaler** handy for sudden attacks.,3,doctor
 journaling,дневник,Daily **journaling** helps process difficult emotions.,4
 affirmation,аффирмация,She repeats a morning **affirmation** before breakfast.,4
 mantra,мантра,Her calming **mantra** is "breathe and let go".,4
@@ -190,46 +190,46 @@ optimism,оптимизм,Her **optimism** helped her beat the illness.,3
 sobriety,трезвость,He celebrated one year of **sobriety** yesterday.,4
 cigarette,сигарета,He smoked his last **cigarette** yesterday morning.,2
 vape,вейпить,Teens should never **vape** flavored tobacco products.,3
-lifting,поднятие,Heavy **lifting** builds strong back muscles fast.,3
-tone,тонус,Regular pilates helps **tone** your belly muscles.,2
-reps,повторения,Finish three sets of ten **reps** each exercise.,3
-interval,интервал,Try short **interval** training for faster results.,3
-crunch,скручивание,One more **crunch** and your abs are done.,3
+lifting,поднятие,Heavy **lifting** builds strong back muscles fast.,3,sports
+tone,тонус,Regular pilates helps **tone** your belly muscles.,2,sports
+reps,повторения,Finish three sets of ten **reps** each exercise.,3,sports
+interval,интервал,Try short **interval** training for faster results.,3,sports
+crunch,скручивание,One more **crunch** and your abs are done.,3,sports
 body,тело,Exercise is good for your **body**.,1
-hurt,больно,My back **hurt** after the long drive.,2
-sick,больной,I'm feeling a bit **sick** today.,2
+hurt,больно,My back **hurt** after the long drive.,2,doctor
+sick,больной,I'm feeling a bit **sick** today.,2,doctor
 dying,умирающий,The old man is **dying** slowly.,3
 foot,нога,I hurt my **foot** while running.,2
-drugs,лекарства,The doctor prescribed some **drugs** for my cough.,2
-pregnant,беременная,My sister is three months **pregnant**.,3
+drugs,лекарства,The doctor prescribed some **drugs** for my cough.,2,doctor
+pregnant,беременная,My sister is three months **pregnant**.,3,family
 neck,шея,My **neck** hurts from sleeping badly.,2
-blind,слепой,My grandfather is completely **blind** in one eye.,2
+blind,слепой,My grandfather is completely **blind** in one eye.,2,doctor
 health,здоровье,Regular exercise is good for your **health**.,2
-teeth,зубы,Brush your **teeth** before going to bed.,1
+teeth,зубы,Brush your **teeth** before going to bed.,1,doctor
 suicide,самоубийство,The hotline helps prevent **suicide** among young people.,4
 concerned,обеспокоенный,I am **concerned** about your health lately.,3
-hurts,болит,My back **hurts** after sitting all day.,2
+hurts,болит,My back **hurts** after sitting all day.,2,doctor
 bodies,тела,The gym helps keep our **bodies** strong and healthy.,3
-medicine,лекарство,Take this **medicine** twice a day.,2
+medicine,лекарство,Take this **medicine** twice a day.,2,doctor
 harm,вред,Too much sugar can **harm** your teeth.,3
-ill,больной,She felt **ill** after eating the old soup.,2
+ill,больной,She felt **ill** after eating the old soup.,2,doctor
 avoid,избегать,Try to **avoid** sugar if you want to lose weight.,3
 sexual,сексуальный,The book discusses **sexual** health openly.,3
-suffer,страдать,Many people **suffer** from seasonal allergies.,3
-physical,физический,He does **physical** exercise every morning.,3
+suffer,страдать,Many people **suffer** from seasonal allergies.,3,doctor
+physical,физический,He does **physical** exercise every morning.,3,sports
 effect,эффект,The medicine had a strong **effect** on him.,3
-concern,беспокойство,The doctor expressed serious **concern** about his health.,3
-pills,таблетки,Take these **pills** twice a day with food.,2
-bleeding,кровоточит,His nose is **bleeding** after the fall.,3
+concern,беспокойство,The doctor expressed serious **concern** about his health.,3,doctor
+pills,таблетки,Take these **pills** twice a day with food.,2,doctor
+bleeding,кровоточит,His nose is **bleeding** after the fall.,3,doctor
 protection,защита,Sunscreen provides good **protection** from UV rays.,3
 smoking,курение,**Smoking** is bad for your health,2
 knees,колени,My **knees** hurt after running,2
-vision,зрение,His **vision** is getting worse,3
-alcohol,алкоголь,I don't drink **alcohol** during the week,2
+vision,зрение,His **vision** is getting worse,3,doctor
+alcohol,алкоголь,I don't drink **alcohol** during the week,2,party
 mental,умственный,Chess requires great **mental** effort and focus.,3
 panic,паника,Try not to **panic** during the emergency.,3
 sensitive,чувствительный,She is very **sensitive** to cold weather.,3
-suffered,страдал,She **suffered** from terrible headaches for weeks before visiting the doctor.,3
+suffered,страдал,She **suffered** from terrible headaches for weeks before visiting the doctor.,3,doctor
 systems,системы,Modern hospitals rely on advanced computer **systems**.,3
 benefit,польза,Regular exercise has a huge **benefit** for your health.,2
 prevent,предотвратить,Washing your hands helps **prevent** the spread of germs.,3
@@ -239,110 +239,110 @@ thirsty,хотеть пить,After the long run in the heat she was absolutely 
 washed,мыть,She **washed** her hands thoroughly before preparing the meal.,2
 tend,иметь тенденцию,People **tend** to eat more when they are stressed or bored.,3
 maintain,поддерживать,It is hard to **maintain** a healthy diet when you travel for work.,3
-critical,критический,Getting enough sleep is **critical** for recovery after surgery.,4
+critical,критический,Getting enough sleep is **critical** for recovery after surgery.,4,doctor
 shaking,трясущийся,His hands were **shaking** when he opened the letter from the hospital.,3
 remarkable,замечательный,The recovery she made after surgery was truly **remarkable**.,4
 stepped,наступил,He **stepped** on a nail while working in the basement without shoes.,3
 depressed,подавленный,He felt **depressed** for weeks after losing his job unexpectedly.,3
 obsessed,одержимый,He became completely **obsessed** with tracking every calorie he ate.,3
-effective,эффективный,The new medication proved to be highly **effective** against the infection.,4
+effective,эффективный,The new medication proved to be highly **effective** against the infection.,4,doctor
 affect,влиять,Stress can seriously **affect** your physical health over time.,3
-suggested,предложил,The doctor **suggested** cutting back on salt and fatty foods.,3
+suggested,предложил,The doctor **suggested** cutting back on salt and fatty foods.,3,doctor
 sticking,придерживаться,He is **sticking** to his diet even though the holidays are coming up.,3
-dizziness,головокружение,Standing up too fast can cause sudden **dizziness**.,3
+dizziness,головокружение,Standing up too fast can cause sudden **dizziness**.,3,doctor
 twitch,дёргаться,His eye began to **twitch** from too much screen time.,3
-numbness,онемение,**Numbness** in her fingers suggested a circulation problem.,4
-obesity,ожирение,Childhood **obesity** is linked to poor dietary habits.,4
-anemia,анемия,Iron supplements can treat mild **anemia** effectively.,4
-epilepsy,эпилепсия,She was diagnosed with **epilepsy** at the age of twelve.,4
+numbness,онемение,**Numbness** in her fingers suggested a circulation problem.,4,doctor
+obesity,ожирение,Childhood **obesity** is linked to poor dietary habits.,4,doctor
+anemia,анемия,Iron supplements can treat mild **anemia** effectively.,4,doctor
+epilepsy,эпилепсия,She was diagnosed with **epilepsy** at the age of twelve.,4,doctor
 phobia,фобия,His **phobia** of needles made every injection difficult.,3
-deficiency,дефицит,A vitamin D **deficiency** is common in northern climates.,4
-aerobic,аэробный,Walking is a simple but effective **aerobic** activity.,4
-anaerobic,анаэробный,Sprinting is an **anaerobic** exercise that builds power.,5
-rehabilitation,реабилитация,After the injury she spent months in **rehabilitation**.,4
-physiotherapy,физиотерапия,His doctor referred him to **physiotherapy** after surgery.,4
-immunization,иммунизация,Childhood **immunization** has eliminated many deadly diseases.,5
-resuscitation,реанимация,The team performed **resuscitation** until the ambulance arrived.,5
-consultation,консультация,He booked a **consultation** with a nutritionist this week.,3
-outpatient,амбулаторный,The procedure was done on an **outpatient** basis.,5
-inpatient,стационарный,Severe cases require **inpatient** treatment at the hospital.,5
-respiratory,дыхательный,Smoking causes serious **respiratory** problems over time.,4
-digestive,пищеварительный,Probiotics support a healthy **digestive** system.,4
-cardiovascular,сердечно-сосудистый,Regular exercise strengthens the **cardiovascular** system.,4
-endocrine,эндокринный,The thyroid is part of the **endocrine** system.,5
-skeletal,скелетный,Calcium is essential for **skeletal** health and bone density.,5
-muscular,мышечный,The trainer assessed his **muscular** strength and endurance.,4
-immune,иммунный,A balanced diet supports a strong **immune** response.,3
-bruising,образование синяков,Easy **bruising** can be a sign of low platelet count.,4
-inflammation,воспаление,Ice and rest help reduce **inflammation** after a sprain.,4
-sterile,стерильный,Always use **sterile** equipment when treating open wounds.,4
+deficiency,дефицит,A vitamin D **deficiency** is common in northern climates.,4,doctor
+aerobic,аэробный,Walking is a simple but effective **aerobic** activity.,4,sports
+anaerobic,анаэробный,Sprinting is an **anaerobic** exercise that builds power.,5,sports
+rehabilitation,реабилитация,After the injury she spent months in **rehabilitation**.,4,doctor
+physiotherapy,физиотерапия,His doctor referred him to **physiotherapy** after surgery.,4,doctor
+immunization,иммунизация,Childhood **immunization** has eliminated many deadly diseases.,5,doctor
+resuscitation,реанимация,The team performed **resuscitation** until the ambulance arrived.,5,doctor
+consultation,консультация,He booked a **consultation** with a nutritionist this week.,3,doctor
+outpatient,амбулаторный,The procedure was done on an **outpatient** basis.,5,doctor
+inpatient,стационарный,Severe cases require **inpatient** treatment at the hospital.,5,doctor
+respiratory,дыхательный,Smoking causes serious **respiratory** problems over time.,4,doctor
+digestive,пищеварительный,Probiotics support a healthy **digestive** system.,4,doctor
+cardiovascular,сердечно-сосудистый,Regular exercise strengthens the **cardiovascular** system.,4,doctor
+endocrine,эндокринный,The thyroid is part of the **endocrine** system.,5,doctor
+skeletal,скелетный,Calcium is essential for **skeletal** health and bone density.,5,doctor
+muscular,мышечный,The trainer assessed his **muscular** strength and endurance.,4,sports
+immune,иммунный,A balanced diet supports a strong **immune** response.,3,doctor
+bruising,образование синяков,Easy **bruising** can be a sign of low platelet count.,4,doctor
+inflammation,воспаление,Ice and rest help reduce **inflammation** after a sprain.,4,doctor
+sterile,стерильный,Always use **sterile** equipment when treating open wounds.,4,doctor
 cope,справляться,She learned to **cope** with anxiety through daily meditation.,3
 coping,совладание,**Coping** strategies help reduce the impact of daily stress.,3
-aftercare,послелечебный уход,"After surgery, the nurse explained the **aftercare** instructions in detail.",4
-disorder,расстройство,Eating **disorder** treatment requires both medical and emotional support.,3
-psychologist,психолог,She visits her **psychologist** every two weeks for talk therapy.,4
-overdose,передозировка,He was rushed to hospital after an accidental **overdose** of sleeping pills.,4
-lymph,лимфа,The **lymph** system helps filter harmful substances from the body.,4
-platelet,тромбоцит,Low **platelet** counts can cause slow clotting and easy bruising.,5
-clotting,свёртывание,Vitamin K plays a key role in blood **clotting** after injury.,4
-incision,разрез,"The surgeon made a small **incision**, just three centimetres long.",4
-needle,игла,Some people feel faint at the sight of a **needle**.,2
-ecg,ЭКГ,The doctor ordered an **ecg** to check for irregular heartbeat.,4
-urine,моча,The lab tested her **urine** to check for signs of infection.,3
-follow-up,повторный приём,"Please book a **follow-up** appointment in two weeks, the doctor said.",3
-recovery,восстановление,Full **recovery** after knee surgery can take up to six months.,2
-mole,родинка,The dermatologist examined every **mole** on her back carefully.,3
-wart,бородавка,A small **wart** appeared on his thumb last winter.,3
-cyst,киста,The ultrasound revealed a harmless **cyst** on her left ovary.,4
-onset,начало,Early treatment is most effective at the **onset** of symptoms.,4
-compress,компресс,Apply a cold **compress** to the bruise for twenty minutes.,3
-spine,позвоночник,Good posture protects your **spine** from long-term damage.,3
-vertebra,позвонок,A fractured **vertebra** can cause severe pain and limited movement.,5
-sinus,синус,Her **sinus** pressure made it hard to breathe through her nose.,3
-abscess,абсцесс,The dentist drained the **abscess** and prescribed a course of antibiotics.,5
-urinary,мочевыводящий,Drinking enough water helps prevent **urinary** tract infections.,4
-renal,почечный,Chronic **renal** disease requires regular dialysis treatment.,5
-hepatic,печёночный,Alcohol abuse leads to serious **hepatic** damage over time.,5
-thyroid,щитовидная железа,An underactive **thyroid** can cause fatigue and unexpected weight gain.,4
-diabetic,диабетический,A **diabetic** diet limits sugar and refined carbohydrates strictly.,4
-anorexia,анорексия,**Anorexia** is a serious eating disorder that requires professional treatment.,4
-bulimia,булимия,**Bulimia** involves cycles of binge eating followed by purging behaviour.,4
+aftercare,послелечебный уход,"After surgery, the nurse explained the **aftercare** instructions in detail.",4,doctor
+disorder,расстройство,Eating **disorder** treatment requires both medical and emotional support.,3,doctor
+psychologist,психолог,She visits her **psychologist** every two weeks for talk therapy.,4,doctor
+overdose,передозировка,He was rushed to hospital after an accidental **overdose** of sleeping pills.,4,doctor
+lymph,лимфа,The **lymph** system helps filter harmful substances from the body.,4,doctor
+platelet,тромбоцит,Low **platelet** counts can cause slow clotting and easy bruising.,5,doctor
+clotting,свёртывание,Vitamin K plays a key role in blood **clotting** after injury.,4,doctor
+incision,разрез,"The surgeon made a small **incision**, just three centimetres long.",4,doctor
+needle,игла,Some people feel faint at the sight of a **needle**.,2,doctor
+ecg,ЭКГ,The doctor ordered an **ecg** to check for irregular heartbeat.,4,doctor
+urine,моча,The lab tested her **urine** to check for signs of infection.,3,doctor
+follow-up,повторный приём,"Please book a **follow-up** appointment in two weeks, the doctor said.",3,doctor
+recovery,восстановление,Full **recovery** after knee surgery can take up to six months.,2,doctor
+mole,родинка,The dermatologist examined every **mole** on her back carefully.,3,doctor
+wart,бородавка,A small **wart** appeared on his thumb last winter.,3,doctor
+cyst,киста,The ultrasound revealed a harmless **cyst** on her left ovary.,4,doctor
+onset,начало,Early treatment is most effective at the **onset** of symptoms.,4,doctor
+compress,компресс,Apply a cold **compress** to the bruise for twenty minutes.,3,doctor
+spine,позвоночник,Good posture protects your **spine** from long-term damage.,3,doctor
+vertebra,позвонок,A fractured **vertebra** can cause severe pain and limited movement.,5,doctor
+sinus,синус,Her **sinus** pressure made it hard to breathe through her nose.,3,doctor
+abscess,абсцесс,The dentist drained the **abscess** and prescribed a course of antibiotics.,5,doctor
+urinary,мочевыводящий,Drinking enough water helps prevent **urinary** tract infections.,4,doctor
+renal,почечный,Chronic **renal** disease requires regular dialysis treatment.,5,doctor
+hepatic,печёночный,Alcohol abuse leads to serious **hepatic** damage over time.,5,doctor
+thyroid,щитовидная железа,An underactive **thyroid** can cause fatigue and unexpected weight gain.,4,doctor
+diabetic,диабетический,A **diabetic** diet limits sugar and refined carbohydrates strictly.,4,doctor
+anorexia,анорексия,**Anorexia** is a serious eating disorder that requires professional treatment.,4,doctor
+bulimia,булимия,**Bulimia** involves cycles of binge eating followed by purging behaviour.,4,doctor
 purge,очищать,Some people with eating disorders **purge** after meals to control weight.,4
-flare-up,обострение,Cold weather often triggers a **flare-up** of her joint pain.,4
+flare-up,обострение,Cold weather often triggers a **flare-up** of her joint pain.,4,doctor
 self-care,самозабота,Regular **self-care** habits reduce stress and improve overall mood.,3
-x-ray,рентген,The doctor ordered an **x-ray** to check for any broken bones.,2
-nosebleed,кровотечение из носа,He got a **nosebleed** after blowing his nose too hard.,2
-bloating,вздутие живота,Eating too fast often leads to uncomfortable **bloating** after meals.,3
-indigestion,несварение желудка,Spicy food before bed can cause painful **indigestion** at night.,3
-heartburn,изжога,He felt **heartburn** rising in his chest after eating greasy food.,3
-reflux,рефлюкс,Acid **reflux** can damage the lining of your throat over time.,4
-mucus,слизь,Excess **mucus** production is a common symptom of a bad cold.,3
-phlegm,мокрота,He coughed up thick **phlegm** every morning for two weeks.,4
-pus,гной,The infected wound was red and filled with **pus**.,3
-polyp,полип,A routine colonoscopy found a small **polyp** in his colon.,5
-acne,акне,She treated her **acne** with a gel prescribed by the dermatologist.,2
-eczema,экзема,Her **eczema** flared up badly during the cold and dry winter.,4
-psoriasis,псориаз,**Psoriasis** causes red scaly patches to appear on the skin.,4
-frostbite,обморожение,The mountaineer lost two toes to severe **frostbite** during the blizzard.,4
-sunburn,солнечный ожог,Apply aloe vera gel to soothe a painful **sunburn**.,2
-tingling,покалывание,She felt a **tingling** sensation in her left arm after the injection.,3
-exhaustion,истощение,Running forty kilometres led to complete physical **exhaustion**.,3
-medication,лекарство,The doctor prescribed **medication** for her chronic back pain.,3
-cuts,порезы,Apply pressure to small **cuts** to stop the bleeding quickly.,2
+x-ray,рентген,The doctor ordered an **x-ray** to check for any broken bones.,2,doctor
+nosebleed,кровотечение из носа,He got a **nosebleed** after blowing his nose too hard.,2,doctor
+bloating,вздутие живота,Eating too fast often leads to uncomfortable **bloating** after meals.,3,doctor
+indigestion,несварение желудка,Spicy food before bed can cause painful **indigestion** at night.,3,doctor
+heartburn,изжога,He felt **heartburn** rising in his chest after eating greasy food.,3,doctor
+reflux,рефлюкс,Acid **reflux** can damage the lining of your throat over time.,4,doctor
+mucus,слизь,Excess **mucus** production is a common symptom of a bad cold.,3,doctor
+phlegm,мокрота,He coughed up thick **phlegm** every morning for two weeks.,4,doctor
+pus,гной,The infected wound was red and filled with **pus**.,3,doctor
+polyp,полип,A routine colonoscopy found a small **polyp** in his colon.,5,doctor
+acne,акне,She treated her **acne** with a gel prescribed by the dermatologist.,2,doctor
+eczema,экзема,Her **eczema** flared up badly during the cold and dry winter.,4,doctor
+psoriasis,псориаз,**Psoriasis** causes red scaly patches to appear on the skin.,4,doctor
+frostbite,обморожение,The mountaineer lost two toes to severe **frostbite** during the blizzard.,4,doctor
+sunburn,солнечный ожог,Apply aloe vera gel to soothe a painful **sunburn**.,2,doctor
+tingling,покалывание,She felt a **tingling** sensation in her left arm after the injection.,3,doctor
+exhaustion,истощение,Running forty kilometres led to complete physical **exhaustion**.,3,sports
+medication,лекарство,The doctor prescribed **medication** for her chronic back pain.,3,doctor
+cuts,порезы,Apply pressure to small **cuts** to stop the bleeding quickly.,2,doctor
 operate,работать,The clinic will **operate** seven days a week starting next month.,3
-delicate,деликатный,The surgeon performed a **delicate** operation lasting nearly six hours.,4
-operations,операции,The hospital performs hundreds of **operations** every week.,4
-recovered,поправился / восстановился,She **recovered** fully after two weeks in the hospital.,3
+delicate,деликатный,The surgeon performed a **delicate** operation lasting nearly six hours.,4,doctor
+operations,операции,The hospital performs hundreds of **operations** every week.,4,doctor
+recovered,поправился / восстановился,She **recovered** fully after two weeks in the hospital.,3,doctor
 poisoned,отравленный,The detective discovered the victim had been **poisoned**.,4
-unconscious,без сознания,"He was **unconscious** for several minutes after the fall, but then slowly came around.",4
-lungs,лёгкие,Smoking causes serious damage to the **lungs** over time.,3
-immediate,немедленный,The injury required **immediate** medical attention.,4
-gut,кишечник,A healthy diet can have a positive effect on your **gut**.,3
+unconscious,без сознания,"He was **unconscious** for several minutes after the fall, but then slowly came around.",4,doctor
+lungs,лёгкие,Smoking causes serious damage to the **lungs** over time.,3,doctor
+immediate,немедленный,The injury required **immediate** medical attention.,4,doctor
+gut,кишечник,A healthy diet can have a positive effect on your **gut**.,3,doctor
 vulnerable,уязвимый,Elderly people are particularly **vulnerable** during a heatwave.,4
-physically,физически,He was **physically** exhausted after the marathon and could barely stand.,3
+physically,физически,He was **physically** exhausted after the marathon and could barely stand.,3,sports
 toes,пальцы ног,He stubbed his **toes** on the corner of the bed in the dark.,2
-coma,кома,He fell into a **coma** after the accident and did not wake up for a week.,5
-infected,заражённый,The wound became **infected** because it was not cleaned and bandaged properly.,4
+coma,кома,He fell into a **coma** after the accident and did not wake up for a week.,5,doctor
+infected,заражённый,The wound became **infected** because it was not cleaned and bandaged properly.,4,doctor
 relieved,облегчённый,She was hugely **relieved** when she heard that the operation had gone well.,3
-symptoms,симптомы,"The **symptoms** of the flu include fever, cough, and fatigue.",3
+symptoms,симптомы,"The **symptoms** of the flu include fever, cough, and fatigue.",3,doctor
 pale,бледный,She looked **pale** and tired after a sleepless night.,2

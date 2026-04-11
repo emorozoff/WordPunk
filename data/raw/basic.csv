@@ -35,19 +35,19 @@ man,мужчина,A tall **man** entered the room.,1
 woman,женщина,The **woman** smiled at me.,1
 child,ребёнок,The **child** is sleeping now.,1
 friend,друг,My best **friend** lives in Paris.,1
-family,семья,My **family** is very important to me.,1
-house,дом,Their **house** has a red roof.,1
-car,машина,Dad bought a blue **car**.,1
-book,книга,This **book** is about animals.,1
+family,семья,My **family** is very important to me.,1,family
+house,дом,Their **house** has a red roof.,1,home
+car,машина,Dad bought a blue **car**.,1,driving
+book,книга,This **book** is about animals.,1,school
 water,вода,I drink **water** every day.,1
-food,еда,The **food** smells amazing.,1
+food,еда,The **food** smells amazing.,1,restaurant|kitchen
 day,день,Have a nice **day**!,1
 night,ночь,The **night** was dark and quiet.,1
 year,год,Next **year** I will be thirty.,1
 time,время,I have no **time** today.,1
 go,идти,I **go** to school by bus.,1
 come,приходить,Please **come** to my party.,1
-eat,есть,We **eat** dinner at eight.,1
+eat,есть,We **eat** dinner at eight.,1,restaurant
 drink,пить,I **drink** tea every morning.,1
 sleep,спать,Babies **sleep** a lot.,1
 see,видеть,I can **see** the mountains.,1
@@ -55,7 +55,7 @@ hear,слышать,Did you **hear** that noise?,1
 speak,говорить,She can **speak** three languages.,1
 read,читать,I **read** books before bed.,1
 write,писать,He likes to **write** stories.,1
-work,работать,I **work** in a hospital.,2
+work,работать,I **work** in a hospital.,2,work
 play,играть,The kids **play** in the park.,1
 run,бегать,I **run** every morning.,1
 walk,ходить,We **walk** to school together.,1
@@ -63,8 +63,8 @@ sit,сидеть,Please **sit** on this chair.,1
 stand,стоять,She had to **stand** on the bus.,1
 open,открывать,Can you **open** the window?,1
 close,закрывать,Please **close** the door quietly.,1
-buy,покупать,I want to **buy** a new phone.,1
-sell,продавать,They **sell** fresh bread here.,1
+buy,покупать,I want to **buy** a new phone.,1,shopping
+sell,продавать,They **sell** fresh bread here.,1,shopping
 give,давать,**Give** me your hand.,1
 take,брать,**Take** an umbrella with you.,1
 make,делать,She can **make** a nice cake.,1
@@ -470,7 +470,7 @@ feeling,чувство,I have a bad **feeling** about this.,2
 living,живущий,My grandma is still **living** in her old house.,2
 cause,причина,What was the **cause** of the accident?,3
 ahead,впереди,There's a long road **ahead** of us.,3
-king,король,The **king** ruled for forty years.,2
+king,король,The **king** ruled for forty years.,2,politics
 sort,вид,What **sort** of music do you like?,3
 leaving,уходящий,He's **leaving** in an hour.,2
 alright,хорошо,Everything is going to be **alright**.,2
@@ -678,7 +678,7 @@ obviously,очевидно,"**Obviously**, she was very tired today.",3
 neither,ни тот ни другой,I like **neither** of those two options.,3
 accept,принимать,Please **accept** my sincere apologies.,3
 besides,кроме того,"**Besides**, we don't have enough time.",3
-queen,королева,The **queen** waved at the crowd.,2
+queen,королева,The **queen** waved at the crowd.,2,politics
 cops,копы,The **cops** arrived at the scene quickly.,2
 sake,ради,Do it for the **sake** of your family.,3
 loves,любит,She really **loves** her new job.,1
@@ -791,7 +791,7 @@ favorite,любимый,Blue is my **favorite** color.,1
 locked,заперт,The door was **locked** when I arrived.,2
 places,места,We visited many beautiful **places** in Italy.,2
 starts,начинается,The movie **starts** at seven o'clock.,2
-prince,принц,The young **prince** married a beautiful girl.,2
+prince,принц,The young **prince** married a beautiful girl.,2,politics
 form,форма,Please fill out this **form** before the appointment.,2
 build,строить,They want to **build** a new house here.,2
 hole,дыра,There's a **hole** in my sock.,2
@@ -854,7 +854,7 @@ main,главный,"The **main** problem, is the high cost.",2
 devil,дьявол,He drives like a **devil** on the highway.,3
 necessary,необходимый,It's **necessary** to book tickets in advance.,3
 although,хотя,I went out **although** it was raining.,3
-princess,принцесса,The little **princess** wore a pink dress.,2
+princess,принцесса,The little **princess** wore a pink dress.,2,politics
 flying,летающий,A bird was **flying** high above us.,2
 knowing,знание,"**Knowing** you, you'll figure it out.",3
 clearly,ясно,"**Clearly**, we need a different approach here.",3
@@ -1101,7 +1101,7 @@ event,событие,The wedding was the biggest **event** of the year.,2
 complicated,сложный,This math problem is too **complicated** for me.,3
 shape,форма,The cake had the **shape** of a heart.,2
 priest,священник,The **priest** spoke to the congregation about kindness.,3
-royal,королевский,The **royal** family lives in a grand palace.,3
+royal,королевский,The **royal** family lives in a grand palace.,3,politics
 romantic,романтичный,They had a **romantic** dinner by candlelight.,3
 tears,слёзы,**Tears** rolled down her cheeks during the movie.,2
 reached,достиг,We finally **reached** the top of the mountain.,2
@@ -1266,7 +1266,7 @@ spending,траты,My **spending** this month was too high,2
 spy,шпион,The **spy** escaped through the back door,3
 shadow,тень,A dark **shadow** appeared on the wall,2
 warrant,ордер,The judge signed the search **warrant** this morning,4
-kingdom,королевство,The ancient **kingdom** had a powerful army,3
+kingdom,королевство,The ancient **kingdom** had a powerful army,3,politics
 squad,отряд,The police **squad** arrived within minutes,3
 highness,высочество,"Your **highness**, the guests have arrived",4
 sometime,когда-нибудь,Let's have dinner together **sometime** next week,2
@@ -1279,7 +1279,7 @@ chain,цепь,She wore a gold **chain** around her neck,2
 fully,полностью,I **fully** agree with your decision,2
 gorgeous,великолепный,You look absolutely **gorgeous** in that dress,3
 passion,страсть,Cooking is her greatest **passion** in life,3
-empire,империя,The Roman **empire** lasted for centuries,3
+empire,империя,The Roman **empire** lasted for centuries,3,politics
 curse,проклятие,An old **curse** haunted the family for generations,3
 puts,кладёт,She **puts** the keys on the table every day,1
 leads,ведёт,This path **leads** to the old castle,2
@@ -1611,7 +1611,7 @@ buildings,здания,The old **buildings** along the waterfront have been conv
 symbol,символ,The dove is a universal **symbol** of peace across many cultures.,3
 differently,по-другому,After the accident she began to see life quite **differently**.,3
 expression,выражение,She had a puzzled **expression** on her face when she read the message.,2
-throne,трон,The king sat on the golden **throne** at the far end of the great hall.,4
+throne,трон,The king sat on the golden **throne** at the far end of the great hall.,4,politics
 centuries,века,The cathedral has stood in the city centre for **centuries**.,3
 fingerprints,отпечатки пальцев,The detective found **fingerprints** on the door handle that matched the suspect.,4
 chin,подбородок,He scratched his **chin** thoughtfully before giving his final answer.,2

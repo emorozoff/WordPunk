@@ -37,7 +37,7 @@ shortcut,срезка,He took a **shortcut** through town.,3
 exit,выезд,Take the next **exit** right.,2
 entrance,въезд,The **entrance** is blocked today.,2
 ramp,пандус,The car climbed the **ramp** slowly.,4
-bridge,мост,The **bridge** crosses the river.,2
+bridge,мост,The **bridge** crosses the river.,2,nature
 tunnel,туннель,The **tunnel** was dark and long.,2
 intersection,перекрёсток,Stop at the **intersection** ahead.,3
 crossroad,развилка,Turn left at the **crossroad**.,3
@@ -56,19 +56,19 @@ asphalt,асфальт,Fresh **asphalt** looked smooth and black.,4
 toll,пошлина,Pay the **toll** at the booth.,3
 ticket,штраф,The officer wrote a **ticket**.,2
 violation,нарушение,Speeding is a traffic **violation**.,4
-cop,коп,A **cop** stopped me for speeding.,3
-officer,офицер,The **officer** asked for my license.,2
+cop,коп,A **cop** stopped me for speeding.,3,politics
+officer,офицер,The **officer** asked for my license.,2,politics
 patrol,патруль,The highway **patrol** was nearby.,4
 siren,сирена,The **siren** got louder quickly.,3
-ambulance,скорая,An **ambulance** passed on the right.,2
+ambulance,скорая,An **ambulance** passed on the right.,2,health|doctor
 truck,грузовик,A big **truck** blocked the view.,1
 van,фургон,We rented a white **van**.,2
 bus,автобус,The **bus** stopped at the corner.,1
-taxi,такси,I called a **taxi** to the airport.,1
+taxi,такси,I called a **taxi** to the airport.,1,airport
 motorcycle,мотоцикл,He rides a black **motorcycle**.,2
 scooter,самокат,She parked her **scooter** outside.,2
-bike,велосипед,The **bike** lane is separate here.,1
-helmet,шлем,Always wear a **helmet** when riding.,2
+bike,велосипед,The **bike** lane is separate here.,1,sports
+helmet,шлем,Always wear a **helmet** when riding.,2,sports
 sedan,седан,He drives a silver **sedan**.,3
 suv,внедорожник,The **suv** handles snow very well.,3
 convertible,кабриолет,The red **convertible** looked very expensive.,4
@@ -127,7 +127,7 @@ expressway,скоростная магистраль,The **expressway** was clos
 freeway,автострада,Traffic on the **freeway** moved slowly today.,2
 turnpike,платное шоссе,The **turnpike** connects two major cities.,4
 carport,навес для машины,He parked under the wooden **carport**.,3
-driveway,подъездная дорожка,The kids played in the **driveway** again.,2
+driveway,подъездная дорожка,The kids played in the **driveway** again.,2,home
 onramp,въезд на трассу,The **onramp** was blocked by construction.,3
 offramp,съезд с трассы,Take the next **offramp** to reach downtown.,3
 detour,объезд,The **detour** added twenty minutes to our trip.,2
@@ -135,7 +135,7 @@ overpass,эстакада,The **overpass** was closed for maintenance.,3
 underpass,подземный переход,Water flooded the **underpass** during the storm.,3
 tollbooth,пункт оплаты,He paid cash at the **tollbooth**.,3
 motorist,автомобилист,Every **motorist** should carry an emergency kit.,3
-cyclist,велосипедист,The **cyclist** signaled before turning left.,2
+cyclist,велосипедист,The **cyclist** signaled before turning left.,2,sports
 pedestrian,пешеход,A **pedestrian** waited patiently at the corner.,2
 jaywalker,нарушитель,The **jaywalker** darted across the busy street.,4
 hitchhiker,автостопщик,She picked up a young **hitchhiker**.,3
@@ -148,7 +148,7 @@ pileup,массовая авария,The foggy **pileup** involved twelve vehicl
 sideswipe,боковой удар,A truck nearly caused a **sideswipe** crash.,4
 fishtail,занос,The rear wheels started to **fishtail** on ice.,4
 hydroplane,аквапланирование,Cars can **hydroplane** on wet highways.,4
-insurance,страховка,Show your **insurance** card to the officer.,2
+insurance,страховка,Show your **insurance** card to the officer.,2,bank
 citation,штрафная квитанция,The officer issued a **citation** for speeding.,3
 speeding,превышение скорости,She got a ticket for **speeding** yesterday.,2
 reckless,безрассудное,**Reckless** driving can cost someone their life.,3
@@ -195,22 +195,22 @@ gallon,галлон,A **gallon** of gas costs four dollars now.,2
 nozzle,заправочный пистолет,He squeezed the gas **nozzle** gently.,3
 horsepower,лошадиные силы,The engine produces three hundred **horsepower**.,3
 torque,крутящий момент,The diesel engine has excellent **torque**.,4
-carseat,детское кресло,Always buckle the **carseat** before driving off.,2
+carseat,детское кресло,Always buckle the **carseat** before driving off.,2,family
 lowbeam,ближний свет,Use your **lowbeam** in heavy fog.,3
 highbeam,дальний свет,Switch your **highbeam** off for oncoming traffic.,3
 dashcam,видеорегистратор,The **dashcam** recorded the entire accident clearly.,3
 control,контроль,I lost **control** of the car.,3
 drive,водить,Can you **drive** me to work?,2
 miles,мили,We drove a hundred **miles** today.,2
-accident,авария,There was a bad **accident** on the highway.,3
+accident,авария,There was a bad **accident** on the highway.,3,health|doctor
 driving,вождение,**Driving** in this city is stressful.,2
 cars,машины,There are too many **cars** on this street.,1
 fixed,починил,The mechanic **fixed** my car this morning.,2
-carefully,осторожно,Please drive **carefully** on the icy roads.,2
+carefully,осторожно,Please drive **carefully** on the icy roads.,2,basic
 drove,вёл (машину),She **drove** home after a long day at work.,2
 headed,направлялся,"We were **headed** downtown, but traffic was terrible.",3
 passing,проходящий,A **passing** car splashed water on me,3
-illegal,незаконный,Parking here is **illegal** after six,3
+illegal,незаконный,Parking here is **illegal** after six,3,politics
 tires,шины,My car needs new **tires** before winter,2
 signs,знаки,Follow the road **signs** to the airport,2
 cab,такси,Let's take a **cab** to the station,2
@@ -219,7 +219,7 @@ zone,зона,This is a no parking **zone**,3
 mile,миля,The nearest station is about one **mile** away.,2
 flow,поток,The **flow** of traffic slowed down during rush hour.,3
 limit,предел,Please respect the speed **limit** on this road.,2
-policeman,полицейский,The **policeman** directed traffic at the busy crossroads.,2
+policeman,полицейский,The **policeman** directed traffic at the busy crossroads.,2,politics
 transmission,коробка передач,The automatic **transmission** shifts gears very smoothly now.,4
 valve,клапан,A broken engine **valve** caused the loud noise.,4
 filter,фильтр,The mechanic replaced the dirty oil **filter**.,3
@@ -238,12 +238,12 @@ accelerate,ускоряться,You need to **accelerate** faster on the ramp.,3
 decelerate,замедляться,Begin to **decelerate** before the sharp curve.,4
 vent,вентиляционное отверстие,The air **vent** blows cold air on me.,3
 sunroof,люк,She opened the **sunroof** to enjoy the breeze.,3
-cargo,груз,The truck carried heavy **cargo** across the country.,3
+cargo,груз,The truck carried heavy **cargo** across the country.,3,airport
 trailer,прицеп,His pickup pulled a small **trailer** behind it.,3
 hitch,фаркоп,The **hitch** connects the trailer to the truck.,3
 petrol,бензин,British drivers usually say **petrol** not gasoline.,3
 ethanol,этанол,Some cars can run on **ethanol** blended fuel.,4
-mechanic,автомеханик,My favorite **mechanic** works near the train station.,2
+mechanic,автомеханик,My favorite **mechanic** works near the train station.,2,work
 repair,ремонт,The engine **repair** will take three days total.,2
 curbside,у обочины,She waited **curbside** for her ride to arrive.,3
 divider,разделитель,A concrete **divider** separates the highway lanes.,3
@@ -254,7 +254,7 @@ semi,фура,A huge **semi** truck blocked both lanes ahead.,3
 upholstery,обивка,The leather **upholstery** was cracked and worn.,4
 emblem,эмблема,The hood **emblem** identifies the car brand.,3
 decal,наклейка,A parking **decal** was stuck to the windshield.,4
-cruiser,полицейский автомобиль,A police **cruiser** pulled up behind me.,3
+cruiser,полицейский автомобиль,A police **cruiser** pulled up behind me.,3,politics
 unmarked,без опознавательных знаков,An **unmarked** police car followed the speeding driver.,4
 infotainment,мультимедиа система,The new **infotainment** screen has navigation and music.,4
 bulb,лампочка,The headlight **bulb** burned out last night.,3
@@ -270,16 +270,16 @@ arrow,стрелка,A green **arrow** signal means protected left turn.,2
 gasket,прокладка,The head **gasket** began leaking oil yesterday.,4
 washer,омыватель,The windshield **washer** fluid is running low.,3
 winch,лебёдка,He used a **winch** to pull the stuck car.,4
-trucker,дальнобойщик,The tired **trucker** stopped at a rest area.,3
-commuter,пассажир пригородного поезда,Every **commuter** complained about the morning traffic jam.,3
+trucker,дальнобойщик,The tired **trucker** stopped at a rest area.,3,work
+commuter,пассажир пригородного поезда,Every **commuter** complained about the morning traffic jam.,3,work
 copilot,штурман,My wife acted as **copilot** on the long trip.,3
 motorhome,дом на колёсах,They traveled in a huge **motorhome** for weeks.,3
 lorry,грузовик,In Britain people say **lorry** instead of truck.,3
-forklift,погрузчик,A warehouse **forklift** loaded heavy boxes onto trucks.,4
+forklift,погрузчик,A warehouse **forklift** loaded heavy boxes onto trucks.,4,work
 congestion,пробки,Rush hour **congestion** slowed traffic to a crawl.,3
-checkpoint,контрольно-пропускной пункт,The border **checkpoint** stopped every passing vehicle.,3
+checkpoint,контрольно-пропускной пункт,The border **checkpoint** stopped every passing vehicle.,3,airport
 pitstop,короткая остановка,We made a quick **pitstop** for snacks and gas.,3
-smog,смог,Heavy **smog** made the highway barely visible.,3
+smog,смог,Heavy **smog** made the highway barely visible.,3,nature
 gridlock,пробка,Downtown **gridlock** trapped thousands of cars yesterday.,4
 rubberneck,глазеть,Drivers often **rubberneck** at accident scenes slowing traffic.,4
 jaywalk,переходить в неположенном месте,Do not **jaywalk** across this busy highway.,4
@@ -294,15 +294,15 @@ impound,забирать на штрафстоянку,Police will **impound** y
 flatbed,эвакуатор с платформой,A **flatbed** tow truck lifted the crashed vehicle.,4
 autonomous,автономный,An **autonomous** car drove itself down the street.,4
 driverless,беспилотный,The **driverless** shuttle serves the airport terminal.,4
-bluetooth,блютуз,My phone connects to the car by **bluetooth**.,2
-adapter,переходник,I need a power **adapter** for the cigarette lighter.,3
+bluetooth,блютуз,My phone connects to the car by **bluetooth**.,2,internet
+adapter,переходник,I need a power **adapter** for the cigarette lighter.,3,internet
 holder,держатель,The phone **holder** mounts onto the dashboard.,2
 mount,крепление,She installed a new phone **mount** above the radio.,3
 freshener,ароматизатор,A pine **freshener** hung from the rearview mirror.,3
 floormat,коврик,The rubber **floormat** protects the carpet from mud.,3
-kit,набор инструментов,Every car should carry a basic first-aid **kit** in the trunk.,3
-offense,нарушение,Driving without a seatbelt is a minor traffic **offense** in most countries.,4
-minor,незначительный,The car needed only a few **minor** repairs after the fender bender.,3
+kit,набор инструментов,Every car should carry a basic first-aid **kit** in the trunk.,3,health
+offense,нарушение,Driving without a seatbelt is a minor traffic **offense** in most countries.,4,politics
+minor,незначительный,The car needed only a few **minor** repairs after the fender bender.,3,basic
 wheels,колёса,The mechanic checked all four **wheels** before approving the car for the road.,2
 blocks,блокировать,The fallen tree **blocks** the road and traffic cannot get through.,3
 causing,вызывающий,The roadwork is **causing** major delays for drivers this morning.,3
@@ -312,7 +312,7 @@ madness,безумие,Driving through that city during rush hour is absolute **
 roads,дороги,The mountain **roads** are narrow and dangerous in icy conditions.,3
 abandon,забросить,They had to **abandon** the car on the side of the road.,3
 pump,насос,The mechanic used an air **pump** to inflate the flat tyre.,3
-engines,двигатели,Both **engines** failed shortly after takeoff and the pilot made an emergency landing.,4
+engines,двигатели,Both **engines** failed shortly after takeoff and the pilot made an emergency landing.,4,airport
 halt,остановка,The officer raised his hand to bring the car to a **halt**.,3
 parked,припаркованный,His car was **parked** right outside the bank when the alarm went off.,2
 rear,задний,The car was hit from the **rear** at the traffic light.,3

@@ -14,23 +14,23 @@ whistle,свисток,The coach blew his **whistle** very loudly.,2
 goal,ворота,He shot the ball into the **goal**.,2
 goal,цель,His main **goal** is winning the championship.,2
 net,сетка,The ball hit the **net** and bounced.,2
-net,чистый,His **net** earnings were very small.,2
+net,чистый,His **net** earnings were very small.,2,work
 bat,бита,He swung the wooden **bat** hard.,2
-bat,летучая мышь,A small **bat** flew over the stadium.,2
+bat,летучая мышь,A small **bat** flew over the stadium.,2,nature
 match,матч,The football **match** lasted ninety minutes.,2
-match,спичка,She lit a **match** to start fire.,2
+match,спичка,She lit a **match** to start fire.,2,home
 pitch,поле,Players ran across the muddy **pitch** quickly.,2
 pitch,подача,His first **pitch** went past the batter.,2
 serve,подача,Her powerful **serve** won the tennis point.,2
 tie,ничья,The game ended in a **tie**.,2
-dive,нырять,He loves to **dive** from tall cliffs.,2
+dive,нырять,He loves to **dive** from tall cliffs.,2,leisure
 dive,нырок,The goalkeeper made a great **dive** left.,2
 racket,ракетка,She gripped her tennis **racket** tightly.,2
 racket,шум,Stop making such a loud **racket** outside.,2
 coach,тренер,Our **coach** taught us many new tricks.,2
 hit,удар,His **hit** sent the ball flying away.,2
-hit,хит,That song became a huge **hit** worldwide.,2
-club,клуб,He joined a famous football **club** yesterday.,2
+hit,хит,That song became a huge **hit** worldwide.,2,leisure
+club,клуб,He joined a famous football **club** yesterday.,2,leisure
 stadium,стадион,The **stadium** held fifty thousand fans.,2
 athlete,спортсмен,Every **athlete** trained hard for games.,2
 sprint,спринт,He ran a fast **sprint** to victory.,2
@@ -44,10 +44,10 @@ league,лига,Our **league** has twenty football clubs.,3
 draft,драфт,The team picked him in the **draft**.,3
 draw,ничья,The chess match ended in a **draw**.,3
 stroke,гребок,Her swimming **stroke** was smooth and powerful.,3
-stroke,инсульт,The old man suffered a mild **stroke**.,3
+stroke,инсульт,The old man suffered a mild **stroke**.,3,health|doctor
 lane,дорожка,The runner stayed in her **lane**.,3
 puck,шайба,The **puck** slid across the frozen ice.,3
-shin,голень,He hurt his **shin** during the tackle.,3
+shin,голень,He hurt his **shin** during the tackle.,3,health
 foul,фол,The player got a **foul** for pushing.,3
 tackle,подкат,He made a clean **tackle** quickly.,3
 dribble,вести мяч,She began to **dribble** past the defender.,3
@@ -57,11 +57,11 @@ save,сейв,The goalie made a brilliant **save** today.,3
 crowd,толпа,The **crowd** roared when she scored.,3
 strike,страйк,He bowled a perfect **strike** last night.,3
 court,корт,The tennis **court** was freshly painted green.,3
-court,суд,The thief was taken to **court** yesterday.,3
+court,суд,The thief was taken to **court** yesterday.,3,politics
 club,клюшка,He swung his golf **club** too hard.,3
 punch,удар,His strong **punch** knocked out the opponent.,3
 record,рекорд,She broke the world **record** last year.,3
-record,запись,Please **record** the meeting for later review.,3
+record,запись,Please **record** the meeting for later review.,3,work
 hurdle,барьер,She jumped every **hurdle** without falling.,3
 dunk,данк,He made a huge **dunk** over defenders.,3
 roster,состав команды,The team **roster** was posted this morning.,4
@@ -84,11 +84,11 @@ winger,вингер,The fast **winger** beat two defenders easily.,4
 scrum,схватка,The rugby **scrum** collapsed near the line.,4
 lineup,состав,The starting **lineup** was announced before kickoff.,4
 halftime,перерыв,Players rested briefly during the **halftime** break.,4
-jersey,футболка,He wore the team **jersey** proudly today.,4
-strike,забастовка,The factory workers began a long **strike**.,4
-punch,дырокол,She used a paper **punch** to make holes.,4
+jersey,футболка,He wore the team **jersey** proudly today.,4,shopping
+strike,забастовка,The factory workers began a long **strike**.,4,work
+punch,дырокол,She used a paper **punch** to make holes.,4,work
 cue,кий,He chalked his **cue** before the shot.,4
-cue,реплика,The actor waited for his **cue** backstage.,4
+cue,реплика,The actor waited for his **cue** backstage.,4,leisure
 overtime,овертайм,The game went into **overtime** after tie.,5
 showdown,противостояние,The final **showdown** determined the league winner.,5
 grapple,захват,The wrestlers began to **grapple** each other fiercely.,5
@@ -106,8 +106,8 @@ boxing,бокс,**Boxing** practice builds both speed and power.,2
 boxer,боксёр,The young **boxer** trains six days a week.,2
 paddle,весло,She dipped her **paddle** into the calm water.,2
 oar,весло,He gripped the wooden **oar** with both hands.,2
-kayak,каяк,We will rent a **kayak** for the race.,3
-canoe,каноэ,The team paddled their **canoe** down the river.,3
+kayak,каяк,We will rent a **kayak** for the race.,3,leisure
+canoe,каноэ,The team paddled their **canoe** down the river.,3,leisure
 saddle,седло,The jockey climbed into the **saddle** quickly.,3
 jockey,жокей,The young **jockey** guided his horse forward.,3
 relay,эстафета,Our school won the **relay** last weekend.,2
@@ -115,7 +115,7 @@ baton,эстафетная палочка,She dropped the **baton** near the fin
 javelin,копьё,He threw the **javelin** over sixty meters.,3
 discus,диск,She spun and launched the **discus** far away.,4
 polevault,прыжок с шестом,The **polevault** record was broken last night.,4
-trampoline,батут,The gymnast bounced high on the **trampoline**.,2
+trampoline,батут,The gymnast bounced high on the **trampoline**.,2,leisure
 sparring,спарринг,They began **sparring** before the big match.,3
 takedown,сваливание,His signature **takedown** surprised every opponent.,3
 jab,джеб,She threw a quick **jab** at her rival.,2
@@ -129,10 +129,10 @@ goalie,голкипер,The **goalie** dove to block the puck.,2
 keeper,вратарь,The young **keeper** stopped every penalty kick.,2
 forward,нападающий,Their best **forward** scored two goals.,2
 defender,защитник,The **defender** blocked the shot cleanly.,2
-badminton,бадминтон,They play **badminton** every Sunday afternoon.,2
+badminton,бадминтон,They play **badminton** every Sunday afternoon.,2,leisure
 cross,навес,His **cross** found the striker near the post.,3
 throwin,вбрасывание,The ref signaled for a **throwin** quickly.,3
-kickboxing,кикбоксинг,She practices **kickboxing** every evening.,3
+kickboxing,кикбоксинг,She practices **kickboxing** every evening.,3,health
 mound,горка питчера,The pitcher walked slowly off the **mound**.,3
 bunt,бант,He tried to **bunt** the ball softly.,3
 homerun,хоумран,Her **homerun** won the championship game.,2
@@ -163,8 +163,8 @@ hattrick,хет-трик,She scored a **hattrick** in twenty minutes.,3
 freestyle,вольный стиль,He won the **freestyle** race easily.,2
 backstroke,плавание на спине,She swims **backstroke** better than butterfly.,3
 breaststroke,брасс,His **breaststroke** technique improves every week.,3
-scuba,подводное плавание,He loves **scuba** lessons at the resort pool.,3
-skateboard,скейтборд,He learned to ride a **skateboard** yesterday.,2
+scuba,подводное плавание,He loves **scuba** lessons at the resort pool.,3,leisure
+skateboard,скейтборд,He learned to ride a **skateboard** yesterday.,2,leisure
 springboard,трамплин,She jumped off the **springboard** gracefully.,3
 platform,вышка,He dove from the ten-meter **platform**.,3
 judo,дзюдо,He has trained **judo** since age six.,2
@@ -174,16 +174,16 @@ wrestling,борьба,He joined the **wrestling** team last fall.,2
 grappler,борец,The **grappler** locked his opponent in seconds.,4
 gi,ги,She washed her **gi** after every class.,4
 dojo,додзё,The **dojo** opens early every weekday morning.,3
-cycling,велоспорт,**Cycling** is his favorite summer activity.,2
+cycling,велоспорт,**Cycling** is his favorite summer activity.,2,health|leisure
 triathlon,триатлон,She finished her first **triathlon** last summer.,3
 marathon,марафон,He trained hard for the city **marathon**.,2
 sprinter,спринтер,The young **sprinter** broke the school record.,2
-snowboard,сноуборд,She rides her **snowboard** down steep slopes.,2
+snowboard,сноуборд,She rides her **snowboard** down steep slopes.,2,leisure
 bobsled,бобслей,The **bobsled** team crossed the finish first.,3
 tactic,тактика,The coach changed his **tactic** at halftime.,3
-strategy,стратегия,Their defensive **strategy** worked perfectly today.,2
+strategy,стратегия,Their defensive **strategy** worked perfectly today.,2,work
 curling,кёрлинг,**Curling** demands precision and smart teamwork.,4
-bowling,боулинг,He enjoys **bowling** with friends on Fridays.,2
+bowling,боулинг,He enjoys **bowling** with friends on Fridays.,2,leisure
 tournament,турнир,The **tournament** attracted teams from ten countries.,2
 championship,чемпионат,They reached the regional **championship** finals.,2
 finals,финал,The **finals** will be held next Saturday.,2
@@ -199,8 +199,8 @@ umpire,судья,The **umpire** called him out at second.,3
 linesman,линейный судья,The **linesman** raised his flag for offside.,4
 timekeeper,хронометрист,The **timekeeper** signaled the end of play.,4
 scoreboard,табло,The **scoreboard** showed a tied game.,2
-game,игра,We watched the football **game** on TV.,1
-running,бегущий,I saw her **running** in the park.,2
+game,игра,We watched the football **game** on TV.,1,leisure
+running,бегущий,I saw her **running** in the park.,2,health
 losing,проигрывающий,Our team is **losing** by three points.,2
 practice,практика,You need more **practice** to play well.,2
 plays,играет,My son **plays** soccer every weekend.,1
@@ -208,14 +208,14 @@ balls,мячи,The kids played with colorful **balls** at the park.,1
 threw,бросил,He **threw** the ball across the field.,2
 football,футбол,We play **football** every Sunday afternoon.,1
 points,очки,Our team scored twenty **points** in the first half.,2
-runs,бегает,She **runs** five miles every single morning.,2
-competition,конкуренция,The **competition** between the two teams was fierce.,3
+runs,бегает,She **runs** five miles every single morning.,2,health
+competition,конкуренция,The **competition** between the two teams was fierce.,3,work
 defense,защита,Our team has the best **defense** in the league.,3
-badly,плохо,He played very **badly** in the final match.,2
+badly,плохо,He played very **badly** in the final match.,2,basic
 winner,победитель,The **winner** received a gold medal.,2
 victory,победа,The team celebrated their **victory** all night.,3
 kicked,пнул,She **kicked** the ball into the goal.,2
-stronger,сильнее,He grew **stronger** after months of training,2
+stronger,сильнее,He grew **stronger** after months of training,2,health
 riding,едущий верхом,She is **riding** a brown horse,2
 winning,побеждающий,Our team is **winning** the match,2
 announcer,диктор,The **announcer** reported the football score,3
@@ -225,16 +225,16 @@ hitting,удар/бить,The boy kept **hitting** the ball over the fence.,2
 potential,потенциал,That young player has great **potential**.,3
 hits,ударяет,The boxer **hits** the bag every morning.,2
 wins,побеждает,Our team always **wins** the championship game.,2
-swimming,плавание,**Swimming** is my favorite summer activity.,2
+swimming,плавание,**Swimming** is my favorite summer activity.,2,health|leisure
 baseball,бейсбол,My son plays **baseball** every Saturday at the local park.,2
 defeat,поражение,The team suffered a crushing **defeat** in the championship finals.,3
-golf,гольф,My father plays **golf** every Sunday morning.,2
+golf,гольф,My father plays **golf** every Sunday morning.,2,leisure
 beaten,побеждённый,Our team was **beaten** in the final match.,3
 fans,болельщики,Thousands of **fans** waited outside the stadium.,2
 players,игроки,Our team has the best **players** in the league.,2
 teams,команды,Both **teams** played hard during the championship game.,2
-injured,раненый,Several players were **injured** during the match.,3
-activity,активность,Hiking is a fun outdoor **activity** for the whole family.,2
+injured,раненый,Several players were **injured** during the match.,3,health|doctor
+activity,активность,Hiking is a fun outdoor **activity** for the whole family.,2,leisure
 intense,интенсивный,The athletes trained through an **intense** three-hour session every morning.,3
 beats,побеждает,Our home team **beats** the rivals almost every season.,3
 jumping,прыгать,The kids were **jumping** on the trampoline all afternoon.,2
@@ -242,16 +242,16 @@ matches,матчи,The league **matches** are held every Saturday afternoon.,2
 kicking,бить ногой,He practiced **kicking** the ball against the wall for an hour.,2
 fighter,боец,He trained as a **fighter** and competed in tournaments across Europe.,3
 lads,ребята,"Come on **lads**, we need to finish this before the game starts.",3
-pro,профессионал,Even a **pro** makes mistakes when learning a completely new skill.,3
+pro,профессионал,Even a **pro** makes mistakes when learning a completely new skill.,3,work
 praise,хвалить,The coach made sure to **praise** every player after the hard training session.,3
 fights,драки,There were several **fights** in the stands during the football match.,3
 catching,ловить,My nephew is good at **catching** the ball but terrible at throwing it.,2
 facility,учреждение,The sports **facility** includes an Olympic-size pool and a climbing wall.,3
 ultimate,конечный,The **ultimate** goal of the training programme is to qualify for the championship.,4
-racing,гонки,He grew up watching **racing** with his father every Sunday afternoon.,3
+racing,гонки,He grew up watching **racing** with his father every Sunday afternoon.,3,leisure
 lap,круг,The runner completed one **lap** around the track in under a minute.,3
-meters,метры,The swimming pool is fifty **meters** long and has eight lanes.,3
-pump,накачивать,She goes to the gym three times a week to **pump** iron.,3
+meters,метры,The swimming pool is fifty **meters** long and has eight lanes.,3,basic
+pump,накачивать,She goes to the gym three times a week to **pump** iron.,3,health
 racquet,ракетка,She restrung her **racquet** before the big match.,3
 tennis,теннис,He has played **tennis** since he was five years old.,2
 volleyball,волейбол,Our school **volleyball** team won the regional cup.,2
@@ -259,18 +259,18 @@ basketball,баскетбол,**Basketball** practice is held every Tuesday and 
 hockey,хоккей,He learned to skate so he could play **hockey**.,2
 rugby,регби,**Rugby** players must be both strong and fast.,3
 gymnastics,гимнастика,She has trained **gymnastics** since the age of four.,3
-skiing,катание на лыжах,**Skiing** down steep mountains gave him a real adrenaline rush.,3
-surfing,сёрфинг,**Surfing** huge ocean waves takes years of dedicated practice.,3
-snowboarding,сноубординг,She prefers **snowboarding** to skiing on steep slopes.,3
-skateboarding,скейтбординг,**Skateboarding** in the park is banned on weekdays.,3
-rowing,гребля,**Rowing** builds incredible upper body and core strength.,3
+skiing,катание на лыжах,**Skiing** down steep mountains gave him a real adrenaline rush.,3,leisure
+surfing,сёрфинг,**Surfing** huge ocean waves takes years of dedicated practice.,3,leisure
+snowboarding,сноубординг,She prefers **snowboarding** to skiing on steep slopes.,3,leisure
+skateboarding,скейтбординг,**Skateboarding** in the park is banned on weekdays.,3,leisure
+rowing,гребля,**Rowing** builds incredible upper body and core strength.,3,health
 spike,смэш,Her **spike** hit the floor just inside the line.,3
 leap,прыжок,The gymnast made a breathtaking **leap** across the mat.,3
 dodge,уклонение,He used a quick **dodge** to avoid the incoming tackle.,3
 pivot,разворот,The dancer executed a sharp **pivot** and faced the audience.,4
 smash,смэш,His overhead **smash** was too fast for the opponent to return.,3
-cooldown,заминка,The trainer reminded everyone to complete the **cooldown** after training.,3
-strain,растяжение мышц,She suffered a calf **strain** during the warm-up run.,3
+cooldown,заминка,The trainer reminded everyone to complete the **cooldown** after training.,3,health
+strain,растяжение мышц,She suffered a calf **strain** during the warm-up run.,3,health|doctor
 supporter,болельщик,Every **supporter** waved a flag when the team scored.,3
 spectator,зритель,The stands were full of every **spectator** the arena could hold.,3
 commentator,комментатор,The **commentator** described the penalty shootout in vivid detail.,4
@@ -283,22 +283,22 @@ qualifier,квалификационный отбор,She won the **qualifier** 
 seeding,посев (рейтинговое распределение),His high **seeding** meant he avoided the top players early on.,5
 sponsor,спонсор,The team's new **sponsor** funded the entire training camp abroad.,4
 header,удар головой,His powerful **header** sent the ball into the top corner.,4
-hamstring,подколенное сухожилие,He pulled his **hamstring** in the first half and had to leave.,4
+hamstring,подколенное сухожилие,He pulled his **hamstring** in the first half and had to leave.,4,health|doctor
 glove,перчатка,The catcher adjusted her **glove** before the next pitch.,2
-trainer,спортивный врач,The **trainer** rushed onto the field to treat the injured player.,3
+trainer,спортивный врач,The **trainer** rushed onto the field to treat the injured player.,3,health
 arena,арена,The ice **arena** was packed for the championship final.,3
 stance,стойка,A wide **stance** gives you better balance on the board.,4
 footwork,работа ног,Good **footwork** is essential for any tennis player.,4
 intensity,интенсивность,The **intensity** of the final lap left everyone breathless.,4
-stretching,растяжка,He does twenty minutes of **stretching** before every game.,3
-fitness,физическая форма,Her **fitness** level allowed her to compete at the highest level.,3
-rep,повторение,Do three sets of twelve **rep** for each exercise.,3
+stretching,растяжка,He does twenty minutes of **stretching** before every game.,3,health
+fitness,физическая форма,Her **fitness** level allowed her to compete at the highest level.,3,health
+rep,повторение,Do three sets of twelve **rep** for each exercise.,3,health
 cleat,шип (бутса),He broke a **cleat** while sliding into home plate.,4
-boot,бутса,She bought new **boot** for the upcoming football season.,2
+boot,бутса,She bought new **boot** for the upcoming football season.,2,shopping
 leotard,купальник для гимнастики,The gymnast wore a sparkling **leotard** for the floor routine.,4
-swimsuit,плавательный костюм,She packed her **swimsuit** for the early morning training session.,2
+swimsuit,плавательный костюм,She packed her **swimsuit** for the early morning training session.,2,shopping
 flipper,ласт,He strapped on each **flipper** before jumping into the pool.,3
-snorkel,дыхательная трубка,They used a **snorkel** to observe fish near the reef.,3
+snorkel,дыхательная трубка,They used a **snorkel** to observe fish near the reef.,3,leisure
 buoy,буй,Swimmers must touch the red **buoy** before turning back.,4
 mat,мат,She landed perfectly on the **mat** after the vault.,2
 pommel,конь (гимнастический снаряд),The gymnast swung smoothly around the **pommel** horse.,5
@@ -306,8 +306,8 @@ apparatus,снаряд,Each gymnast chose a different **apparatus** for the fina
 harness,страховочная система,The climber checked her **harness** twice before ascending the wall.,4
 padding,защитная подкладка,The goalkeeper wore extra **padding** under his jersey today.,4
 mouthguard,капа,The boxer inserted his **mouthguard** before the round began.,4
-physio,физиотерапевт,The **physio** helped her recover from the knee injury quickly.,4
-aerobics,аэробика,She teaches **aerobics** classes at the local sports center.,3
+physio,физиотерапевт,The **physio** helped her recover from the knee injury quickly.,4,health|doctor
+aerobics,аэробика,She teaches **aerobics** classes at the local sports center.,3,health
 snowboarder,сноубордист,The young **snowboarder** landed a perfect trick on the halfpipe.,4
 surfer,сёрфингист,The experienced **surfer** read the wave before paddling out.,4
 rower,гребец,The **rower** kept a steady rhythm all the way to the finish.,4
@@ -317,7 +317,7 @@ skater,конькобежец,The **skater** completed a triple jump with perfec
 pacer,темповик,The **pacer** led the runners through the first three kilometers.,4
 coordination,координация,His **coordination** improved greatly after months of gymnastics training.,4
 dodgeball,вышибалы,The kids played **dodgeball** in the gym on rainy days.,3
-weightlifting,тяжёлая атлетика,**Weightlifting** requires precise technique as well as raw power.,4
+weightlifting,тяжёлая атлетика,**Weightlifting** requires precise technique as well as raw power.,4,health
 decathlon,десятиборье,The **decathlon** is considered the ultimate test of all-round athletics.,5
 waterpolo,водное поло,**Waterpolo** players need to tread water for the entire match.,4
 lacrosse,лакросс,She started playing **lacrosse** after moving to the new school.,4
@@ -334,6 +334,6 @@ steeplechase,стипль-чез,The **steeplechase** demands both speed and the
 soccer,футбол,The kids played **soccer** in the park all afternoon.,1
 roaring,рёв,The crowd let out a **roaring** cheer when the home team scored.,3
 excitement,возбуждение,There was a buzz of **excitement** in the stadium before the opening ceremony.,3
-injuries,травмы,Three players left the field early due to **injuries** sustained in the first half.,3
+injuries,травмы,Three players left the field early due to **injuries** sustained in the first half.,3,health|doctor
 solo,соло,He decided to attempt the crossing **solo** without any support team or backup.,3
 shooter,стрелок,The **shooter** at the free-throw line missed both attempts in the final seconds.,4

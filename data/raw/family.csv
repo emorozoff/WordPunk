@@ -37,12 +37,12 @@ birth,рождение,We celebrated the **birth** of our son.,3
 death,смерть,His **death** shocked the whole family.,3
 funeral,похороны,The **funeral** was held on Monday.,3
 marry,жениться,They will **marry** next spring.,2
-wedding,свадьба,Our **wedding** was very small.,2
+wedding,свадьба,Our **wedding** was very small.,2,party
 divorce,развод,Their **divorce** was painful.,3
 propose,делать предложение,He will **propose** to her tonight.,3
 engagement,помолвка,Their **engagement** lasted two years.,3
-anniversary,годовщина,Today is our tenth **anniversary**.,3
-pregnancy,беременность,Her **pregnancy** was very easy.,3
+anniversary,годовщина,Today is our tenth **anniversary**.,3,party
+pregnancy,беременность,Her **pregnancy** was very easy.,3,health
 adopt,усыновлять,They want to **adopt** a child.,3
 love,любовь,Her **love** for him grew daily.,2
 cuddle,прижиматься,She likes to **cuddle** her puppy.,4
@@ -66,31 +66,31 @@ trust,доверять,I **trust** my family completely.,2
 trust,доверие,Family **trust** takes years to build.,3
 lie,врать,Children should never **lie** to parents.,2
 forgive,прощать,Please **forgive** your little brother.,3
-kind,добрый,My grandmother is very **kind**.,1
-mean,злой,Do not be **mean** to your sister.,2
+kind,добрый,My grandmother is very **kind**.,1,basic
+mean,злой,Do not be **mean** to your sister.,2,basic
 strict,строгий,My father is quite **strict**.,3
 gentle,нежный,Her **gentle** voice calmed the baby.,3
 loving,любящий,They are a **loving** couple.,3
-lazy,ленивый,My brother is really **lazy**.,2
-smart,умный,Her daughter is very **smart**.,2
+lazy,ленивый,My brother is really **lazy**.,2,basic
+smart,умный,Her daughter is very **smart**.,2,basic
 generous,щедрый,My uncle is so **generous**.,3
 proud,гордый,She felt **proud** of her son.,3
 jealous,ревнивый,The child was **jealous** of his brother.,3
 shy,стеснительный,My little cousin is very **shy**.,2
 visit,навещать,We **visit** grandma every weekend.,2
 gather,собираться,The family will **gather** for dinner.,3
-celebrate,праздновать,We **celebrate** birthdays together.,2
+celebrate,праздновать,We **celebrate** birthdays together.,2,party
 raise,воспитывать,She will **raise** three children alone.,3
 raise,поднимать,Please **raise** your hand now.,2
 name,называть,They will **name** the baby Anna.,2
-name,имя,What **name** did you choose?,1
+name,имя,What **name** did you choose?,1,basic
 inherit,наследовать,He will **inherit** the old house.,4
 resemble,походить,You really **resemble** your mother.,4
 remind,напоминать,You **remind** me of my father.,3
 bond,связь,The **bond** between twins is strong.,4
-grow,расти,Children **grow** up so fast.,2
+grow,расти,Children **grow** up so fast.,2,basic
 feed,кормить,She will **feed** the baby soon.,2
-teach,учить,Parents **teach** their children values.,2
+teach,учить,Parents **teach** their children values.,2,school
 protect,защищать,A father will **protect** his family.,3
 promise,обещать,I **promise** to call tomorrow.,2
 promise,обещание,A **promise** should never be broken.,3
@@ -98,10 +98,10 @@ scold,ругать,Do not **scold** the little boy.,4
 spoil,баловать,Grandparents often **spoil** their grandchildren.,4
 nurture,растить,Good parents **nurture** their children.,4
 obey,слушаться,Children must **obey** their parents.,3
-tell,рассказывать,Dad used to **tell** bedtime stories.,2
-laugh,смеяться,We **laugh** together at dinner.,2
-cry,плакать,The baby started to **cry** loudly.,2
-smile,улыбаться,Mom likes to **smile** at strangers.,2
+tell,рассказывать,Dad used to **tell** bedtime stories.,2,basic
+laugh,смеяться,We **laugh** together at dinner.,2,basic
+cry,плакать,The baby started to **cry** loudly.,2,basic
+smile,улыбаться,Mom likes to **smile** at strangers.,2,basic
 welcome,приветствовать,We will **welcome** our new sister.,3
 godparent,крёстный,His **godparent** gave him a silver spoon.,3
 godchild,крестник,She prays for her **godchild** each night.,3
@@ -119,7 +119,7 @@ guardian,опекун,Her uncle became her legal **guardian**.,3
 custody,опека,The court awarded her full **custody**.,4
 heir,наследник,He is the only **heir** to the estate.,3
 heiress,наследница,The **heiress** donated money to charity.,4
-beneficiary,получатель,She is the **beneficiary** of his will.,4
+beneficiary,получатель,She is the **beneficiary** of his will.,4,bank
 alimony,алименты,He pays **alimony** every month faithfully.,4
 kin,родня,He has no close **kin** left.,3
 kinship,родство,Their **kinship** runs through many generations.,4
@@ -132,7 +132,7 @@ matriarch,матриарх,Grandma is the **matriarch** of our clan.,4
 patriarch,патриарх,The **patriarch** gathered the whole family.,4
 clan,клан,Our **clan** meets every July fourth.,3
 bloodline,род,Their royal **bloodline** spans five centuries.,4
-dynasty,династия,The **dynasty** ruled for two hundred years.,4
+dynasty,династия,The **dynasty** ruled for two hundred years.,4,politics
 newborn,новорождённый,The **newborn** sleeps almost all day.,2
 infant,младенец,The **infant** began crying very loudly.,2
 offspring,потомство,Their **offspring** all became doctors eventually.,4
@@ -146,18 +146,18 @@ betrothed,обручённый,They became **betrothed** at a small ceremony.,4
 separated,в разводе,They have been **separated** since March.,3
 expecting,в положении,She is **expecting** her second baby.,3
 bachelor,холостяк,He remained a **bachelor** all his life.,3
-bachelorette,незамужняя,The **bachelorette** threw a small party.,4
+bachelorette,незамужняя,The **bachelorette** threw a small party.,4,party
 fiance,жених,Her **fiance** works as a firefighter.,3
 fiancee,невеста,His **fiancee** is studying medicine abroad.,3
 sweetheart,возлюбленный,She met her **sweetheart** in high school.,2
-household,домохозяйство,Our **household** has five busy members.,2
-homemaker,домохозяйка,My aunt is a proud **homemaker**.,3
-breadwinner,кормилец,He became the **breadwinner** after dad died.,3
+household,домохозяйство,Our **household** has five busy members.,2,home
+homemaker,домохозяйка,My aunt is a proud **homemaker**.,3,home
+breadwinner,кормилец,He became the **breadwinner** after dad died.,3,work
 caregiver,опекун,She is the primary **caregiver** for grandma.,3
 dependent,иждивенец,Each **dependent** reduces your tax bill.,3
 generation,поколение,Three **generations** live under one roof.,2
-reunion,воссоединение,The family **reunion** was unforgettable this year.,3
-gathering,собрание,The annual **gathering** brings everyone together.,2
+reunion,воссоединение,The family **reunion** was unforgettable this year.,3,party
+gathering,собрание,The annual **gathering** brings everyone together.,2,party
 bonding,сближение,Cooking together is our **bonding** activity.,3
 closeness,близость,I value the **closeness** of our family.,3
 affection,привязанность,He shows his **affection** with small gifts.,3
@@ -177,21 +177,21 @@ upbringing,воспитание,His **upbringing** was very traditional and stri
 discipline,дисциплина,Good **discipline** starts at a young age.,3
 tuck,укрывать,I always **tuck** my daughter in.,2
 soothe,успокаивать,She sings to **soothe** the crying baby.,3
-bathe,купать,We **bathe** the twins every single evening.,2
+bathe,купать,We **bathe** the twins every single evening.,2,home
 swaddle,пеленать,Nurses taught me how to **swaddle** him.,4
 stroller,коляска,She pushed the **stroller** around the park.,2
-crib,колыбель,The baby fell asleep in his **crib**.,3
-playpen,манеж,The toddler stayed in her **playpen**.,3
+crib,колыбель,The baby fell asleep in his **crib**.,3,home
+playpen,манеж,The toddler stayed in her **playpen**.,3,home
 pacifier,соска,Give the baby her favorite **pacifier**.,3
 lullaby,колыбельная,Mom hums a **lullaby** every single night.,2
-bedtime,перед сном,Their **bedtime** routine takes about an hour.,2
+bedtime,перед сном,Their **bedtime** routine takes about an hour.,2,home
 storytime,сказка на ночь,The kids love **storytime** before going to bed.,2
 allowance,карманные деньги,My weekly **allowance** was five dollars.,3
-chore,обязанность,Each kid has one daily **chore**.,2
+chore,обязанность,Each kid has one daily **chore**.,2,home
 curfew,комендантский час,My **curfew** was ten on weeknights.,3
 grounded,под домашним арестом,I got **grounded** for skipping my class.,3
-nanny,няня,Our **nanny** arrives at seven sharp.,2
-babysitter,няня,The **babysitter** called in sick today.,2
+nanny,няня,Our **nanny** arrives at seven sharp.,2,home
+babysitter,няня,The **babysitter** called in sick today.,2,home
 in-laws,родня супруга,My **in-laws** are visiting this weekend.,3
 mother-in-law,свекровь,His **mother-in-law** bakes amazing apple pies.,3
 father-in-law,свёкор,Her **father-in-law** owns a small bakery.,3
@@ -200,19 +200,19 @@ great-grandmother,прабабушка,Her **great-grandmother** lived to ninety
 motherhood,материнство,**Motherhood** changed her entire perspective completely.,3
 fatherhood,отцовство,**Fatherhood** taught him real patience.,3
 childhood,детство,His **childhood** was spent on a farm.,2
-childbirth,роды,Her **childbirth** was surprisingly quick and easy.,3
-paternity,отцовство,He requested a **paternity** leave last month.,4
-maternity,материнство,She starts **maternity** leave next Monday.,3
-girl,девушка,The young **girl** loves painting flowers.,1
+childbirth,роды,Her **childbirth** was surprisingly quick and easy.,3,health
+paternity,отцовство,He requested a **paternity** leave last month.,4,work
+maternity,материнство,She starts **maternity** leave next Monday.,3,work
+girl,девушка,The young **girl** loves painting flowers.,1,basic
 dad,папа,My **dad** loves cooking on weekends.,1
 mom,мама,My **mom** makes the best cookies,1
-boy,мальчик,The little **boy** was playing in the park,1
+boy,мальчик,The little **boy** was playing in the park,1,basic
 kids,дети,The **kids** are playing in the yard.,1
 kid,ребёнок,That **kid** is really talented.,1
-girls,девочки,The **girls** are at the park.,1
+girls,девочки,The **girls** are at the park.,1,basic
 married,женатый,They got **married** last summer.,2
 children,дети,The **children** are playing in the garden.,1
-boys,мальчики,The **boys** are playing soccer.,1
+boys,мальчики,The **boys** are playing soccer.,1,basic
 parents,родители,My **parents** are visiting next week.,1
 daddy,папа,"**Daddy**, can you read me a story?",1
 darling,дорогой,"Good morning, **darling**, did you sleep well?",2
@@ -225,16 +225,16 @@ boyfriend,парень,Her **boyfriend** is a really nice guy.,2
 brothers,братья,I have two **brothers** and one sister.,1
 mommy,мама,"**Mommy**, can I have some ice cream?",1
 grandma,бабушка,My **grandma** makes the best cookies ever.,1
-older,старше,My sister is two years **older** than me.,1
+older,старше,My sister is two years **older** than me.,1,basic
 grandpa,дедушка,My **grandpa** taught me how to fish.,1
 papa,папа,My **papa** taught me how to ride a bike.,1
 grown,взрослый,She has **grown** into a confident young woman.,2
-younger,младший,My **younger** brother just started school.,1
+younger,младший,My **younger** brother just started school.,1,basic
 families,семьи,Many **families** gather during the holidays.,2
 babies,малыши,The hospital has ten newborn **babies** today.,1
 sisters,сёстры,My two **sisters** live in another city,1
-wise,мудрый,My grandmother is a very **wise** woman,2
-helps,помогает,She **helps** her mother every day,1
+wise,мудрый,My grandmother is a very **wise** woman,2,basic
+helps,помогает,She **helps** her mother every day,1,basic
 engaged,помолвлен,They got **engaged** last summer in Paris,2
 sons,сыновья,They have three **sons** and one daughter,1
 beloved,любимый,He wrote a letter to his **beloved** wife.,3
@@ -245,19 +245,19 @@ ages,возрасты,Children of all **ages** love playing at this new park.,1
 selfish,эгоистичный,Don't be so **selfish** and share your toys.,3
 blessed,благословенный,We feel **blessed** to have such wonderful children.,3
 begging,умоляющий,The children were **begging** for ice cream.,3
-toy,игрушка,The child played happily with his favorite **toy**.,1
+toy,игрушка,The child played happily with his favorite **toy**.,1,shopping
 smiling,улыбающийся,The baby was **smiling** at everyone in the room.,2
 mistress,любовница,His wife discovered he had a secret **mistress**.,4
-presents,подарки,The children opened their **presents** on Christmas morning.,2
+presents,подарки,The children opened their **presents** on Christmas morning.,2,party
 divorced,разведённый,My uncle got **divorced** after twenty years of marriage.,3
 worries,беспокоится,My mother always **worries** about my safety.,2
 tradition,традиция,Christmas dinner is a family **tradition** in our house.,2
-beside,рядом,She sat **beside** her grandmother on the old sofa.,2
+beside,рядом,She sat **beside** her grandmother on the old sofa.,2,basic
 loyal,верный,My dog has been a **loyal** companion for ten years.,2
 fairy,фея,"The little girl believed in a kind **fairy**, even at ten.",2
 wives,жёны,The men brought their **wives** to the company dinner.,2
 auntie,тётушка,My **auntie** always bakes cookies when I visit her.,2
-holds,держит,She **holds** the baby gently in her arms.,2
+holds,держит,She **holds** the baby gently in her arms.,2,basic
 slap,шлепок,The toddler gave his sister a **slap** on the arm.,2
 marrying,жениться/выходить замуж,Her parents were shocked when she announced she was **marrying** someone she had met online.,3
 cries,плачет,The baby **cries** whenever she is hungry or tired.,2
@@ -268,15 +268,15 @@ granny,бабушка,My **granny** makes the best apple pie every time we visit
 arguing,спорить,The couple was **arguing** over which restaurant to go to for dinner.,2
 relatives,родственники,All our **relatives** gathered at grandma's house for the holiday dinner.,2
 elder,старший,The **elder** brother looked after his siblings while their parents worked.,2
-happily,счастливо,The kids played **happily** in the garden all afternoon without a screen.,2
+happily,счастливо,The kids played **happily** in the garden all afternoon without a screen.,2,basic
 mothers,матери,Many **mothers** return to work within six months of having a baby.,2
 feeding,кормление,**Feeding** a toddler vegetables is one of the great challenges of parenting.,3
-toys,игрушки,The children scattered their **toys** across the entire living room floor.,1
+toys,игрушки,The children scattered their **toys** across the entire living room floor.,1,shopping
 burden,бремя,Caring for an elderly parent alone can be an enormous **burden**.,4
 wisdom,мудрость,Grandparents often share their **wisdom** with younger members of the family.,3
 blessing,благословение,Having good health is a real **blessing** that many people take for granted.,3
 manners,манеры,Good **manners** at the dinner table are important in many cultures.,3
-retired,на пенсии,My grandfather is **retired** and spends most of his time gardening.,2
+retired,на пенсии,My grandfather is **retired** and spends most of his time gardening.,2,work
 christening,крещение,The whole family attended the baby's **christening** on Sunday.,3
 baptism,крещение,Her **baptism** was held at the small riverside church.,3
 memorial,поминки,We held a quiet **memorial** for my grandfather last spring.,3
@@ -296,14 +296,14 @@ praise,похвала,Children thrive when they receive genuine **praise** for t
 permissive,попустительский,Some experts say overly **permissive** parenting leads to entitlement.,4
 cherish,дорожить,I **cherish** every moment spent with my aging parents.,3
 wean,отлучать от груди,The doctor advised her to **wean** the baby at six months.,4
-puberty,половое созревание,Talking openly about **puberty** helps teenagers feel less confused.,4
+puberty,половое созревание,Talking openly about **puberty** helps teenagers feel less confused.,4,health
 blended,смешанная (о семье),Their **blended** family came together beautifully after the wedding.,3
-prenatal,дородовой,She attended every **prenatal** checkup during her pregnancy.,3
-postnatal,послеродовой,The clinic offers free **postnatal** support to all new mothers.,4
-postpartum,послеродовой,She struggled with **postpartum** depression after the birth.,4
+prenatal,дородовой,She attended every **prenatal** checkup during her pregnancy.,3,health
+postnatal,послеродовой,The clinic offers free **postnatal** support to all new mothers.,4,health
+postpartum,послеродовой,She struggled with **postpartum** depression after the birth.,4,health
 rivalry,соперничество,Sibling **rivalry** is completely normal in large families.,3
-heredity,наследственность,Many personality traits are shaped by **heredity** and environment equally.,4
-genetics,генетика,The doctor explained that the condition was linked to **genetics**.,4
+heredity,наследственность,Many personality traits are shaped by **heredity** and environment equally.,4,science
+genetics,генетика,The doctor explained that the condition was linked to **genetics**.,4,science
 memento,сувенир на память,She kept the old watch as a **memento** of her late father.,4
 obituary,некролог,The family wrote a heartfelt **obituary** for the local newspaper.,4
 condolence,соболезнование,He sent a card expressing his **condolence** after her loss.,4
@@ -322,10 +322,10 @@ separation,разлучение,The family went through a long **separation** be
 annulment,аннулирование брака,The court granted an **annulment** because the marriage was invalid.,5
 mediation,медиация,They chose **mediation** to settle custody without going to court.,4
 surrogate,суррогатная мать,A generous **surrogate** carried their baby for nine months.,4
-miscarriage,выкидыш,She opened up about her **miscarriage** to help other women.,4
-stillbirth,мертворождённость,The parents quietly mourned their **stillbirth** with close family.,5
-premature,недоношенный,Their **premature** baby spent six weeks in the hospital.,3
-pediatrics,педиатрия,The clinic specializes in **pediatrics** and family health.,4
+miscarriage,выкидыш,She opened up about her **miscarriage** to help other women.,4,health
+stillbirth,мертворождённость,The parents quietly mourned their **stillbirth** with close family.,5,health
+premature,недоношенный,Their **premature** baby spent six weeks in the hospital.,3,health
+pediatrics,педиатрия,The clinic specializes in **pediatrics** and family health.,4,doctor
 breastfeed,кормить грудью,She chose to **breastfeed** her son for the first year.,3
 teether,прорезыватель,The baby chewed on his **teether** to ease the pain.,3
 tantrum,истерика,Her toddler threw a **tantrum** in the middle of the grocery store.,2
@@ -345,11 +345,11 @@ outgrow,перерасти,Kids **outgrow** their clothes so quickly in the firs
 sorrow,печаль,The **sorrow** of losing a parent never fully goes away.,3
 reminisce,вспоминать,The siblings sat together and **reminisced** about their childhood summers.,4
 legacy,наследие,He wanted to leave a **legacy** of kindness for his children.,3
-provider,кормилец,After the job loss he struggled with his role as **provider**.,3
+provider,кормилец,After the job loss he struggled with his role as **provider**.,3,work
 reprimand,выговор,She gave her son a firm **reprimand** for lying to the teacher.,4
 courtship,ухаживание,Their **courtship** lasted two years before he finally proposed.,3
 dowry,приданое,In some cultures a **dowry** is still expected at marriage.,4
-nuptials,бракосочетание,The whole village gathered to celebrate the young couple's **nuptials**.,4
+nuptials,бракосочетание,The whole village gathered to celebrate the young couple's **nuptials**.,4,party
 leniency,снисходительность,The teacher's **leniency** was appreciated by students with younger siblings.,4
 adolescence,подростковый возраст,**Adolescence** is often the most challenging phase for both parent and child.,3
 breastfeeding,грудное вскармливание,Experts recommend **breastfeeding** for at least the first six months.,3
@@ -362,7 +362,7 @@ grandson,внук,The old man beamed with pride when his **grandson** graduated 
 raising,воспитание / поднятие,**Raising** children is one of the most rewarding challenges in life.,3
 ancestors,предки,She learned a lot about her **ancestors** by studying old records.,3
 prayers,молитвы,The family said their **prayers** before sitting down to eat.,3
-closest,ближайший,She told her **closest** friend about the plan first.,2
+closest,ближайший,She told her **closest** friend about the plan first.,2,basic
 commitment,обязательство,Marriage is a serious **commitment** that takes work every day.,4
 embrace,обнимать,She ran to **embrace** her son after months apart.,3
 communicate,общаться,It is important to **communicate** openly with your partner.,3

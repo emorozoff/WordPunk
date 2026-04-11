@@ -1,308 +1,308 @@
 english,russian,sentence,difficulty
-hospital,больница,She works at the **hospital** downtown.,1
-clinic,клиника,The **clinic** opens at eight.,2
-ward,палата,The **ward** was quiet at night.,3
-pharmacy,аптека,I bought pills at the **pharmacy**.,2
-lab,лаборатория,The **lab** tested my samples quickly.,2
-surgeon,хирург,The **surgeon** performed a long operation.,3
-dentist,стоматолог,My **dentist** checked my teeth today.,2
-pharmacist,фармацевт,The **pharmacist** explained the dose clearly.,3
-physician,врач,Her **physician** ordered more tests.,3
-paramedic,парамедик,The **paramedic** arrived within minutes.,3
-midwife,акушерка,The **midwife** delivered a healthy baby.,3
-specialist,специалист,A **specialist** reviewed her case.,2
-patient,пациент,The **patient** is resting now.,2
+hospital,больница,She works at the **hospital** downtown.,1,health
+clinic,клиника,The **clinic** opens at eight.,2,health
+ward,палата,The **ward** was quiet at night.,3,health
+pharmacy,аптека,I bought pills at the **pharmacy**.,2,health
+lab,лаборатория,The **lab** tested my samples quickly.,2,science
+surgeon,хирург,The **surgeon** performed a long operation.,3,health
+dentist,стоматолог,My **dentist** checked my teeth today.,2,health
+pharmacist,фармацевт,The **pharmacist** explained the dose clearly.,3,health
+physician,врач,Her **physician** ordered more tests.,3,health
+paramedic,парамедик,The **paramedic** arrived within minutes.,3,health
+midwife,акушерка,The **midwife** delivered a healthy baby.,3,health
+specialist,специалист,A **specialist** reviewed her case.,2,work
+patient,пациент,The **patient** is resting now.,2,health
 patient,терпеливый,Please be **patient** with her.,2
-eye,глаз,My left **eye** hurts today.,1
-ear,ухо,Water got into my **ear**.,1
-nose,нос,Her **nose** is running badly.,1
-mouth,рот,Open your **mouth** wide please.,1
-tooth,зуб,My **tooth** really aches tonight.,1
-tongue,язык,Stick out your **tongue** please.,2
-throat,горло,My **throat** feels very sore.,2
-shoulder,плечо,My **shoulder** hurts after work.,2
-shoulder,обочина,He stopped on the road **shoulder**.,3
-elbow,локоть,I hit my **elbow** hard.,2
-wrist,запястье,She sprained her **wrist** yesterday.,3
-finger,палец,I cut my **finger** badly.,1
-thumb,большой палец,My **thumb** is swollen today.,2
-chest,грудь,He felt pain in his **chest**.,2
-chest,сундук,Grandma keeps jewelry in a **chest**.,3
-hip,бедро,Her **hip** hurts when walking.,2
-knee,колено,I hurt my **knee** running.,1
-ankle,лодыжка,She twisted her **ankle** dancing.,3
-toe,палец ноги,I broke my little **toe**.,2
-skin,кожа,His **skin** is very dry.,1
-bone,кость,The **bone** healed quickly.,2
-muscle,мышца,My **muscle** is very sore.,2
-blood,кровь,There was **blood** on his shirt.,1
-heart,сердце,His **heart** beats too fast.,1
+eye,глаз,My left **eye** hurts today.,1,health
+ear,ухо,Water got into my **ear**.,1,health
+nose,нос,Her **nose** is running badly.,1,health
+mouth,рот,Open your **mouth** wide please.,1,health
+tooth,зуб,My **tooth** really aches tonight.,1,health
+tongue,язык,Stick out your **tongue** please.,2,health
+throat,горло,My **throat** feels very sore.,2,health
+shoulder,плечо,My **shoulder** hurts after work.,2,health
+shoulder,обочина,He stopped on the road **shoulder**.,3,driving
+elbow,локоть,I hit my **elbow** hard.,2,health
+wrist,запястье,She sprained her **wrist** yesterday.,3,health
+finger,палец,I cut my **finger** badly.,1,health
+thumb,большой палец,My **thumb** is swollen today.,2,health
+chest,грудь,He felt pain in his **chest**.,2,health
+chest,сундук,Grandma keeps jewelry in a **chest**.,3,home
+hip,бедро,Her **hip** hurts when walking.,2,health
+knee,колено,I hurt my **knee** running.,1,health|sports
+ankle,лодыжка,She twisted her **ankle** dancing.,3,health
+toe,палец ноги,I broke my little **toe**.,2,health
+skin,кожа,His **skin** is very dry.,1,health
+bone,кость,The **bone** healed quickly.,2,health
+muscle,мышца,My **muscle** is very sore.,2,health|sports
+blood,кровь,There was **blood** on his shirt.,1,health
+heart,сердце,His **heart** beats too fast.,1,health
 heart,суть,Let's get to the **heart** of it.,4
-lung,лёгкое,The left **lung** looks clear.,3
-liver,печень,Alcohol damages the **liver** badly.,3
-kidney,почка,Her **kidney** works normally again.,3
-brain,мозг,The **brain** controls every move.,2
-stomach,желудок,My **stomach** hurts after eating.,2
-nerve,нерв,He pinched a **nerve** today.,3
+lung,лёгкое,The left **lung** looks clear.,3,health
+liver,печень,Alcohol damages the **liver** badly.,3,health
+kidney,почка,Her **kidney** works normally again.,3,health
+brain,мозг,The **brain** controls every move.,2,health|science
+stomach,желудок,My **stomach** hurts after eating.,2,health
+nerve,нерв,He pinched a **nerve** today.,3,health
 nerve,смелость,She had the **nerve** to lie.,4
-joint,сустав,My knee **joint** is stiff.,3
-joint,совместный,It was a **joint** project.,3
-vein,вена,The nurse found a good **vein**.,3
-organ,орган,The heart is a vital **organ**.,2
-pain,боль,The **pain** got worse overnight.,1
-ache,ноющая боль,I have a constant **ache** here.,2
-fever,жар,The child has a high **fever**.,2
-cough,кашель,Her **cough** sounds very bad.,2
-dizzy,головокружение,I feel **dizzy** when standing.,2
-weak,слабый,She felt **weak** after surgery.,1
-sore,больной,My legs are **sore** today.,2
-swollen,опухший,His ankle is badly **swollen**.,3
-itchy,зудящий,The rash is very **itchy**.,3
-numb,онемевший,My hand went completely **numb**.,3
-nausea,тошнота,Strong **nausea** hit her suddenly.,4
-faint,падать в обморок,She might **faint** from heat.,3
-bruise,синяк,A big **bruise** formed on his leg.,3
-scratch,царапина,It's just a small **scratch**.,2
-rash,сыпь,A red **rash** covered his arms.,3
-lump,шишка,She found a **lump** on her neck.,3
-blister,волдырь,A **blister** formed on his heel.,3
-cramp,судорога,Leg **cramp** woke me up.,3
-flu,грипп,The **flu** hit our office hard.,2
-allergy,аллергия,She has a cat **allergy**.,2
-infection,инфекция,The **infection** spread quickly.,3
-virus,вирус,A new **virus** appeared last winter.,2
-headache,головная боль,A bad **headache** ruined my day.,2
-migraine,мигрень,Her **migraine** lasted all night.,4
-asthma,астма,He carries **asthma** medicine always.,3
-diabetes,диабет,Her **diabetes** is well controlled.,3
-cancer,рак,They cured his **cancer** early.,2
-fracture,перелом,She has a hairline **fracture**.,3
-sprain,растяжение,The **sprain** will heal soon.,3
-burn,ожог,The **burn** left a small scar.,2
+joint,сустав,My knee **joint** is stiff.,3,health
+joint,совместный,It was a **joint** project.,3,work
+vein,вена,The nurse found a good **vein**.,3,health
+organ,орган,The heart is a vital **organ**.,2,health
+pain,боль,The **pain** got worse overnight.,1,health
+ache,ноющая боль,I have a constant **ache** here.,2,health
+fever,жар,The child has a high **fever**.,2,health
+cough,кашель,Her **cough** sounds very bad.,2,health
+dizzy,головокружение,I feel **dizzy** when standing.,2,health
+weak,слабый,She felt **weak** after surgery.,1,health
+sore,больной,My legs are **sore** today.,2,health
+swollen,опухший,His ankle is badly **swollen**.,3,health
+itchy,зудящий,The rash is very **itchy**.,3,health
+numb,онемевший,My hand went completely **numb**.,3,health
+nausea,тошнота,Strong **nausea** hit her suddenly.,4,health
+faint,падать в обморок,She might **faint** from heat.,3,health
+bruise,синяк,A big **bruise** formed on his leg.,3,health
+scratch,царапина,It's just a small **scratch**.,2,health
+rash,сыпь,A red **rash** covered his arms.,3,health
+lump,шишка,She found a **lump** on her neck.,3,health
+blister,волдырь,A **blister** formed on his heel.,3,health
+cramp,судорога,Leg **cramp** woke me up.,3,health
+flu,грипп,The **flu** hit our office hard.,2,health
+allergy,аллергия,She has a cat **allergy**.,2,health
+infection,инфекция,The **infection** spread quickly.,3,health
+virus,вирус,A new **virus** appeared last winter.,2,health
+headache,головная боль,A bad **headache** ruined my day.,2,health
+migraine,мигрень,Her **migraine** lasted all night.,4,health
+asthma,астма,He carries **asthma** medicine always.,3,health
+diabetes,диабет,Her **diabetes** is well controlled.,3,health
+cancer,рак,They cured his **cancer** early.,2,health
+fracture,перелом,She has a hairline **fracture**.,3,health
+sprain,растяжение,The **sprain** will heal soon.,3,health|sports
+burn,ожог,The **burn** left a small scar.,2,health
 burn,гореть,Wood can **burn** very fast.,1
-wound,рана,The **wound** needs fresh bandages.,3
-injury,травма,His **injury** took months to heal.,2
-illness,болезнь,Her **illness** came without warning.,2
-disease,заболевание,The **disease** spreads through water.,2
-pill,таблетка,Take one **pill** after meals.,2
-capsule,капсула,Swallow the **capsule** with water.,3
-tablet,таблетка,One **tablet** twice a day.,2
-tablet,планшет,He reads news on his **tablet**.,2
-syrup,сироп,Cough **syrup** helped my throat.,2
-cream,крем,Apply this **cream** twice daily.,1
-cream,сливки,Add **cream** to your coffee.,1
-ointment,мазь,Rub the **ointment** on gently.,3
-bandage,бинт,Wrap the **bandage** around tightly.,3
-plaster,пластырь,Put a **plaster** on the cut.,3
-cast,гипс,The doctor put a **cast** on his arm.,3
+wound,рана,The **wound** needs fresh bandages.,3,health
+injury,травма,His **injury** took months to heal.,2,health|sports
+illness,болезнь,Her **illness** came without warning.,2,health
+disease,заболевание,The **disease** spreads through water.,2,health
+pill,таблетка,Take one **pill** after meals.,2,health
+capsule,капсула,Swallow the **capsule** with water.,3,health
+tablet,таблетка,One **tablet** twice a day.,2,health
+tablet,планшет,He reads news on his **tablet**.,2,internet
+syrup,сироп,Cough **syrup** helped my throat.,2,health
+cream,крем,Apply this **cream** twice daily.,1,health
+cream,сливки,Add **cream** to your coffee.,1,kitchen
+ointment,мазь,Rub the **ointment** on gently.,3,health
+bandage,бинт,Wrap the **bandage** around tightly.,3,health
+plaster,пластырь,Put a **plaster** on the cut.,3,health
+cast,гипс,The doctor put a **cast** on his arm.,3,health
 cast,бросать,He can **cast** a stone far.,3
-crutch,костыль,She uses a **crutch** to walk.,4
-wheelchair,инвалидная коляска,He moves by **wheelchair** now.,2
-vaccine,вакцина,The new **vaccine** works well.,2
+crutch,костыль,She uses a **crutch** to walk.,4,health
+wheelchair,инвалидная коляска,He moves by **wheelchair** now.,2,health
+vaccine,вакцина,The new **vaccine** works well.,2,health
 stethoscope,стетоскоп,The doctor pressed a cold **stethoscope** to my chest.,2
 scalpel,скальпель,The surgeon held the **scalpel** above the patient.,3
 forceps,щипцы,The nurse passed sterile **forceps** to the surgeon.,4
 tourniquet,жгут,He tied a **tourniquet** above the bleeding arm.,3
 speculum,зеркало,The gynecologist prepared a warm **speculum** for the exam.,5
 otoscope,отоскоп,She used an **otoscope** to check his ears.,4
-swab,мазок,The nurse took a throat **swab** for testing.,3
-syringe,шприц,The nurse filled the **syringe** with clear liquid.,2
+swab,мазок,The nurse took a throat **swab** for testing.,3,health
+syringe,шприц,The nurse filled the **syringe** with clear liquid.,2,health
 gurney,каталка,They wheeled him in on a **gurney**.,4
-splint,шина,The paramedic wrapped a **splint** around my leg.,3
-sling,повязка,He wore an arm **sling** for three weeks.,2
+splint,шина,The paramedic wrapped a **splint** around my leg.,3,health
+sling,повязка,He wore an arm **sling** for three weeks.,2,health
 bedside,у кровати,The doctor stood at my **bedside** all night.,3
 wristband,браслет,The patient wore a plastic **wristband** with her name.,3
 suture,шов,She removed the tight **suture** with tiny scissors.,4
-stitch,стежок,The doctor put one neat **stitch** in my chin.,2
-stitches,швы,I need five **stitches** on my forehead today.,2
-scar,шрам,A thin **scar** remains above his eyebrow.,2
-scab,корочка,Don't pick the **scab** on your knee.,3
-biopsy,биопсия,The specialist ordered a **biopsy** of the lump.,4
-mammogram,маммограмма,Women over forty need a yearly **mammogram**.,5
-endoscopy,эндоскопия,The **endoscopy** took less than twenty minutes.,5
-colonoscopy,колоноскопия,My father scheduled his first **colonoscopy** last month.,5
-ultrasound,ультразвук,The **ultrasound** showed a healthy baby girl.,2
-mri,мрт,She needs an **mri** of her knee soon.,3
-ekg,экг,The technician attached wires for an **ekg**.,4
-bloodwork,анализы,The doctor ordered routine **bloodwork** this morning.,4
-xray,рентген,The **xray** showed no broken bones.,2
-checkup,осмотр,I go for a yearly **checkup** every spring.,2
-appointment,приём,I have an **appointment** with my doctor tomorrow.,2
-referral,направление,The doctor wrote a **referral** to a specialist.,3
-prescription,рецепт,She filled her **prescription** at the corner pharmacy.,2
-copay,доплата,My **copay** for each visit is thirty dollars.,4
+stitch,стежок,The doctor put one neat **stitch** in my chin.,2,health
+stitches,швы,I need five **stitches** on my forehead today.,2,health
+scar,шрам,A thin **scar** remains above his eyebrow.,2,health
+scab,корочка,Don't pick the **scab** on your knee.,3,health
+biopsy,биопсия,The specialist ordered a **biopsy** of the lump.,4,health
+mammogram,маммограмма,Women over forty need a yearly **mammogram**.,5,health
+endoscopy,эндоскопия,The **endoscopy** took less than twenty minutes.,5,health
+colonoscopy,колоноскопия,My father scheduled his first **colonoscopy** last month.,5,health
+ultrasound,ультразвук,The **ultrasound** showed a healthy baby girl.,2,health
+mri,мрт,She needs an **mri** of her knee soon.,3,health
+ekg,экг,The technician attached wires for an **ekg**.,4,health
+bloodwork,анализы,The doctor ordered routine **bloodwork** this morning.,4,health
+xray,рентген,The **xray** showed no broken bones.,2,health
+checkup,осмотр,I go for a yearly **checkup** every spring.,2,health
+appointment,приём,I have an **appointment** with my doctor tomorrow.,2,health
+referral,направление,The doctor wrote a **referral** to a specialist.,3,health
+prescription,рецепт,She filled her **prescription** at the corner pharmacy.,2,health
+copay,доплата,My **copay** for each visit is thirty dollars.,4,health
 deductible,франшиза,I must pay the **deductible** before insurance helps.,5
 claim,страховка,She filed an insurance **claim** after the surgery.,3
-chart,карта,The doctor wrote notes in my **chart**.,2
-admission,поступление,Her **admission** to the hospital was on Tuesday.,4
-discharge,выписка,My **discharge** from the hospital was delayed.,3
-followup,повторный,The doctor scheduled a **followup** in two weeks.,3
-triage,сортировка,The **triage** nurse asked about my pain level.,4
-icu,реанимация,Grandfather spent three days in the **icu**.,3
-operating room,операционная,The patient was wheeled into the **operating room**.,3
-recovery room,палата восстановления,She woke up in the **recovery room** slowly.,3
-exam room,кабинет,The nurse showed me to the **exam room**.,2
-waiting room,приёмная,The **waiting room** was crowded with sick children.,2
-surgery,операция,Her heart **surgery** lasted over six hours.,2
-anesthesia,анестезия,They gave me general **anesthesia** before surgery.,3
-anesthetic,анестетик,The dentist injected a local **anesthetic** slowly.,4
-sedative,успокоительное,The nurse gave him a mild **sedative** first.,4
-painkiller,обезболивающее,Take one **painkiller** every six hours please.,2
-antibiotic,антибиотик,The doctor prescribed an **antibiotic** for my infection.,2
-antiseptic,антисептик,She cleaned the cut with **antiseptic** liquid.,3
-gauze,марля,The nurse wrapped my wound in clean **gauze**.,3
-dosage,дозировка,Follow the **dosage** instructions on the bottle.,3
-dose,доза,Take one **dose** twice a day.,2
-refill,рецепт,I need a **refill** on my medication today.,3
-orthopedist,ортопед,The **orthopedist** examined the child's crooked spine carefully.,4
+chart,карта,The doctor wrote notes in my **chart**.,2,health
+admission,поступление,Her **admission** to the hospital was on Tuesday.,4,health
+discharge,выписка,My **discharge** from the hospital was delayed.,3,health
+followup,повторный,The doctor scheduled a **followup** in two weeks.,3,health
+triage,сортировка,The **triage** nurse asked about my pain level.,4,health
+icu,реанимация,Grandfather spent three days in the **icu**.,3,health
+operating room,операционная,The patient was wheeled into the **operating room**.,3,health
+recovery room,палата восстановления,She woke up in the **recovery room** slowly.,3,health
+exam room,кабинет,The nurse showed me to the **exam room**.,2,health
+waiting room,приёмная,The **waiting room** was crowded with sick children.,2,health
+surgery,операция,Her heart **surgery** lasted over six hours.,2,health
+anesthesia,анестезия,They gave me general **anesthesia** before surgery.,3,health
+anesthetic,анестетик,The dentist injected a local **anesthetic** slowly.,4,health
+sedative,успокоительное,The nurse gave him a mild **sedative** first.,4,health
+painkiller,обезболивающее,Take one **painkiller** every six hours please.,2,health
+antibiotic,антибиотик,The doctor prescribed an **antibiotic** for my infection.,2,health
+antiseptic,антисептик,She cleaned the cut with **antiseptic** liquid.,3,health
+gauze,марля,The nurse wrapped my wound in clean **gauze**.,3,health
+dosage,дозировка,Follow the **dosage** instructions on the bottle.,3,health
+dose,доза,Take one **dose** twice a day.,2,health
+refill,рецепт,I need a **refill** on my medication today.,3,health
+orthopedist,ортопед,The **orthopedist** examined the child's crooked spine carefully.,4,health
 scrubs,костюм,The doctors wore blue **scrubs** during rounds.,3
-rounds,обход,The attending physician made her morning **rounds** quickly.,4
-symptom,симптом,A high fever is a common **symptom**.,2
-hives,крапивница,Strawberries give me itchy **hives** every time.,3
-itch,зуд,The mosquito bite caused a terrible **itch**.,2
-swelling,опухоль,The **swelling** around his ankle looked concerning.,2
-bleed,кровотечение,The cut continued to **bleed** for minutes.,2
-clot,сгусток,A blood **clot** in his leg caused pain.,4
-pulse,пульс,The nurse checked his **pulse** every hour.,2
-heartbeat,сердцебиение,She listened to the baby's **heartbeat** carefully.,2
-wheeze,хрип,The child began to **wheeze** during the night.,4
-choke,задыхаться,The old man started to **choke** on water.,3
-vomit,рвать,The sick child began to **vomit** suddenly.,3
-seizure,припадок,He had a brief **seizure** after the fall.,4
-concussion,сотрясение,The football player suffered a mild **concussion**.,4
-shot,укол,The child cried after getting a **shot**.,2
-trauma,травма,The emergency team treated his head **trauma** quickly.,3
-relapse,рецидив,She had a painful **relapse** after treatment.,4
-remedy,средство,My grandmother's home **remedy** worked overnight.,3
-cure,лекарство,Scientists are searching for a **cure** tonight.,2
-therapist,терапевт,Her **therapist** helped her through recovery.,2
-physical therapy,физиотерапия,He started **physical therapy** after the surgery.,2
-rehab,реабилитация,She entered **rehab** for her knee injury.,3
-prognosis,прогноз,The **prognosis** for recovery looks very good.,4
-diagnosis,диагноз,The **diagnosis** explained all his strange symptoms.,3
-diagnose,диагностировать,Doctors can now **diagnose** the disease early.,3
-prescribe,назначать,Only a doctor can **prescribe** this medication.,3
-inject,вводить,The nurse will **inject** the vaccine slowly.,2
-injection,инъекция,The **injection** hurt less than I expected.,2
-vaccinate,прививать,We should **vaccinate** all the children soon.,3
-vaccination,вакцинация,My child's **vaccination** is scheduled for Friday.,3
-sedate,усыплять,They had to **sedate** the frightened patient.,4
-examine,осматривать,The doctor will **examine** you in a minute.,2
-resuscitate,реанимировать,Medics tried to **resuscitate** the drowning man.,5
-tendon,сухожилие,He tore a **tendon** playing basketball yesterday.,4
-ligament,связка,She stretched a **ligament** in her knee badly.,4
-cartilage,хрящ,The **cartilage** in his knee is wearing down.,5
-artery,артерия,A blocked **artery** led to his heart attack.,4
-tumor,опухоль,The doctor found a small **tumor** in her breast.,3
-ulcer,язва,Stress caused a painful **ulcer** in his stomach.,4
-hernia,грыжа,He needs surgery for his **hernia** next month.,4
-arthritis,артрит,Her **arthritis** makes mornings very difficult.,3
-medical,медицинский,He needs immediate **medical** attention right now.,3
-drug,лекарство,This **drug** helps with chronic pain.,3
-emergency,чрезвычайная ситуация,Call 911 in case of an **emergency**.,2
-operation,операция,The **operation** went smoothly and lasted two hours.,3
-doctors,врачи,The **doctors** worked hard to save his life.,2
-patients,пациенты,The doctor sees many **patients** each day.,2
-treatment,лечение,The doctor recommended a new **treatment** for the illness.,3
-treated,лечил,The doctor **treated** my broken arm,3
-cardiologist,кардиолог,The **cardiologist** reviewed his heart scan results carefully.,3
-neurologist,невролог,A **neurologist** diagnosed her chronic migraine condition.,3
-oncologist,онколог,The **oncologist** explained the next treatment phase.,3
-dermatologist,дерматолог,Her **dermatologist** prescribed cream for the stubborn eczema.,3
-endocrinologist,эндокринолог,The **endocrinologist** adjusted his daily insulin dose.,4
-gastroenterologist,гастроэнтеролог,A **gastroenterologist** should examine that stomach pain.,4
-urologist,уролог,The **urologist** ordered a kidney function test.,3
-pulmonologist,пульмонолог,A **pulmonologist** treats serious lung diseases every day.,4
-rheumatologist,ревматолог,The **rheumatologist** confirmed his joint inflammation diagnosis.,4
-gynecologist,гинеколог,She scheduled her yearly **gynecologist** exam next week.,3
-obstetrician,акушер,The **obstetrician** delivered their first baby last night.,3
-pediatrician,педиатр,Our **pediatrician** gave the toddler her routine shots.,3
-radiologist,рентгенолог,The **radiologist** examined her chest scan images closely.,3
-anesthesiologist,анестезиолог,The **anesthesiologist** monitored vital signs during surgery.,4
-ophthalmologist,офтальмолог,Her **ophthalmologist** detected early signs of glaucoma.,4
-psychiatrist,психиатр,A **psychiatrist** prescribed antidepressants for his condition.,3
-podiatrist,подиатр,The **podiatrist** treated his painful ingrown toenail.,4
-hematologist,гематолог,A **hematologist** studies blood disorders and diseases.,4
-nephrologist,нефролог,The **nephrologist** placed him on dialysis treatment.,4
-angiogram,ангиограмма,His **angiogram** showed two blocked coronary arteries.,4
-angioplasty,ангиопластика,Doctors performed an emergency **angioplasty** to clear the artery.,4
-catheter,катетер,The nurse inserted a **catheter** before the procedure.,3
-laparoscopy,лапароскопия,A **laparoscopy** is less invasive than open surgery.,4
-chemotherapy,химиотерапия,Her **chemotherapy** caused severe nausea and hair loss.,3
-radiotherapy,лучевая терапия,Daily **radiotherapy** sessions shrank the brain tumor.,4
-immunotherapy,иммунотерапия,**Immunotherapy** helps the body fight cancer cells naturally.,4
-dialysis,диализ,He goes to **dialysis** three times every week.,3
-transplant,трансплантация,The kidney **transplant** saved his life last year.,3
-amputation,ампутация,The **amputation** was the only remaining option.,4
-eeg,ээг,An **eeg** recorded unusual brain wave activity.,4
-echocardiogram,эхокардиограмма,An **echocardiogram** shows how the heart valves move.,4
-urinalysis,анализ мочи,A routine **urinalysis** detected traces of blood.,4
-cholesterol,холестерин,His **cholesterol** level remains dangerously high today.,3
-carcinoma,карцинома,The biopsy confirmed a small skin **carcinoma**.,4
-leukemia,лейкемия,Childhood **leukemia** has become much more treatable.,4
-lymphoma,лимфома,The **lymphoma** responded well to immunotherapy treatment.,4
-hypertension,гипертония,Chronic **hypertension** can damage your kidneys and heart.,3
-arrhythmia,аритмия,His **arrhythmia** was controlled with daily medication.,4
-aneurysm,аневризма,Doctors discovered a small aortic **aneurysm** during screening.,4
-embolism,эмболия,A pulmonary **embolism** can be rapidly fatal.,4
-pneumonia,пневмония,The elderly patient developed **pneumonia** after surgery.,3
-bronchitis,бронхит,Her chronic **bronchitis** worsens during cold weather.,3
-tuberculosis,туберкулёз,**Tuberculosis** still affects millions of people worldwide.,3
-hepatitis,гепатит,He tested positive for **hepatitis** during his checkup.,3
-cirrhosis,цирроз,Heavy drinking caused his advanced liver **cirrhosis**.,4
-osteoporosis,остеопороз,**Osteoporosis** makes bones fragile and easily broken.,4
-dementia,деменция,Her grandmother struggles with early stage **dementia**.,3
-melanoma,меланома,Early detection of **melanoma** saves countless lives.,4
-sepsis,сепсис,The wound infection progressed to severe **sepsis**.,4
-analgesic,обезболивающее,The dentist gave him a strong **analgesic** afterward.,4
-antiviral,противовирусное,The **antiviral** medication shortened her flu symptoms.,3
-antifungal,противогрибковое,An **antifungal** cream cleared up her skin rash.,4
-antihistamine,антигистамин,She takes an **antihistamine** for her seasonal allergies.,3
-decongestant,противозастойное,A nasal **decongestant** helped clear his blocked nose.,3
-diuretic,диуретик,The **diuretic** reduced his swelling and blood pressure.,4
-insulin,инсулин,He injects **insulin** every morning before breakfast.,3
-placebo,плацебо,The **placebo** group showed surprising improvement anyway.,3
-jaundice,желтуха,The baby developed mild **jaundice** right after birth.,4
-lesion,повреждение,The **lesion** on his arm needed a biopsy.,4
-spasm,спазм,A sudden muscle **spasm** made him drop the glass.,3
-tremor,тремор,His hand **tremor** worsened over the last year.,3
-paralysis,паралич,The stroke caused temporary **paralysis** on her left side.,4
-vertigo,головокружение,Severe **vertigo** left him unable to stand upright.,4
-diarrhea,диарея,The child had **diarrhea** for three straight days.,2
-constipation,запор,Fiber really helps prevent **constipation** in older adults.,3
-tachycardia,тахикардия,**Tachycardia** means the heart beats too quickly.,4
-ventilator,аппарат ивл,The patient needed a **ventilator** to breathe properly.,3
-cpr,сердечно-лёгочная реанимация,The bystander performed **cpr** until the ambulance arrived.,3
-defibrillator,дефибриллятор,The **defibrillator** restored his normal heart rhythm instantly.,4
-transfusion,переливание крови,He received a blood **transfusion** after the accident.,3
-donor,донор,The organ **donor** saved three different lives.,3
-chronic,хронический,She has suffered from **chronic** back pain for years.,3
-acute,острый,The **acute** appendicitis required immediate surgical intervention.,3
-benign,доброкачественный,Thankfully the tumor turned out to be **benign**.,3
-malignant,злокачественный,The cells were identified as **malignant** under microscope.,4
-remission,ремиссия,Her cancer has been in full **remission** for years.,4
-quarantine,карантин,Infected patients remained in **quarantine** for two weeks.,3
-contagious,заразный,The measles virus is highly **contagious** among children.,3
-antibody,антитело,The blood test measured his **antibody** levels precisely.,3
-chiropractor,хиропрактик,The **chiropractor** adjusted his lower back gently.,3
-painful,болезненный,The injection was more **painful** than I expected.,3
+rounds,обход,The attending physician made her morning **rounds** quickly.,4,health
+symptom,симптом,A high fever is a common **symptom**.,2,health
+hives,крапивница,Strawberries give me itchy **hives** every time.,3,health
+itch,зуд,The mosquito bite caused a terrible **itch**.,2,health
+swelling,опухоль,The **swelling** around his ankle looked concerning.,2,health
+bleed,кровотечение,The cut continued to **bleed** for minutes.,2,health
+clot,сгусток,A blood **clot** in his leg caused pain.,4,health
+pulse,пульс,The nurse checked his **pulse** every hour.,2,health
+heartbeat,сердцебиение,She listened to the baby's **heartbeat** carefully.,2,health
+wheeze,хрип,The child began to **wheeze** during the night.,4,health
+choke,задыхаться,The old man started to **choke** on water.,3,health
+vomit,рвать,The sick child began to **vomit** suddenly.,3,health
+seizure,припадок,He had a brief **seizure** after the fall.,4,health
+concussion,сотрясение,The football player suffered a mild **concussion**.,4,health|sports
+shot,укол,The child cried after getting a **shot**.,2,health
+trauma,травма,The emergency team treated his head **trauma** quickly.,3,health
+relapse,рецидив,She had a painful **relapse** after treatment.,4,health
+remedy,средство,My grandmother's home **remedy** worked overnight.,3,health
+cure,лекарство,Scientists are searching for a **cure** tonight.,2,health
+therapist,терапевт,Her **therapist** helped her through recovery.,2,health
+physical therapy,физиотерапия,He started **physical therapy** after the surgery.,2,health
+rehab,реабилитация,She entered **rehab** for her knee injury.,3,health
+prognosis,прогноз,The **prognosis** for recovery looks very good.,4,health
+diagnosis,диагноз,The **diagnosis** explained all his strange symptoms.,3,health
+diagnose,диагностировать,Doctors can now **diagnose** the disease early.,3,health
+prescribe,назначать,Only a doctor can **prescribe** this medication.,3,health
+inject,вводить,The nurse will **inject** the vaccine slowly.,2,health
+injection,инъекция,The **injection** hurt less than I expected.,2,health
+vaccinate,прививать,We should **vaccinate** all the children soon.,3,health
+vaccination,вакцинация,My child's **vaccination** is scheduled for Friday.,3,health
+sedate,усыплять,They had to **sedate** the frightened patient.,4,health
+examine,осматривать,The doctor will **examine** you in a minute.,2,health
+resuscitate,реанимировать,Medics tried to **resuscitate** the drowning man.,5,health
+tendon,сухожилие,He tore a **tendon** playing basketball yesterday.,4,health|sports
+ligament,связка,She stretched a **ligament** in her knee badly.,4,health|sports
+cartilage,хрящ,The **cartilage** in his knee is wearing down.,5,health
+artery,артерия,A blocked **artery** led to his heart attack.,4,health
+tumor,опухоль,The doctor found a small **tumor** in her breast.,3,health
+ulcer,язва,Stress caused a painful **ulcer** in his stomach.,4,health
+hernia,грыжа,He needs surgery for his **hernia** next month.,4,health
+arthritis,артрит,Her **arthritis** makes mornings very difficult.,3,health
+medical,медицинский,He needs immediate **medical** attention right now.,3,health
+drug,лекарство,This **drug** helps with chronic pain.,3,health
+emergency,чрезвычайная ситуация,Call 911 in case of an **emergency**.,2,health
+operation,операция,The **operation** went smoothly and lasted two hours.,3,health
+doctors,врачи,The **doctors** worked hard to save his life.,2,health
+patients,пациенты,The doctor sees many **patients** each day.,2,health
+treatment,лечение,The doctor recommended a new **treatment** for the illness.,3,health
+treated,лечил,The doctor **treated** my broken arm,3,health
+cardiologist,кардиолог,The **cardiologist** reviewed his heart scan results carefully.,3,health
+neurologist,невролог,A **neurologist** diagnosed her chronic migraine condition.,3,health
+oncologist,онколог,The **oncologist** explained the next treatment phase.,3,health
+dermatologist,дерматолог,Her **dermatologist** prescribed cream for the stubborn eczema.,3,health
+endocrinologist,эндокринолог,The **endocrinologist** adjusted his daily insulin dose.,4,health
+gastroenterologist,гастроэнтеролог,A **gastroenterologist** should examine that stomach pain.,4,health
+urologist,уролог,The **urologist** ordered a kidney function test.,3,health
+pulmonologist,пульмонолог,A **pulmonologist** treats serious lung diseases every day.,4,health
+rheumatologist,ревматолог,The **rheumatologist** confirmed his joint inflammation diagnosis.,4,health
+gynecologist,гинеколог,She scheduled her yearly **gynecologist** exam next week.,3,health
+obstetrician,акушер,The **obstetrician** delivered their first baby last night.,3,health
+pediatrician,педиатр,Our **pediatrician** gave the toddler her routine shots.,3,health
+radiologist,рентгенолог,The **radiologist** examined her chest scan images closely.,3,health
+anesthesiologist,анестезиолог,The **anesthesiologist** monitored vital signs during surgery.,4,health
+ophthalmologist,офтальмолог,Her **ophthalmologist** detected early signs of glaucoma.,4,health
+psychiatrist,психиатр,A **psychiatrist** prescribed antidepressants for his condition.,3,health
+podiatrist,подиатр,The **podiatrist** treated his painful ingrown toenail.,4,health
+hematologist,гематолог,A **hematologist** studies blood disorders and diseases.,4,health
+nephrologist,нефролог,The **nephrologist** placed him on dialysis treatment.,4,health
+angiogram,ангиограмма,His **angiogram** showed two blocked coronary arteries.,4,health
+angioplasty,ангиопластика,Doctors performed an emergency **angioplasty** to clear the artery.,4,health
+catheter,катетер,The nurse inserted a **catheter** before the procedure.,3,health
+laparoscopy,лапароскопия,A **laparoscopy** is less invasive than open surgery.,4,health
+chemotherapy,химиотерапия,Her **chemotherapy** caused severe nausea and hair loss.,3,health
+radiotherapy,лучевая терапия,Daily **radiotherapy** sessions shrank the brain tumor.,4,health
+immunotherapy,иммунотерапия,**Immunotherapy** helps the body fight cancer cells naturally.,4,health
+dialysis,диализ,He goes to **dialysis** three times every week.,3,health
+transplant,трансплантация,The kidney **transplant** saved his life last year.,3,health
+amputation,ампутация,The **amputation** was the only remaining option.,4,health
+eeg,ээг,An **eeg** recorded unusual brain wave activity.,4,health
+echocardiogram,эхокардиограмма,An **echocardiogram** shows how the heart valves move.,4,health
+urinalysis,анализ мочи,A routine **urinalysis** detected traces of blood.,4,health
+cholesterol,холестерин,His **cholesterol** level remains dangerously high today.,3,health
+carcinoma,карцинома,The biopsy confirmed a small skin **carcinoma**.,4,health
+leukemia,лейкемия,Childhood **leukemia** has become much more treatable.,4,health
+lymphoma,лимфома,The **lymphoma** responded well to immunotherapy treatment.,4,health
+hypertension,гипертония,Chronic **hypertension** can damage your kidneys and heart.,3,health
+arrhythmia,аритмия,His **arrhythmia** was controlled with daily medication.,4,health
+aneurysm,аневризма,Doctors discovered a small aortic **aneurysm** during screening.,4,health
+embolism,эмболия,A pulmonary **embolism** can be rapidly fatal.,4,health
+pneumonia,пневмония,The elderly patient developed **pneumonia** after surgery.,3,health
+bronchitis,бронхит,Her chronic **bronchitis** worsens during cold weather.,3,health
+tuberculosis,туберкулёз,**Tuberculosis** still affects millions of people worldwide.,3,health
+hepatitis,гепатит,He tested positive for **hepatitis** during his checkup.,3,health
+cirrhosis,цирроз,Heavy drinking caused his advanced liver **cirrhosis**.,4,health
+osteoporosis,остеопороз,**Osteoporosis** makes bones fragile and easily broken.,4,health
+dementia,деменция,Her grandmother struggles with early stage **dementia**.,3,health
+melanoma,меланома,Early detection of **melanoma** saves countless lives.,4,health
+sepsis,сепсис,The wound infection progressed to severe **sepsis**.,4,health
+analgesic,обезболивающее,The dentist gave him a strong **analgesic** afterward.,4,health
+antiviral,противовирусное,The **antiviral** medication shortened her flu symptoms.,3,health
+antifungal,противогрибковое,An **antifungal** cream cleared up her skin rash.,4,health
+antihistamine,антигистамин,She takes an **antihistamine** for her seasonal allergies.,3,health
+decongestant,противозастойное,A nasal **decongestant** helped clear his blocked nose.,3,health
+diuretic,диуретик,The **diuretic** reduced his swelling and blood pressure.,4,health
+insulin,инсулин,He injects **insulin** every morning before breakfast.,3,health
+placebo,плацебо,The **placebo** group showed surprising improvement anyway.,3,health|science
+jaundice,желтуха,The baby developed mild **jaundice** right after birth.,4,health
+lesion,повреждение,The **lesion** on his arm needed a biopsy.,4,health
+spasm,спазм,A sudden muscle **spasm** made him drop the glass.,3,health
+tremor,тремор,His hand **tremor** worsened over the last year.,3,health
+paralysis,паралич,The stroke caused temporary **paralysis** on her left side.,4,health
+vertigo,головокружение,Severe **vertigo** left him unable to stand upright.,4,health
+diarrhea,диарея,The child had **diarrhea** for three straight days.,2,health
+constipation,запор,Fiber really helps prevent **constipation** in older adults.,3,health
+tachycardia,тахикардия,**Tachycardia** means the heart beats too quickly.,4,health
+ventilator,аппарат ивл,The patient needed a **ventilator** to breathe properly.,3,health
+cpr,сердечно-лёгочная реанимация,The bystander performed **cpr** until the ambulance arrived.,3,health
+defibrillator,дефибриллятор,The **defibrillator** restored his normal heart rhythm instantly.,4,health
+transfusion,переливание крови,He received a blood **transfusion** after the accident.,3,health
+donor,донор,The organ **donor** saved three different lives.,3,health
+chronic,хронический,She has suffered from **chronic** back pain for years.,3,health
+acute,острый,The **acute** appendicitis required immediate surgical intervention.,3,health
+benign,доброкачественный,Thankfully the tumor turned out to be **benign**.,3,health
+malignant,злокачественный,The cells were identified as **malignant** under microscope.,4,health
+remission,ремиссия,Her cancer has been in full **remission** for years.,4,health
+quarantine,карантин,Infected patients remained in **quarantine** for two weeks.,3,health
+contagious,заразный,The measles virus is highly **contagious** among children.,3,health
+antibody,антитело,The blood test measured his **antibody** levels precisely.,3,health|science
+chiropractor,хиропрактик,The **chiropractor** adjusted his lower back gently.,3,health
+painful,болезненный,The injection was more **painful** than I expected.,3,health
 informed,осведомлённый,The doctor kept the patient fully **informed** about the risks of surgery.,4
-procedure,процедура,The nurse explained the entire **procedure** before the blood test began.,4
-stable,стабильный,The patient's condition remained **stable** throughout the night.,4
+procedure,процедура,The nurse explained the entire **procedure** before the blood test began.,4,health
+stable,стабильный,The patient's condition remained **stable** throughout the night.,4,health
 corpse,труп,The detective found a **corpse** buried beneath the floorboards of the old house.,4
-resistance,сопротивление,The bacteria showed **resistance** to the standard antibiotic treatment.,5
-fits,припадки,The doctor said the child's **fits** were caused by a high fever.,4
-abuse,злоупотреблять,Doctors warned him not to **abuse** painkillers after the surgery.,4
-deadly,смертоносный,The doctors identified a **deadly** strain of bacteria resistant to antibiotics.,4
+resistance,сопротивление,The bacteria showed **resistance** to the standard antibiotic treatment.,5,science
+fits,припадки,The doctor said the child's **fits** were caused by a high fever.,4,health
+abuse,злоупотреблять,Doctors warned him not to **abuse** painkillers after the surgery.,4,health
+deadly,смертоносный,The doctors identified a **deadly** strain of bacteria resistant to antibiotics.,4,health
 multiple,несколько,The patient underwent **multiple** surgeries over the course of a year.,4
 explained,объяснил,The doctor **explained** the procedure clearly before asking for consent.,3
-labor,работа,She went into **labor** early and was rushed to the hospital.,4
-drops,капли,The doctor prescribed eye **drops** to reduce the inflammation.,3
+labor,работа,She went into **labor** early and was rushed to the hospital.,4,health
+drops,капли,The doctor prescribed eye **drops** to reduce the inflammation.,3,health
 concerns,опасения,"The doctor listened carefully to her **concerns**, then ordered some tests.",3
-severe,тяжёлый,The doctor warned that the infection was **severe** and needed strong antibiotics.,4
+severe,тяжёлый,The doctor warned that the infection was **severe** and needed strong antibiotics.,4,health
 stab,удар ножом,The detective found a single **stab** wound on the victim's left side.,5
-vessel,сосуд,The surgeon carefully repaired the damaged blood **vessel** during the three-hour operation.,5
+vessel,сосуд,The surgeon carefully repaired the damaged blood **vessel** during the three-hour operation.,5,health
 autopsy,вскрытие,The **autopsy** revealed that the victim had been poisoned rather than injured in a fall.,5
-advise,советовать,The doctor will **advise** you on the best course of treatment after the test results come in.,3
-operating,операционный,The hospital expanded its **operating** theatre to handle more complex surgeries.,4
-breast,грудь,The doctor examined her **breast** during the routine checkup.,4
+advise,советовать,The doctor will **advise** you on the best course of treatment after the test results come in.,3,health
+operating,операционный,The hospital expanded its **operating** theatre to handle more complex surgeries.,4,health
+breast,грудь,The doctor examined her **breast** during the routine checkup.,4,health

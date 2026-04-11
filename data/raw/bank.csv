@@ -1,28 +1,28 @@
 english,russian,sentence,difficulty
-money,деньги,I need more **money** for food.,1
-wallet,кошелёк,My **wallet** is full of cards.,1
+money,деньги,I need more **money** for food.,1,basic
+wallet,кошелёк,My **wallet** is full of cards.,1,shopping
 debt,долг,He slowly paid off his **debt**.,1
 loan,кредит,I took a small **loan** today.,1
 owe,должен,You still **owe** me ten bucks.,1
 lend,одалживать,Can you **lend** me some money?,1
 borrow,занимать,I want to **borrow** your pen.,1
-poor,бедный,Many **poor** families need real help.,1
+poor,бедный,Many **poor** families need real help.,1,basic
 dollar,доллар,The **dollar** is strong this week.,1
 euro,евро,He paid ten **euro** for lunch.,1
 bank,банк,The **bank** opens at nine tomorrow.,2
-bank,берег,We walked along the river **bank**.,2
+bank,берег,We walked along the river **bank**.,2,nature
 note,купюра,He handed me a crisp **note**.,2
-note,заметка,I wrote a quick **note** here.,2
+note,заметка,I wrote a quick **note** here.,2,school
 account,счёт,Open a savings **account** next week.,2
 account,учитывать,We must **account** for every cent.,2
-credit,кредит,They offered me a **credit** card.,2
+credit,кредит,They offered me a **credit** card.,2,shopping
 credit,доверие,Give him **credit** for trying hard.,2
 interest,процент,The bank pays low **interest** now.,2
-interest,интерес,She showed great **interest** in finance.,2
+interest,интерес,She showed great **interest** in finance.,2,basic
 rate,курс,The exchange **rate** changed overnight.,2
 rate,оценивать,Critics **rate** this film very highly.,2
 deposit,депозит,I made a cash **deposit** today.,2
-deposit,залог,They asked for a security **deposit**.,2
+deposit,залог,They asked for a security **deposit**.,2,hotel
 withdraw,снимать,I need to **withdraw** some money.,2
 balance,баланс,Check your account **balance** online.,2
 transfer,перевод,The bank **transfer** arrived this morning.,2
@@ -30,22 +30,22 @@ currency,валюта,The local **currency** is very weak.,2
 pound,фунт,A British **pound** buys little now.,2
 atm,банкомат,The **atm** on the corner works.,2
 pin,пин,Never share your **pin** with strangers.,2
-payment,платёж,Your first **payment** is due tomorrow.,2
-pension,пенсия,Her monthly **pension** arrives on Tuesday.,2
-income,доход,My monthly **income** covers basic expenses.,2
-wage,плата,The hourly **wage** went up again.,2
+payment,платёж,Your first **payment** is due tomorrow.,2,shopping
+pension,пенсия,Her monthly **pension** arrives on Tuesday.,2,work
+income,доход,My monthly **income** covers basic expenses.,2,work
+wage,плата,The hourly **wage** went up again.,2,work
 bankrupt,банкрот,The old company went **bankrupt** quickly.,3
 vault,хранилище,The gold sits inside the **vault**.,3
-safe,сейф,Keep the money in the **safe**.,3
-safe,безопасный,Online banking is mostly **safe** now.,3
-mortgage,ипотека,They took a huge **mortgage** out.,3
+safe,сейф,Keep the money in the **safe**.,3,home
+safe,безопасный,Online banking is mostly **safe** now.,3,basic
+mortgage,ипотека,They took a huge **mortgage** out.,3,home
 invest,вкладывать,People **invest** in real estate too.,3
 investor,инвестор,A wealthy **investor** bought the shares.,3
-profit,прибыль,The store made good **profit** today.,3
+profit,прибыль,The store made good **profit** today.,3,work
 loss,убыток,The quarter ended in heavy **loss**.,3
 expense,расход,Rent is my biggest **expense** now.,3
 budget,бюджет,Stick to your monthly **budget** please.,3
-revenue,выручка,Store **revenue** doubled this holiday season.,3
+revenue,выручка,Store **revenue** doubled this holiday season.,3,work
 asset,актив,Gold is a reliable **asset** here.,3
 wealth,богатство,His **wealth** came from old business.,3
 fortune,состояние,She inherited a huge **fortune** abroad.,3
@@ -54,22 +54,22 @@ fund,финансировать,Private donors **fund** the whole project.,3
 stock,акция,The **stock** price fell yesterday morning.,3
 stock,запас,The warehouse **stock** is running low.,3
 share,доля,Every partner owns a **share** here.,3
-share,делиться,Please **share** your snacks with me.,3
+share,делиться,Please **share** your snacks with me.,3,basic
 balance,равновесие,He lost his **balance** on ice.,3
 capital,капитал,Starting **capital** for the shop was small.,3
-capital,столица,Paris is the **capital** of France.,3
+capital,столица,Paris is the **capital** of France.,3,politics
 sum,сумма,What is the total **sum** today?,3
 transaction,транзакция,Each **transaction** appears in your app.,3
 cheque,чек,He wrote me a quick **cheque**.,3
 signature,подпись,Put your **signature** on this line.,3
 currency,распространение,This idea gained **currency** among students.,4
 mint,монетный двор,The **mint** produces new coins daily.,4
-mint,мята,He added fresh **mint** to tea.,4
+mint,мята,He added fresh **mint** to tea.,4,kitchen
 coin,придумывать,Who did **coin** this funny phrase?,4
-audit,аудит,The yearly **audit** starts on Monday.,4
-fraud,мошенничество,Online **fraud** is rising very fast.,4
+audit,аудит,The yearly **audit** starts on Monday.,4,work
+fraud,мошенничество,Online **fraud** is rising very fast.,4,internet
 scam,афера,That investment scheme seemed like **scam**.,4
-bribe,взятка,He refused to accept any **bribe**.,4
+bribe,взятка,He refused to accept any **bribe**.,4,politics
 launder,отмывать,Criminals **launder** money through fake shops.,4
 embezzle,растратить,The clerk tried to **embezzle** funds.,4
 forfeit,лишиться,You may **forfeit** your entire deposit.,4
@@ -77,16 +77,16 @@ lien,залог,The house has a **lien** attached.,4
 collateral,обеспечение,The bank required solid **collateral** first.,4
 equity,капитал,Home **equity** grows over many years.,4
 bond,облигация,He bought a government **bond** cheaply.,4
-bond,связь,A strong **bond** between brothers grew.,4
+bond,связь,A strong **bond** between brothers grew.,4,family
 yield,доходность,Treasury **yield** rose again this morning.,4
-yield,уступать,Drivers must **yield** at the crossing.,4
+yield,уступать,Drivers must **yield** at the crossing.,4,driving
 dividend,дивиденд,The company paid a special **dividend**.,4
-finance,финансы,She studies **finance** at a university.,4
-economy,экономика,The local **economy** grew last quarter.,4
-inflation,инфляция,Rising **inflation** hurts working families badly.,4
-recession,рецессия,The **recession** lasted nearly two years.,4
+finance,финансы,She studies **finance** at a university.,4,school
+economy,экономика,The local **economy** grew last quarter.,4,politics
+inflation,инфляция,Rising **inflation** hurts working families badly.,4,politics
+recession,рецессия,The **recession** lasted nearly two years.,4,politics
 overdraft,овердрафт,An **overdraft** hit my bank account.,4
-surcharge,наценка,The hotel added a **surcharge** again.,4
+surcharge,наценка,The hotel added a **surcharge** again.,4,hotel
 arrears,задолженность,He fell into serious rent **arrears**.,4
 insolvent,неплатёжеспособный,The firm became **insolvent** last month.,4
 hedge,хеджирование,Gold is a classic **hedge** investment.,5
@@ -99,8 +99,8 @@ amortize,амортизировать,Banks **amortize** loans over many years.,
 forbear,воздержаться,Lenders sometimes **forbear** during hard times.,5
 usury,ростовщичество,Ancient laws banned **usury** on loans.,5
 solvent,платёжеспособный,The firm remained **solvent** through the crisis.,5
-teller,кассир,The **teller** greeted me with a warm smile.,3
-debit,дебет,I paid with my **debit** card at lunch.,2
+teller,кассир,The **teller** greeted me with a warm smile.,3,work
+debit,дебет,I paid with my **debit** card at lunch.,2,shopping
 chip,чип,The **chip** on my card stopped working suddenly.,3
 expiration,срок,Check the **expiration** date on your debit card.,3
 prepaid,предоплаченный,She bought a **prepaid** card for travel.,3
@@ -108,13 +108,13 @@ cosigner,поручитель,His father became a **cosigner** on the loan.,4
 collateralize,обеспечить,They had to **collateralize** the business loan.,5
 default,дефолт,The borrower went into **default** last month.,4
 delinquent,просроченный,Her account became **delinquent** after missed payments.,5
-foreclose,лишить,The bank may **foreclose** on the house soon.,5
-foreclosure,лишение,The **foreclosure** process took almost a year.,5
+foreclose,лишить,The bank may **foreclose** on the house soon.,5,home
+foreclosure,лишение,The **foreclosure** process took almost a year.,5,home
 repossess,изымать,They will **repossess** the car if payments stop.,5
 repossession,изъятие,The **repossession** left him without transportation.,5
-refinance,рефинансировать,He decided to **refinance** the home loan.,4
-underwriter,андеррайтер,The **underwriter** reviewed all the documents today.,5
-underwriting,андеррайтинг,**Underwriting** took longer than they expected.,5
+refinance,рефинансировать,He decided to **refinance** the home loan.,4,home
+underwriter,андеррайтер,The **underwriter** reviewed all the documents today.,5,work
+underwriting,андеррайтинг,**Underwriting** took longer than they expected.,5,work
 borrower,заемщик,The **borrower** missed three monthly payments already.,3
 lender,кредитор,The **lender** approved her application quickly.,3
 disburse,выплатить,The bank will **disburse** the funds tomorrow.,4
@@ -124,9 +124,9 @@ treasury,казначейский,He bought a **treasury** bond last week.,4
 portfolio,портфель,Her investment **portfolio** grew ten percent this year.,3
 holdings,активы,His stock **holdings** include several tech firms.,4
 brokerage,брокерский,She opened a **brokerage** account last month.,3
-broker,брокер,Her stock **broker** recommended a new fund.,3
+broker,брокер,Her stock **broker** recommended a new fund.,3,work
 annuity,рента,The **annuity** pays him monthly for life.,4
-endowment,фонд,The university **endowment** grew significantly this year.,4
+endowment,фонд,The university **endowment** grew significantly this year.,4,school
 trustee,попечитель,The **trustee** manages the family money carefully.,4
 amortization,амортизация,The **amortization** schedule shows every payment clearly.,5
 leverage,кредитное плечо,He used **leverage** to buy more stocks.,5
@@ -147,12 +147,12 @@ liability,обязательство,Every business has assets and **liability**
 receivable,дебиторский,The **receivable** account totaled fifty thousand dollars.,5
 payable,кредиторский,Her account **payable** is due by Friday.,5
 passbook,сберкнижка,The **passbook** showed all her recent deposits.,4
-chargeback,возврат платежа,The **chargeback** took two weeks to process.,4
+chargeback,возврат платежа,The **chargeback** took two weeks to process.,4,shopping
 dispute,оспорить,You can **dispute** a charge easily now.,3
 skim,скиммировать,Criminals **skim** card data from gas pumps.,4
 identity,личность,**Identity** theft can ruin your credit history.,3
-authentication,аутентификация,Two-factor **authentication** protects your online banking.,4
-verification,проверка,The system needs **verification** before any transfer.,3
+authentication,аутентификация,Two-factor **authentication** protects your online banking.,4,internet
+verification,проверка,The system needs **verification** before any transfer.,3,internet
 ownership,собственность,Joint **ownership** means both parties share rights.,4
 cosign,поручаться,She agreed to **cosign** his car loan.,4
 endorse,индоссировать,Please **endorse** the check on the back.,3
@@ -160,20 +160,20 @@ endorsement,индоссамент,The check needs your **endorsement** to cash.
 cashless,безналичный,Many cafes now operate a **cashless** system.,3
 unbanked,не имеющий счета,Millions of people remain **unbanked** worldwide.,4
 microfinance,микрофинансы,**Microfinance** helps small businesses in poor areas.,4
-crowdfunding,краудфандинг,They raised money through **crowdfunding** last year.,4
-crowdfund,краудфандить,Artists often **crowdfund** their next album online.,4
-subsidy,субсидия,The government offers a **subsidy** for first-time buyers.,4
-subsidize,субсидировать,The state will **subsidize** student housing costs.,4
-bailout,финансовая помощь,The bank needed a government **bailout** after the crash.,4
+crowdfunding,краудфандинг,They raised money through **crowdfunding** last year.,4,internet
+crowdfund,краудфандить,Artists often **crowdfund** their next album online.,4,internet
+subsidy,субсидия,The government offers a **subsidy** for first-time buyers.,4,politics
+subsidize,субсидировать,The state will **subsidize** student housing costs.,4,politics
+bailout,финансовая помощь,The bank needed a government **bailout** after the crash.,4,politics
 depositor,вкладчик,Every **depositor** is insured up to a limit.,4
-fiscal,бюджетный,The **fiscal** year ends in December.,4
-monetary,монетарный,Central banks control **monetary** policy carefully.,4
+fiscal,бюджетный,The **fiscal** year ends in December.,4,politics
+monetary,монетарный,Central banks control **monetary** policy carefully.,4,politics
 liquidate,ликвидировать,They had to **liquidate** assets to pay debts.,4
 payee,получатель,The **payee** name must match exactly.,4
 payer,плательщик,The **payer** sent the funds this morning.,4
 remit,перевести,Please **remit** payment by the due date.,4
 remittance,перевод,The **remittance** from abroad arrived yesterday.,4
-notary,нотариус,A **notary** must witness your signature today.,4
+notary,нотариус,A **notary** must witness your signature today.,4,work
 notarize,нотариально заверить,You need to **notarize** the loan documents.,5
 surety,поручительство,He provided **surety** for his brother's debt.,5
 forex,форекс,She trades **forex** markets every single morning.,4
@@ -192,13 +192,13 @@ volatility,волатильность,Market **volatility** scared many new inve
 volatile,волатильный,The stock became very **volatile** after the news.,4
 bearish,медвежий,Analysts turned **bearish** on tech stocks recently.,5
 bullish,бычий,Investors feel **bullish** about the economy again.,5
-merchant,торговец,The **merchant** accepts all major credit cards.,3
-deficit,дефицит,The country has a huge trade **deficit**.,4
-surplus,профицит,The budget **surplus** allowed new public spending.,4
-cartel,картель,A **cartel** controls most of the oil market.,4
-monopoly,монополия,That firm holds a **monopoly** over regional markets.,4
+merchant,торговец,The **merchant** accepts all major credit cards.,3,shopping
+deficit,дефицит,The country has a huge trade **deficit**.,4,politics
+surplus,профицит,The budget **surplus** allowed new public spending.,4,politics
+cartel,картель,A **cartel** controls most of the oil market.,4,politics
+monopoly,монополия,That firm holds a **monopoly** over regional markets.,4,politics
 frugal,экономный,He lives a very **frugal** lifestyle these days.,4
-treasurer,казначей,The **treasurer** manages all club finances carefully.,4
+treasurer,казначей,The **treasurer** manages all club finances carefully.,4,work
 stoppayment,приказ о приостановке платежа,She issued a **stoppayment** on the lost check.,3
 uncleared,неочищенный,The **uncleared** funds appeared in her balance briefly.,3
 pending,в обработке,Your wire transfer is still **pending** until morning.,2
@@ -212,7 +212,7 @@ magstripe,магнитная полоса,The **magstripe** on my card stopped w
 embossed,тиснёный,His name was **embossed** on the gold card.,3
 expiry,срок действия,Check the **expiry** date before using the card.,2
 cvv,код CVV,Never share your **cvv** over the phone.,2
-tokenization,токенизация,**Tokenization** replaces card numbers during online checkout.,4
+tokenization,токенизация,**Tokenization** replaces card numbers during online checkout.,4,internet
 cloning,клонирование,Card **cloning** is a serious fraud problem today.,3
 fraudulent,мошеннический,The bank flagged several **fraudulent** charges quickly.,3
 mutual,взаимный,He invested his savings in a **mutual** fund.,2
@@ -220,7 +220,7 @@ ticker,биржевой тикер,The **ticker** scrolled across the screen all
 divest,продавать активы,She decided to **divest** from risky holdings.,4
 rebalance,ребалансировать,He chose to **rebalance** his portfolio every quarter.,4
 vesting,переход прав,The stock **vesting** period lasts four full years.,4
-devaluation,девальвация,The **devaluation** wiped out half his savings.,4
+devaluation,девальвация,The **devaluation** wiped out half his savings.,4,politics
 pegged,привязанный,Their currency is **pegged** to the dollar.,3
 floating,плавающий,Most countries use a **floating** exchange rate today.,3
 correspondent,корреспондент,The **correspondent** bank handled the foreign transfer.,4
@@ -235,8 +235,8 @@ rating,рейтинг,His credit **rating** improved after paying debts.,2
 downgrade,понижение,The agency issued a **downgrade** on the bond.,3
 benchmark,эталонная ставка,The loan tracks a global **benchmark** rate monthly.,3
 bankruptcy,банкротство,The company filed for **bankruptcy** last week.,3
-stimulus,стимул,The **stimulus** checks arrived during the recession.,3
-deflation,дефляция,Long **deflation** can devastate any modern economy.,4
+stimulus,стимул,The **stimulus** checks arrived during the recession.,3,politics
+deflation,дефляция,Long **deflation** can devastate any modern economy.,4,politics
 creditworthy,кредитоспособный,Only **creditworthy** borrowers receive the lowest rates.,3
 billing,биллинг,Check the **billing** statement before paying anything.,2
 offshore,оффшорный,He held funds in an **offshore** account.,3
@@ -253,8 +253,8 @@ nostro,ностро-счёт,Our **nostro** account holds euros at their bank.,5
 vostro,востро-счёт,Their **vostro** account lets them access our rubles.,5
 obligor,должник,The **obligor** failed to make the payment.,4
 obligation,обязательство,He signed the **obligation** without reading it carefully.,2
-dovish,мягкая политика,The **dovish** central banker favored lower rates.,5
-hawkish,жёсткая политика,Her **hawkish** speech pushed bond yields higher.,5
+dovish,мягкая политика,The **dovish** central banker favored lower rates.,5,politics
+hawkish,жёсткая политика,Her **hawkish** speech pushed bond yields higher.,5,politics
 securitize,секьюритизировать,Banks often **securitize** their mortgage portfolios.,5
 accrual,начисление,Interest **accrual** starts on the settlement day.,4
 accrue,начислять,Penalties **accrue** daily on overdue accounts.,3
@@ -269,7 +269,7 @@ bullion,банковские слитки,The vault stored tons of gold **bullio
 ingot,слиток,Each silver **ingot** weighs exactly one kilogram.,3
 hallmark,клеймо,The **hallmark** confirms the gold bar is genuine.,3
 fiat,фиатные деньги,**Fiat** money has no intrinsic commodity value.,4
-cashflow,денежный поток,Her small business needed better **cashflow** this quarter.,3
+cashflow,денежный поток,Her small business needed better **cashflow** this quarter.,3,work
 lockbox,абонентский ящик,The company rented a **lockbox** for customer payments.,3
 stake,доля,He bought a small **stake** in the startup.,2
 shareholder,акционер,Every **shareholder** received a voting ballot yesterday.,2
@@ -280,10 +280,10 @@ writeoff,списание,The bank booked a huge loan **writeoff** this quarter.
 goodwill,деловая репутация,**Goodwill** represents brand value on the balance sheet.,3
 overnight,овернайт,The **overnight** rate dropped sharply after the meeting.,3
 advance,аванс/продвижение,We paid the money in **advance**.,3
-billion,миллиард,The company is worth over one **billion** dollars.,3
+billion,миллиард,The company is worth over one **billion** dollars.,3,basic
 bills,счета,I need to pay all my **bills** before Friday.,3
 financial,финансовый,The company faces serious **financial** problems this year.,3
-response,ответ,We are still waiting for a **response** from the bank.,3
+response,ответ,We are still waiting for a **response** from the bank.,3,basic
 surveillance,слежка,The bank uses video **surveillance** to prevent robbery.,4
 accounts,счета,She checked all her bank **accounts** before making the large purchase.,3
 forms,формы,You need to fill out several **forms** before opening a bank account.,3
@@ -292,25 +292,25 @@ checks,чеки,The accountant ran background **checks** on all new financial pa
 savings account,сберегательный счёт,She opened a **savings account** to set money aside each month.,2
 checking account,текущий счёт,His **checking account** was linked to his debit card.,2
 current account,текущий счёт,She moved her salary into a **current account** at the new bank.,2
-joint account,совместный счёт,The couple opened a **joint account** after getting married.,2
+joint account,совместный счёт,The couple opened a **joint account** after getting married.,2,family
 interest rate,процентная ставка,The **interest rate** on the mortgage was fixed for five years.,3
 standing order,постоянное поручение,He set up a **standing order** to pay rent automatically each month.,3
 direct debit,прямой дебет,"A **direct debit** is the easiest way to pay regular bills, like utilities.",3
 wire transfer,банковский перевод,She sent the payment via **wire transfer** to the overseas supplier.,3
 top-up,пополнение,He did a quick **top-up** to put money on his prepaid card.,2
-foreign currency,иностранная валюта,The kiosk at the airport offers **foreign currency** exchange.,3
+foreign currency,иностранная валюта,The kiosk at the airport offers **foreign currency** exchange.,3,airport
 exchange rate,обменный курс,She checked the **exchange rate** before converting her euros to dollars.,2
 transaction limit,лимит транзакции,The card had a **transaction limit** of five hundred dollars per day.,3
-identity theft,кража личных данных,She reported **identity theft** after her account was opened fraudulently.,4
+identity theft,кража личных данных,She reported **identity theft** after her account was opened fraudulently.,4,internet
 safe deposit box,сейфовая ячейка,He kept his passport in a **safe deposit box** at the bank.,3
-two-factor authentication,двухфакторная аутентификация,The bank requires **two-factor authentication** for every login.,4
+two-factor authentication,двухфакторная аутентификация,The bank requires **two-factor authentication** for every login.,4,internet
 compound interest,сложные проценты,**Compound interest** means you earn interest on your interest over time.,4
 savings,сбережения,She kept her **savings** in a high-yield account.,2
 guarantor,поручитель,The landlord asked for a **guarantor** before signing the lease.,4
 repayment,погашение,His monthly **repayment** on the car loan was three hundred euros.,3
-mobile banking,мобильный банкинг,**Mobile banking** lets you check your balance without visiting a branch.,2
-online banking,интернет-банкинг,She manages all her finances through **online banking**.,2
-e-statement,электронная выписка,He opted for an **e-statement** instead of paper mail.,2
+mobile banking,мобильный банкинг,**Mobile banking** lets you check your balance without visiting a branch.,2,internet
+online banking,интернет-банкинг,She manages all her finances through **online banking**.,2,internet
+e-statement,электронная выписка,He opted for an **e-statement** instead of paper mail.,2,internet
 standing charge,фиксированная плата,The account had a small **standing charge** deducted every month.,3
 savings goal,цель накопления,She set a **savings goal** of two thousand dollars for the holiday.,2
 credit score,кредитный рейтинг,Paying bills on time will improve your **credit score** steadily.,3
@@ -323,15 +323,15 @@ IBAN,IBAN,She sent the invoice with her **IBAN** so the client could pay directl
 SWIFT code,SWIFT-код,International transfers require a **SWIFT code** to reach the correct bank.,4
 minimum balance,минимальный баланс,"The account requires a **minimum balance** of one hundred dollars, or fees apply.",3
 cash withdrawal,снятие наличных,He made a **cash withdrawal** at the airport ATM before the trip.,2
-contactless payment,бесконтактная оплата,**Contactless payment** is faster than entering your PIN at the checkout.,2
+contactless payment,бесконтактная оплата,**Contactless payment** is faster than entering your PIN at the checkout.,2,shopping
 bank charges,банковские комиссии,She switched banks to avoid the high **bank charges** on her old account.,3
 account holder,владелец счёта,Only the **account holder** can authorise large transfers.,2
 debit order,дебетовое поручение,The gym fee is collected by **debit order** on the first of every month.,3
 blocked card,заблокированная карта,Her **blocked card** left her unable to pay for groceries.,2
-card reader,картридер,The cashier inserted the card into the **card reader** to process payment.,2
+card reader,картридер,The cashier inserted the card into the **card reader** to process payment.,2,shopping
 card number,номер карты,Never share your full **card number** over an unsecured connection.,2
-payment gateway,платёжный шлюз,The website uses a secure **payment gateway** to process credit cards.,4
-direct deposit,прямой депозит,Her salary arrives via **direct deposit** every second Friday.,2
+payment gateway,платёжный шлюз,The website uses a secure **payment gateway** to process credit cards.,4,internet
+direct deposit,прямой депозит,Her salary arrives via **direct deposit** every second Friday.,2,work
 money market,денежный рынок,He parked his savings in a **money market** account for a higher return.,4
 grace period,льготный период,The credit card offers a thirty-day **grace period** before interest accrues.,4
 annual fee,годовая комиссия,The premium card carries a high **annual fee** but offers great rewards.,3
@@ -339,12 +339,12 @@ bank transfer,банковский перевод,She completed a **bank transfe
 loan application,заявка на кредит,He filled in a **loan application** online and received a decision in minutes.,3
 credit history,кредитная история,A long **credit history** with no missed payments opens better loan offers.,3
 debit transaction,дебетовая транзакция,Each **debit transaction** is deducted from your available balance immediately.,3
-currency exchange,обмен валюты,She went to the bank for **currency exchange** before her trip.,2
+currency exchange,обмен валюты,She went to the bank for **currency exchange** before her trip.,2,airport
 cheque book,чековая книжка,He asked the bank for a new **cheque book** to pay his suppliers.,3
 bank account,банковский счёт,Opening a **bank account** is the first step to managing your money.,1
 teller machine,банкомат,The **teller machine** outside the bank was out of service all weekend.,2
 financial institution,финансовое учреждение,A credit union is a member-owned **financial institution**.,4
-micro-payment,микроплатёж,The app charges a small **micro-payment** for each article you read.,3
+micro-payment,микроплатёж,The app charges a small **micro-payment** for each article you read.,3,internet
 cashier's check,кассовый чек,The seller required a **cashier's check** for the full purchase price.,3
 bank fee,банковский сбор,She noticed an unexpected **bank fee** on her monthly statement.,2
 balance inquiry,запрос баланса,A quick **balance inquiry** showed she had enough to cover rent.,2
@@ -357,18 +357,18 @@ auto-pay,автоплатёж,She enabled **auto-pay** so her credit card bill w
 cash deposit,внесение наличных,He made a **cash deposit** of five hundred euros at the teller window.,2
 transfer fee,комиссия за перевод,The bank waives the **transfer fee** if you use their mobile app.,3
 account closure,закрытие счёта,She submitted the form requesting **account closure** after moving banks.,3
-net banking,интернет-банкинг,**Net banking** allows customers to manage accounts from any device.,2
+net banking,интернет-банкинг,**Net banking** allows customers to manage accounts from any device.,2,internet
 bank holiday,банковский выходной,Payments made on a **bank holiday** are usually processed the following business day.,2
 overdraft protection,защита от овердрафта,He linked his savings account as **overdraft protection** on his current account.,3
 credit card debt,задолженность по кредитной карте,She worked hard to pay off her **credit card debt** within a year.,3
 high-yield account,высокодоходный счёт,A **high-yield account** offers significantly better interest than a standard savings account.,4
-cash back,кэшбэк,The card gives two percent **cash back** on all supermarket purchases.,2
+cash back,кэшбэк,The card gives two percent **cash back** on all supermarket purchases.,2,shopping
 penalty charge,штрафная комиссия,He received a **penalty charge** for exceeding his overdraft limit.,3
 loan term,срок кредита,"The longer the **loan term**, the lower the monthly payment but the more interest you pay.",3
 account verification,верификация счёта,The bank sent a small test payment to complete **account verification**.,3
 payment deadline,срок платежа,Missing the **payment deadline** can result in late fees and credit damage.,3
 interest payment,выплата процентов,Each month she makes an **interest payment** before the principal is reduced.,3
-spending limit,лимит расходов,She set a daily **spending limit** on her card to help stay within budget.,2
+spending limit,лимит расходов,She set a daily **spending limit** on her card to help stay within budget.,2,shopping
 investment,инвестиция,"A house is a smart **investment**, if you can afford it.",4
 yen,иена,The **yen** is the official currency of Japan.,3
-taxes,налоги,"He had forgotten to file his **taxes**, so he hired an accountant to sort it out.",3
+taxes,налоги,"He had forgotten to file his **taxes**, so he hired an accountant to sort it out.",3,politics

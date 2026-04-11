@@ -5,7 +5,7 @@ college,колледж,He dropped out of **college** last year.,2
 kindergarten,детский сад,My son loves his **kindergarten**.,2
 classroom,классная комната,The **classroom** was full of students.,2
 library,библиотека,I borrowed three books from the **library**.,2
-lab,лаборатория,We did experiments in the chemistry **lab**.,3
+lab,лаборатория,We did experiments in the chemistry **lab**.,3,science
 hallway,коридор,Students ran through the **hallway** loudly.,3
 playground,площадка,Kids were playing on the **playground**.,2
 cafeteria,столовая,Let's have lunch in the **cafeteria**.,3
@@ -19,16 +19,16 @@ professor,профессор,The **professor** explained the theory clearly.,2
 principal,директор,The **principal** called my parents yesterday.,3
 dean,декан,The **dean** gave a welcome speech.,4
 tutor,репетитор,I hired a math **tutor** for summer.,3
-mentor,наставник,She became my **mentor** last year.,3
-librarian,библиотекарь,The **librarian** recommended a great novel.,3
+mentor,наставник,She became my **mentor** last year.,3,work
+librarian,библиотекарь,The **librarian** recommended a great novel.,3,work
 freshman,первокурсник,He is just a **freshman** this year.,3
 graduate,выпускник,She is a **graduate** of Harvard.,3
-math,математика,I love solving **math** problems.,1
-algebra,алгебра,We started learning **algebra** last week.,3
-geometry,геометрия,**Geometry** is about shapes and angles.,3
-biology,биология,She wants to major in **biology**.,2
-chemistry,химия,**Chemistry** class was cancelled today.,2
-physics,физика,He failed his **physics** exam twice.,2
+math,математика,I love solving **math** problems.,1,science
+algebra,алгебра,We started learning **algebra** last week.,3,science
+geometry,геометрия,**Geometry** is about shapes and angles.,3,science
+biology,биология,She wants to major in **biology**.,2,science
+chemistry,химия,**Chemistry** class was cancelled today.,2,science
+physics,физика,He failed his **physics** exam twice.,2,science
 history,история,Ancient **history** is my favorite subject.,2
 geography,география,We studied African **geography** today.,2
 literature,литература,English **literature** includes many classics.,3
@@ -38,40 +38,40 @@ art,рисование,Her **art** teacher is very kind.,1
 music,музыка,**Music** class is every Tuesday morning.,1
 subject,предмет,What **subject** do you like most?,2
 subject,подвергать,Don't **subject** him to such pressure.,4
-pen,ручка,Can I borrow your **pen** please?,1
-pencil,карандаш,My **pencil** broke during the test.,1
+pen,ручка,Can I borrow your **pen** please?,1,work
+pencil,карандаш,My **pencil** broke during the test.,1,work
 eraser,ластик,I need an **eraser** for this mistake.,2
 ruler,линейка,Draw a straight line with a **ruler**.,2
-ruler,правитель,The **ruler** made harsh new laws.,3
+ruler,правитель,The **ruler** made harsh new laws.,3,politics
 marker,маркер,She used a red **marker** on the board.,3
 chalk,мел,Old classrooms still use white **chalk**.,3
 blackboard,доска,He wrote the formula on the **blackboard**.,3
-paper,бумага,Give me a sheet of **paper** please.,1
-paper,статья,His **paper** was published last month.,3
-notebook,тетрадь,Write your notes in this **notebook**.,2
+paper,бумага,Give me a sheet of **paper** please.,1,work
+paper,статья,His **paper** was published last month.,3,science
+notebook,тетрадь,Write your notes in this **notebook**.,2,work
 textbook,учебник,Open your **textbook** to page forty.,2
 dictionary,словарь,Use a **dictionary** to check spelling.,2
-folder,папка,Put the documents in this **folder**.,2
-binder,скоросшиватель,She organized everything in one **binder**.,3
+folder,папка,Put the documents in this **folder**.,2,work
+binder,скоросшиватель,She organized everything in one **binder**.,3,work
 backpack,рюкзак,My **backpack** is too heavy today.,2
 calculator,калькулятор,You can't use a **calculator** on this test.,2
-microscope,микроскоп,Look at the cells through the **microscope**.,3
+microscope,микроскоп,Look at the cells through the **microscope**.,3,science
 study,учиться,I need to **study** for my finals.,1
 learn,учить,Children **learn** languages very fast.,1
-explain,объяснять,Can you **explain** this problem again?,2
+explain,объяснять,Can you **explain** this problem again?,2,work
 listen,слушать,Please **listen** to the teacher carefully.,1
 copy,переписывать,Don't **copy** my homework again.,2
-copy,копия,Make a **copy** of this document.,2
-highlight,выделить,Please **highlight** the main ideas.,3
+copy,копия,Make a **copy** of this document.,2,work
+highlight,выделить,Please **highlight** the main ideas.,3,work
 highlight,главное событие,That lesson was the **highlight** of my week.,4
-debate,дебаты,The **debate** about climate was heated.,3
-discuss,обсуждать,Let's **discuss** this after the lecture.,2
+debate,дебаты,The **debate** about climate was heated.,3,politics
+discuss,обсуждать,Let's **discuss** this after the lecture.,2,work
 memorize,запоминать,I had to **memorize** fifty words.,3
 revise,повторять,I need to **revise** before the exam.,3
 solve,решать,Try to **solve** this equation yourself.,2
 draw,рисовать,Please **draw** a circle on the paper.,2
 fail,провалить,I don't want to **fail** this course.,2
-pass,сдать,Did you **pass** your driving test?,2
+pass,сдать,Did you **pass** your driving test?,2,driving
 pass,передавать,Please **pass** me the textbook.,2
 enroll,записаться,I want to **enroll** in this course.,3
 register,регистрироваться,You must **register** before next Monday.,3
@@ -85,15 +85,15 @@ grade,оценка,She got the highest **grade** in class.,2
 grade,класс,He is in the fifth **grade** now.,2
 mark,оценка,My **mark** on this essay was low.,2
 mark,отметка,Put a **mark** next to each answer.,2
-score,счёт,What was your **score** on the test?,2
+score,счёт,What was your **score** on the test?,2,sports
 cheat,списывать,Never **cheat** during an important exam.,3
 retake,пересдать,I will **retake** the exam next month.,3
 homework,домашнее задание,Did you finish your **homework** yet?,1
-assignment,задание,This **assignment** is due tomorrow.,2
+assignment,задание,This **assignment** is due tomorrow.,2,work
 essay,сочинение,Write a short **essay** about summer.,2
-presentation,презентация,My **presentation** lasted ten minutes.,2
-due,срок сдачи,The report is **due** this Friday.,3
-overdue,просроченный,My library book is already **overdue**.,4
+presentation,презентация,My **presentation** lasted ten minutes.,2,work
+due,срок сдачи,The report is **due** this Friday.,3,work
+overdue,просроченный,My library book is already **overdue**.,4,work
 clever,сообразительный,She is a very **clever** student.,2
 bored,скучающий,The kids looked **bored** during history.,2
 curious,любопытный,A **curious** mind learns faster.,3
@@ -108,46 +108,46 @@ alumna,выпускница,The famous scientist is an **alumna** of our academy
 alumni,выпускники,The **alumni** gathered for their annual dinner.,3
 faculty,преподавательский состав,The **faculty** voted to extend the spring break.,3
 dormitory,общежитие,Freshmen usually live in the oldest **dormitory**.,3
-laboratory,лаборатория,Students conducted experiments in the chemistry **laboratory**.,3
+laboratory,лаборатория,Students conducted experiments in the chemistry **laboratory**.,3,science
 auditorium,актовый зал,The whole school gathered in the main **auditorium**.,3
-gymnasium,спортзал,We played basketball in the new **gymnasium** yesterday.,3
+gymnasium,спортзал,We played basketball in the new **gymnasium** yesterday.,3,sports
 quadrangle,внутренний двор,Students picnic on the grassy **quadrangle** at noon.,4
 headmaster,директор,The **headmaster** welcomed parents at the open house.,3
 headmistress,директриса,Our strict **headmistress** enforced the uniform policy.,3
 chancellor,ректор,The university **chancellor** gave a short welcome speech.,4
 lecturer,лектор,The visiting **lecturer** explained the theory clearly.,3
-educator,педагог,She is a passionate **educator** with twenty years experience.,3
+educator,педагог,She is a passionate **educator** with twenty years experience.,3,work
 proctor,наблюдатель,The **proctor** walked around during the final exam.,4
 chaperone,сопровождающий,A parent **chaperone** joined us on the field trip.,4
 peer,сверстник,My study **peer** helped me prepare for the test.,3
 schoolmate,школьный друг,I met an old **schoolmate** at the grocery store.,2
-roommate,сосед по комнате,My college **roommate** snores loudly every single night.,2
-briefcase,портфель,The professor carried a leather **briefcase** to class.,3
+roommate,сосед по комнате,My college **roommate** snores loudly every single night.,2,home
+briefcase,портфель,The professor carried a leather **briefcase** to class.,3,work
 satchel,ранец,Her daughter proudly wore her new **satchel** to school.,4
 knapsack,рюкзак,He packed his blue **knapsack** with textbooks.,3
 locker,шкафчик,Each student gets a small **locker** near the hallway.,2
 sharpener,точилка,I need a pencil **sharpener** for my drawings.,2
 crayon,цветной карандаш,The child drew a sun with a yellow **crayon**.,2
 scissors,ножницы,Kids use safety **scissors** in their art class.,2
-projector,проектор,The teacher connected her laptop to the classroom **projector**.,3
+projector,проектор,The teacher connected her laptop to the classroom **projector**.,3,work
 globe,глобус,A dusty **globe** stood on the geography teacher's desk.,3
 atlas,атлас,We studied rivers using a colorful world **atlas**.,3
 encyclopedia,энциклопедия,My grandma kept an old **encyclopedia** on her shelf.,3
 almanac,альманах,The farmer's **almanac** predicted a very cold winter.,4
 poster,плакат,A bright science **poster** hung above the blackboard.,2
-diagram,схема,The biology **diagram** showed the stages of cell division.,3
-graph,график,She drew a neat **graph** to show the results.,3
-equation,уравнение,He solved the tough math **equation** on the board.,3
-formula,формула,I memorized the chemistry **formula** for the final.,3
-theorem,теорема,The geometry **theorem** proved the triangle was equal.,4
-hypothesis,гипотеза,Our group tested a simple **hypothesis** about plant growth.,4
+diagram,схема,The biology **diagram** showed the stages of cell division.,3,science
+graph,график,She drew a neat **graph** to show the results.,3,science
+equation,уравнение,He solved the tough math **equation** on the board.,3,science
+formula,формула,I memorized the chemistry **formula** for the final.,3,science
+theorem,теорема,The geometry **theorem** proved the triangle was equal.,4,science
+hypothesis,гипотеза,Our group tested a simple **hypothesis** about plant growth.,4,science
 bursary,стипендия,She received a **bursary** to cover her tuition costs.,5
-grant,грант,He won a research **grant** for his senior project.,3
+grant,грант,He won a research **grant** for his senior project.,3,science
 fees,взносы,The annual **fees** for this school keep rising.,3
 registrar,регистратор,The **registrar** helped me sign up for new courses.,4
 acceptance,зачисление,She received an **acceptance** letter from her dream school.,4
 rejection,отказ,Getting a **rejection** letter from college was tough.,3
-recommendation,рекомендация,He asked his teacher for a **recommendation** letter.,3
+recommendation,рекомендация,He asked his teacher for a **recommendation** letter.,3,work
 commencement,выпускная церемония,The **commencement** ceremony lasted almost three hours.,5
 proficiency,владение,Her language **proficiency** improved after studying abroad.,4
 mastery,мастерство,True **mastery** of math requires years of practice.,4
@@ -159,8 +159,8 @@ flashcard,карточка,I studied each **flashcard** before the vocabulary qu
 syllabus,программа курса,Please read the **syllabus** before the first class.,3
 semester,семестр,This **semester** I am taking five difficult courses.,2
 trimester,триместр,Our school uses a **trimester** system instead of semesters.,4
-workshop,мастер-класс,I attended a writing **workshop** after school today.,2
-seminar,семинар,The philosophy **seminar** meets every Tuesday afternoon.,3
+workshop,мастер-класс,I attended a writing **workshop** after school today.,2,work
+seminar,семинар,The philosophy **seminar** meets every Tuesday afternoon.,3,work
 lesson,урок,Today's English **lesson** was about irregular verbs.,2
 schooling,образование,His early **schooling** took place in a small town.,3
 matriculate,поступать,Students **matriculate** after passing all entrance tests.,5
@@ -179,9 +179,9 @@ degree,степень,He earned a bachelor's **degree** in biology.,2
 valedictorian,лучший выпускник,She became **valedictorian** of her graduating class.,4
 salutatorian,выпускник второй по успеваемости,The **salutatorian** gave a touching farewell speech.,5
 tuition,плата за обучение,College **tuition** costs have risen sharply this year.,3
-attendance,посещаемость,Good **attendance** is required to pass this course.,3
-absence,отсутствие,Her frequent **absence** worried her concerned teachers.,2
-tardiness,опоздание,Repeated **tardiness** will lower your participation grade.,4
+attendance,посещаемость,Good **attendance** is required to pass this course.,3,work
+absence,отсутствие,Her frequent **absence** worried her concerned teachers.,2,work
+tardiness,опоздание,Repeated **tardiness** will lower your participation grade.,4,work
 midterm,промежуточный экзамен,I studied all weekend for the history **midterm**.,3
 thesis,диссертация,She defended her master's **thesis** last month.,4
 dissertation,докторская диссертация,His doctoral **dissertation** took four years to complete.,5
@@ -198,7 +198,7 @@ protractor,транспортир,You need a **protractor** to measure these ang
 philosophy,философия,I took an introduction to **philosophy** course last term.,3
 rhetoric,риторика,The debate club practices **rhetoric** and public speaking.,4
 composition,сочинение,My English **composition** received very positive feedback.,3
-calculus,математический анализ,**Calculus** is usually the hardest math class.,4
+calculus,математический анализ,**Calculus** is usually the hardest math class.,4,science
 questions,вопросы,Do you have any **questions** about the lesson?,2
 class,класс,I have math **class** at nine in the morning.,2
 finished,закончил,He **finished** his homework before dinner.,2
@@ -206,7 +206,7 @@ attention,внимание,Please pay **attention** to the teacher.,2
 count,считать,Can you **count** to one hundred?,2
 difficult,трудный,This math problem is really **difficult**.,2
 english,английский,She teaches **English** at the local school.,1
-books,книги,I love reading old **books** at night.,1
+books,книги,I love reading old **books** at night.,1,leisure
 bell,звонок,The school **bell** rang at three o'clock.,2
 writing,письмо,I enjoy **writing** letters to my friends.,2
 german,немецкий,I'm learning **German** in my evening class.,2
@@ -222,28 +222,28 @@ answers,ответы,The teacher checked all the **answers** carefully.,2
 raised,поднял,He **raised** his hand to ask a question.,2
 result,результат,The test **result** surprised everyone,2
 intelligence,интеллект,Her **intelligence** impressed all the teachers,3
-notes,заметки,I take **notes** during every lecture,1
+notes,заметки,I take **notes** during every lecture,1,work
 marks,отметки,She got good **marks** in math,2
 section,раздел,Read the next **section** of the book,3
-progress,прогресс,She made great **progress** in English,3
+progress,прогресс,She made great **progress** in English,3,work
 tests,тесты,We have two math **tests** tomorrow,2
 sentence,предложение,Please write a short **sentence** using this word,2
 learning,обучение,**Learning** a new language takes time and patience,2
 percent,процент,Only ten **percent** of students passed the exam,2
 education,образование,**Education** is the key to a better future,3
 studying,учиться,She is **studying** for her final exam tonight.,1
-teaching,обучение,**Teaching** children requires a lot of patience.,2
+teaching,обучение,**Teaching** children requires a lot of patience.,2,work
 behavior,поведение,Her **behavior** at school has improved this year.,3
 explanation,объяснение,Please give me a clear **explanation** of the problem.,3
 asks,спрашивает,She always **asks** good questions during class.,2
 cheating,обманывающий,He was caught **cheating** on the math test.,3
 drawing,рисунок,Her **drawing** of the mountain won first prize.,2
 contest,конкурс,She won first place in the singing **contest**.,2
-concentrate,сосредоточиться,I cannot **concentrate** with all this noise.,3
+concentrate,сосредоточиться,I cannot **concentrate** with all this noise.,3,work
 unlike,в отличие,"**Unlike** his brother, he actually enjoys studying math.",3
 lessons,уроки,She takes piano **lessons** twice a week.,1
 classes,занятия,I have three **classes** this afternoon at the university.,1
-deaf,глухой,The teacher learned sign language to communicate with her **deaf** student.,3
+deaf,глухой,The teacher learned sign language to communicate with her **deaf** student.,3,health
 highest,наивысший,She received the **highest** score in the class on the final exam.,2
 academy,академия,She was accepted into the prestigious **academy** after three rounds of auditions.,4
 schools,школы,Several **schools** in the district closed early due to the severe snowstorm.,2
@@ -255,43 +255,43 @@ teachers,учителя,The **teachers** held a meeting to discuss the new curri
 arts,искусство,She studied the **arts** at university before switching to graphic design.,3
 poetry,поэзия,She discovered a love for **poetry** while studying Russian literature at university.,3
 goddess,богиня,Athena was the **goddess** of wisdom in ancient Greek mythology.,4
-anxious,тревожный,She felt **anxious** waiting for her exam results to arrive.,3
-structure,структура,The report lacked clear **structure** and was difficult to follow.,3
+anxious,тревожный,She felt **anxious** waiting for her exam results to arrive.,3,health
+structure,структура,The report lacked clear **structure** and was difficult to follow.,3,work
 concept,концепция,The professor explained the **concept** clearly with a simple diagram.,4
 foundation,основа,A good education is the **foundation** of a successful career.,3
 wisdom,мудрость,She admired the **wisdom** of the ancient philosopher's writing.,4
 delighted,в восторге,She was absolutely **delighted** when she found out she had passed the exam.,3
-wars,войны,The history class covered the major **wars** of the twentieth century.,4
-trigonometry,тригонометрия,**Trigonometry** deals with the relationships between angles and sides.,4
-sociology,социология,She chose **sociology** as her major because she loves studying human behavior.,4
-psychology,психология,**Psychology** explains why people think and act the way they do.,4
+wars,войны,The history class covered the major **wars** of the twentieth century.,4,politics
+trigonometry,тригонометрия,**Trigonometry** deals with the relationships between angles and sides.,4,science
+sociology,социология,She chose **sociology** as her major because she loves studying human behavior.,4,science
+psychology,психология,**Psychology** explains why people think and act the way they do.,4,science
 counselor,школьный психолог,The **counselor** helped me choose the right courses for next year.,3
-prom,выпускной бал,Everyone spent weeks planning their outfits for the school **prom**.,3
+prom,выпускной бал,Everyone spent weeks planning their outfits for the school **prom**.,3,party
 orientation,ориентационная неделя,New students attend **orientation** to learn how the campus works.,3
 elective,факультатив,I chose drama as my **elective** for the spring semester.,3
 prerequisite,предварительное требование,Statistics is a **prerequisite** for this advanced data course.,4
 compulsory,обязательный,Physical education is **compulsory** for all students in the first year.,4
 enrollment,зачисление,**Enrollment** for the new term opens on the first of March.,3
 distinction,отличие с отличием,She graduated with **distinction** after four years of hard work.,4
-merit,заслуга,The award is given on **merit** rather than on attendance alone.,4
+merit,заслуга,The award is given on **merit** rather than on attendance alone.,4,work
 rank,место в рейтинге,He finished first in the class **rank** after a very tough semester.,3
 extracurricular,внеклассный,Joining an **extracurricular** activity helps you make friends outside class.,4
 clique,группировка,Every school has at least one **clique** that is hard to join.,3
-feedback,обратная связь,The teacher gave detailed **feedback** on every paragraph of our essay.,3
+feedback,обратная связь,The teacher gave detailed **feedback** on every paragraph of our essay.,3,work
 revision,повторение материала,Good **revision** the night before an exam really helps your memory.,3
 plagiarism,плагиат,Copying another student's work is a serious form of **plagiarism**.,4
 bibliography,список литературы,Every research paper must include a full **bibliography** at the end.,4
 cite,ссылаться,Always **cite** your sources when you write an academic essay.,3
-analyze,анализировать,Students must **analyze** the poem before writing their response.,3
-evaluate,оценивать,The teacher asked us to **evaluate** the strength of each argument.,3
-summarize,кратко излагать,Can you **summarize** the chapter in three clear sentences?,3
+analyze,анализировать,Students must **analyze** the poem before writing their response.,3,work
+evaluate,оценивать,The teacher asked us to **evaluate** the strength of each argument.,3,work
+summarize,кратко излагать,Can you **summarize** the chapter in three clear sentences?,3,work
 comprehend,понимать,It is hard to **comprehend** the theory without reading the textbook.,3
 annotate,делать пометки,She likes to **annotate** her textbooks with short notes in the margins.,4
 paraphrase,перефразировать,The teacher asked us to **paraphrase** the passage in our own words.,4
-outline,план,Write a brief **outline** before you start your essay.,3
-proofread,редактировать,Always **proofread** your essay before handing it in.,3
+outline,план,Write a brief **outline** before you start your essay.,3,work
+proofread,редактировать,Always **proofread** your essay before handing it in.,3,work
 coursework,курсовая работа,The final grade includes both the exam and the **coursework** score.,4
-assessment,оценивание,The **assessment** included a written test and an oral component.,3
+assessment,оценивание,The **assessment** included a written test and an oral component.,3,work
 criterion,критерий,Each **criterion** on the rubric is worth a different number of points.,4
 deduction,вычет,Points were taken by **deduction** for every spelling mistake in the test.,4
 recitation,декламация,He practiced his poem for the Friday **recitation** contest.,4
@@ -314,30 +314,30 @@ student council,совет учащихся,The **student council** organized th
 superintendent,суперинтендант,The **superintendent** visited our school to review the new curriculum.,5
 academic,учебный,**Academic** performance matters but so does personal growth.,3
 scholastic,школьный,Her **scholastic** achievements earned her a place at a top college.,4
-varsity,сборная школы,He made the **varsity** basketball team in his very first year.,4
-intramural,внутришкольный,The **intramural** volleyball league is open to all year groups.,5
+varsity,сборная школы,He made the **varsity** basketball team in his very first year.,4,sports
+intramural,внутришкольный,The **intramural** volleyball league is open to all year groups.,5,sports
 study hall,период самоподготовки,We used **study hall** to finish our history reading assignment.,3
 book report,отзыв о книге,Each student must submit a **book report** at the end of term.,2
 term paper,курсовая работа,Her **term paper** on climate change impressed the whole department.,3
-research paper,научная работа,Writing a strong **research paper** requires careful reading and note-taking.,3
-lab report,отчёт о лабораторной работе,The chemistry teacher handed back our **lab report** with detailed comments.,3
+research paper,научная работа,Writing a strong **research paper** requires careful reading and note-taking.,3,science
+lab report,отчёт о лабораторной работе,The chemistry teacher handed back our **lab report** with detailed comments.,3,science
 field trip,экскурсия,Our class went on a **field trip** to the local science museum.,2
-science fair,выставка научных проектов,She won first prize at the regional **science fair** with her project.,3
+science fair,выставка научных проектов,She won first prize at the regional **science fair** with her project.,3,science
 spelling bee,конкурс правописания,He made it to the final round of the school **spelling bee**.,3
 open day,день открытых дверей,Parents visited the school on **open day** to meet the teachers.,3
 oral exam,устный экзамен,The **oral exam** terrified me far more than the written test.,3
-note-taking,конспектирование,Good **note-taking** skills will help you throughout your academic career.,3
+note-taking,конспектирование,Good **note-taking** skills will help you throughout your academic career.,3,work
 accredited,аккредитованный,Make sure the program is **accredited** before you apply and pay fees.,4
 accreditation,аккредитация,The college lost its **accreditation** after failing the inspection.,5
-internship,стажировка,She completed a summer **internship** at a local engineering company.,3
-apprenticeship,ученичество,He chose an **apprenticeship** over university to learn a practical trade.,4
-vocational,профессиональный,A **vocational** course teaches hands-on skills for a specific career.,3
+internship,стажировка,She completed a summer **internship** at a local engineering company.,3,work
+apprenticeship,ученичество,He chose an **apprenticeship** over university to learn a practical trade.,4,work
+vocational,профессиональный,A **vocational** course teaches hands-on skills for a specific career.,3,work
 school board,школьный совет,The **school board** approved the new science curriculum last Tuesday.,4
 honor society,почётное общество,Membership in the **honor society** is a great addition to any resume.,4
 class president,президент класса,She ran for **class president** on a platform of better school lunches.,3
 workbook,рабочая тетрадь,Complete exercises one through ten in your **workbook** for homework.,2
-handout,раздаточный материал,The teacher gave each student a **handout** with the key vocabulary.,2
-keynote,основной доклад,The professor gave a **keynote** lecture at the international education summit.,4
+handout,раздаточный материал,The teacher gave each student a **handout** with the key vocabulary.,2,work
+keynote,основной доклад,The professor gave a **keynote** lecture at the international education summit.,4,work
 repetition,повторение,**Repetition** is one of the most effective ways to memorize new words.,3
 multilingual,многоязычный,A **multilingual** classroom can be a challenge and a great advantage.,4
 native,родной,It takes years to speak a second language like a **native** speaker.,2
@@ -353,5 +353,5 @@ borrowed,одолженный,She returned the **borrowed** book to the library 
 masters,магистратура,She decided to apply for a **masters** degree after finishing her first year at work.,3
 poet,поэт,The **poet** spent years revising the same collection before finally agreeing to publish it.,4
 oldest,старейший,He is the **oldest** student in the class.,2
-application,заявление,He submitted his **application** for the university programme last week.,4
+application,заявление,He submitted his **application** for the university programme last week.,4,work
 clubs,клубы,He joined several **clubs** at school to meet new people.,2

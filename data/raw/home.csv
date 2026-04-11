@@ -1,5 +1,5 @@
 english,russian,sentence,difficulty
-kitchen,кухня,She is cooking dinner in the **kitchen**.,1
+kitchen,кухня,She is cooking dinner in the **kitchen**.,1,kitchen
 bedroom,спальня,My **bedroom** has a big window.,1
 bathroom,ванная,The **bathroom** is next to my room.,1
 garage,гараж,He parks the car in the **garage**.,1
@@ -17,10 +17,10 @@ chair,стул,Sit on this **chair** by the table.,1
 bed,кровать,My **bed** is very soft and warm.,1
 sofa,диван,We watched TV on the **sofa**.,2
 shelf,полка,Put the books on the top **shelf**.,2
-desk,стол,I do homework at my **desk**.,1
+desk,стол,I do homework at my **desk**.,1,work
 drawer,ящик,Socks are in the bottom **drawer**.,2
 mirror,зеркало,She looked at herself in the **mirror**.,2
-cupboard,шкаф,Cups are in the kitchen **cupboard**.,2
+cupboard,шкаф,Cups are in the kitchen **cupboard**.,2,kitchen
 wardrobe,гардероб,Her dresses hang in the **wardrobe**.,2
 lamp,лампа,Please turn on the **lamp**.,1
 carpet,ковёр,The **carpet** is soft under my feet.,2
@@ -29,34 +29,34 @@ curtain,штора,She pulled the **curtain** shut.,2
 blanket,одеяло,I need a warm **blanket** tonight.,2
 pillow,подушка,My **pillow** is too soft.,1
 sheet,простыня,She changed the bed **sheet** today.,2
-oven,духовка,The bread is baking in the **oven**.,2
-fridge,холодильник,Milk is in the **fridge**.,1
-freezer,морозилка,Ice cream is in the **freezer**.,2
-kettle,чайник,The **kettle** is boiling water now.,2
-toaster,тостер,Put the bread in the **toaster**.,2
+oven,духовка,The bread is baking in the **oven**.,2,kitchen
+fridge,холодильник,Milk is in the **fridge**.,1,kitchen
+freezer,морозилка,Ice cream is in the **freezer**.,2,kitchen
+kettle,чайник,The **kettle** is boiling water now.,2,kitchen
+toaster,тостер,Put the bread in the **toaster**.,2,kitchen
 vacuum,пылесос,I use a **vacuum** to clean carpets.,2
-dishwasher,посудомойка,Load the plates into the **dishwasher**.,3
-stove,плита,She left the **stove** on all night.,2
-microwave,микроволновка,Heat the soup in the **microwave**.,2
-sink,раковина,Wash your hands in the **sink**.,2
-tap,кран,Turn off the water **tap**.,2
+dishwasher,посудомойка,Load the plates into the **dishwasher**.,3,kitchen
+stove,плита,She left the **stove** on all night.,2,kitchen
+microwave,микроволновка,Heat the soup in the **microwave**.,2,kitchen
+sink,раковина,Wash your hands in the **sink**.,2,kitchen
+tap,кран,Turn off the water **tap**.,2,kitchen
 shower,душ,I take a **shower** every morning.,1
 bathtub,ванна,The baby is splashing in the **bathtub**.,2
 toilet,туалет,The **toilet** is over there.,1
-soap,мыло,Wash your hands with **soap**.,1
+soap,мыло,Wash your hands with **soap**.,1,basic
 towel,полотенце,Dry your face with a **towel**.,1
-plate,тарелка,Put the food on the **plate**.,1
-bowl,миска,Pour the soup into a **bowl**.,2
-fork,вилка,Use a **fork** to eat the salad.,1
-spoon,ложка,Stir the tea with a **spoon**.,1
-knife,нож,Cut the bread with a sharp **knife**.,1
-cup,чашка,I drink tea from my favorite **cup**.,1
-glass,стакан,Pour me a **glass** of water.,1
+plate,тарелка,Put the food on the **plate**.,1,kitchen
+bowl,миска,Pour the soup into a **bowl**.,2,kitchen
+fork,вилка,Use a **fork** to eat the salad.,1,kitchen
+spoon,ложка,Stir the tea with a **spoon**.,1,kitchen
+knife,нож,Cut the bread with a sharp **knife**.,1,kitchen
+cup,чашка,I drink tea from my favorite **cup**.,1,kitchen
+glass,стакан,Pour me a **glass** of water.,1,kitchen
 glass,стекло,The window **glass** is very clean.,2
-pot,кастрюля,Soup is boiling in the **pot**.,2
-pan,сковорода,Fry the eggs in the **pan**.,2
+pot,кастрюля,Soup is boiling in the **pot**.,2,kitchen
+pan,сковорода,Fry the eggs in the **pan**.,2,kitchen
 clean,убирать,I **clean** my room every weekend.,1
-clean,чистый,Put on a **clean** shirt please.,1
+clean,чистый,Put on a **clean** shirt please.,1,basic
 sweep,подметать,Please **sweep** the kitchen floor.,2
 mop,швабра,Bring me the **mop** and bucket.,3
 mop,мыть,She will **mop** the bathroom tiles.,3
@@ -75,30 +75,30 @@ hammer,молоток,Pass me the **hammer** please.,2
 nail,гвоздь,Hit the **nail** with the hammer.,2
 screw,винт,Tighten this loose **screw** please.,3
 leak,течь,The pipe has a small **leak**.,3
-broken,сломанный,This chair is **broken** and unsafe.,2
-lawn,газон,He is cutting the **lawn** today.,3
+broken,сломанный,This chair is **broken** and unsafe.,2,basic
+lawn,газон,He is cutting the **lawn** today.,3,nature
 fence,забор,The white **fence** needs painting.,2
 gate,ворота,Please close the garden **gate**.,2
-tree,дерево,A big **tree** grows in our yard.,1
-flower,цветок,She picked a **flower** from the garden.,1
-plant,растение,Water the green **plant** every Sunday.,2
-plant,сажать,Let's **plant** tomatoes this spring.,2
-soil,почва,Plant the seeds in dark **soil**.,3
-dig,копать,Let's **dig** a hole for the tree.,2
+tree,дерево,A big **tree** grows in our yard.,1,nature
+flower,цветок,She picked a **flower** from the garden.,1,nature
+plant,растение,Water the green **plant** every Sunday.,2,nature
+plant,сажать,Let's **plant** tomatoes this spring.,2,nature
+soil,почва,Plant the seeds in dark **soil**.,3,nature
+dig,копать,Let's **dig** a hole for the tree.,2,nature
 cozy,уютный,This living room feels so **cozy**.,3
 tidy,аккуратный,Her desk is always very **tidy**.,3
 messy,грязный,His bedroom is really **messy** today.,3
-warm,тёплый,The house feels **warm** inside.,1
+warm,тёплый,The house feels **warm** inside.,1,basic
 key,ключ,I lost my house **key** again.,1
 lock,замок,The **lock** on the door is broken.,2
 lock,запирать,Always **lock** the door at night.,2
-clock,часы,The **clock** on the wall stopped.,1
-garden,сад,Flowers are growing in the **garden**.,1
+clock,часы,The **clock** on the wall stopped.,1,basic
+garden,сад,Flowers are growing in the **garden**.,1,nature
 yard,двор,Kids are playing in the **yard**.,2
 balcony,балкон,We drink coffee on the **balcony**.,2
 furniture,мебель,They bought new **furniture** yesterday.,2
-light,свет,Turn off the **light** before bed.,1
-light,лёгкий,This chair is very **light** to carry.,2
+light,свет,Turn off the **light** before bed.,1,basic
+light,лёгкий,This chair is very **light** to carry.,2,basic
 doormat,коврик,Wipe your shoes on the **doormat** before entering.,2
 hinge,петля,The door **hinge** squeaks every morning.,3
 latch,защёлка,The gate **latch** is broken again.,3
@@ -109,7 +109,7 @@ peephole,глазок,Check the **peephole** before opening the door.,3
 baseboard,плинтус,Paint the **baseboard** in a matching white.,3
 molding,молдинг,The crown **molding** adds a classy touch.,4
 threshold,порог,He carried her across the **threshold**.,4
-pantry,кладовая,Store the flour in the **pantry**.,3
+pantry,кладовая,Store the flour in the **pantry**.,3,kitchen
 mudroom,прихожая,Leave your boots in the **mudroom**.,3
 nook,уголок,We built a reading **nook** by the window.,3
 alcove,альков,A small **alcove** holds her favorite books.,4
@@ -129,10 +129,10 @@ broom,метла,Sweep the porch with a **broom**.,2
 dustpan,совок,Hold the **dustpan** while I sweep.,2
 bristle,щетина,The brush **bristle** is worn out.,3
 bucket,ведро,Fill the **bucket** with warm soapy water.,2
-sponge,губка,Wipe the counter with a damp **sponge**.,2
+sponge,губка,Wipe the counter with a damp **sponge**.,2,kitchen
 coaster,подставка,Put a **coaster** under your drink.,2
-placemat,салфетка,Set a **placemat** at every seat.,2
-tablecloth,скатерть,She ironed the white **tablecloth**.,2
+placemat,салфетка,Set a **placemat** at every seat.,2,kitchen
+tablecloth,скатерть,She ironed the white **tablecloth**.,2,kitchen
 centerpiece,центральное украшение,The flower **centerpiece** looks lovely.,3
 candlestick,подсвечник,Light the **candlestick** on the mantel.,3
 mantel,каминная полка,Photos line the marble **mantel**.,3
@@ -179,7 +179,7 @@ tape,рулетка,Measure the room with a **tape** measure.,2
 level,уровень,Use a **level** to hang pictures straight.,3
 screwdriver,отвёртка,Tighten the hinge with a **screwdriver**.,2
 staple,скоба,Attach the wire with a **staple**.,3
-glue,клей,A drop of **glue** fixed the handle.,2
+glue,клей,A drop of **glue** fixed the handle.,2,school
 sandpaper,наждачная бумага,Smooth the wood with **sandpaper**.,3
 varnish,лак,Apply **varnish** to protect the table.,3
 primer,грунтовка,Brush on **primer** before painting.,3
@@ -199,98 +199,98 @@ ottoman,оттоманка,Rest your feet on the **ottoman**.,3
 armchair,кресло,He fell asleep in the **armchair**.,2
 loveseat,кушетка,A cozy **loveseat** sits by the window.,3
 armrest,подлокотник,Her cat naps on the **armrest**.,3
-home,дом,She went **home** after work.,1
-tv,телевизор,Let's watch **tv** after dinner tonight.,1
-box,коробка,Put the books in that **box**.,1
-radio,радио,Turn on the **radio** for some music.,2
+home,дом,She went **home** after work.,1,basic
+tv,телевизор,Let's watch **tv** after dinner tonight.,1,leisure
+box,коробка,Put the books in that **box**.,1,basic
+radio,радио,Turn on the **radio** for some music.,2,leisure
 mess,беспорядок,Your room is such a **mess** today.,2
 moved,переехал,We **moved** to a new apartment last month.,2
 machine,машина,This washing **machine** is very old.,2
 apartment,квартира,My **apartment** has two small bedrooms.,2
-sleeping,спящий,The baby is **sleeping** in the crib.,2
-putting,кладущий,She is **putting** the dishes away.,2
+sleeping,спящий,The baby is **sleeping** in the crib.,2,basic
+putting,кладущий,She is **putting** the dishes away.,2,basic
 rid,избавиться,I want to get **rid** of this old sofa.,3
 upstairs,наверху,The bathroom is **upstairs** on the left.,2
-built,построил,"My grandfather **built** this house, years ago.",2
+built,построил,"My grandfather **built** this house, years ago.",2,basic
 keys,ключи,"Where did I put my **keys**, again?",1
 lights,огни,Turn off the **lights** before you leave.,1
 hanging,висящий,Your coat is **hanging** on the hook.,2
-comfortable,удобный,This chair is very **comfortable** for reading.,2
+comfortable,удобный,This chair is very **comfortable** for reading.,2,basic
 fan,вентилятор,"Please turn on the **fan**, it is hot.",2
 doors,двери,Close all the **doors** before leaving.,1
-rent,аренда,I pay **rent** at the beginning of each month.,2
-painting,картина,She hung a beautiful **painting** on the living room wall.,2
+rent,аренда,I pay **rent** at the beginning of each month.,2,bank
+painting,картина,She hung a beautiful **painting** on the living room wall.,2,leisure
 knocking,стук,Someone is **knocking** on the front door loudly.,2
 downstairs,внизу,The kitchen is **downstairs** on the first floor.,2
 bath,ванна,She takes a hot **bath** every evening.,1
 walls,стены,The **walls** of the castle were very thick.,1
 switch,переключатель,Please flip the light **switch** off.,2
-television,телевидение,We watched the news on **television**.,2
+television,телевидение,We watched the news on **television**.,2,leisure
 neighborhood,район,"This is a quiet **neighborhood**, perfect for families.",2
-wood,дерево,The table is made of solid **wood**.,2
-modern,современный,This is a **modern** building with glass walls.,2
-remove,убирать,Please **remove** your shoes at the door,2
-hated,ненавидел,She **hated** washing dishes every night,2
-hung,повесил,He **hung** his coat by the door,2
+wood,дерево,The table is made of solid **wood**.,2,nature
+modern,современный,This is a **modern** building with glass walls.,2,basic
+remove,убирать,Please **remove** your shoes at the door,2,basic
+hated,ненавидел,She **hated** washing dishes every night,2,basic
+hung,повесил,He **hung** his coat by the door,2,basic
 houses,дома,The street has beautiful old **houses**,2
-separate,отдельный,Keep whites and colors in **separate** piles,3
+separate,отдельный,Keep whites and colors in **separate** piles,3,basic
 cleaning,уборка,I hate **cleaning** the bathroom,2
 trash,мусор,Please take out the **trash** before you leave,1
 knocked,постучал/сбил,"Someone **knocked** on the door, but nobody answered.",2
-fed,кормил,"Yesterday, I **fed** the cat before leaving.",2
+fed,кормил,"Yesterday, I **fed** the cat before leaving.",2,basic
 garbage,мусор,Please take the **garbage** outside tonight.,2
-doll,кукла,My daughter sleeps with her favorite **doll**.,1
+doll,кукла,My daughter sleeps with her favorite **doll**.,1,family
 windows,окна,The **windows** were dirty after the storm.,1
-dirt,грязь,My shoes are covered in **dirt** from the garden.,2
+dirt,грязь,My shoes are covered in **dirt** from the garden.,2,nature
 couch,диван,He fell asleep on the **couch** while watching TV.,2
 closet,шкаф,Her winter coats are in the hallway **closet**.,2
 neighbor,сосед,My new **neighbor** invited us over for dinner tonight.,2
-arranged,организовал,She **arranged** all the books on the shelf by color.,3
-servant,слуга,The rich family has a loyal old **servant**.,3
-cats,кошки,Three lazy **cats** are sleeping on my sofa.,1
-electricity,электричество,The storm cut off our **electricity** for hours.,3
+arranged,организовал,She **arranged** all the books on the shelf by color.,3,basic
+servant,слуга,The rich family has a loyal old **servant**.,3,work
+cats,кошки,Three lazy **cats** are sleeping on my sofa.,1,nature
+electricity,электричество,The storm cut off our **electricity** for hours.,3,science
 neighbors,соседи,Our new **neighbors** invited us over for coffee.,2
-underneath,под,The cat is hiding **underneath** the kitchen table.,3
+underneath,под,The cat is hiding **underneath** the kitchen table.,3,basic
 doorbell,дверной звонок,"Someone is ringing the **doorbell**, please open it.",2
 cage,клетка,The parrot lives in a large metal **cage**.,2
-fetch,принести,Can you **fetch** me a glass of water from the kitchen?,2
-replace,заменить,We need to **replace** the broken light bulb tomorrow.,2
+fetch,принести,Can you **fetch** me a glass of water from the kitchen?,2,basic
+replace,заменить,We need to **replace** the broken light bulb tomorrow.,2,basic
 pipe,труба,A **pipe** burst under the kitchen sink last night.,2
-meantime,тем временем,"I'll finish cooking; in the **meantime**, set the table.",3
+meantime,тем временем,"I'll finish cooking; in the **meantime**, set the table.",3,basic
 frame,рама,She hung the photo in a wooden **frame** above the fireplace.,3
-sets,наборы,She bought two **sets** of plates for her new kitchen.,2
-plants,растения,I water my **plants** every morning before work.,1
-photograph,фотография,She framed the old **photograph** of her grandparents and hung it on the wall.,2
-beneath,под,The cat was sleeping **beneath** the kitchen table all afternoon.,2
-snap,щёлкнуть,She tried to **snap** the lid shut but it was broken.,2
-shared,общий,The two flatmates had a **shared** bathroom and a small common kitchen.,3
+sets,наборы,She bought two **sets** of plates for her new kitchen.,2,basic
+plants,растения,I water my **plants** every morning before work.,1,nature
+photograph,фотография,She framed the old **photograph** of her grandparents and hung it on the wall.,2,leisure
+beneath,под,The cat was sleeping **beneath** the kitchen table all afternoon.,2,basic
+snap,щёлкнуть,She tried to **snap** the lid shut but it was broken.,2,basic
+shared,общий,The two flatmates had a **shared** bathroom and a small common kitchen.,3,basic
 rubbish,мусор,Please put the **rubbish** in the bin before you leave the kitchen.,2
-supper,ужин,The family gathers around the table for **supper** every Sunday evening.,2
-tools,инструменты,The carpenter brought all his **tools** in a large wooden box.,2
-invisible,невидимый,The stain is almost **invisible** once the fabric has been washed.,3
+supper,ужин,The family gathers around the table for **supper** every Sunday evening.,2,family
+tools,инструменты,The carpenter brought all his **tools** in a large wooden box.,2,work
+invisible,невидимый,The stain is almost **invisible** once the fabric has been washed.,3,basic
 painted,крашеный,The **painted** walls of the café gave it a warm and cheerful look.,2
-naughty,непослушный,The **naughty** puppy chewed through three pairs of shoes this week.,2
-string,верёвка,He tied the package with a piece of **string** before mailing it.,2
-sharing,совместное использование,**Sharing** a flat with three roommates taught me to be more patient.,3
-freezing,замерзающий,The pipes burst because the temperature dropped to **freezing** overnight.,3
+naughty,непослушный,The **naughty** puppy chewed through three pairs of shoes this week.,2,family
+string,верёвка,He tied the package with a piece of **string** before mailing it.,2,basic
+sharing,совместное использование,**Sharing** a flat with three roommates taught me to be more patient.,3,basic
+freezing,замерзающий,The pipes burst because the temperature dropped to **freezing** overnight.,3,nature
 brick,кирпич,He used a **brick** to prop open the heavy warehouse door.,3
-lap,колени,The cat curled up on her **lap** while she read.,2
-log,бревно,He chopped the **log** into smaller pieces for the fireplace.,3
-weed,сорняк,The garden was full of **weed** after two weeks of rain.,2
-entering,входить,Please remove your shoes before **entering** the house.,2
-bothered,беспокоил,The loud music from next door **bothered** her while she was trying to study.,3
-twist,скрутить,She used a rubber band to **twist** the cables together neatly.,3
-largest,наибольший,The **largest** room in the apartment is the living room.,2
+lap,колени,The cat curled up on her **lap** while she read.,2,basic
+log,бревно,He chopped the **log** into smaller pieces for the fireplace.,3,nature
+weed,сорняк,The garden was full of **weed** after two weeks of rain.,2,nature
+entering,входить,Please remove your shoes before **entering** the house.,2,basic
+bothered,беспокоил,The loud music from next door **bothered** her while she was trying to study.,3,basic
+twist,скрутить,She used a rubber band to **twist** the cables together neatly.,3,basic
+largest,наибольший,The **largest** room in the apartment is the living room.,2,basic
 washing,стирка,She spent Sunday morning **washing** clothes and cleaning the kitchen.,2
-ideal,идеальный,"This apartment is **ideal** for a young couple, as it is close to everything.",3
-photographs,фотографии,She kept all the old **photographs** in a shoebox under the bed.,2
+ideal,идеальный,"This apartment is **ideal** for a young couple, as it is close to everything.",3,basic
+photographs,фотографии,She kept all the old **photographs** in a shoebox under the bed.,2,leisure
 sheets,простыни,She changed the **sheets** on the bed and opened the window to air the room.,2
 porch,крыльцо,She sat on the **porch** reading a book in the evening sun.,2
 utility room,подсобное помещение,The washing machine is in the **utility room** off the kitchen.,3
 bookcase,книжный шкаф,She arranged her novels on the tall oak **bookcase**.,2
 mantelpiece,каминная полка,Old family photos sit along the stone **mantelpiece**.,3
 sewing machine,швейная машина,My grandmother taught me how to use her old **sewing machine**.,3
-electrician,электрик,The **electrician** checked all the wiring before we moved in.,3
+electrician,электрик,The **electrician** checked all the wiring before we moved in.,3,work
 repaint,перекрасить,We decided to **repaint** the living room a warm shade of grey.,3
 sealant,герметик,Apply **sealant** around the shower tray to prevent leaks.,4
 heating,отопление,The **heating** broke down just as winter started.,3
@@ -300,15 +300,15 @@ circuit breaker,автомат защиты,The **circuit breaker** tripped when
 fuse,предохранитель,The fuse box blew a **fuse** during the storm last night.,3
 detergent,моющее средство,Add a cap of **detergent** to the washing machine drum.,3
 bleach,отбеливатель,She used **bleach** to remove the mould from the bathroom tiles.,3
-disinfect,дезинфицировать,**Disinfect** the kitchen counter after preparing raw meat.,4
+disinfect,дезинфицировать,**Disinfect** the kitchen counter after preparing raw meat.,4,health
 landlord,домовладелец,The **landlord** agreed to replace the broken boiler by Friday.,3
 tenant,жилец,The **tenant** signed a one-year lease for the studio flat.,3
 lease,договор аренды,"Read the **lease** carefully before you sign anything, especially the small print.",4
 suburb,пригород,"They moved to a quiet **suburb**, away from the noise of the city centre.",3
 condo,кондоминиум,She bought a small **condo** on the fifth floor with a city view.,3
-utilities bill,счёт за коммунальные услуги,The **utilities bill** was higher than usual because of the cold month.,3
+utilities bill,счёт за коммунальные услуги,The **utilities bill** was higher than usual because of the cold month.,3,bank
 mow,косить,He goes out to **mow** the lawn every Saturday morning.,2
-compost,компост,Add vegetable peelings to the **compost** bin in the garden.,3
+compost,компост,Add vegetable peelings to the **compost** bin in the garden.,3,nature
 water meter,счётчик воды,The engineer came to read the **water meter** in the basement.,3
 clogged,засорённый,"The kitchen sink is **clogged** again, probably with grease.",3
 leaking,протекающий,The **leaking** tap kept her awake all night with its constant drip.,3
@@ -329,9 +329,9 @@ skirting board,плинтус,The **skirting board** was damaged when they moved
 spare room,гостевая комната,The **spare room** is ready for when your parents visit.,2
 en suite,ванная комната при спальне,The master bedroom has an **en suite** with a walk-in shower.,4
 open plan,открытая планировка,The **open plan** kitchen and living room makes the flat feel spacious.,3
-fitted kitchen,встроенная кухня,The flat comes with a modern **fitted kitchen** already installed.,3
-kitchen island,кухонный остров,She chops vegetables on the **kitchen island** in the centre of the kitchen.,3
-worktop,рабочая поверхность,Granite is a popular material for a kitchen **worktop**.,3
+fitted kitchen,встроенная кухня,The flat comes with a modern **fitted kitchen** already installed.,3,kitchen
+kitchen island,кухонный остров,She chops vegetables on the **kitchen island** in the centre of the kitchen.,3,kitchen
+worktop,рабочая поверхность,Granite is a popular material for a kitchen **worktop**.,3,kitchen
 skirting,плинтусное отопление,The **skirting** along the walls needs a fresh coat of white paint.,3
 boiler,котёл,"The **boiler** stopped working, so we had no hot water.",3
 gas meter,газовый счётчик,The engineer came to check the **gas meter** in the utility cupboard.,3
@@ -340,8 +340,8 @@ fitted wardrobe,встроенный шкаф,"The bedroom has a **fitted wardro
 chest of drawers,комод с ящиками,Her jewellery is kept in the top drawer of the **chest of drawers**.,3
 coffee table,журнальный столик,She placed her mug on the **coffee table** in front of the sofa.,2
 side table,приставной столик,A small **side table** beside the armchair holds his evening tea.,2
-dining table,обеденный стол,We all sat around the **dining table** for Christmas dinner.,2
-kitchen cabinet,кухонный шкаф,The **kitchen cabinet** above the sink is where we keep the mugs.,2
+dining table,обеденный стол,We all sat around the **dining table** for Christmas dinner.,2,family
+kitchen cabinet,кухонный шкаф,The **kitchen cabinet** above the sink is where we keep the mugs.,2,kitchen
 loft conversion,мансардное переустройство,A **loft conversion** can add a whole extra room to your home.,4
 cavity wall,полая стена,**Cavity wall** insulation can significantly reduce heating bills.,4
 double glazing,двойное остекление,**Double glazing** keeps the house much warmer in winter.,4

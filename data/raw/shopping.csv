@@ -3,29 +3,29 @@ mall,торговый центр,Let's meet at the **mall** tomorrow.,1
 market,рынок,I buy fruit at the **market**.,1
 supermarket,супермаркет,The **supermarket** closes at ten.,1
 boutique,бутик,She owns a small **boutique** downtown.,3
-pharmacy,аптека,The **pharmacy** is next to the bank.,2
-bakery,пекарня,Fresh bread comes from the **bakery**.,2
-butcher,мясник,The **butcher** cut the meat for me.,3
-grocer,бакалейщик,The old **grocer** knows every customer.,4
+pharmacy,аптека,The **pharmacy** is next to the bank.,2,health
+bakery,пекарня,Fresh bread comes from the **bakery**.,2,kitchen
+butcher,мясник,The **butcher** cut the meat for me.,3,kitchen
+grocer,бакалейщик,The old **grocer** knows every customer.,4,kitchen
 store,магазин,This **store** has great prices.,1
 shop,магазин,I need to **shop** for groceries.,1
-cashier,кассир,The **cashier** scanned my items quickly.,2
+cashier,кассир,The **cashier** scanned my items quickly.,2,bank
 clerk,продавец,Ask the **clerk** for help.,2
 price,цена,What is the **price** of this?,1
 cost,стоить,How much does it **cost**?,1
-cash,наличные,I prefer to pay in **cash**.,1
-card,карта,Can I use my **card** here?,1
-change,сдача,Here is your **change**.,2
+cash,наличные,I prefer to pay in **cash**.,1,bank
+card,карта,Can I use my **card** here?,1,bank
+change,сдача,Here is your **change**.,2,bank
 change,менять,Can I **change** this shirt?,2
 coupon,купон,I have a **coupon** for ten percent.,2
 discount,скидка,They offer a student **discount**.,2
 sale,распродажа,Everything is on **sale** today.,2
-refund,возврат денег,I want a full **refund** please.,2
+refund,возврат денег,I want a full **refund** please.,2,bank
 exchange,обмен,Can I make an **exchange**?,2
 total,итого,The **total** comes to fifty dollars.,2
-tax,налог,The **tax** is already included.,2
-fee,сбор,There is a small service **fee**.,2
-charge,взимать,They **charge** extra for delivery.,3
+tax,налог,The **tax** is already included.,2,bank
+fee,сбор,There is a small service **fee**.,2,bank
+charge,взимать,They **charge** extra for delivery.,3,bank
 shirt,рубашка,He wore a white **shirt** today.,1
 pants,брюки,These **pants** are too long.,1
 dress,платье,She bought a new **dress**.,1
@@ -44,18 +44,18 @@ socks,носки,These **socks** have a hole.,1
 underwear,нижнее бельё,I need to buy new **underwear**.,2
 shoes,обувь,These **shoes** are very comfortable.,1
 boots,ботинки,Winter **boots** keep feet warm.,2
-sneakers,кроссовки,My **sneakers** are getting old.,2
+sneakers,кроссовки,My **sneakers** are getting old.,2,sports
 sandals,сандалии,I wear **sandals** in summer.,2
 bag,сумка,Put it in the **bag** please.,1
 purse,дамская сумочка,Her **purse** matches her shoes.,2
-wallet,кошелёк,I lost my **wallet** yesterday.,2
+wallet,кошелёк,I lost my **wallet** yesterday.,2,bank
 belt,ремень,This **belt** is too tight.,2
 watch,часы,My **watch** stopped working last week.,1
 ring,кольцо,She got a beautiful **ring**.,2
 necklace,ожерелье,The gold **necklace** was expensive.,2
 earrings,серьги,These silver **earrings** are lovely.,3
 sunglasses,солнечные очки,I need new **sunglasses** for summer.,2
-umbrella,зонт,Take an **umbrella**, it's raining.,2
+umbrella,зонт,"Take an **umbrella**, it's raining.",2,nature
 size,размер,What **size** do you wear?,1
 fit,подходить,These shoes don't **fit** me.,2
 tight,тесный,This shirt feels too **tight**.,2
@@ -79,19 +79,19 @@ return,вернуть,I want to **return** this item.,2
 browse,просматривать,I just want to **browse** the store.,3
 choose,выбирать,Help me **choose** a gift.,1
 prefer,предпочитать,I **prefer** the black one.,2
-afford,позволить себе,I can't **afford** that watch.,3
-save,экономить,I want to **save** some money.,2
-spend,тратить,Don't **spend** too much today.,2
+afford,позволить себе,I can't **afford** that watch.,3,bank
+save,экономить,I want to **save** some money.,2,bank
+spend,тратить,Don't **spend** too much today.,2,bank
 splurge,шиковать,Let's **splurge** on a nice dinner.,4
 queue,очередь,The **queue** at the cashier is long.,3
 scan,сканировать,Please **scan** the barcode here.,2
-swipe,провести картой,Just **swipe** your card here.,3
+swipe,провести картой,Just **swipe** your card here.,3,bank
 pack,упаковать,Can you **pack** this as a gift?,2
 ship,отправить,They will **ship** it tomorrow.,2
 cheap,дешёвый,This shop is very **cheap**.,1
 expensive,дорогой,That watch is too **expensive**.,1
 affordable,доступный,We need **affordable** housing options.,3
-pricey,дороговатый,This restaurant is quite **pricey**.,3
+pricey,дороговатый,This restaurant is quite **pricey**.,3,restaurant
 bargain,выгодная покупка,This coat was a real **bargain**.,3
 secondhand,подержанный,I bought a **secondhand** book today.,3
 vintage,винтажный,She collects **vintage** dresses.,3
@@ -113,10 +113,10 @@ hypermarket,гипермаркет,The **hypermarket** has everything under one 
 showroom,шоурум,We visited the car **showroom** yesterday.,2
 storefront,витрина,The empty **storefront** needs new tenants soon.,3
 galleria,галерея,The marble **galleria** houses luxury brands only.,5
-dispensary,диспансер,The medical **dispensary** opened last month.,4
+dispensary,диспансер,The medical **dispensary** opened last month.,4,health
 haberdashery,галантерея,The old **haberdashery** sells buttons and thread.,5
-drugstore,аптека,Pick up aspirin at the **drugstore** please.,2
-chemist,аптекарь,Ask the **chemist** about sleep aids.,3
+drugstore,аптека,Pick up aspirin at the **drugstore** please.,2,health
+chemist,аптекарь,Ask the **chemist** about sleep aids.,3,health
 florist,цветочник,The **florist** arranges weddings and funerals.,3
 jeweler,ювелир,Our **jeweler** resized the ring perfectly.,3
 voucher,ваучер,She redeemed the **voucher** at the register.,3
@@ -129,7 +129,7 @@ wholesale,оптовый,She buys jewelry at **wholesale** prices.,3
 markup,наценка,The **markup** on luxury bags is insane.,4
 rollback,снижение,The store announced a price **rollback** today.,4
 bundle,комплект,Buy the **bundle** and save twenty dollars.,3
-combo,комбо,The **combo** deal includes fries and drink.,2
+combo,комбо,The **combo** deal includes fries and drink.,2,restaurant
 freebie,халява,They included a small **freebie** with purchase.,4
 giveaway,раздача,The store hosted a **giveaway** for followers.,3
 blowout,распродажа,The weekend **blowout** sale drew huge crowds.,4
@@ -160,10 +160,10 @@ membership,подписка,A warehouse club **membership** costs sixty dollars 
 rewards,награды,Her **rewards** card gives ten percent off.,3
 flash,молниеносный,The **flash** sale ends in two hours.,3
 perk,бонус,Free shipping is a nice **perk**.,3
-installment,рассрочка,She paid the fridge in monthly **installment** plans.,4
+installment,рассрочка,She paid the fridge in monthly **installment** plans.,4,bank
 layaway,отложить,I put the dress on **layaway** yesterday.,5
-cashback,кешбэк,My card offers two percent **cashback** on groceries.,3
-contactless,бесконтактный,I paid using **contactless** at the till.,3
+cashback,кешбэк,My card offers two percent **cashback** on groceries.,3,bank
+contactless,бесконтактный,I paid using **contactless** at the till.,3,bank
 authentic,подлинный,This leather bag is one hundred percent **authentic**.,3
 counterfeit,контрафактный,Police seized thousands of **counterfeit** handbags.,4
 flawed,бракованный,She returned the **flawed** ceramic bowl.,4
@@ -185,7 +185,7 @@ fitting,примерочная,I tried the dress in the **fitting** room.,3
 tailor,портной,The **tailor** will shorten these pants.,3
 alterations,подгонка,Simple **alterations** cost about twenty dollars.,4
 bagger,упаковщик,The teenage **bagger** carried my groceries out.,4
-till,касса,She placed money in the **till** carefully.,4
+till,касса,She placed money in the **till** carefully.,4,bank
 shopper,покупатель,Every **shopper** got a free tote bag.,3
 stockist,продавец,This brand has only one local **stockist**.,5
 haul,добыча,Her shopping **haul** filled the entire trunk.,4
@@ -194,7 +194,7 @@ unbox,распаковать,Kids love to **unbox** new toys on camera.,3
 reusable,многоразовый,Bring your own **reusable** shopping bags.,3
 sample,образец,Try a free cheese **sample** at the counter.,3
 tester,тестер,Use the **tester** before buying the perfume.,3
-pinpad,пинпад,Enter your PIN on the **pinpad** now.,4
+pinpad,пинпад,Enter your PIN on the **pinpad** now.,4,bank
 pushcart,тележка,The vendor rolled his **pushcart** down the street.,4
 gondola,стеллаж,Snacks filled the center **gondola** aisle.,5
 endcap,торцевая,The soda display sits on the **endcap**.,5
@@ -203,12 +203,12 @@ wear,носить,What should I **wear** to the wedding?,2
 clothes,одежда,I need to buy new **clothes** for work.,2
 bought,купил,I **bought** some fresh bread this morning.,2
 list,список,Make a shopping **list** before we go.,2
-dollars,доллары,This book costs fifteen **dollars**.,1
+dollars,доллары,This book costs fifteen **dollars**.,1,bank
 bunch,куча,I bought a **bunch** of bananas at the store.,2
 closed,закрытый,The shop is **closed** on Sundays.,1
 sold,продал,We **sold** our old car last month.,2
 selling,продающий,They are **selling** their house next month.,2
-bucks,баксы,This jacket costs only twenty **bucks** on sale.,3
+bucks,баксы,This jacket costs only twenty **bucks** on sale.,3,bank
 opens,открывает,The shop **opens** at eight every morning.,2
 opening,открывающий,The grand **opening** is next Saturday morning.,3
 pair,пара,I need a new **pair** of running shoes.,2
@@ -216,13 +216,13 @@ buying,покупка,She is **buying** a new dress for the party.,2
 carrying,несущий,She was **carrying** heavy grocery bags home.,2
 closes,закрывает,The store **closes** at ten tonight.,1
 shopping,шопинг,We went **shopping** for groceries this morning.,1
-candy,конфета,Kids love **candy** on Halloween,1
+candy,конфета,Kids love **candy** on Halloween,1,kitchen
 bags,сумки,Put the **bags** in the car trunk,1
 material,материал,This shirt is made of soft **material**,2
 range,диапазон,This store has a wide **range** of shoes,3
 closing,закрытие,The shop is **closing** at nine,2
 guarantee,гарантия,This product comes with a one-year **guarantee**.,3
-dozen,дюжина,I bought a **dozen** eggs at the market.,2
+dozen,дюжина,I bought a **dozen** eggs at the market.,2,kitchen
 delivery,доставка,The **delivery** will arrive tomorrow morning.,3
 quality,качество,This product is of very high **quality**.,2
 shoe,ботинок,I lost my left **shoe** at the beach.,2
@@ -239,8 +239,8 @@ reasonable,разумный,"The price seems **reasonable**, so I'll buy it toda
 downtown,центр города,We spent the afternoon shopping **downtown** with friends.,2
 diamonds,бриллианты,The necklace was covered in beautiful **diamonds**.,3
 minor,несовершеннолетний,Alcohol cannot be sold to a **minor** under any circumstances.,3
-chips,чипсы,She grabbed a bag of **chips** and a soda from the vending machine.,1
-bottles,бутылки,He bought six **bottles** of sparkling water for the office kitchen.,1
+chips,чипсы,She grabbed a bag of **chips** and a soda from the vending machine.,1,kitchen
+bottles,бутылки,He bought six **bottles** of sparkling water for the office kitchen.,1,kitchen
 liquor,крепкий алкоголь,The store sells wine and beer but no **liquor** after ten at night.,3
 fits,подходит,This jacket **fits** perfectly — I'll take it in blue.,2
 item,товар,This **item** is currently out of stock but will be available next week.,3
@@ -251,7 +251,7 @@ refurbished,восстановленный,He saved money by buying a **refurbis
 complaint,жалоба,She filed a **complaint** after the shoes fell apart in a week.,3
 feedback,отзыв,Leave honest **feedback** so other shoppers know what to expect.,3
 assistance,помощь,A store associate offered **assistance** finding the right size.,3
-appliance,бытовой прибор,The kitchen **appliance** aisle was packed with blenders and toasters.,3
+appliance,бытовой прибор,The kitchen **appliance** aisle was packed with blenders and toasters.,3,kitchen
 gadget,гаджет,Dad bought another **gadget** he will probably never use.,3
 accessory,аксессуар,She picked up a small **accessory** to complete her outfit.,3
 garment,предмет одежды,Every **garment** in the sale section was reduced by forty percent.,4
@@ -260,9 +260,9 @@ fragrance,парфюм,She tested three perfumes before choosing her favourite *
 cosmetics,косметика,The beauty counter sells skincare products and **cosmetics** side by side.,3
 jewelry,ювелирные украшения,The **jewelry** display near the entrance caught everyone's eye.,2
 electronics,электроника,Black Friday is the best time to buy **electronics** at lower prices.,2
-stationery,канцтовары,I stopped at the **stationery** section to grab some notebooks and pens.,3
+stationery,канцтовары,I stopped at the **stationery** section to grab some notebooks and pens.,3,school
 impulse,импульсивная покупка,Those chocolate bars near the register are designed to trigger an **impulse** buy.,4
-overspend,тратить слишком много,It is easy to **overspend** when everything is on sale.,3
+overspend,тратить слишком много,It is easy to **overspend** when everything is on sale.,3,bank
 flyer,рекламная листовка,A **flyer** in the mailbox announced a half-price weekend at the garden centre.,3
 catalog,каталог,She browsed the furniture **catalog** before visiting the store.,3
 advertisement,реклама,The **advertisement** promised free shipping on orders over fifty dollars.,3
@@ -285,10 +285,10 @@ shoplifting,кража в магазине,Security cameras are installed to det
 theft,кража,The store installed new alarms after a series of **theft** incidents.,3
 catalogue,каталог,The printed **catalogue** arrived in the post before the sale began.,3
 lookbook,лукбук,The brand released a stunning autumn **lookbook** on its website.,4
-overpay,переплатить,Don't **overpay** for a name brand when the generic is just as good.,3
-overcharge,завысить цену,The waiter tried to **overcharge** us but we caught the mistake.,3
+overpay,переплатить,Don't **overpay** for a name brand when the generic is just as good.,3,bank
+overcharge,завысить цену,The waiter tried to **overcharge** us but we caught the mistake.,3,bank
 shrinkage,потери от краж и усушки,The store manager blamed **shrinkage** for the drop in monthly profits.,5
-perishable,скоропортящийся,**Perishable** items like dairy and meat must be refrigerated at all times.,4
+perishable,скоропортящийся,**Perishable** items like dairy and meat must be refrigerated at all times.,4,kitchen
 flagship,флагманский,The brand's **flagship** store on Fifth Avenue spans five floors.,4
 upsell,предлагать товар подороже,The salesperson tried to **upsell** me a more expensive phone model.,4
 sustainable,экологичный,More shoppers choose **sustainable** products to reduce their carbon footprint.,3
@@ -299,7 +299,7 @@ shopaholic,шопоголик,My sister is a true **shopaholic** who buys things
 trade-in,обмен старого товара на новый,"The phone shop offers a **trade-in** deal, so you get credit for your old handset.",4
 open-box,вскрытая упаковка,The **open-box** television was thirty percent cheaper and worked perfectly.,4
 superstore,супермаркет,The new **superstore** on the edge of town sells everything from food to furniture.,3
-dealership,автосалон,We spent the afternoon at a car **dealership** comparing different models.,3
+dealership,автосалон,We spent the afternoon at a car **dealership** comparing different models.,3,driving
 bookstore,книжный магазин,She could spend hours browsing the shelves of a good **bookstore**.,2
 seller,продавец,The online **seller** had a five-star rating and hundreds of positive reviews.,2
 edition,издание,"This is a limited **edition** sneaker, so only five hundred pairs were made.",3
@@ -319,7 +319,7 @@ brand-new,совершенно новый,He insisted on buying a **brand-new** 
 giftcard,подарочная карта,She bought a **giftcard** so her nephew could choose his own gift.,3
 loyalty card,карта лояльности,Scan your **loyalty card** every time you shop to earn bonus points.,2
 price-match,совпадение цен,The electronics store offers a **price-match** guarantee on any product.,4
-store credit,кредит магазина,Since there was no receipt the manager offered **store credit** instead.,3
+store credit,кредит магазина,Since there was no receipt the manager offered **store credit** instead.,3,bank
 pre-owned,подержанный,The **pre-owned** camera is in excellent condition and costs half the price.,3
 floor model,демонстрационный образец,The **floor model** sofa was sold at a big discount on the last day.,4
 pamphlet,буклет,A small **pamphlet** explained all the membership benefits at the front desk.,4
