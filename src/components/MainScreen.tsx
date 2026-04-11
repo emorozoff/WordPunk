@@ -92,23 +92,28 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   // Seed DB on first load (re-seed if built-in word count changed)
   useEffect(() => {
     const init = async () => {
-      const allExisting = await getAllCards();
-      const builtInCount = allExisting.filter(c => !c.isCustom).length;
-      if (builtInCount !== WORDS.length) {
-        // Remove outdated built-in cards, keep custom ones
-        for (const c of allExisting.filter(cc => !cc.isCustom)) {
-          await deleteCard(c.id);
+      try {
+        const allExisting = await getAllCards();
+        const builtInCount = allExisting.filter(c => !c.isCustom).length;
+        if (builtInCount !== WORDS.length) {
+          // Remove outdated built-in cards, keep custom ones
+          for (const c of allExisting.filter(cc => !cc.isCustom)) {
+            await deleteCard(c.id);
+          }
+          await putCards(WORDS);
         }
-        await putCards(WORDS);
+        const cards = await getAllCards();
+        setAllCards(cards);
+        await loadQueue(cards);
+        const kc = await getKnownCount();
+        setKnownCount(kc);
+        const lvl = getCurrentLevel(kc);
+        prevLevelRef.current = lvl.title;
+      } catch (e) {
+        console.error('init failed:', e);
+      } finally {
+        setLoading(false);
       }
-      const cards = await getAllCards();
-      setAllCards(cards);
-      await loadQueue(cards);
-      const kc = await getKnownCount();
-      setKnownCount(kc);
-      const lvl = getCurrentLevel(kc);
-      prevLevelRef.current = lvl.title;
-      setLoading(false);
     };
     init();
   }, []);
@@ -420,7 +425,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.63</span>
+          <span className="header-version">v0.64</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>

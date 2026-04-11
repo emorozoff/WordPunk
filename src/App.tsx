@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import MainScreen from './components/MainScreen';
 import TopicModal from './components/TopicModal';
 import StatsScreen from './components/StatsScreen';
@@ -10,10 +10,13 @@ export default function App() {
   const [prefsVersion, setPrefsVersion] = useState(0);
   const [blastActive, setBlastActive] = useState(false);
 
-  const handleTopicsClose = () => {
+  const handleTopicsClose = useCallback(() => {
     setShowTopics(false);
     setPrefsVersion(v => v + 1);
-  };
+  }, []);
+
+  const handleBlastDone = useCallback(() => setBlastActive(false), []);
+  const handleSwearingActivated = useCallback(() => setBlastActive(b => b ? b : true), []);
 
   return (
     <div className={`app${blastActive ? ' swearing-blast' : ''}`}>
@@ -26,7 +29,7 @@ export default function App() {
       {showTopics && (
         <TopicModal
           onClose={handleTopicsClose}
-          onSwearingActivated={() => { if (!blastActive) setBlastActive(true); }}
+          onSwearingActivated={handleSwearingActivated}
         />
       )}
 
@@ -34,7 +37,7 @@ export default function App() {
         <StatsScreen onClose={() => setShowStats(false)} />
       )}
 
-      {blastActive && <SwearingBlast onDone={() => setBlastActive(false)} />}
+      {blastActive && <SwearingBlast onDone={handleBlastDone} />}
 
       {/* CRT scanline effect */}
       <div className="scanline" />
