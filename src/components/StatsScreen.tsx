@@ -1,5 +1,6 @@
 import { FC, useEffect, useState, useRef } from 'react';
-import { getAllProgress, getActivity, countCards, getArchivedCount } from '../db';
+import { getAllProgress, getActivity, countCards, getArchivedCount, getAllFlagged, deleteFlagged } from '../db';
+import type { FlaggedCard } from '../types';
 import type { DayActivity } from '../types';
 
 interface Props {
@@ -14,6 +15,7 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
   const [known, setKnown] = useState(0);
   const [total, setTotal] = useState(0);
   const [archived, setArchived] = useState(0);
+  const [flaggedCards, setFlaggedCards] = useState<FlaggedCard[]>([]);
   const [dist, setDist] = useState<Record<number, number>>({ 0:0,1:0,2:0,3:0,4:0,5:0 });
   const [activity, setActivity] = useState<DayActivity[]>([]);
 
@@ -23,14 +25,16 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
 
   useEffect(() => {
     const load = async () => {
-      const [prog, act, cnt, arc] = await Promise.all([
+      const [prog, act, cnt, arc, flagged] = await Promise.all([
         getAllProgress(),
         getActivity(90),
         countCards(),
         getArchivedCount(),
+        getAllFlagged(),
       ]);
       setTotal(cnt);
       setArchived(arc);
+      setFlaggedCards(flagged);
       setKnown(prog.filter(p => p.level >= 3).length);
       const d: Record<number, number> = {0:0,1:0,2:0,3:0,4:0,5:0};
       for (const p of prog) d[p.level] = (d[p.level] ?? 0) + 1;
@@ -150,6 +154,37 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
             return <div key={cell.date} className={cls} title={`${cell.date}: ${cell.count}`} />;
           })}
         </div>
+
+        {flaggedCards.length > 0 && (
+          <>
+            <div className="stats-section-title">ФЛАГИ_ ({flaggedCards.length})</div>
+            <div className="flagged-list">
+              {flaggedCards.map(fc => (
+                <div key={fc.cardId} className="flagged-item">
+                  <div className="flagged-item-header">
+                    <span className="flagged-en">{fc.english}</span>
+                    <span className="flagged-sep">→</span>
+                    <span className="flagged-ru">{fc.russian}</span>
+                    <button className="flagged-remove" onClick={async () => {
+                      await deleteFlagged(fc.cardId);
+                      setFlaggedCards(prev => prev.filter(f => f.cardId !== fc.cardId));
+                    }}>✕</button>
+                  </div>
+                  {fc.example && (
+                    <div className="flagged-example">{fc.example.replace(/\*\*/g, '')}</div>
+                  )}
+                  <div className="flagged-options">
+                    {fc.options.map((opt, i) => (
+                      <span key={i} className={`flagged-opt${opt === fc.correctAnswer ? ' flagged-opt-correct' : ''}`}>
+                        {opt}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
 
         <div className="stats-counter-info">
           <div className="stats-section-title">КАК СЧИТАЕТСЯ СЧЁТЧИК</div>

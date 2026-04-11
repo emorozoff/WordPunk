@@ -1487,6 +1487,114 @@ button {
   border-color: var(--text-muted);
 }
 
+/* Flag button */
+.flag-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 16px 4px;
+  flex-shrink: 0;
+}
+
+.flag-btn {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 10px;
+  background: none;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.flag-btn:active {
+  color: var(--accent-amber);
+  border-color: var(--accent-amber);
+}
+
+.flag-btn-active {
+  color: var(--accent-amber);
+  border-color: var(--accent-amber);
+}
+
+/* Flagged list in StatsScreen */
+.flagged-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.flagged-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.flagged-item-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flagged-en {
+  color: var(--accent-green);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.flagged-sep {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.flagged-ru {
+  color: var(--text);
+  font-size: 13px;
+  flex: 1;
+}
+
+.flagged-remove {
+  color: var(--text-dim);
+  font-size: 13px;
+  padding: 2px 6px;
+  border: none;
+  background: none;
+  flex-shrink: 0;
+}
+
+.flagged-remove:active { color: var(--accent-red); }
+
+.flagged-example {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.flagged-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.flagged-opt {
+  font-size: 11px;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+
+.flagged-opt-correct {
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
 /* Stats archived row */
 .stats-archived-row {
   font-size: 11px;

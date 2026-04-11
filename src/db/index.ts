@@ -1,5 +1,5 @@
 import { openDB, DBSchema, IDBPDatabase } from 'idb';
-import type { Card, CardProgress, DayActivity } from '../types';
+import type { Card, CardProgress, DayActivity, FlaggedCard } from '../types';
 
 interface WordPunkDB extends DBSchema {
   cards: {
@@ -16,22 +16,29 @@ interface WordPunkDB extends DBSchema {
     key: string; // ISO date "2026-04-01"
     value: DayActivity;
   };
+  flagged: {
+    key: string; // cardId
+    value: FlaggedCard;
+  };
 }
 
 let _db: IDBPDatabase<WordPunkDB> | null = null;
 
 async function getDB(): Promise<IDBPDatabase<WordPunkDB>> {
   if (_db) return _db;
-  _db = await openDB<WordPunkDB>('wordpunk', 1, {
-    upgrade(db) {
-      const cardStore = db.createObjectStore('cards', { keyPath: 'id' });
-      cardStore.createIndex('by-topic', 'topicId');
-
-      const progressStore = db.createObjectStore('progress', { keyPath: 'cardId' });
-      progressStore.createIndex('by-next-review', 'nextReviewDate');
-      progressStore.createIndex('by-level', 'level');
-
-      db.createObjectStore('activity', { keyPath: 'date' });
+  _db = await openDB<WordPunkDB>('wordpunk', 2, {
+    upgrade(db, oldVersion) {
+      if (oldVersion < 1) {
+        const cardStore = db.createObjectStore('cards', { keyPath: 'id' });
+        cardStore.createIndex('by-topic', 'topicId');
+        const progressStore = db.createObjectStore('progress', { keyPath: 'cardId' });
+        progressStore.createIndex('by-next-review', 'nextReviewDate');
+        progressStore.createIndex('by-level', 'level');
+        db.createObjectStore('activity', { keyPath: 'date' });
+      }
+      if (oldVersion < 2) {
+        db.createObjectStore('flagged', { keyPath: 'cardId' });
+      }
     },
   });
   return _db;
@@ -145,6 +152,29 @@ export async function clearAllProgress(): Promise<void> {
   const db = await getDB();
   await db.clear('progress');
   await db.clear('activity');
+}
+
+// ── Flagged cards ──────────────────────────────────────────────────────────
+
+export async function putFlagged(card: FlaggedCard): Promise<void> {
+  const db = await getDB();
+  await db.put('flagged', card);
+}
+
+export async function getAllFlagged(): Promise<FlaggedCard[]> {
+  const db = await getDB();
+  const all = await db.getAll('flagged');
+  return all.sort((a, b) => b.timestamp - a.timestamp);
+}
+
+export async function deleteFlagged(cardId: string): Promise<void> {
+  const db = await getDB();
+  await db.delete('flagged', cardId);
+}
+
+export async function getFlaggedCount(): Promise<number> {
+  const db = await getDB();
+  return db.count('flagged');
 }
 
 // ── Seed check ─────────────────────────────────────────────────────────────

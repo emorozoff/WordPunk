@@ -40,3 +40,13 @@ export interface DayActivity {
   date: string;
   count: number;
 }
+
+export interface FlaggedCard {
+  cardId: string;
+  english: string;
+  russian: string;
+  example?: string;
+  options: string[];       // the 4 options shown at the time of flagging
+  correctAnswer: string;
+  timestamp: number;
+}

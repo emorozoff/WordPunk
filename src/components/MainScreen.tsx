@@ -3,7 +3,7 @@ import type { Card, SessionCard } from '../types';
 import {
   getAllCards, getAllProgress, getProgress,
   putProgress, putCards, deleteCard, getDueCards, getKnownCount,
-  recordActivity, clearAllProgress,
+  recordActivity, clearAllProgress, putFlagged,
 } from '../db';
 
 import { WORDS } from '../data/words';
@@ -85,6 +85,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const swipeTouchStartX = useRef(0);
   const swipeTouchStartY = useRef(0);
   const swipeEdge = useRef(false);
+
+  // Flag feature
+  const [flagged, setFlagged] = useState(false);
 
   // Archive feature
   const [archiveConfirm, setArchiveConfirm] = useState<{ english: string; russian: string; cardId: string } | null>(null);
@@ -368,6 +371,24 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     });
   }, [allCards, setupCard]);
 
+  const handleFlag = useCallback(async () => {
+    if (!currentCard) return;
+    const correctAnswer = currentCard.direction === 'en-ru'
+      ? currentCard.card.russian
+      : currentCard.card.english;
+    await putFlagged({
+      cardId: currentCard.card.id,
+      english: currentCard.card.english,
+      russian: currentCard.card.russian,
+      example: currentCard.card.example,
+      options,
+      correctAnswer,
+      timestamp: Date.now(),
+    });
+    setFlagged(true);
+    setTimeout(() => setFlagged(false), 900);
+  }, [currentCard, options]);
+
   const handleArchive = useCallback(async () => {
     const sc = queue[queueIdx];
     if (!sc) { setArchiveConfirm(null); return; }
@@ -464,7 +485,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.73</span>
+
+          <span className="header-version">v0.74</span>
+          <span className="header-version">v0.74</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -555,6 +578,15 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           </>
         ) : null}
       </div>
+
+      {/* Flag button — visible whenever a card is active */}
+      {!isFinished && !loading && currentCard && (
+        <div className="flag-row">
+          <button className={`flag-btn${flagged ? ' flag-btn-active' : ''}`} onClick={handleFlag}>
+            {flagged ? '⚑ ОТМЕЧЕНО' : '⚑ ФЛАГ'}
+          </button>
+        </div>
+      )}
 
       {/* Options / Continue */}
       {!isFinished && !loading && currentCard && (
