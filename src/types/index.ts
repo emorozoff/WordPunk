@@ -6,7 +6,8 @@ export interface Card {
   example?: string; // Sentence; target word may be wrapped in **bold** markers
   topicId: string;
   isCustom: boolean;
-  difficulty?: number; // 1–6, соответствует A1–C2
+  difficulty?: number; // 1–6, соответствует A1–C2 (субъективная оценка агентом при генерации)
+  freqLevel?: number; // 1–10, рассчитывается из SUBTLEX-частотности (внутренняя сортировка)
 }
 
 export interface CardProgress {

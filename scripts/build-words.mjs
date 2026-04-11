@@ -7,6 +7,16 @@ import { join } from 'path';
 
 const RAW_DIR = 'data/raw';
 const OUT = 'src/data/words.ts';
+const LEVELS_FILE = 'data/levels.json';
+
+// Load freqLevels map (word → level 1-10)
+let freqLevels = {};
+try {
+  freqLevels = JSON.parse(readFileSync(LEVELS_FILE, 'utf-8'));
+  console.log(`Loaded freqLevels for ${Object.keys(freqLevels).length} words`);
+} catch {
+  console.warn(`WARN: ${LEVELS_FILE} not found — run scripts/assign-levels.mjs first`);
+}
 
 // Parse a CSV line respecting double-quote escaping
 function parseCsvLine(line) {
@@ -55,14 +65,17 @@ for (const file of files) {
       continue;
     }
     idx++;
+    const enTrim = english.trim();
+    const freqLevel = freqLevels[enTrim.toLowerCase()] ?? 9;
     allCards.push({
       id: `${topicId}_${String(idx).padStart(3, '0')}`,
-      english: english.trim(),
+      english: enTrim,
       russian: russian.trim(),
       sentence: sentence.trim(),
       topicId,
       isCustom: false,
       difficulty: parseInt(difficulty, 10) || 1,
+      freqLevel,
     });
   }
 }
@@ -83,7 +96,7 @@ console.log(`\nUnique English words: ${uniqueEng.size}`);
 // Write words.ts
 function esc(s) { return s.replace(/\\/g, '\\\\').replace(/'/g, "\\'"); }
 const lines = allCards.map(c =>
-  `  { id: '${esc(c.id)}', english: '${esc(c.english)}', russian: '${esc(c.russian)}', synonyms: [], example: '${esc(c.sentence)}', topicId: '${esc(c.topicId)}', isCustom: ${c.isCustom}, difficulty: ${c.difficulty} },`
+  `  { id: '${esc(c.id)}', english: '${esc(c.english)}', russian: '${esc(c.russian)}', synonyms: [], example: '${esc(c.sentence)}', topicId: '${esc(c.topicId)}', isCustom: ${c.isCustom}, difficulty: ${c.difficulty}, freqLevel: ${c.freqLevel} },`
 );
 const output = `import type { Card } from '../types';\n\nexport const WORDS: Card[] = [\n${lines.join('\n')}\n];\n`;
 writeFileSync(OUT, output);
