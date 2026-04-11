@@ -88,11 +88,11 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
 
   // Archive feature
   const [archiveConfirm, setArchiveConfirm] = useState<{ english: string; russian: string; cardId: string } | null>(null);
-  const [lpOpt, setLpOpt] = useState<string | null>(null);
+  const [lpOpt, setLpOpt] = useState<string | null>(null);   // truthy = some button is being held
   const lpTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  // Set to true when the 600ms timer fires — prevents the subsequent touchend
-  // from being treated as a tap and triggering handleAnswer.
-  const lpFiredRef = useRef(false);
+  const lpPressedOptRef = useRef<string | null>(null);        // which option is being held
+  const lpFiredRef = useRef(false);                           // timer already fired, swallow next click
+  const archiveOpenedAtRef = useRef(0);                       // timestamp when modal opened
 
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
@@ -464,7 +464,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.68</span>
+          <span className="header-version">v0.69</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -573,10 +573,12 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
                 else if (opt === answered.chosen) cls += ' wrong';
                 else cls += ' dimmed';
               }
-              if (lpOpt === opt) cls += ' lp-pressing';
+              // ALL buttons animate during a hold — no hint which one is correct
+              if (lpOpt !== null && !answered) cls += ' lp-pressing';
 
               const cancelLp = () => {
                 if (lpTimerRef.current) { clearTimeout(lpTimerRef.current); lpTimerRef.current = null; }
+                lpPressedOptRef.current = null;
                 setLpOpt(null);
               };
 
@@ -584,25 +586,44 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
                 <button
                   key={i}
                   className={cls}
-                  // Click fires after touchend — skip if long-press already opened the modal
                   onClick={() => {
+                    // Swallow click if timer already fired (iOS fires click after touchend)
                     if (lpFiredRef.current) { lpFiredRef.current = false; return; }
                     handleAnswer(opt);
                   }}
                   onTouchStart={e => {
                     if (answered || !currentCard) return;
-                    e.preventDefault(); // prevent ghost click delay on iOS
-                    setLpOpt(opt);
+                    e.preventDefault(); // prevent ghost click on iOS
+                    setLpOpt(opt);      // any non-null value triggers animation on ALL buttons
+                    lpPressedOptRef.current = opt;
                     lpFiredRef.current = false;
                     lpTimerRef.current = setTimeout(() => {
                       lpFiredRef.current = true;
+                      const pressedOpt = lpPressedOptRef.current ?? '';
+                      lpPressedOptRef.current = null;
                       setLpOpt(null);
-                      // Always archive the CURRENT CARD, not the button pressed
-                      setArchiveConfirm({
-                        english: currentCard.card.english,
-                        russian: currentCard.card.russian,
-                        cardId: currentCard.card.id,
-                      });
+
+                      // Check if the held button is the correct answer
+                      const correctAnswer = currentCard.direction === 'en-ru'
+                        ? currentCard.card.russian
+                        : currentCard.card.english;
+                      const allSynonyms = [correctAnswer, ...(currentCard.card.synonyms ?? [])];
+                      const pressedIsCorrect = allSynonyms.some(
+                        s => s.toLowerCase() === pressedOpt.toLowerCase()
+                      );
+
+                      if (pressedIsCorrect) {
+                        // Show archive confirm; guard against phantom iOS click closing it
+                        archiveOpenedAtRef.current = Date.now();
+                        setArchiveConfirm({
+                          english: currentCard.card.english,
+                          russian: currentCard.card.russian,
+                          cardId: currentCard.card.id,
+                        });
+                      } else {
+                        // Wrong button held — count as wrong answer
+                        handleAnswer(pressedOpt);
+                      }
                     }, 600);
                   }}
                   onTouchEnd={cancelLp}
@@ -653,7 +674,15 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
 
       {/* Archive confirm modal */}
       {archiveConfirm && (
-        <div className="archive-overlay" onClick={() => setArchiveConfirm(null)}>
+        <div
+          className="archive-overlay"
+          onClick={() => {
+            // Guard: iOS can fire a phantom click right after the long-press touchend.
+            // Ignore any click within 500ms of the modal opening.
+            if (Date.now() - archiveOpenedAtRef.current < 500) return;
+            setArchiveConfirm(null);
+          }}
+        >
           <div className="archive-confirm" onClick={e => e.stopPropagation()}>
             <div className="archive-confirm-title">АРХИВ_</div>
             <div className="archive-confirm-word">{archiveConfirm.english}</div>
