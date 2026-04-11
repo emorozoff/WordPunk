@@ -8,6 +8,7 @@ import type { PrefLevel, TopicPrefs } from '../lib/topicPrefs';
 
 interface Props {
   onClose: () => void;
+  onSwearingActivated?: () => void;
 }
 
 interface TopicStats {
@@ -35,11 +36,10 @@ const TopicIcon: FC<{ name: string }> = ({ name }) => {
   return <Icon size={15} strokeWidth={1.5} />;
 };
 
-const TopicModal: FC<Props> = ({ onClose }) => {
+const TopicModal: FC<Props> = ({ onClose, onSwearingActivated }) => {
   const [prefs, setPrefs] = useState<TopicPrefs>(() => loadTopicPrefs());
   const [stats, setStats] = useState<Record<string, TopicStats>>({});
   const [showBasicWarning, setShowBasicWarning] = useState(false);
-  const [devilFlashes, setDevilFlashes] = useState<number[]>([]);
   const sheetRef = useRef<HTMLDivElement>(null);
   const dragStartY = useRef(0);
   const isDragging = useRef(false);
@@ -73,9 +73,7 @@ const TopicModal: FC<Props> = ({ onClose }) => {
     saveTopicPrefs(updated);
 
     if (topicId === 'swearing' && next !== 0) {
-      const id = Date.now() + Math.random();
-      setDevilFlashes(prev => [...prev, id]);
-      setTimeout(() => setDevilFlashes(prev => prev.filter(x => x !== id)), 800);
+      onSwearingActivated?.();
     }
   };
 
@@ -225,17 +223,12 @@ const TopicModal: FC<Props> = ({ onClose }) => {
                     </div>
                     <div className="topic-item-right">
                       <span className="topic-progress-count">{s.known}/{s.total}</span>
-                      <div style={{ position: 'relative', display: 'inline-flex' }}>
-                        {topic.id === 'swearing' && devilFlashes.map(id => (
-                          <span key={id} className="devil-glitch">😈</span>
-                        ))}
-                        <button
-                          className={`pref-toggle pref-toggle-${pref}`}
-                          onClick={() => toggle(topic.id)}
-                        >
-                          {PREF_LABELS[pref]}
-                        </button>
-                      </div>
+                      <button
+                        className={`pref-toggle pref-toggle-${pref}`}
+                        onClick={() => toggle(topic.id)}
+                      >
+                        {PREF_LABELS[pref]}
+                      </button>
                     </div>
                   </div>
                   <div className="topic-progress-bar">
