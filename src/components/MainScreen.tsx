@@ -96,11 +96,13 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         const allExisting = await getAllCards();
         const builtInCount = allExisting.filter(c => !c.isCustom).length;
         if (builtInCount !== WORDS.length) {
-          // Remove outdated built-in cards, keep custom ones
-          for (const c of allExisting.filter(cc => !cc.isCustom)) {
+          // Put new cards first (safe upsert), then remove stale built-in cards.
+          // This order ensures data is never lost if putCards fails mid-way.
+          await putCards(WORDS);
+          const newIds = new Set(WORDS.map(w => w.id));
+          for (const c of allExisting.filter(cc => !cc.isCustom && !newIds.has(cc.id))) {
             await deleteCard(c.id);
           }
-          await putCards(WORDS);
         }
         const cards = await getAllCards();
         setAllCards(cards);
@@ -425,7 +427,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.64</span>
+          <span className="header-version">v0.65</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>

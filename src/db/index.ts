@@ -56,8 +56,12 @@ export async function putCard(card: Card): Promise<void> {
 
 export async function putCards(cards: Card[]): Promise<void> {
   const db = await getDB();
-  const tx = db.transaction('cards', 'readwrite');
-  await Promise.all([...cards.map(c => tx.store.put(c)), tx.done]);
+  const BATCH = 500;
+  for (let i = 0; i < cards.length; i += BATCH) {
+    const batch = cards.slice(i, i + BATCH);
+    const tx = db.transaction('cards', 'readwrite');
+    await Promise.all([...batch.map(c => tx.store.put(c)), tx.done]);
+  }
 }
 
 export async function deleteCard(id: string): Promise<void> {
