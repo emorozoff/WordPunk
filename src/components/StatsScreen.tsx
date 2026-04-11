@@ -1,5 +1,5 @@
 import { FC, useEffect, useState, useRef } from 'react';
-import { getAllProgress, getActivity, countCards } from '../db';
+import { getAllProgress, getActivity, countCards, getArchivedCount } from '../db';
 import type { DayActivity } from '../types';
 
 interface Props {
@@ -13,6 +13,7 @@ const DISMISS_THRESHOLD = 100;
 const StatsScreen: FC<Props> = ({ onClose }) => {
   const [known, setKnown] = useState(0);
   const [total, setTotal] = useState(0);
+  const [archived, setArchived] = useState(0);
   const [dist, setDist] = useState<Record<number, number>>({ 0:0,1:0,2:0,3:0,4:0,5:0 });
   const [activity, setActivity] = useState<DayActivity[]>([]);
 
@@ -22,12 +23,14 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
 
   useEffect(() => {
     const load = async () => {
-      const [prog, act, cnt] = await Promise.all([
+      const [prog, act, cnt, arc] = await Promise.all([
         getAllProgress(),
         getActivity(90),
         countCards(),
+        getArchivedCount(),
       ]);
       setTotal(cnt);
+      setArchived(arc);
       setKnown(prog.filter(p => p.level >= 3).length);
       const d: Record<number, number> = {0:0,1:0,2:0,3:0,4:0,5:0};
       for (const p of prog) d[p.level] = (d[p.level] ?? 0) + 1;
@@ -113,6 +116,9 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
             <div className="stat-label">ВСЕГО слов</div>
           </div>
         </div>
+        {archived > 0 && (
+          <div className="stats-archived-row">архивировано: {archived} слов</div>
+        )}
 
         <div className="stats-section-title">РАСПРЕДЕЛЕНИЕ ПО УРОВНЯМ</div>
         <div className="level-dist" style={{ marginBottom: 24 }}>

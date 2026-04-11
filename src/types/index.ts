@@ -18,6 +18,7 @@ export interface CardProgress {
   consecutiveCorrect: number;
   totalCorrect: number;
   totalWrong: number;
+  archived?: boolean;      // true = excluded from queue forever, counts as known
 }
 
 export interface Topic {

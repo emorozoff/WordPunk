@@ -86,6 +86,12 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const swipeTouchStartY = useRef(0);
   const swipeEdge = useRef(false);
 
+  // Archive feature
+  const [archiveConfirm, setArchiveConfirm] = useState<{ english: string; russian: string; cardId: string } | null>(null);
+  const [lpOpt, setLpOpt] = useState<string | null>(null);
+  const lpTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const lpCompletedRef = useRef(false);
+
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
 
@@ -149,10 +155,10 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     const allProgress = await getAllProgress();
     const progressMap = new Map(allProgress.map(p => [p.cardId, p]));
 
-    // Due cards (SRS reviews) — show all regardless of prefs
+    // Due cards (SRS reviews) — show all regardless of prefs, exclude archived
     const filteredDue = dueProgress.filter(p => {
       const c = cards.find(cc => cc.id === p.cardId);
-      return c && c.topicId !== 'custom';
+      return c && c.topicId !== 'custom' && !p.archived;
     });
 
     // New cards — weighted by topic prefs, grouped by difficulty
@@ -360,6 +366,31 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     });
   }, [allCards, setupCard]);
 
+  const handleArchive = useCallback(async () => {
+    const sc = queue[queueIdx];
+    if (!sc) { setArchiveConfirm(null); return; }
+
+    const progressFromDB = await getProgress(sc.card.id) ?? createInitialProgress(sc.card.id);
+    await putProgress({ ...progressFromDB, archived: true });
+
+    const newKnown = await getKnownCount();
+    setKnownCount(newKnown);
+
+    setArchiveConfirm(null);
+
+    // Remove all instances of this card from the in-memory queue
+    const archivedId = sc.card.id;
+    const filtered = queue.filter(item => item.card.id !== archivedId);
+    setQueue(filtered);
+    const nextCard = filtered[queueIdx];
+    if (nextCard) {
+      setupCard(nextCard, allCards);
+    } else {
+      setAnswered(null);
+      setDisplayWord('');
+    }
+  }, [queue, queueIdx, allCards, setupCard]);
+
   // Debug handlers
   const handleDebugAddPoints = (n: number) => {
     const next = knownCount + n;
@@ -431,7 +462,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="header">
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
-          <span className="header-version">v0.66</span>
+          <span className="header-version">v0.67</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -540,14 +571,49 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
                 else if (opt === answered.chosen) cls += ' wrong';
                 else cls += ' dimmed';
               }
+              if (lpOpt === opt) cls += ' lp-pressing';
+
+              const correctAnswer = currentCard
+                ? (currentCard.direction === 'en-ru' ? currentCard.card.russian : currentCard.card.english)
+                : '';
+              const isCorrectOpt = !answered && [correctAnswer, ...(currentCard?.card.synonyms ?? [])].some(
+                s => s.toLowerCase() === opt.toLowerCase()
+              );
+
               return (
                 <button
                   key={i}
                   className={cls}
-                  onClick={() => handleAnswer(opt)}
+                  onClick={() => {
+                    if (lpCompletedRef.current) { lpCompletedRef.current = false; return; }
+                    handleAnswer(opt);
+                  }}
+                  onPointerDown={() => {
+                    if (answered || !isCorrectOpt || !currentCard) return;
+                    setLpOpt(opt);
+                    lpTimerRef.current = setTimeout(() => {
+                      lpCompletedRef.current = true;
+                      setLpOpt(null);
+                      setArchiveConfirm({
+                        english: currentCard.card.english,
+                        russian: currentCard.card.russian,
+                        cardId: currentCard.card.id,
+                      });
+                    }, 600);
+                  }}
+                  onPointerUp={() => {
+                    if (lpTimerRef.current) { clearTimeout(lpTimerRef.current); lpTimerRef.current = null; }
+                    setLpOpt(null);
+                  }}
+                  onPointerLeave={() => {
+                    if (lpTimerRef.current) { clearTimeout(lpTimerRef.current); lpTimerRef.current = null; }
+                    setLpOpt(null);
+                  }}
+                  onContextMenu={e => e.preventDefault()}
                   disabled={!!answered}
                   style={answered ? { pointerEvents: 'none' } : undefined}
                 >
+                  <span className="lp-fill-bar" />
                   {opt}
                 </button>
               );
@@ -585,6 +651,21 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           onNextLevel={handleDebugNextLevel}
           onReset={handleDebugReset}
         />
+      )}
+
+      {/* Archive confirm modal */}
+      {archiveConfirm && (
+        <div className="archive-overlay" onClick={() => setArchiveConfirm(null)}>
+          <div className="archive-confirm" onClick={e => e.stopPropagation()}>
+            <div className="archive-confirm-title">АРХИВ_</div>
+            <div className="archive-confirm-word">{archiveConfirm.english}</div>
+            <div className="archive-confirm-sep">→</div>
+            <div className="archive-confirm-translation">{archiveConfirm.russian}</div>
+            <div className="archive-confirm-hint">слово исчезнет навсегда из очереди</div>
+            <button className="archive-confirm-yes" onClick={handleArchive}>ТОЧНО ЗНАЮ</button>
+            <button className="archive-confirm-no" onClick={() => setArchiveConfirm(null)}>ОТМЕНА</button>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -1363,6 +1363,138 @@ button {
   color: var(--accent-red);
 }
 
+/* ── Long-press archive ──────────────────────────────────────────────────── */
+
+@keyframes lp-fill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+.option-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.lp-fill-bar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 0;
+  background: rgba(0, 255, 136, 0.18);
+  pointer-events: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.option-btn.lp-pressing .lp-fill-bar {
+  animation: lp-fill 0.6s linear forwards;
+}
+
+.option-btn.lp-pressing {
+  border-color: rgba(0, 255, 136, 0.5);
+}
+
+/* Archive confirm overlay */
+.archive-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 24px;
+}
+
+.archive-confirm {
+  background: var(--surface);
+  border: 1px solid var(--accent-green);
+  border-radius: 12px;
+  padding: 28px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 0 24px rgba(0, 255, 136, 0.12);
+}
+
+.archive-confirm-title {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.archive-confirm-word {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-green);
+  letter-spacing: 1px;
+}
+
+.archive-confirm-sep {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.archive-confirm-translation {
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.archive-confirm-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.archive-confirm-yes {
+  width: 100%;
+  background: rgba(0, 255, 136, 0.12);
+  border: 1px solid var(--accent-green);
+  border-radius: 8px;
+  color: var(--accent-green);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 14px;
+  margin-bottom: 8px;
+  transition: background 0.15s;
+}
+
+.archive-confirm-yes:active {
+  background: rgba(0, 255, 136, 0.25);
+}
+
+.archive-confirm-no {
+  width: 100%;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 12px;
+  transition: border-color 0.15s;
+}
+
+.archive-confirm-no:active {
+  border-color: var(--text-muted);
+}
+
+/* Stats archived row */
+.stats-archived-row {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+
 /* CRT scanline */
 .scanline {
   position: fixed;

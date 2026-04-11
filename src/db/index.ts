@@ -102,7 +102,13 @@ export async function getDueCards(today: string): Promise<CardProgress[]> {
 export async function getKnownCount(): Promise<number> {
   const db = await getDB();
   const all = await db.getAll('progress');
-  return all.filter(p => p.level >= 1).length;
+  return all.filter(p => p.level >= 1 || !!p.archived).length;
+}
+
+export async function getArchivedCount(): Promise<number> {
+  const db = await getDB();
+  const all = await db.getAll('progress');
+  return all.filter(p => !!p.archived).length;
 }
 
 export async function getLevelDistribution(): Promise<Record<number, number>> {
