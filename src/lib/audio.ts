@@ -63,7 +63,7 @@ export function playLevelUp(): void {
 const TTS_KEY = 'tts_enabled';
 const VOICE_ID = 'en_US-hfc_female-low';
 
-let currentAudio: HTMLAudioElement | null = null;
+let currentSource: AudioBufferSourceNode | null = null;
 let speechEndCallback: (() => void) | null = null;
 let piperReady = false;
 let piperDownloading = false;
@@ -138,40 +138,40 @@ export function speakSentence(text: string, onEnd: () => void): void {
   const clean = text.replace(/\*\*/g, '');
   stopSpeech();
 
-  const audio = new Audio();
-  currentAudio = audio;
-  speechEndCallback = onEnd;
+  // Разблокируем / создаём AudioContext синхронно в стеке жеста (iOS)
+  const ac = getCtx();
+  if (ac.state === 'suspended') ac.resume();
 
-  audio.onended = () => {
-    if (audio.src) URL.revokeObjectURL(audio.src);
-    if (speechEndCallback) {
-      const cb = speechEndCallback;
-      speechEndCallback = null;
-      currentAudio = null;
-      cb();
-    }
-  };
-  audio.onerror = () => {
-    speechEndCallback = null;
-    currentAudio = null;
-  };
+  speechEndCallback = onEnd;
 
   getTtsModule()
     .then(tts => tts.predict({ text: clean, voiceId: VOICE_ID }))
-    .then(wav => {
-      if (currentAudio !== audio) return;
-      audio.src = URL.createObjectURL(wav);
-      audio.play().catch(() => { speechEndCallback = null; currentAudio = null; });
+    .then(wav => wav.arrayBuffer())
+    .then(buf => ac.decodeAudioData(buf))
+    .then(audioBuffer => {
+      if (!speechEndCallback) return; // stopSpeech() was called
+      const source = ac.createBufferSource();
+      source.buffer = audioBuffer;
+      source.connect(ac.destination);
+      currentSource = source;
+      source.onended = () => {
+        if (speechEndCallback) {
+          const cb = speechEndCallback;
+          speechEndCallback = null;
+          currentSource = null;
+          cb();
+        }
+      };
+      source.start(0);
     })
-    .catch(() => { speechEndCallback = null; currentAudio = null; });
+    .catch(() => { speechEndCallback = null; currentSource = null; });
 }
 
 export function stopSpeech(): void {
   speechEndCallback = null;
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.onended = null;
-    if (currentAudio.src) URL.revokeObjectURL(currentAudio.src);
-    currentAudio = null;
+  if (currentSource) {
+    try { currentSource.stop(); } catch (_) {}
+    currentSource.onended = null;
+    currentSource = null;
   }
 }
