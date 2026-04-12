@@ -68,6 +68,7 @@ let speechEndCallback: (() => void) | null = null;
 let piperReady = false;
 let piperDownloading = false;
 let piperProgress = 0;
+let piperError: string | null = null;
 
 type PiperStatusListener = (status: PiperStatus) => void;
 const listeners = new Set<PiperStatusListener>();
@@ -76,16 +77,17 @@ export interface PiperStatus {
   downloading: boolean;
   progress: number;
   ready: boolean;
+  error: string | null;
 }
 
 function notify(): void {
-  const s: PiperStatus = { downloading: piperDownloading, progress: piperProgress, ready: piperReady };
+  const s: PiperStatus = { downloading: piperDownloading, progress: piperProgress, ready: piperReady, error: piperError };
   listeners.forEach(fn => fn(s));
 }
 
 export function subscribePiperStatus(fn: PiperStatusListener): () => void {
   listeners.add(fn);
-  fn({ downloading: piperDownloading, progress: piperProgress, ready: piperReady });
+  fn({ downloading: piperDownloading, progress: piperProgress, ready: piperReady, error: piperError });
   return () => { listeners.delete(fn); };
 }
 
@@ -100,6 +102,7 @@ async function getTtsModule() {
 
 export async function initPiper(): Promise<void> {
   if (piperReady || piperDownloading) return;
+  piperError = null;
   try {
     const tts = await getTtsModule();
     const cached = await tts.stored();
@@ -119,8 +122,8 @@ export async function initPiper(): Promise<void> {
     piperReady = true;
     notify();
   } catch (e) {
-    console.error('Piper init failed:', e);
     piperDownloading = false;
+    piperError = 'init: ' + (e instanceof Error ? e.message : String(e));
     notify();
   }
 }
@@ -163,8 +166,15 @@ export function speakSentence(text: string, onEnd: () => void): void {
         }
       };
       source.start(0);
+      piperError = null;
+      notify();
     })
-    .catch(() => { speechEndCallback = null; currentSource = null; });
+    .catch((e) => {
+      speechEndCallback = null;
+      currentSource = null;
+      piperError = 'speak: ' + (e instanceof Error ? e.message : String(e));
+      notify();
+    });
 }
 
 export function stopSpeech(): void {

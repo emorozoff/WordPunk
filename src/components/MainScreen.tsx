@@ -91,7 +91,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const swipeEdge = useRef(false);
 
   const [ttsEnabled, setTtsEnabledState] = useState(isTtsEnabled);
-  const [piperStatus, setPiperStatus] = useState<PiperStatus>({ downloading: false, progress: 0, ready: false });
+  const [piperStatus, setPiperStatus] = useState<PiperStatus>({ downloading: false, progress: 0, ready: false, error: null });
 
   const handleTtsToggle = () => {
     const next = !ttsEnabled;
@@ -508,7 +508,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.771</span>
+          <span className="header-version">v0.772</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -699,9 +699,13 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <button className="nav-btn" onClick={onOpenTopics}>ТЕМЫ</button>
         <button className={`nav-btn${ttsEnabled ? ' nav-btn-tts-on' : ''}`} onClick={handleTtsToggle}>
           {ttsEnabled
-            ? (piperStatus.downloading
-                ? `◎ ${Math.round(piperStatus.progress)}%`
-                : '◉ ОЗВУЧКА')
+            ? (piperStatus.error
+                ? `✕ ${piperStatus.error.slice(0, 25)}`
+                : piperStatus.downloading
+                  ? `◎ ${Math.round(piperStatus.progress)}%`
+                  : piperStatus.ready
+                    ? '◉ ОЗВУЧКА'
+                    : '◎ ...')
             : '◎ ОЗВУЧКА'}
         </button>
         <button className="nav-btn" onClick={onOpenStats}>СТАТИСТИКА</button>
