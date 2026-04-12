@@ -272,6 +272,19 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     // Звук
     if (!isCorrect) playWrong();
 
+    // TTS + авто-переход — ОБЯЗАТЕЛЬНО до первого await!
+    // iOS Safari блокирует speechSynthesis.speak() если он не в синхронном стеке от тапа.
+    if (isCorrect) {
+      if (sc.card.example && sc.direction === 'ru-en') {
+        pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
+      }
+      if (ttsEnabled && sc.card.example) {
+        speakSentence(sc.card.example, () => advance());
+      } else {
+        autoAdvanceRef.current = setTimeout(() => advance(), 1600);
+      }
+    }
+
     // Активность — записываем каждый ответ
     await recordActivity(getToday());
 
@@ -344,22 +357,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       }
     }
 
-    // Автопереход — только при правильном ответе
-    // При ошибке пользователь сам нажимает "ДАЛЕЕ"
-    if (isCorrect) {
-      // Для ru-en: пример показывается под карточкой после ответа, потом гаснет
-      // Для en-ru: пример уже был на карточке — не дублируем
-      if (sc.card.example && sc.direction === 'ru-en') {
-        pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
-      }
-      if (ttsEnabled && sc.card.example) {
-        // Озвучиваем предложение; advance() вызывается когда речь закончится естественно.
-        // Если пользователь тапнет раньше — advance() вызовет stopSpeech() и колбэк не сработает.
-        speakSentence(sc.card.example, () => advance());
-      } else {
-        autoAdvanceRef.current = setTimeout(() => advance(), 1600);
-      }
-    }
+    // (TTS + авто-переход перенесены выше, до первого await — см. комментарий про iOS Safari)
   };
 
   const advance = useCallback(() => {
@@ -498,7 +496,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.762</span>
+          <span className="header-version">v0.763</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
