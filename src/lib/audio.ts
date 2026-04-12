@@ -58,7 +58,7 @@ export function playLevelUp(): void {
   } catch (_) {}
 }
 
-// ─── Piper TTS ────────────────────────────────────────────────────────────────
+// ─── TTS (Piper + speechSynthesis fallback) ──────────────────────────────────
 
 const TTS_KEY = 'tts_enabled';
 const VOICE_ID = 'en_US-hfc_female-low';
@@ -69,6 +69,7 @@ let piperReady = false;
 let piperDownloading = false;
 let piperProgress = 0;
 let piperError: string | null = null;
+let useFallback = false; // true = Piper сломан, используем speechSynthesis
 
 type PiperStatusListener = (status: PiperStatus) => void;
 const listeners = new Set<PiperStatusListener>();
@@ -78,22 +79,23 @@ export interface PiperStatus {
   progress: number;
   ready: boolean;
   error: string | null;
+  fallback: boolean;
 }
 
 function notify(): void {
-  const s: PiperStatus = { downloading: piperDownloading, progress: piperProgress, ready: piperReady, error: piperError };
+  const s: PiperStatus = { downloading: piperDownloading, progress: piperProgress, ready: piperReady, error: piperError, fallback: useFallback };
   listeners.forEach(fn => fn(s));
 }
 
 export function subscribePiperStatus(fn: PiperStatusListener): () => void {
   listeners.add(fn);
-  fn({ downloading: piperDownloading, progress: piperProgress, ready: piperReady, error: piperError });
+  fn({ downloading: piperDownloading, progress: piperProgress, ready: piperReady, error: piperError, fallback: useFallback });
   return () => { listeners.delete(fn); };
 }
 
-export function isPiperReady(): boolean { return piperReady; }
+export function isPiperReady(): boolean { return piperReady || useFallback; }
 
-// Lazy dynamic import — WASM не грузится пока не нужен
+// Lazy dynamic import
 let ttsModule: typeof import('@mintplex-labs/piper-tts-web') | null = null;
 async function getTtsModule() {
   if (!ttsModule) ttsModule = await import('@mintplex-labs/piper-tts-web');
@@ -101,21 +103,18 @@ async function getTtsModule() {
 }
 
 export async function initPiper(): Promise<void> {
-  if (piperReady || piperDownloading) return;
+  if (piperReady || piperDownloading || useFallback) return;
   piperError = null;
   try {
     const tts = await getTtsModule();
-    // Сначала пробуем предикт с кешированной моделью
     const cached = await tts.stored();
     if (cached.includes(VOICE_ID)) {
-      // Проверяем что кеш не битый — пробуем синтез
       try {
         await tts.predict({ text: 'test', voiceId: VOICE_ID });
         piperReady = true;
         notify();
         return;
       } catch (_) {
-        // Кеш битый — чистим и качаем заново
         await tts.flush();
       }
     }
@@ -126,12 +125,24 @@ export async function initPiper(): Promise<void> {
       piperProgress = Math.round(p.loaded * 100 / p.total);
       notify();
     });
-    piperDownloading = false;
-    piperReady = true;
-    notify();
+    // Проверяем что свежескачанная модель работает
+    try {
+      await tts.predict({ text: 'test', voiceId: VOICE_ID });
+      piperDownloading = false;
+      piperReady = true;
+      notify();
+    } catch (e) {
+      // Piper не работает на этом браузере — переключаемся на speechSynthesis
+      piperDownloading = false;
+      useFallback = true;
+      piperError = null;
+      notify();
+    }
   } catch (e) {
     piperDownloading = false;
-    piperError = 'init: ' + (e instanceof Error ? e.message : String(e));
+    // Любая ошибка (сеть, WASM, OPFS) — фоллбэк на speechSynthesis
+    useFallback = true;
+    piperError = null;
     notify();
   }
 }
@@ -144,12 +155,19 @@ export function setTtsEnabled(v: boolean): void {
   localStorage.setItem(TTS_KEY, v ? 'true' : 'false');
 }
 
+// ─── speakSentence: Piper → speechSynthesis fallback ─────────────────────────
+
 export function speakSentence(text: string, onEnd: () => void): void {
-  if (!piperReady) return;
   const clean = text.replace(/\*\*/g, '');
+
+  if (useFallback) {
+    speakViaSpeechSynthesis(clean, onEnd);
+    return;
+  }
+
+  if (!piperReady) return;
   stopSpeech();
 
-  // Разблокируем / создаём AudioContext синхронно в стеке жеста (iOS)
   const ac = getCtx();
   if (ac.state === 'suspended') ac.resume();
 
@@ -160,7 +178,7 @@ export function speakSentence(text: string, onEnd: () => void): void {
     .then(wav => wav.arrayBuffer())
     .then(buf => ac.decodeAudioData(buf))
     .then(audioBuffer => {
-      if (!speechEndCallback) return; // stopSpeech() was called
+      if (!speechEndCallback) return;
       const source = ac.createBufferSource();
       source.buffer = audioBuffer;
       source.connect(ac.destination);
@@ -178,11 +196,37 @@ export function speakSentence(text: string, onEnd: () => void): void {
       notify();
     })
     .catch((e) => {
-      speechEndCallback = null;
-      currentSource = null;
-      piperError = 'speak: ' + (e instanceof Error ? e.message : String(e));
+      // Piper сломался в рантайме — фоллбэк
+      useFallback = true;
+      piperError = null;
       notify();
+      speakViaSpeechSynthesis(clean, onEnd);
     });
+}
+
+function speakViaSpeechSynthesis(text: string, onEnd: () => void): void {
+  if (!window.speechSynthesis) { onEnd(); return; }
+  stopSpeech();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = 0.9;
+  speechEndCallback = onEnd;
+  utterance.onend = () => {
+    if (speechEndCallback) {
+      const cb = speechEndCallback;
+      speechEndCallback = null;
+      cb();
+    }
+  };
+  utterance.onerror = () => {
+    // Если speechSynthesis тоже не работает — просто вызываем onEnd
+    if (speechEndCallback) {
+      const cb = speechEndCallback;
+      speechEndCallback = null;
+      cb();
+    }
+  };
+  window.speechSynthesis.speak(utterance);
 }
 
 export function stopSpeech(): void {
@@ -192,4 +236,5 @@ export function stopSpeech(): void {
     currentSource.onended = null;
     currentSource = null;
   }
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
 }
