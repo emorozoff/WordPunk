@@ -590,6 +590,10 @@ button {
   letter-spacing: 2px;
 }
 
+.nav-btn-tts-on {
+  color: var(--accent-green);
+}
+
 .nav-btn.no-click {
   cursor: default;
   pointer-events: none;

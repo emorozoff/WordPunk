@@ -13,7 +13,7 @@ import {
   createInitialProgress, getCurrentLevel, getLevelProgress,
   getToday,
 } from '../lib/srs';
-import { playCorrect, playWrong, playLevelUp } from '../lib/audio';
+import { playCorrect, playWrong, playLevelUp, speakSentence, stopSpeech, isTtsEnabled, setTtsEnabled } from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
@@ -85,6 +85,15 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const swipeTouchStartX = useRef(0);
   const swipeTouchStartY = useRef(0);
   const swipeEdge = useRef(false);
+
+  const [ttsEnabled, setTtsEnabledState] = useState(isTtsEnabled);
+
+  const handleTtsToggle = () => {
+    const next = !ttsEnabled;
+    setTtsEnabled(next);
+    setTtsEnabledState(next);
+    if (!next) stopSpeech();
+  };
 
   // Flag feature
   const [flagged, setFlagged] = useState(false);
@@ -344,14 +353,19 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       if (sc.card.example && sc.direction === 'ru-en') {
         pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
       }
-      autoAdvanceRef.current = setTimeout(() => {
-        advance();
-      }, 1600);
+      if (ttsEnabled && sc.card.example) {
+        // Озвучиваем предложение; advance() вызывается когда речь закончится естественно.
+        // Если пользователь тапнет раньше — advance() вызовет stopSpeech() и колбэк не сработает.
+        speakSentence(sc.card.example, () => advance());
+      } else {
+        autoAdvanceRef.current = setTimeout(() => advance(), 1600);
+      }
     }
   };
 
   const advance = useCallback(() => {
     if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
+    stopSpeech();
     if (pendingExampleRef.current) {
       setPrevExample({ ...pendingExampleRef.current, animKey: Date.now() });
       pendingExampleRef.current = null;
@@ -485,7 +499,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.75</span>
+          <span className="header-version">v0.76</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -674,6 +688,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       {/* Bottom nav */}
       <div className="bottom-nav">
         <button className="nav-btn" onClick={onOpenTopics}>ТЕМЫ</button>
+        <button className={`nav-btn${ttsEnabled ? ' nav-btn-tts-on' : ''}`} onClick={handleTtsToggle}>
+          {ttsEnabled ? '◉ ОЗВУЧКА' : '◎ ОЗВУЧКА'}
+        </button>
         <button className="nav-btn" onClick={onOpenStats}>СТАТИСТИКА</button>
       </div>
 
