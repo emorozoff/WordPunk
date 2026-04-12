@@ -62,6 +62,34 @@ export function playLevelUp(): void {
 
 const TTS_KEY = 'tts_enabled';
 let speechEndCallback: (() => void) | null = null;
+let bestVoice: SpeechSynthesisVoice | null = null;
+
+// Best-sounding free voices by platform, in priority order
+const PREFERRED_VOICES = [
+  'Google US English',        // Chrome — very natural
+  'Google UK English Female', // Chrome fallback
+  'Samantha',                 // macOS / iOS
+  'Karen',                    // macOS / iOS (Australian)
+  'Daniel',                   // macOS / iOS (British)
+  'Microsoft Zira',           // Windows
+  'Microsoft David',          // Windows
+];
+
+function selectBestVoice(): void {
+  const voices = speechSynthesis.getVoices();
+  if (voices.length === 0) return;
+  for (const name of PREFERRED_VOICES) {
+    const match = voices.find(v => v.name === name);
+    if (match) { bestVoice = match; return; }
+  }
+  bestVoice = voices.find(v => v.lang.startsWith('en')) ?? voices[0] ?? null;
+}
+
+// Voices load asynchronously in Chrome
+if (typeof speechSynthesis !== 'undefined') {
+  selectBestVoice();
+  speechSynthesis.onvoiceschanged = selectBestVoice;
+}
 
 export function isTtsEnabled(): boolean {
   return localStorage.getItem(TTS_KEY) !== 'false';
@@ -79,6 +107,7 @@ export function speakSentence(text: string, onEnd: () => void): void {
   const utterance = new SpeechSynthesisUtterance(clean);
   utterance.lang = 'en-US';
   utterance.rate = 0.9;
+  if (bestVoice) utterance.voice = bestVoice;
   speechEndCallback = onEnd;
   utterance.onend = () => {
     if (speechEndCallback) {
