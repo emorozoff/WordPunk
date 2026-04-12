@@ -120,14 +120,10 @@ export function speakSentence(text: string, onEnd: () => void): void {
     // Cancelled or interrupted — do NOT call onEnd
     speechEndCallback = null;
   };
-  window.speechSynthesis.cancel();
-  // Chrome bug: speak() immediately after cancel() is sometimes silent.
-  // Small delay + resume() fixes it.
-  setTimeout(() => {
-    if (!speechEndCallback) return; // stopSpeech() was called in the meantime
-    window.speechSynthesis.resume();
-    window.speechSynthesis.speak(utterance);
-  }, 50);
+  // speak() must be called synchronously in the user gesture stack —
+  // iOS Safari silently blocks it otherwise.
+  // No cancel() here: stopSpeech() in advance() already handles cleanup.
+  window.speechSynthesis.speak(utterance);
 }
 
 /** Stops any ongoing speech. The onEnd callback will NOT be called. */
