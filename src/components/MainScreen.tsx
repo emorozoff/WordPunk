@@ -508,7 +508,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.772</span>
+          <span className="header-version">v0.773</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -700,7 +700,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <button className={`nav-btn${ttsEnabled ? ' nav-btn-tts-on' : ''}`} onClick={handleTtsToggle}>
           {ttsEnabled
             ? (piperStatus.error
-                ? `✕ ${piperStatus.error.slice(0, 25)}`
+                ? `✕ ${piperStatus.error.slice(0, 50)}`
                 : piperStatus.downloading
                   ? `◎ ${Math.round(piperStatus.progress)}%`
                   : piperStatus.ready

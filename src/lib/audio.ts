@@ -105,11 +105,19 @@ export async function initPiper(): Promise<void> {
   piperError = null;
   try {
     const tts = await getTtsModule();
+    // Сначала пробуем предикт с кешированной моделью
     const cached = await tts.stored();
     if (cached.includes(VOICE_ID)) {
-      piperReady = true;
-      notify();
-      return;
+      // Проверяем что кеш не битый — пробуем синтез
+      try {
+        await tts.predict({ text: 'test', voiceId: VOICE_ID });
+        piperReady = true;
+        notify();
+        return;
+      } catch (_) {
+        // Кеш битый — чистим и качаем заново
+        await tts.flush();
+      }
     }
     piperDownloading = true;
     piperProgress = 0;
