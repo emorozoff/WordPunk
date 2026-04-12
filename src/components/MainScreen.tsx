@@ -13,7 +13,11 @@ import {
   createInitialProgress, getCurrentLevel, getLevelProgress,
   getToday,
 } from '../lib/srs';
-import { playWrong, playLevelUp, speakSentence, stopSpeech, isTtsEnabled, setTtsEnabled } from '../lib/audio';
+import {
+  playWrong, playLevelUp, speakSentence, stopSpeech,
+  isTtsEnabled, setTtsEnabled, isPiperReady,
+  initPiper, subscribePiperStatus, type PiperStatus,
+} from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
@@ -87,12 +91,14 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const swipeEdge = useRef(false);
 
   const [ttsEnabled, setTtsEnabledState] = useState(isTtsEnabled);
+  const [piperStatus, setPiperStatus] = useState<PiperStatus>({ downloading: false, progress: 0, ready: false });
 
   const handleTtsToggle = () => {
     const next = !ttsEnabled;
     setTtsEnabled(next);
     setTtsEnabledState(next);
     if (!next) stopSpeech();
+    else initPiper();
   };
 
   // Flag feature
@@ -108,6 +114,12 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
 
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
+
+  // Piper TTS: инициализация модели + подписка на статус загрузки
+  useEffect(() => {
+    if (ttsEnabled) initPiper();
+    return subscribePiperStatus(setPiperStatus);
+  }, []);
 
   // Seed DB on first load (re-seed if built-in word count changed)
   useEffect(() => {
@@ -278,7 +290,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       if (sc.card.example && sc.direction === 'ru-en') {
         pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
       }
-      if (ttsEnabled && sc.card.example) {
+      if (ttsEnabled && sc.card.example && isPiperReady()) {
         speakSentence(sc.card.example, () => advance());
       } else {
         autoAdvanceRef.current = setTimeout(() => advance(), 1600);
@@ -496,7 +508,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.763</span>
+          <span className="header-version">v0.77</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -686,7 +698,11 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       <div className="bottom-nav">
         <button className="nav-btn" onClick={onOpenTopics}>ТЕМЫ</button>
         <button className={`nav-btn${ttsEnabled ? ' nav-btn-tts-on' : ''}`} onClick={handleTtsToggle}>
-          {ttsEnabled ? '◉ ОЗВУЧКА' : '◎ ОЗВУЧКА'}
+          {ttsEnabled
+            ? (piperStatus.downloading
+                ? `◎ ${Math.round(piperStatus.progress)}%`
+                : '◉ ОЗВУЧКА')
+            : '◎ ОЗВУЧКА'}
         </button>
         <button className="nav-btn" onClick={onOpenStats}>СТАТИСТИКА</button>
       </div>

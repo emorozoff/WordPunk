@@ -58,37 +58,71 @@ export function playLevelUp(): void {
   } catch (_) {}
 }
 
-// ─── TTS ──────────────────────────────────────────────────────────────────────
+// ─── Piper TTS ────────────────────────────────────────────────────────────────
 
 const TTS_KEY = 'tts_enabled';
+const VOICE_ID = 'en_US-hfc_female-low';
+
+let currentAudio: HTMLAudioElement | null = null;
 let speechEndCallback: (() => void) | null = null;
-let bestVoice: SpeechSynthesisVoice | null = null;
+let piperReady = false;
+let piperDownloading = false;
+let piperProgress = 0;
 
-// Best-sounding free voices by platform, in priority order
-const PREFERRED_VOICES = [
-  'Google US English',        // Chrome — very natural
-  'Google UK English Female', // Chrome fallback
-  'Samantha',                 // macOS / iOS
-  'Karen',                    // macOS / iOS (Australian)
-  'Daniel',                   // macOS / iOS (British)
-  'Microsoft Zira',           // Windows
-  'Microsoft David',          // Windows
-];
+type PiperStatusListener = (status: PiperStatus) => void;
+const listeners = new Set<PiperStatusListener>();
 
-function selectBestVoice(): void {
-  const voices = speechSynthesis.getVoices();
-  if (voices.length === 0) return;
-  for (const name of PREFERRED_VOICES) {
-    const match = voices.find(v => v.name === name);
-    if (match) { bestVoice = match; return; }
-  }
-  bestVoice = voices.find(v => v.lang.startsWith('en')) ?? voices[0] ?? null;
+export interface PiperStatus {
+  downloading: boolean;
+  progress: number;
+  ready: boolean;
 }
 
-// Voices load asynchronously in Chrome
-if (typeof speechSynthesis !== 'undefined') {
-  selectBestVoice();
-  speechSynthesis.onvoiceschanged = selectBestVoice;
+function notify(): void {
+  const s: PiperStatus = { downloading: piperDownloading, progress: piperProgress, ready: piperReady };
+  listeners.forEach(fn => fn(s));
+}
+
+export function subscribePiperStatus(fn: PiperStatusListener): () => void {
+  listeners.add(fn);
+  fn({ downloading: piperDownloading, progress: piperProgress, ready: piperReady });
+  return () => { listeners.delete(fn); };
+}
+
+export function isPiperReady(): boolean { return piperReady; }
+
+// Lazy dynamic import — WASM не грузится пока не нужен
+let ttsModule: typeof import('@mintplex-labs/piper-tts-web') | null = null;
+async function getTtsModule() {
+  if (!ttsModule) ttsModule = await import('@mintplex-labs/piper-tts-web');
+  return ttsModule;
+}
+
+export async function initPiper(): Promise<void> {
+  if (piperReady || piperDownloading) return;
+  try {
+    const tts = await getTtsModule();
+    const cached = await tts.stored();
+    if (cached.includes(VOICE_ID)) {
+      piperReady = true;
+      notify();
+      return;
+    }
+    piperDownloading = true;
+    piperProgress = 0;
+    notify();
+    await tts.download(VOICE_ID, (p) => {
+      piperProgress = Math.round(p.loaded * 100 / p.total);
+      notify();
+    });
+    piperDownloading = false;
+    piperReady = true;
+    notify();
+  } catch (e) {
+    console.error('Piper init failed:', e);
+    piperDownloading = false;
+    notify();
+  }
 }
 
 export function isTtsEnabled(): boolean {
@@ -99,35 +133,45 @@ export function setTtsEnabled(v: boolean): void {
   localStorage.setItem(TTS_KEY, v ? 'true' : 'false');
 }
 
-/** Speaks the sentence (strips **markers**), calls onEnd when finished naturally.
- *  If cancelled via stopSpeech(), onEnd is NOT called. */
 export function speakSentence(text: string, onEnd: () => void): void {
-  if (!window.speechSynthesis) return;
+  if (!piperReady) return;
   const clean = text.replace(/\*\*/g, '');
-  const utterance = new SpeechSynthesisUtterance(clean);
-  utterance.lang = 'en-US';
-  utterance.rate = 0.9;
-  if (bestVoice) utterance.voice = bestVoice;
+  stopSpeech();
+
+  const audio = new Audio();
+  currentAudio = audio;
   speechEndCallback = onEnd;
-  utterance.onend = () => {
+
+  audio.onended = () => {
+    if (audio.src) URL.revokeObjectURL(audio.src);
     if (speechEndCallback) {
       const cb = speechEndCallback;
       speechEndCallback = null;
+      currentAudio = null;
       cb();
     }
   };
-  utterance.onerror = () => {
-    // Cancelled or interrupted — do NOT call onEnd
+  audio.onerror = () => {
     speechEndCallback = null;
+    currentAudio = null;
   };
-  // speak() must be called synchronously in the user gesture stack —
-  // iOS Safari silently blocks it otherwise.
-  // No cancel() here: stopSpeech() in advance() already handles cleanup.
-  window.speechSynthesis.speak(utterance);
+
+  getTtsModule()
+    .then(tts => tts.predict({ text: clean, voiceId: VOICE_ID }))
+    .then(wav => {
+      if (currentAudio !== audio) return;
+      audio.src = URL.createObjectURL(wav);
+      audio.play().catch(() => { speechEndCallback = null; currentAudio = null; });
+    })
+    .catch(() => { speechEndCallback = null; currentAudio = null; });
 }
 
-/** Stops any ongoing speech. The onEnd callback will NOT be called. */
 export function stopSpeech(): void {
   speechEndCallback = null;
-  if (window.speechSynthesis) window.speechSynthesis.cancel();
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.onended = null;
+    if (currentAudio.src) URL.revokeObjectURL(currentAudio.src);
+    currentAudio = null;
+  }
 }
