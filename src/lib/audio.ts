@@ -57,3 +57,46 @@ export function playLevelUp(): void {
     });
   } catch (_) {}
 }
+
+// ─── TTS ──────────────────────────────────────────────────────────────────────
+
+const TTS_KEY = 'tts_enabled';
+let speechEndCallback: (() => void) | null = null;
+
+export function isTtsEnabled(): boolean {
+  return localStorage.getItem(TTS_KEY) !== 'false';
+}
+
+export function setTtsEnabled(v: boolean): void {
+  localStorage.setItem(TTS_KEY, v ? 'true' : 'false');
+}
+
+/** Speaks the sentence (strips **markers**), calls onEnd when finished naturally.
+ *  If cancelled via stopSpeech(), onEnd is NOT called. */
+export function speakSentence(text: string, onEnd: () => void): void {
+  if (!window.speechSynthesis) return;
+  const clean = text.replace(/\*\*/g, '');
+  const utterance = new SpeechSynthesisUtterance(clean);
+  utterance.lang = 'en-US';
+  utterance.rate = 0.9;
+  speechEndCallback = onEnd;
+  utterance.onend = () => {
+    if (speechEndCallback) {
+      const cb = speechEndCallback;
+      speechEndCallback = null;
+      cb();
+    }
+  };
+  utterance.onerror = () => {
+    // Cancelled or interrupted — do NOT call onEnd
+    speechEndCallback = null;
+  };
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utterance);
+}
+
+/** Stops any ongoing speech. The onEnd callback will NOT be called. */
+export function stopSpeech(): void {
+  speechEndCallback = null;
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
+}
