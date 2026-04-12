@@ -92,7 +92,13 @@ export function speakSentence(text: string, onEnd: () => void): void {
     speechEndCallback = null;
   };
   window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utterance);
+  // Chrome bug: speak() immediately after cancel() is sometimes silent.
+  // Small delay + resume() fixes it.
+  setTimeout(() => {
+    if (!speechEndCallback) return; // stopSpeech() was called in the meantime
+    window.speechSynthesis.resume();
+    window.speechSynthesis.speak(utterance);
+  }, 50);
 }
 
 /** Stops any ongoing speech. The onEnd callback will NOT be called. */

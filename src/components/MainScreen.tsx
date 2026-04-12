@@ -13,7 +13,7 @@ import {
   createInitialProgress, getCurrentLevel, getLevelProgress,
   getToday,
 } from '../lib/srs';
-import { playCorrect, playWrong, playLevelUp, speakSentence, stopSpeech, isTtsEnabled, setTtsEnabled } from '../lib/audio';
+import { playWrong, playLevelUp, speakSentence, stopSpeech, isTtsEnabled, setTtsEnabled } from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
@@ -270,8 +270,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     setAnswered({ chosen, correct: correctAnswer, wasCorrect: isCorrect });
 
     // Звук
-    if (isCorrect) playCorrect();
-    else playWrong();
+    if (!isCorrect) playWrong();
 
     // Активность — записываем каждый ответ
     await recordActivity(getToday());
