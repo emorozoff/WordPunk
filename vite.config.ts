@@ -35,12 +35,13 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globIgnores: ['audio/**'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         runtimeCaching: [
           {
-            urlPattern: /\.wasm$/i,
+            urlPattern: /\/audio\/.*\.mp3$/i,
             handler: 'CacheFirst',
-            options: { cacheName: 'wasm-cache', expiration: { maxEntries: 5, maxAgeSeconds: 60 * 60 * 24 * 365 } }
+            options: { cacheName: 'word-audio-cache', expiration: { maxEntries: 10000, maxAgeSeconds: 60 * 60 * 24 * 365 } }
           },
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
