@@ -105,6 +105,8 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
 
   // Archive feature
   const [archiveConfirm, setArchiveConfirm] = useState<{ english: string; russian: string; cardId: string } | null>(null);
+  const [archiveInput, setArchiveInput] = useState('');
+  const archiveInputRef = useRef<HTMLInputElement>(null);
   const [lpOpt, setLpOpt] = useState<string | null>(null);   // truthy = some button is being held
   const lpTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lpPressedOptRef = useRef<string | null>(null);        // which option is being held
@@ -566,7 +568,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.842</span>
+          <span className="header-version">v0.843</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -779,6 +781,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                       if (pressedIsCorrect) {
                         // Show archive confirm; guard against phantom iOS click closing it
                         archiveOpenedAtRef.current = Date.now();
+                        setArchiveInput('');
                         setArchiveConfirm({
                           english: currentCard.card.english,
                           russian: currentCard.card.russian,
@@ -846,13 +849,50 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
             setArchiveConfirm(null);
           }}
         >
-          <div className="archive-confirm" onClick={e => e.stopPropagation()}>
+          <div className="archive-confirm" onClick={e => { e.stopPropagation(); archiveInputRef.current?.focus(); }}>
             <div className="archive-confirm-title">АРХИВ_</div>
-            <div className="archive-confirm-word">{archiveConfirm.english}</div>
-            <div className="archive-confirm-sep">→</div>
-            <div className="archive-confirm-translation">{archiveConfirm.russian}</div>
-            <div className="archive-confirm-hint">слово исчезнет навсегда из очереди</div>
-            <button className="archive-confirm-yes" onClick={handleArchive}>ТОЧНО ЗНАЮ</button>
+            <div className="archive-confirm-translation">→ {archiveConfirm.russian}</div>
+            <div className="letter-boxes archive-letter-boxes">
+              {Array.from({ length: archiveConfirm.english.length }).map((_, i) => {
+                const ch = archiveInput[i];
+                const isSpace = archiveConfirm.english[i] === ' ';
+                return (
+                  <span key={i} className={`letter-box${ch && !isSpace ? ' filled' : ''}${isSpace ? ' space' : ''}`}>
+                    {ch ?? (isSpace ? '\u00B7' : '')}
+                  </span>
+                );
+              })}
+            </div>
+            <input
+              ref={archiveInputRef}
+              className="manual-input-hidden"
+              type="text"
+              value={archiveInput}
+              autoFocus
+              autoCapitalize="off"
+              autoCorrect="off"
+              spellCheck={false}
+              inputMode="text"
+              onChange={e => {
+                const v = e.target.value.toLowerCase().replace(/[^a-z'\s-]/g, '');
+                setArchiveInput(v);
+                if (v.length >= archiveConfirm.english.length && checkManualAnswer(v, archiveConfirm.english)) {
+                  playCorrect();
+                  handleArchive();
+                }
+              }}
+              onKeyDown={e => {
+                if (e.key === 'Enter' && checkManualAnswer(archiveInput, archiveConfirm.english)) {
+                  playCorrect();
+                  handleArchive();
+                }
+              }}
+              onFocus={() => setTimeout(() => {
+                const el = document.querySelector('.archive-letter-boxes');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }, 350)}
+            />
+            <div className="archive-confirm-hint">введи слово чтобы архивировать</div>
             <button className="archive-confirm-no" onClick={() => setArchiveConfirm(null)}>ОТМЕНА</button>
           </div>
         </div>
