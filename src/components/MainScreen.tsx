@@ -12,7 +12,7 @@ import {
   createInitialProgress, getCurrentLevel, getLevelProgress, checkManualAnswer,
   getToday, MAX_LEVEL,
 } from '../lib/srs';
-import { playCorrect, playWrong, playLevelUp, speakWord, stopSpeech, isTtsEnabled } from '../lib/audio';
+import { playCorrect, playWrong, playLevelUp, speakWord, stopSpeech, isTtsEnabled, isManualInputEnabled } from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
@@ -117,6 +117,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
   const [showFirstLetter, setShowFirstLetter] = useState(false);
   const manualInputRef = useRef<HTMLInputElement>(null);
   const manualSubmittedRef = useRef(false);
+  const isFinale = currentLevel === MAX_LEVEL && isManualInputEnabled();
 
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
@@ -184,7 +185,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
 
   // Auto-check on level 4 when typed length matches target
   useEffect(() => {
-    if (currentLevel !== MAX_LEVEL || answered || manualSubmittedRef.current) return;
+    if (!isFinale || answered || manualSubmittedRef.current) return;
     const sc = queue[queueIdx];
     if (!sc) return;
     if (manualInput.length >= sc.card.english.length && manualInput.trim().length > 0) {
@@ -195,7 +196,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
 
   // First-letter hint on level 4 after 5s of inactivity
   useEffect(() => {
-    if (currentLevel !== MAX_LEVEL || answered) return;
+    if (!isFinale || answered) return;
     setShowFirstLetter(false);
     const t = setTimeout(() => setShowFirstLetter(true), 5000);
     return () => clearTimeout(t);
@@ -565,7 +566,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.841</span>
+          <span className="header-version">v0.842</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -613,7 +614,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
               )}
               {currentCard.direction === 'en-ru' && currentCard.card.example ? (
                 <div className="card-sentence">
-                  {currentLevel === MAX_LEVEL && !answered
+                  {isFinale && !answered
                     ? renderExampleBlanked(currentCard.card.example)
                     : renderExample(currentCard.card.example, currentCard.card.english)}
                 </div>
@@ -675,7 +676,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
               ДАЛЕЕ →
             </button>
           </div>
-        ) : currentLevel === MAX_LEVEL ? (
+        ) : isFinale ? (
           <div className="manual-wrap" onClick={() => !answered && manualInputRef.current?.focus()}>
             {currentCard.direction === 'en-ru' && !answered && (
               <div className="manual-prompt">→ {currentCard.card.russian}</div>

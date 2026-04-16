@@ -1,6 +1,6 @@
 import { FC, useRef, useState } from 'react';
 import { clearAllProgress } from '../db';
-import { isTtsEnabled, setTtsEnabled, stopSpeech } from '../lib/audio';
+import { isTtsEnabled, setTtsEnabled, stopSpeech, isManualInputEnabled, setManualInputEnabled } from '../lib/audio';
 
 interface Props {
   onClose: () => void;
@@ -13,6 +13,7 @@ const DISMISS_THRESHOLD = 100;
 
 const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onProgressReset }) => {
   const [ttsOn, setTtsOn] = useState(isTtsEnabled);
+  const [manualOn, setManualOn] = useState(isManualInputEnabled);
   const [confirmReset, setConfirmReset] = useState(false);
 
   const sheetRef = useRef<HTMLDivElement>(null);
@@ -66,6 +67,12 @@ const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onPro
     if (!next) stopSpeech();
   };
 
+  const toggleManualInput = () => {
+    const next = !manualOn;
+    setManualInputEnabled(next);
+    setManualOn(next);
+  };
+
   const handleReset = async () => {
     await clearAllProgress();
     onProgressReset();
@@ -90,6 +97,13 @@ const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onPro
           <span className="settings-label">озвучка слова</span>
           <span className={`settings-toggle${ttsOn ? ' on' : ''}`}>
             {ttsOn ? '◉ ВКЛ' : '◎ ВЫКЛ'}
+          </span>
+        </div>
+
+        <div className="settings-row" onClick={toggleManualInput}>
+          <span className="settings-label">ввод на финале</span>
+          <span className={`settings-toggle${manualOn ? ' on' : ''}`}>
+            {manualOn ? '◉ ВКЛ' : '◎ ВЫКЛ'}
           </span>
         </div>
 

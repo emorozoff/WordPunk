@@ -60,6 +60,16 @@ export function playLevelUp(): void {
 
 // ─── TTS (pre-generated MP3) ─────────────────────────────────────────────────
 
+const MANUAL_INPUT_KEY = 'manual_input_enabled';
+
+export function isManualInputEnabled(): boolean {
+  return localStorage.getItem(MANUAL_INPUT_KEY) !== 'false';
+}
+
+export function setManualInputEnabled(v: boolean): void {
+  localStorage.setItem(MANUAL_INPUT_KEY, v ? 'true' : 'false');
+}
+
 const TTS_KEY = 'tts_enabled';
 let currentSource: AudioBufferSourceNode | null = null;
 let speechEndCallback: (() => void) | null = null;
