@@ -499,30 +499,6 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
     }
   };
 
-  // Debug handlers
-  const handleDebugAddPoints = (n: number) => {
-    const next = knownCount + n;
-    setKnownCount(next);
-    const newLvl = getCurrentLevel(next);
-    if (newLvl.title !== prevLevelRef.current) {
-      prevLevelRef.current = newLvl.title;
-      playLevelUp();
-      setLevelUp({ title: newLvl.title, description: newLvl.description });
-    }
-    setDebugOpen(false);
-  };
-
-  const handleDebugNextLevel = () => {
-    const { nextMin } = getCurrentLevel(knownCount);
-    const next = nextMin;
-    setKnownCount(next);
-    const newLvl = getCurrentLevel(next);
-    prevLevelRef.current = newLvl.title;
-    playLevelUp();
-    setLevelUp({ title: newLvl.title, description: newLvl.description });
-    setDebugOpen(false);
-  };
-
   const handleDebugReset = async () => {
     await clearAllProgress();
     sessionDataRef.current.clear();
@@ -853,8 +829,6 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
       {debugOpen && (
         <DebugPanel
           onClose={() => setDebugOpen(false)}
-          onAddPoints={handleDebugAddPoints}
-          onNextLevel={handleDebugNextLevel}
           onReset={handleDebugReset}
           onPromoteCurrent={handleDebugPromoteCurrent}
         />
