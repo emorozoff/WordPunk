@@ -19,6 +19,7 @@ import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
 import LevelsModal from './LevelsModal';
 import DebugPanel from './DebugPanel';
+import VoiceTestPage from './VoiceTestPage';
 
 interface Props {
   prefsVersion: number;
@@ -76,6 +77,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const [loading, setLoading]       = useState(true);
   const [isGlitching, setIsGlitching] = useState(false);
   const [showLevels, setShowLevels] = useState(false);
+  const [showVoiceTest, setShowVoiceTest] = useState(false);
   const [prevExample, setPrevExample] = useState<{ text: string; word: string; animKey: number } | null>(null);
   const pendingExampleRef = useRef<{ text: string; word: string } | null>(null);
   const prevLevelRef = useRef<string>('');
@@ -499,7 +501,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.76</span>
+          <span className="header-version">v0.77</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
@@ -716,7 +718,13 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           onAddPoints={handleDebugAddPoints}
           onNextLevel={handleDebugNextLevel}
           onReset={handleDebugReset}
+          onVoiceTest={() => { setDebugOpen(false); setShowVoiceTest(true); }}
         />
+      )}
+
+      {/* Voice test page */}
+      {showVoiceTest && (
+        <VoiceTestPage onClose={() => setShowVoiceTest(false)} />
       )}
 
       {/* Archive confirm modal */}

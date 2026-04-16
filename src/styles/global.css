@@ -1617,3 +1617,129 @@ button {
   background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 4px);
   z-index: 500;
 }
+
+/* ── Voice Test Page ────────────────────────────────────────────────────────── */
+
+.voice-test-page {
+  position: fixed;
+  inset: 0;
+  background: #0d0d0d;
+  z-index: 400;
+  overflow-y: auto;
+  padding: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.voice-test-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.voice-test-back {
+  background: none;
+  border: 1px solid var(--accent-green);
+  color: var(--accent-green);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.voice-test-title {
+  font-family: 'VT323', monospace;
+  color: var(--accent-green);
+  font-size: 24px;
+  margin: 0;
+}
+
+.voice-test-error {
+  background: rgba(255, 51, 102, 0.15);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.voice-test-hint {
+  color: #666;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.voice-test-hint code {
+  color: var(--accent-amber);
+  background: rgba(255, 170, 0, 0.1);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.voice-test-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.voice-test-voice-section {
+  border: 1px solid #222;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.voice-test-voice-name {
+  font-family: 'VT323', monospace;
+  color: var(--accent-amber);
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.voice-test-bitrate-row {
+  display: flex;
+  gap: 12px;
+}
+
+.voice-test-bitrate-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.voice-test-bitrate-label {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #555;
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.voice-test-btn {
+  background: rgba(0, 255, 136, 0.05);
+  border: 1px solid #333;
+  color: #aaa;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.voice-test-btn:active {
+  background: rgba(0, 255, 136, 0.15);
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+.voice-test-btn.playing {
+  background: rgba(0, 255, 136, 0.15);
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
