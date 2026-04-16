@@ -13,7 +13,11 @@ import {
   createInitialProgress, getCurrentLevel, getLevelProgress,
   getToday,
 } from '../lib/srs';
-import { playCorrect, playWrong, playLevelUp } from '../lib/audio';
+import {
+  playWrong, playLevelUp, speakSentence, stopSpeech,
+  isTtsEnabled, setTtsEnabled, isPiperReady,
+  initPiper, subscribePiperStatus, type PiperStatus,
+} from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
@@ -86,6 +90,17 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const swipeTouchStartY = useRef(0);
   const swipeEdge = useRef(false);
 
+  const [ttsEnabled, setTtsEnabledState] = useState(isTtsEnabled);
+  const [piperStatus, setPiperStatus] = useState<PiperStatus>({ downloading: false, progress: 0, ready: false, error: null, fallback: false });
+
+  const handleTtsToggle = () => {
+    const next = !ttsEnabled;
+    setTtsEnabled(next);
+    setTtsEnabledState(next);
+    if (!next) stopSpeech();
+    else initPiper();
+  };
+
   // Flag feature
   const [flagged, setFlagged] = useState(false);
 
@@ -99,6 +114,12 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
 
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
+
+  // Piper TTS: инициализация модели + подписка на статус загрузки
+  useEffect(() => {
+    if (ttsEnabled) initPiper();
+    return subscribePiperStatus(setPiperStatus);
+  }, []);
 
   // Seed DB on first load (re-seed if built-in word count changed)
   useEffect(() => {
@@ -261,8 +282,20 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     setAnswered({ chosen, correct: correctAnswer, wasCorrect: isCorrect });
 
     // Звук
-    if (isCorrect) playCorrect();
-    else playWrong();
+    if (!isCorrect) playWrong();
+
+    // TTS + авто-переход — ОБЯЗАТЕЛЬНО до первого await!
+    // iOS Safari блокирует speechSynthesis.speak() если он не в синхронном стеке от тапа.
+    if (isCorrect) {
+      if (sc.card.example && sc.direction === 'ru-en') {
+        pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
+      }
+      if (ttsEnabled && sc.card.example && isPiperReady()) {
+        speakSentence(sc.card.example, () => advance());
+      } else {
+        autoAdvanceRef.current = setTimeout(() => advance(), 1600);
+      }
+    }
 
     // Активность — записываем каждый ответ
     await recordActivity(getToday());
@@ -336,22 +369,12 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       }
     }
 
-    // Автопереход — только при правильном ответе
-    // При ошибке пользователь сам нажимает "ДАЛЕЕ"
-    if (isCorrect) {
-      // Для ru-en: пример показывается под карточкой после ответа, потом гаснет
-      // Для en-ru: пример уже был на карточке — не дублируем
-      if (sc.card.example && sc.direction === 'ru-en') {
-        pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
-      }
-      autoAdvanceRef.current = setTimeout(() => {
-        advance();
-      }, 1600);
-    }
+    // (TTS + авто-переход перенесены выше, до первого await — см. комментарий про iOS Safari)
   };
 
   const advance = useCallback(() => {
     if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
+    stopSpeech();
     if (pendingExampleRef.current) {
       setPrevExample({ ...pendingExampleRef.current, animKey: Date.now() });
       pendingExampleRef.current = null;
@@ -674,6 +697,17 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       {/* Bottom nav */}
       <div className="bottom-nav">
         <button className="nav-btn" onClick={onOpenTopics}>ТЕМЫ</button>
+        <button className={`nav-btn${ttsEnabled ? ' nav-btn-tts-on' : ''}`} onClick={handleTtsToggle}>
+          {ttsEnabled
+            ? (piperStatus.error
+                ? `✕ ${piperStatus.error.slice(0, 50)}`
+                : piperStatus.downloading
+                  ? `◎ ${Math.round(piperStatus.progress)}%`
+                  : (piperStatus.ready || piperStatus.fallback)
+                    ? '◉ ОЗВУЧКА'
+                    : '◎ ...')
+            : '◎ ОЗВУЧКА'}
+        </button>
         <button className="nav-btn" onClick={onOpenStats}>СТАТИСТИКА</button>
       </div>
 
