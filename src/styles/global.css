@@ -674,6 +674,17 @@ button {
   letter-spacing: 0.5px;
 }
 
+.mini-history-word::after {
+  content: '\00B7';
+  margin-left: 12px;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.mini-history-word:last-child::after {
+  content: none;
+}
+
 .mh-green { color: var(--accent-green); }
 .mh-red   { color: var(--accent-red); }
 
