@@ -105,6 +105,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
 
   // Archive feature — long-press switches card to inline manual input
   const [archiveChallenge, setArchiveChallenge] = useState(false);
+  const archiveChallengeAtRef = useRef(0);
   const [archiveInput, setArchiveInput] = useState('');
   const archiveInputRef = useRef<HTMLInputElement>(null);
   const [lpOpt, setLpOpt] = useState<string | null>(null);
@@ -572,7 +573,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.846</span>
+          <span className="header-version">v0.847</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -769,7 +770,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                   }}
                 />
                 {archiveChallenge ? (
-                  <button className="manual-submit-btn" onClick={() => { setArchiveChallenge(false); setArchiveInput(''); }}>
+                  <button className="manual-submit-btn" onClick={() => { if (Date.now() - archiveChallengeAtRef.current < 500) return; setArchiveChallenge(false); setArchiveInput(''); }}>
                     ОТМЕНА
                   </button>
                 ) : (
@@ -831,6 +832,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                       if (pressedIsCorrect) {
                         setArchiveInput('');
                         setArchiveChallenge(true);
+                        archiveChallengeAtRef.current = Date.now();
                         setTimeout(() => archiveInputRef.current?.focus(), 100);
                       } else {
                         // Wrong button held — count as wrong answer
