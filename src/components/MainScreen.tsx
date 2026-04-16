@@ -19,7 +19,6 @@ import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
 import LevelsModal from './LevelsModal';
 import DebugPanel from './DebugPanel';
-import VoiceTestPage from './VoiceTestPage';
 
 interface Props {
   prefsVersion: number;
@@ -77,7 +76,6 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const [loading, setLoading]       = useState(true);
   const [isGlitching, setIsGlitching] = useState(false);
   const [showLevels, setShowLevels] = useState(false);
-  const [showVoiceTest, setShowVoiceTest] = useState(false);
   const [prevExample, setPrevExample] = useState<{ text: string; word: string; animKey: number } | null>(null);
   const pendingExampleRef = useRef<{ text: string; word: string } | null>(null);
   const prevLevelRef = useRef<string>('');
@@ -716,13 +714,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
           onAddPoints={handleDebugAddPoints}
           onNextLevel={handleDebugNextLevel}
           onReset={handleDebugReset}
-          onVoiceTest={() => { setDebugOpen(false); setShowVoiceTest(true); }}
         />
-      )}
-
-      {/* Voice test page */}
-      {showVoiceTest && (
-        <VoiceTestPage onClose={() => setShowVoiceTest(false)} />
       )}
 
       {/* Archive confirm modal */}
