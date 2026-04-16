@@ -58,9 +58,10 @@ export function playLevelUp(): void {
   } catch (_) {}
 }
 
-// ─── TTS ──────────────────────────────────────────────────────────────────────
+// ─── TTS (pre-generated MP3) ─────────────────────────────────────────────────
 
 const TTS_KEY = 'tts_enabled';
+let currentSource: AudioBufferSourceNode | null = null;
 let speechEndCallback: (() => void) | null = null;
 
 export function isTtsEnabled(): boolean {
@@ -71,32 +72,60 @@ export function setTtsEnabled(v: boolean): void {
   localStorage.setItem(TTS_KEY, v ? 'true' : 'false');
 }
 
-/** Speaks the sentence (strips **markers**), calls onEnd when finished naturally.
- *  If cancelled via stopSpeech(), onEnd is NOT called. */
-export function speakSentence(text: string, onEnd: () => void): void {
-  if (!window.speechSynthesis) return;
-  const clean = text.replace(/\*\*/g, '');
-  const utterance = new SpeechSynthesisUtterance(clean);
-  utterance.lang = 'en-US';
-  utterance.rate = 0.9;
-  speechEndCallback = onEnd;
-  utterance.onend = () => {
-    if (speechEndCallback) {
-      const cb = speechEndCallback;
-      speechEndCallback = null;
-      cb();
-    }
-  };
-  utterance.onerror = () => {
-    // Cancelled or interrupted — do NOT call onEnd
-    speechEndCallback = null;
-  };
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utterance);
+function toSlug(word: string): string {
+  return word
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/['"]/g, '')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_|_$/g, '');
 }
 
-/** Stops any ongoing speech. The onEnd callback will NOT be called. */
+export function speakWord(word: string, onEnd: () => void): void {
+  stopSpeech();
+  const slug = toSlug(word);
+  if (!slug) { onEnd(); return; }
+
+  const ac = getCtx();
+  if (ac.state === 'suspended') ac.resume();
+  speechEndCallback = onEnd;
+
+  const url = `${import.meta.env.BASE_URL}audio/${slug}.mp3`;
+  fetch(url)
+    .then(r => { if (!r.ok) throw new Error(r.statusText); return r.arrayBuffer(); })
+    .then(buf => ac.decodeAudioData(buf))
+    .then(audioBuffer => {
+      if (!speechEndCallback) return;
+      const source = ac.createBufferSource();
+      source.buffer = audioBuffer;
+      source.connect(ac.destination);
+      currentSource = source;
+      source.onended = () => {
+        if (speechEndCallback) {
+          const cb = speechEndCallback;
+          speechEndCallback = null;
+          currentSource = null;
+          cb();
+        }
+      };
+      source.start(0);
+    })
+    .catch(() => {
+      if (speechEndCallback) {
+        const cb = speechEndCallback;
+        speechEndCallback = null;
+        cb();
+      }
+    });
+}
+
 export function stopSpeech(): void {
   speechEndCallback = null;
-  if (window.speechSynthesis) window.speechSynthesis.cancel();
+  if (currentSource) {
+    try { currentSource.stop(); } catch (_) {}
+    currentSource.onended = null;
+    currentSource = null;
+  }
 }

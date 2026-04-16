@@ -13,7 +13,7 @@ import {
   createInitialProgress, getCurrentLevel, getLevelProgress,
   getToday,
 } from '../lib/srs';
-import { playCorrect, playWrong, playLevelUp, speakSentence, stopSpeech, isTtsEnabled, setTtsEnabled } from '../lib/audio';
+import { playCorrect, playWrong, playLevelUp, speakWord, stopSpeech, isTtsEnabled, setTtsEnabled } from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
@@ -355,10 +355,8 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       if (sc.card.example && sc.direction === 'ru-en') {
         pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
       }
-      if (ttsEnabled && sc.card.example) {
-        // Озвучиваем предложение; advance() вызывается когда речь закончится естественно.
-        // Если пользователь тапнет раньше — advance() вызовет stopSpeech() и колбэк не сработает.
-        speakSentence(sc.card.example, () => advance());
+      if (ttsEnabled) {
+        speakWord(sc.card.english, () => advance());
       } else {
         autoAdvanceRef.current = setTimeout(() => advance(), 1600);
       }
@@ -501,7 +499,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.77</span>
+          <span className="header-version">v0.78</span>
           <span className="header-version" style={{ opacity: 0.4, fontSize: '0.6em', marginLeft: 4 }}>[{UNIQUE_WORD_COUNT}]</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
