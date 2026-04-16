@@ -8,9 +8,9 @@ import {
 
 import { WORDS } from '../data/words';
 import {
-  buildQueue, generateOptions, processAnswer, processLevel0Answer,
-  createInitialProgress, getCurrentLevel, getLevelProgress,
-  getToday,
+  buildQueue, generateOptions, processAnswer, processLevel0Answer, processFinaleAnswer,
+  createInitialProgress, getCurrentLevel, getLevelProgress, checkManualAnswer,
+  getToday, MAX_LEVEL,
 } from '../lib/srs';
 import { playCorrect, playWrong, playLevelUp, speakWord, stopSpeech, isTtsEnabled } from '../lib/audio';
 import { getTopicById } from '../data/topics';
@@ -45,6 +45,20 @@ function renderExample(example: string, englishWord: string): React.ReactNode {
       ? <span key={i} className="example-highlight">{part}</span>
       : part
   );
+}
+
+// На финале (lvl 4) целевое слово в предложении заменяется на ___ — пользователь должен вспомнить его и ввести вручную.
+function renderExampleBlanked(example: string): React.ReactNode {
+  if (example.includes('**')) {
+    const parts = example.split(/(\*\*[^*]+\*\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <span key={i} className="example-blank">_____</span>;
+      }
+      return part;
+    });
+  }
+  return example;
 }
 
 function getWordSizeClass(word: string): string {
@@ -97,6 +111,13 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
   const lpFiredRef = useRef(false);                           // timer already fired, swallow next click
   const archiveOpenedAtRef = useRef(0);                       // timestamp when modal opened
 
+  // Level 4 manual input
+  const [currentLevel, setCurrentLevel] = useState(0);
+  const [manualInput, setManualInput] = useState('');
+  const [showFirstLetter, setShowFirstLetter] = useState(false);
+  const manualInputRef = useRef<HTMLInputElement>(null);
+  const manualSubmittedRef = useRef(false);
+
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
 
@@ -147,6 +168,38 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
       })();
     }
   }, [prefsVersion]);
+
+  // Load level for current card & reset manual input state
+  useEffect(() => {
+    const sc = queue[queueIdx];
+    if (!sc) { setCurrentLevel(0); return; }
+    setManualInput('');
+    setShowFirstLetter(false);
+    manualSubmittedRef.current = false;
+    (async () => {
+      const p = await getProgress(sc.card.id);
+      setCurrentLevel(p?.level ?? 0);
+    })();
+  }, [queue, queueIdx]);
+
+  // Auto-check on level 4 when typed length matches target
+  useEffect(() => {
+    if (currentLevel !== MAX_LEVEL || answered || manualSubmittedRef.current) return;
+    const sc = queue[queueIdx];
+    if (!sc) return;
+    if (manualInput.length >= sc.card.english.length && manualInput.trim().length > 0) {
+      handleManualSubmit();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [manualInput]);
+
+  // First-letter hint on level 4 after 5s of inactivity
+  useEffect(() => {
+    if (currentLevel !== MAX_LEVEL || answered) return;
+    setShowFirstLetter(false);
+    const t = setTimeout(() => setShowFirstLetter(true), 5000);
+    return () => clearTimeout(t);
+  }, [currentLevel, answered, queueIdx]);
 
   // Glitch animation when knownCount increases
   useEffect(() => {
@@ -407,6 +460,45 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
     }
   }, [queue, queueIdx, allCards, setupCard]);
 
+  const handleManualSubmit = async () => {
+    if (manualSubmittedRef.current || answered) return;
+    const sc = queue[queueIdx];
+    if (!sc) return;
+    const correctEnglish = sc.card.english;
+    if (!manualInput.trim()) return;
+    manualSubmittedRef.current = true;
+
+    const isCorrect = checkManualAnswer(manualInput, correctEnglish);
+    setAnswered({ chosen: manualInput, correct: correctEnglish, wasCorrect: isCorrect });
+
+    if (isCorrect) playCorrect();
+    else playWrong();
+
+    if (isCorrect) {
+      if (sc.card.example && sc.direction === 'ru-en') {
+        pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
+      }
+      if (isTtsEnabled()) {
+        speakWord(sc.card.english, () => advance());
+      } else {
+        autoAdvanceRef.current = setTimeout(() => advance(), 1800);
+      }
+    }
+
+    await recordActivity(getToday());
+    const progressFromDB = await getProgress(sc.card.id) ?? createInitialProgress(sc.card.id);
+    const next = processFinaleAnswer(progressFromDB, isCorrect);
+    await putProgress(next);
+    if (isCorrect) showXp();
+    const newKnown = await getKnownCount();
+    setKnownCount(newKnown);
+    const newLvl = getCurrentLevel(newKnown);
+    if (newLvl.title !== prevLevelRef.current) {
+      prevLevelRef.current = newLvl.title;
+      setTimeout(() => { playLevelUp(); setLevelUp({ title: newLvl.title, description: newLvl.description }); }, 800);
+    }
+  };
+
   // Debug handlers
   const handleDebugAddPoints = (n: number) => {
     const next = knownCount + n;
@@ -437,6 +529,24 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
     setKnownCount(0);
     prevLevelRef.current = getCurrentLevel(0).title;
     await loadQueue(allCards);
+    setDebugOpen(false);
+  };
+
+  const handleDebugPromoteCurrent = async () => {
+    const sc = queue[queueIdx];
+    if (!sc) { setDebugOpen(false); return; }
+    const existing = await getProgress(sc.card.id) ?? createInitialProgress(sc.card.id);
+    await putProgress({
+      ...existing,
+      level: MAX_LEVEL,
+      nextReviewDate: getToday(),
+      archived: false,
+    });
+    setCurrentLevel(MAX_LEVEL);
+    setAnswered(null);
+    setManualInput('');
+    setShowFirstLetter(false);
+    manualSubmittedRef.current = false;
     setDebugOpen(false);
   };
 
@@ -479,7 +589,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.83</span>
+          <span className="header-version">v0.84</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -527,7 +637,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
               )}
               {currentCard.direction === 'en-ru' && currentCard.card.example ? (
                 <div className="card-sentence">
-                  {renderExample(currentCard.card.example, currentCard.card.english)}
+                  {currentLevel === MAX_LEVEL && !answered
+                    ? renderExampleBlanked(currentCard.card.example)
+                    : renderExample(currentCard.card.example, currentCard.card.english)}
                 </div>
               ) : (
                 <div className={`card-word ${sizeClass} ${isTyping ? 'typing' : ''}`}>
@@ -579,13 +691,56 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         </div>
       )}
 
-      {/* Options / Continue */}
+      {/* Options / Manual input / Continue */}
       {!isFinished && !loading && currentCard && (
         answered && !answered.wasCorrect ? (
           <div className="continue-area">
             <button className="continue-btn" onClick={advance}>
               ДАЛЕЕ →
             </button>
+          </div>
+        ) : currentLevel === MAX_LEVEL ? (
+          <div className="manual-wrap" onClick={() => !answered && manualInputRef.current?.focus()}>
+            {currentCard.direction === 'en-ru' && !answered && (
+              <div className="manual-prompt">→ {currentCard.card.russian}</div>
+            )}
+            <div className="letter-boxes">
+              {Array.from({ length: currentCard.card.english.length }).map((_, i) => {
+                const target = currentCard.card.english;
+                const ch = answered ? target[i] : manualInput[i];
+                const isSpace = target[i] === ' ';
+                const hintFirst = !answered && showFirstLetter && i === 0 && !manualInput[i];
+                let cls = 'letter-box';
+                if (isSpace) cls += ' space';
+                if (ch && !isSpace) cls += ' filled';
+                if (hintFirst) cls += ' hint';
+                return (
+                  <span key={i} className={cls}>
+                    {ch ?? (hintFirst ? target[0] : isSpace ? '·' : '')}
+                  </span>
+                );
+              })}
+            </div>
+            {!answered && (
+              <>
+                <input
+                  ref={manualInputRef}
+                  className="manual-input-hidden"
+                  type="text"
+                  value={manualInput}
+                  autoFocus
+                  autoCapitalize="off"
+                  autoCorrect="off"
+                  spellCheck={false}
+                  inputMode="text"
+                  onChange={e => setManualInput(e.target.value.toLowerCase().replace(/[^a-z'’\s-]/g, ''))}
+                  onKeyDown={e => { if (e.key === 'Enter') handleManualSubmit(); }}
+                />
+                <button className="manual-submit-btn" onClick={handleManualSubmit} disabled={!manualInput.trim()}>
+                  ПРОВЕРИТЬ
+                </button>
+              </>
+            )}
           </div>
         ) : (
           <div className="options-grid" onClick={handleMainZoneTap}>
@@ -692,6 +847,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
           onAddPoints={handleDebugAddPoints}
           onNextLevel={handleDebugNextLevel}
           onReset={handleDebugReset}
+          onPromoteCurrent={handleDebugPromoteCurrent}
         />
       )}
 

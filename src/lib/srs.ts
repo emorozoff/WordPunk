@@ -107,6 +107,58 @@ export function processLevel0Answer(
   }
 }
 
+// Расстояние Левенштейна для толерантности к опечаткам на ручном вводе.
+function levenshtein(a: string, b: string): number {
+  const m = a.length, n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  const dp: number[][] = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i]![0] = i;
+  for (let j = 0; j <= n; j++) dp[0]![j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      dp[i]![j] = Math.min(dp[i - 1]![j]! + 1, dp[i]![j - 1]! + 1, dp[i - 1]![j - 1]! + cost);
+    }
+  }
+  return dp[m]![n]!;
+}
+
+// Проверка ручного ввода. Игнорирует регистр и окружающие пробелы.
+// Короткие слова требуют точного совпадения; длинные допускают 1 опечатку.
+export function checkManualAnswer(input: string, correct: string): boolean {
+  const a = input.trim().toLowerCase();
+  const b = correct.trim().toLowerCase();
+  if (!a) return false;
+  if (a === b) return true;
+  if (b.length <= 3) return false;
+  return levenshtein(a, b) <= 1;
+}
+
+// Обработка ответа для уровня MAX_LEVEL (финал).
+// Правильно → архив, ошибка → −1 уровень (как в processAnswer).
+export function processFinaleAnswer(progress: CardProgress, correct: boolean): CardProgress {
+  const today = getToday();
+  if (correct) {
+    return {
+      ...progress,
+      level: MAX_LEVEL,
+      consecutiveCorrect: progress.consecutiveCorrect + 1,
+      totalCorrect: progress.totalCorrect + 1,
+      nextReviewDate: addDays(today, SRS_INTERVALS[MAX_LEVEL]!),
+      archived: true,
+    };
+  }
+  const newLevel = Math.max(MAX_LEVEL - 1, 1);
+  return {
+    ...progress,
+    level: newLevel,
+    consecutiveCorrect: 0,
+    totalWrong: progress.totalWrong + 1,
+    nextReviewDate: addDays(today, SRS_INTERVALS[newLevel] ?? 1),
+  };
+}
+
 // Дробные баллы «знаю слов» по уровню:
 //   0 → 0, 1 → 0.2, 2 → 0.4, 3 → 0.6, 4 → 0.8, архив → 1.0
 // Сумма округляется до целого в UI.
