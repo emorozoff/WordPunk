@@ -733,9 +733,17 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                   autoCorrect="off"
                   spellCheck={false}
                   inputMode="text"
-                  onChange={e => setManualInput(e.target.value.toLowerCase().replace(/[^a-z’’\s-]/g, ‘’))}
-                  onKeyDown={e => { if (e.key === ‘Enter’) handleManualSubmit(); }}
-                  onFocus={() => setTimeout(() => document.querySelector(‘.letter-boxes’)?.scrollIntoView({ behavior: ‘smooth’, block: ‘center’ }), 350)}
+                  onChange={e => {
+                    const v = e.target.value.toLowerCase().replace(/[^a-z'\s-]/g, '');
+                    setManualInput(v);
+                  }}
+                  onKeyDown={e => { if (e.key === 'Enter') handleManualSubmit(); }}
+                  onFocus={() => {
+                    setTimeout(() => {
+                      const el = document.querySelector('.letter-boxes');
+                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 350);
+                  }}
                 />
                 <button className="manual-submit-btn" onClick={handleManualSubmit} disabled={!manualInput.trim()}>
                   ПРОВЕРИТЬ
