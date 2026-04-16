@@ -12,7 +12,7 @@ import {
   createInitialProgress, getCurrentLevel, getLevelProgress,
   getToday,
 } from '../lib/srs';
-import { playCorrect, playWrong, playLevelUp, speakWord, stopSpeech, isTtsEnabled, setTtsEnabled } from '../lib/audio';
+import { playCorrect, playWrong, playLevelUp, speakWord, stopSpeech, isTtsEnabled } from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
@@ -21,7 +21,7 @@ import DebugPanel from './DebugPanel';
 
 interface Props {
   prefsVersion: number;
-  onOpenTopics: () => void;
+  onOpenSettings: () => void;
   onOpenStats: () => void;
 }
 
@@ -58,7 +58,7 @@ function getWordSizeClass(word: string): string {
 
 const TYPING_SPEED_MS = 40;
 
-const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
+const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) => {
   const [queue, setQueue]           = useState<SessionCard[]>([]);
   const [queueIdx, setQueueIdx]     = useState(0);
   const [options, setOptions]       = useState<string[]>([]);
@@ -85,14 +85,6 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
   const swipeTouchStartY = useRef(0);
   const swipeEdge = useRef(false);
 
-  const [ttsEnabled, setTtsEnabledState] = useState(isTtsEnabled);
-
-  const handleTtsToggle = () => {
-    const next = !ttsEnabled;
-    setTtsEnabled(next);
-    setTtsEnabledState(next);
-    if (!next) stopSpeech();
-  };
 
   // Flag feature
   const [flagged, setFlagged] = useState(false);
@@ -143,10 +135,16 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
     init();
   }, []);
 
-  // Reload queue when topic prefs change
+  // Reload queue and knownCount when topic prefs or progress change
   useEffect(() => {
     if (!loading && allCards.length > 0) {
-      loadQueue(allCards);
+      (async () => {
+        await loadQueue(allCards);
+        const kc = await getKnownCount();
+        setKnownCount(kc);
+        prevLevelRef.current = getCurrentLevel(kc).title;
+        sessionDataRef.current.clear();
+      })();
     }
   }, [prefsVersion]);
 
@@ -277,7 +275,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
       if (sc.card.example && sc.direction === 'ru-en') {
         pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
       }
-      if (ttsEnabled) {
+      if (isTtsEnabled()) {
         speakWord(sc.card.english, () => advance());
       } else {
         autoAdvanceRef.current = setTimeout(() => advance(), 1600);
@@ -494,7 +492,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.81</span>
+          <span className="header-version">v0.82</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -536,7 +534,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
             <div className="xp-toast-slot">
               {showXpToast && <div key={xpToastKey} className="xp-toast">▲ ОПЫТ</div>}
             </div>
-            <div className="word-card" style={{ cursor: 'pointer' }} onClick={e => { e.stopPropagation(); if (answered?.wasCorrect) advance(); else if (!answered) onOpenTopics(); }}>
+            <div className="word-card" style={{ cursor: 'pointer' }} onClick={e => { e.stopPropagation(); if (answered?.wasCorrect) advance(); else if (!answered) onOpenSettings(); }}>
               {topic && (
                 <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
               )}
@@ -681,10 +679,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenTopics, onOpenStats }) => {
 
       {/* Bottom nav */}
       <div className="bottom-nav">
-        <button className="nav-btn" onClick={onOpenTopics}>ТЕМЫ</button>
-        <button className={`nav-btn${ttsEnabled ? ' nav-btn-tts-on' : ''}`} onClick={handleTtsToggle}>
-          {ttsEnabled ? '◉ ОЗВУЧКА' : '◎ ОЗВУЧКА'}
-        </button>
+        <button className="nav-btn" onClick={onOpenSettings}>НАСТРОЙКИ</button>
         <button className="nav-btn" onClick={onOpenStats}>СТАТИСТИКА</button>
       </div>
 
