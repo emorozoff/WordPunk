@@ -121,6 +121,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
   const manualSubmittedRef = useRef(false);
   const isFinale = currentLevel === MAX_LEVEL && isManualInputEnabled();
 
+  // Mini-history: last 5 answered words
+  const [history, setHistory] = useState<{ english: string; wasCorrect: boolean; typed?: string }[]>([]);
+
   // Отслеживаем показы слов уровня 0 внутри текущей сессии (в памяти, не в DB)
   const sessionDataRef = useRef<Map<string, { shows: number; correctCount: number; wrongCount: number }>>(new Map());
 
@@ -321,6 +324,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
     const isCorrect = allSynonyms.some(s => s.toLowerCase() === chosen.toLowerCase());
 
     setAnswered({ chosen, correct: correctAnswer, wasCorrect: isCorrect });
+    setHistory(h => [{ english: sc.card.english, wasCorrect: isCorrect }, ...h].slice(0, 5));
 
     // Звук
     if (isCorrect) playCorrect();
@@ -473,6 +477,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
 
     const isCorrect = checkManualAnswer(manualInput, correctEnglish);
     setAnswered({ chosen: manualInput, correct: correctEnglish, wasCorrect: isCorrect });
+    setHistory(h => [{ english: correctEnglish, wasCorrect: isCorrect, typed: manualInput }, ...h].slice(0, 5));
 
     if (isCorrect) playCorrect();
     else playWrong();
@@ -568,7 +573,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.843</span>
+          <span className="header-version">v0.844</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -659,6 +664,24 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
             )}
           </>
         ) : null}
+
+        {/* Mini-history: last 5 words */}
+        {history.length > 0 && (
+          <div className="mini-history">
+            {history.map((h, i) => (
+              <span key={i} className="mini-history-word">
+                {h.typed
+                  ? h.english.split('').map((ch, j) => {
+                      const typedCh = h.typed![j];
+                      const match = typedCh && typedCh.toLowerCase() === ch.toLowerCase();
+                      return <span key={j} className={match ? 'mh-green' : 'mh-red'}>{ch}</span>;
+                    })
+                  : <span className={h.wasCorrect ? 'mh-green' : 'mh-red'}>{h.english}</span>
+                }
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Flag button — visible whenever a card is active */}

@@ -658,6 +658,25 @@ button {
   background: rgba(0,255,136,0.18);
 }
 
+/* Mini-history */
+.mini-history {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 12px;
+  padding: 8px 16px 4px;
+  opacity: 0.4;
+}
+
+.mini-history-word {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.mh-green { color: var(--accent-green); }
+.mh-red   { color: var(--accent-red); }
+
 /* Bottom nav */
 .bottom-nav {
   display: flex;
