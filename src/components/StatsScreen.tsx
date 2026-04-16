@@ -1,5 +1,5 @@
 import { FC, useEffect, useState, useRef } from 'react';
-import { getAllProgress, getActivity, countCards, getArchivedCount, getAllFlagged, deleteFlagged } from '../db';
+import { getAllProgress, getActivity, countCards, getArchivedCount, getAllFlagged, deleteFlagged, getKnownCount } from '../db';
 import type { FlaggedCard } from '../types';
 import type { DayActivity } from '../types';
 
@@ -7,8 +7,8 @@ interface Props {
   onClose: () => void;
 }
 
-const LEVEL_COLORS = ['#555', '#444488', '#3355aa', '#00aa55', '#00ff88', '#ffaa00'];
-const LEVEL_NAMES  = ['Новые', 'Lvl 1', 'Lvl 2', 'Lvl 3', 'Lvl 4', 'Lvl 5 ★'];
+const LEVEL_COLORS = ['#555', '#3355aa', '#00aa55', '#00ff88', '#ffaa00'];
+const LEVEL_NAMES  = ['Новые', 'Lvl 1', 'Lvl 2', 'Lvl 3', 'Lvl 4 ★'];
 const DISMISS_THRESHOLD = 100;
 
 const StatsScreen: FC<Props> = ({ onClose }) => {
@@ -16,7 +16,7 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
   const [total, setTotal] = useState(0);
   const [archived, setArchived] = useState(0);
   const [flaggedCards, setFlaggedCards] = useState<FlaggedCard[]>([]);
-  const [dist, setDist] = useState<Record<number, number>>({ 0:0,1:0,2:0,3:0,4:0,5:0 });
+  const [dist, setDist] = useState<Record<number, number>>({ 0:0,1:0,2:0,3:0,4:0 });
   const [activity, setActivity] = useState<DayActivity[]>([]);
 
   const sheetRef = useRef<HTMLDivElement>(null);
@@ -25,19 +25,23 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
 
   useEffect(() => {
     const load = async () => {
-      const [prog, act, cnt, arc, flagged] = await Promise.all([
+      const [prog, act, cnt, arc, flagged, kc] = await Promise.all([
         getAllProgress(),
         getActivity(90),
         countCards(),
         getArchivedCount(),
         getAllFlagged(),
+        getKnownCount(),
       ]);
       setTotal(cnt);
       setArchived(arc);
       setFlaggedCards(flagged);
-      setKnown(prog.filter(p => p.level >= 3).length);
-      const d: Record<number, number> = {0:0,1:0,2:0,3:0,4:0,5:0};
-      for (const p of prog) d[p.level] = (d[p.level] ?? 0) + 1;
+      setKnown(kc);
+      const d: Record<number, number> = {0:0,1:0,2:0,3:0,4:0};
+      for (const p of prog) {
+        const lvl = Math.min(p.level, 4);
+        d[lvl] = (d[lvl] ?? 0) + 1;
+      }
       setDist(d);
       setActivity(act);
     };
@@ -126,7 +130,7 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
 
         <div className="stats-section-title">РАСПРЕДЕЛЕНИЕ ПО УРОВНЯМ</div>
         <div className="level-dist" style={{ marginBottom: 24 }}>
-          {([0,1,2,3,4,5] as const).map(lvl => (
+          {([0,1,2,3,4] as const).map(lvl => (
             <div key={lvl} className="level-dist-row">
               <span className="level-dist-label">{LEVEL_NAMES[lvl]}</span>
               <div className="level-dist-bar-bg">

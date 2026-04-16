@@ -1,9 +1,12 @@
 import type { Card, CardProgress, SessionCard } from '../types';
 import { getWeight, type TopicPrefs } from './topicPrefs';
 
-// Level 0 = новое слово (до 3 показов в сессии)
-// Level 1 = +1 день, 2 = +3 дня, 3 = +7 дней, 4 = +30 дней, 5 = +180 дней
-export const SRS_INTERVALS = [0, 1, 3, 7, 30, 180];
+// Level 0 = новое слово (2 правильных подряд → level 1)
+// Level 1 = +1 день, 2 = +3 дня, 3 = +7 дней, 4 = +14 дней (финал)
+// На уровне 4 правильный ввод слова отправит его в архив (ввод вручную будет
+// реализован на следующем этапе; пока слово просто остаётся на 4 через 14 дней).
+export const SRS_INTERVALS = [0, 1, 3, 7, 14];
+export const MAX_LEVEL = 4;
 
 export function getToday(): string {
   return new Date().toISOString().split('T')[0]!;
@@ -26,15 +29,24 @@ export function createInitialProgress(cardId: string): CardProgress {
   };
 }
 
-// Для уровней 1–5: 1 правильный → уровень вверх, 1 ошибка → уровень вниз (минимум 1, не 0)
+// Difficulty modifier: лёгкие слова (diff 1-2) получают +2 уровня за правильный
+// ответ, остальные (diff 3-5) — +1. Ошибка всегда -1 (минимум уровень 1).
+function levelStep(difficulty: number | undefined): number {
+  const d = difficulty ?? 3;
+  return d <= 2 ? 2 : 1;
+}
+
+// Для уровней 1–MAX_LEVEL: правильный → уровень вверх (с учётом difficulty),
+// ошибка → -1 уровень (минимум 1, не 0).
 export function processAnswer(
   progress: CardProgress,
-  correct: boolean
+  correct: boolean,
+  difficulty?: number,
 ): CardProgress {
   const today = getToday();
   if (correct) {
-    const newLevel = Math.min(progress.level + 1, 5);
-    const interval = SRS_INTERVALS[newLevel] ?? 180;
+    const newLevel = Math.min(progress.level + levelStep(difficulty), MAX_LEVEL);
+    const interval = SRS_INTERVALS[newLevel] ?? SRS_INTERVALS[MAX_LEVEL]!;
     return {
       ...progress,
       level: newLevel,
@@ -43,21 +55,21 @@ export function processAnswer(
       nextReviewDate: addDays(today, interval),
     };
   } else {
-    // Откат на 1 уровень, но не ниже 1 (0 — особый статус новых слов)
     const newLevel = Math.max(progress.level - 1, 1);
+    const interval = SRS_INTERVALS[newLevel] ?? 1;
     return {
       ...progress,
       level: newLevel,
       consecutiveCorrect: 0,
       totalWrong: progress.totalWrong + 1,
-      nextReviewDate: addDays(today, 1), // завтра
+      nextReviewDate: addDays(today, interval),
     };
   }
 }
 
 // Обработка ответа для слов уровня 0.
 // Прогресс сохраняется в DB после каждого ответа.
-// Продвижение на уровень 1 происходит при 3 правильных подряд (consecutiveCorrect >= 3),
+// Продвижение на уровень 1 происходит при 2 правильных подряд (consecutiveCorrect >= 2),
 // независимо от того, были они в одной сессии или в разных.
 // Ошибка сбрасывает consecutiveCorrect в 0.
 export function processLevel0Answer(
@@ -67,8 +79,8 @@ export function processLevel0Answer(
   const today = getToday();
   if (correct) {
     const newConsecutive = progress.consecutiveCorrect + 1;
-    if (newConsecutive >= 3) {
-      // 3 правильных подряд → уровень 1, следующий показ завтра
+    if (newConsecutive >= 2) {
+      // 2 правильных подряд → уровень 1, следующий показ завтра
       return {
         ...progress,
         level: 1,
@@ -93,6 +105,16 @@ export function processLevel0Answer(
       nextReviewDate: today,
     };
   }
+}
+
+// Дробные баллы «знаю слов» по уровню:
+//   0 → 0, 1 → 0.2, 2 → 0.4, 3 → 0.6, 4 → 0.8, архив → 1.0
+// Сумма округляется до целого в UI.
+export function progressScore(p: CardProgress): number {
+  if (p.archived) return 1;
+  if (p.level <= 0) return 0;
+  if (p.level >= MAX_LEVEL) return 0.8;
+  return p.level * 0.2;
 }
 
 // Build the session queue.

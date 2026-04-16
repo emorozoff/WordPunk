@@ -104,12 +104,17 @@ export async function getDueCards(today: string): Promise<CardProgress[]> {
   return all.filter(p => p.nextReviewDate <= today);
 }
 
-// TEMP (тестовый режим): каждое слово любого уровня >= 1 считается как 1.0
-// TODO v1.0: вернуть дробный счётчик (уровень 1 → +0.25, уровень 2 → +0.5, уровень 3-5 → +1.0)
+// Дробный счётчик: level × 0.2 для lvl 1–4, архив = 1.0. Сумма округляется.
 export async function getKnownCount(): Promise<number> {
   const db = await getDB();
   const all = await db.getAll('progress');
-  return all.filter(p => p.level >= 1 || !!p.archived).length;
+  let sum = 0;
+  for (const p of all) {
+    if (p.archived) { sum += 1; continue; }
+    if (p.level <= 0) continue;
+    sum += Math.min(p.level, 4) * 0.2;
+  }
+  return Math.round(sum);
 }
 
 export async function getArchivedCount(): Promise<number> {
@@ -121,9 +126,10 @@ export async function getArchivedCount(): Promise<number> {
 export async function getLevelDistribution(): Promise<Record<number, number>> {
   const db = await getDB();
   const all = await db.getAll('progress');
-  const dist: Record<number, number> = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  const dist: Record<number, number> = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0 };
   for (const p of all) {
-    dist[p.level] = (dist[p.level] ?? 0) + 1;
+    const lvl = Math.min(p.level, 4);
+    dist[lvl] = (dist[lvl] ?? 0) + 1;
   }
   return dist;
 }

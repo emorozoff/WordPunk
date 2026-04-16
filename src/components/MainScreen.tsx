@@ -291,7 +291,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
 
     if (isLevel0) {
       // Уровень 0: прогресс сохраняется в DB после каждого ответа.
-      // 3 правильных подряд (consecutiveCorrect >= 3) → уровень 1, независимо от сессии.
+      // 2 правильных подряд (consecutiveCorrect >= 2) → уровень 1, независимо от сессии.
       // Ошибка сбрасывает consecutiveCorrect.
       const existing = sessionDataRef.current.get(sc.card.id) ?? { shows: 0, correctCount: 0, wrongCount: 0 };
       const newShows = existing.shows + 1;
@@ -301,30 +301,17 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         wrongCount: existing.wrongCount + (isCorrect ? 0 : 1),
       });
 
-      // Сохраняем в DB сразу после каждого ответа
       const newProgress = processLevel0Answer(progressFromDB, isCorrect);
       await putProgress(newProgress);
 
       if (isCorrect) showXp();
 
-      if (newProgress.level === 1) {
-        // Слово выучено (3 правильных подряд) — берём счётчик из DB
-        const newKnown = await getKnownCount();
-        setKnownCount(newKnown);
-        const newLvl = getCurrentLevel(newKnown);
-        if (newLvl.title !== prevLevelRef.current) {
-          prevLevelRef.current = newLvl.title;
-          setTimeout(() => { playLevelUp(); setLevelUp({ title: newLvl.title, description: newLvl.description }); }, 800);
-        }
-      } else if (isCorrect && newShows === 1) {
-        // Первый правильный ответ в этой сессии — оптимистичный +1 в счётчик
-        const tentative = knownCount + 1;
-        setKnownCount(tentative);
-        const newLvl = getCurrentLevel(tentative);
-        if (newLvl.title !== prevLevelRef.current) {
-          prevLevelRef.current = newLvl.title;
-          setTimeout(() => { playLevelUp(); setLevelUp({ title: newLvl.title, description: newLvl.description }); }, 800);
-        }
+      const newKnown = await getKnownCount();
+      setKnownCount(newKnown);
+      const newLvl = getCurrentLevel(newKnown);
+      if (newLvl.title !== prevLevelRef.current) {
+        prevLevelRef.current = newLvl.title;
+        setTimeout(() => { playLevelUp(); setLevelUp({ title: newLvl.title, description: newLvl.description }); }, 800);
       }
 
       // Вставляем обратно в очередь (не более 3 показов за сессию)
@@ -340,10 +327,10 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         });
       }
     } else {
-      // Уровень 1–5: стандартный SRS
-      // Правильно → +1 уровень, ошибка → -1 уровень (минимум 1), следующий показ завтра
+      // Уровень 1–4: стандартный SRS v2.
+      // Правильно → +1 уровень (или +2 для diff 1–2), ошибка → -1 (минимум 1).
       if (isCorrect) showXp();
-      const progress = processAnswer(progressFromDB, isCorrect);
+      const progress = processAnswer(progressFromDB, isCorrect, sc.card.difficulty);
       await putProgress(progress);
       const newKnown = await getKnownCount();
       setKnownCount(newKnown);
@@ -492,7 +479,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.82</span>
+          <span className="header-version">v0.83</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
