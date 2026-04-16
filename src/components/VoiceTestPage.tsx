@@ -9,8 +9,6 @@ const VOICES: Record<string, string> = {
   sonia: 'Sonia (GB)',
 };
 
-const BITRATES = ['64k', '128k'];
-
 const BASE = import.meta.env.BASE_URL + 'audio-samples';
 
 interface Props {
@@ -22,10 +20,9 @@ const VoiceTestPage: FC<Props> = ({ onClose }) => {
   const [error, setError] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const play = useCallback((voice: string, word: string, bitrate: string) => {
-    const key = `${voice}/${word}_${bitrate}`;
+  const play = useCallback((voice: string, word: string) => {
+    const key = `${voice}/${word}`;
 
-    // Stop current
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current = null;
@@ -37,7 +34,7 @@ const VoiceTestPage: FC<Props> = ({ onClose }) => {
     }
 
     setError(null);
-    const url = `${BASE}/${voice}/${word}_${bitrate}.mp3`;
+    const url = `${BASE}/${voice}/${word}.mp3`;
     const audio = new Audio(url);
     audioRef.current = audio;
     setPlaying(key);
@@ -47,7 +44,7 @@ const VoiceTestPage: FC<Props> = ({ onClose }) => {
       audioRef.current = null;
     };
     audio.onerror = () => {
-      setError(`Файл не найден: ${voice}/${word}_${bitrate}.mp3`);
+      setError(`Файл не найден: ${voice}/${word}.mp3 — запусти скрипт генерации`);
       setPlaying(null);
       audioRef.current = null;
     };
@@ -67,33 +64,27 @@ const VoiceTestPage: FC<Props> = ({ onClose }) => {
       {error && <div className="voice-test-error">{error}</div>}
 
       <p className="voice-test-hint">
-        Запусти <code>python scripts/generate-voice-samples.py</code> на маке,
-        чтобы сгенерировать сэмплы.
+        Запусти на маке: <code>python3 scripts/generate-voice-samples.py</code>
       </p>
 
       <div className="voice-test-grid">
         {Object.entries(VOICES).map(([voiceKey, voiceLabel]) => (
           <div key={voiceKey} className="voice-test-voice-section">
             <h3 className="voice-test-voice-name">{voiceLabel}</h3>
-            <div className="voice-test-bitrate-row">
-              {BITRATES.map(br => (
-                <div key={br} className="voice-test-bitrate-col">
-                  <div className="voice-test-bitrate-label">{br}</div>
-                  {WORDS.map(word => {
-                    const key = `${voiceKey}/${word}_${br}`;
-                    const isPlaying = playing === key;
-                    return (
-                      <button
-                        key={key}
-                        className={`voice-test-btn ${isPlaying ? 'playing' : ''}`}
-                        onClick={() => play(voiceKey, word, br)}
-                      >
-                        {isPlaying ? '■' : '▶'} {word}
-                      </button>
-                    );
-                  })}
-                </div>
-              ))}
+            <div className="voice-test-words">
+              {WORDS.map(word => {
+                const key = `${voiceKey}/${word}`;
+                const isPlaying = playing === key;
+                return (
+                  <button
+                    key={key}
+                    className={`voice-test-btn ${isPlaying ? 'playing' : ''}`}
+                    onClick={() => play(voiceKey, word)}
+                  >
+                    {isPlaying ? '■' : '▶'} {word}
+                  </button>
+                );
+              })}
             </div>
           </div>
         ))}

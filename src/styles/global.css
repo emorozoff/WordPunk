@@ -1699,25 +1699,10 @@ button {
   margin: 0 0 10px 0;
 }
 
-.voice-test-bitrate-row {
-  display: flex;
-  gap: 12px;
-}
-
-.voice-test-bitrate-col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.voice-test-words {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 6px;
-}
-
-.voice-test-bitrate-label {
-  font-family: 'IBM Plex Mono', monospace;
-  color: #555;
-  font-size: 11px;
-  text-align: center;
-  margin-bottom: 4px;
-  text-transform: uppercase;
 }
 
 .voice-test-btn {
