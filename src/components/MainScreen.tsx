@@ -103,15 +103,14 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
   // Flag feature
   const [flagged, setFlagged] = useState(false);
 
-  // Archive feature
-  const [archiveConfirm, setArchiveConfirm] = useState<{ english: string; russian: string; cardId: string } | null>(null);
+  // Archive feature — long-press switches card to inline manual input
+  const [archiveChallenge, setArchiveChallenge] = useState(false);
   const [archiveInput, setArchiveInput] = useState('');
   const archiveInputRef = useRef<HTMLInputElement>(null);
-  const [lpOpt, setLpOpt] = useState<string | null>(null);   // truthy = some button is being held
+  const [lpOpt, setLpOpt] = useState<string | null>(null);
   const lpTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const lpPressedOptRef = useRef<string | null>(null);        // which option is being held
-  const lpFiredRef = useRef(false);                           // timer already fired, swallow next click
-  const archiveOpenedAtRef = useRef(0);                       // timestamp when modal opened
+  const lpPressedOptRef = useRef<string | null>(null);
+  const lpFiredRef = useRef(false);
 
   // Level 4 manual input
   const [currentLevel, setCurrentLevel] = useState(0);
@@ -444,7 +443,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
 
   const handleArchive = useCallback(async () => {
     const sc = queue[queueIdx];
-    if (!sc) { setArchiveConfirm(null); return; }
+    if (!sc) { setArchiveChallenge(false); return; }
 
     const progressFromDB = await getProgress(sc.card.id) ?? createInitialProgress(sc.card.id);
     await putProgress({ ...progressFromDB, archived: true });
@@ -452,9 +451,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
     const newKnown = await getKnownCount();
     setKnownCount(newKnown);
 
-    setArchiveConfirm(null);
+    setArchiveChallenge(false);
+    setArchiveInput('');
 
-    // Remove all instances of this card from the in-memory queue
     const archivedId = sc.card.id;
     const filtered = queue.filter(item => item.card.id !== archivedId);
     setQueue(filtered);
@@ -573,7 +572,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.845</span>
+          <span className="header-version">v0.846</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -621,7 +620,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
               )}
               {currentCard.direction === 'en-ru' && currentCard.card.example ? (
                 <div className="card-sentence">
-                  {isFinale && !answered
+                  {(isFinale || archiveChallenge) && !answered
                     ? renderExampleBlanked(currentCard.card.example)
                     : renderExample(currentCard.card.example, currentCard.card.english)}
                 </div>
@@ -701,24 +700,27 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
               ДАЛЕЕ →
             </button>
           </div>
-        ) : isFinale ? (
-          <div className="manual-wrap" onClick={() => !answered && manualInputRef.current?.focus()}>
-            {currentCard.direction === 'en-ru' && !answered && (
-              <div className="manual-prompt">→ {currentCard.card.russian}</div>
+        ) : isFinale || archiveChallenge ? (
+          <div className="manual-wrap" onClick={() => !answered && (archiveChallenge ? archiveInputRef.current?.focus() : manualInputRef.current?.focus())}>
+            {!answered && (
+              <div className="manual-prompt">
+                {archiveChallenge ? 'АРХИВ → ' : '→ '}{currentCard.card.russian}
+              </div>
             )}
             <div className="letter-boxes">
               {Array.from({ length: currentCard.card.english.length }).map((_, i) => {
                 const target = currentCard.card.english;
-                const ch = answered ? target[i] : manualInput[i];
+                const inputVal = archiveChallenge ? archiveInput : manualInput;
+                const ch = answered ? target[i] : inputVal[i];
                 const isSpace = target[i] === ' ';
-                const hintFirst = !answered && showFirstLetter && i === 0 && !manualInput[i];
+                const hintFirst = !answered && !archiveChallenge && showFirstLetter && i === 0 && !inputVal[i];
                 let cls = 'letter-box';
                 if (isSpace) cls += ' space';
                 if (ch && !isSpace) cls += ' filled';
                 if (hintFirst) cls += ' hint';
                 return (
                   <span key={i} className={cls}>
-                    {ch ?? (hintFirst ? target[0] : isSpace ? '·' : '')}
+                    {ch ?? (hintFirst ? target[0] : isSpace ? '\u00B7' : '')}
                   </span>
                 );
               })}
@@ -726,10 +728,10 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
             {!answered && (
               <>
                 <input
-                  ref={manualInputRef}
+                  ref={archiveChallenge ? archiveInputRef : manualInputRef}
                   className="manual-input-hidden"
                   type="text"
-                  value={manualInput}
+                  value={archiveChallenge ? archiveInput : manualInput}
                   autoFocus
                   autoCapitalize="off"
                   autoCorrect="off"
@@ -737,9 +739,28 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                   inputMode="text"
                   onChange={e => {
                     const v = e.target.value.toLowerCase().replace(/[^a-z'\s-]/g, '');
-                    setManualInput(v);
+                    if (archiveChallenge) {
+                      setArchiveInput(v);
+                      if (v.length >= currentCard.card.english.length && checkManualAnswer(v, currentCard.card.english)) {
+                        playCorrect();
+                        handleArchive();
+                      }
+                    } else {
+                      setManualInput(v);
+                    }
                   }}
-                  onKeyDown={e => { if (e.key === 'Enter') handleManualSubmit(); }}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter') {
+                      if (archiveChallenge) {
+                        if (checkManualAnswer(archiveInput, currentCard.card.english)) {
+                          playCorrect();
+                          handleArchive();
+                        }
+                      } else {
+                        handleManualSubmit();
+                      }
+                    }
+                  }}
                   onFocus={() => {
                     setTimeout(() => {
                       const el = document.querySelector('.letter-boxes');
@@ -747,9 +768,15 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                     }, 350);
                   }}
                 />
-                <button className="manual-submit-btn" onClick={handleManualSubmit} disabled={!manualInput.trim()}>
-                  ПРОВЕРИТЬ
-                </button>
+                {archiveChallenge ? (
+                  <button className="manual-submit-btn" onClick={() => { setArchiveChallenge(false); setArchiveInput(''); }}>
+                    ОТМЕНА
+                  </button>
+                ) : (
+                  <button className="manual-submit-btn" onClick={handleManualSubmit} disabled={!manualInput.trim()}>
+                    ПРОВЕРИТЬ
+                  </button>
+                )}
               </>
             )}
           </div>
@@ -802,14 +829,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                       );
 
                       if (pressedIsCorrect) {
-                        // Show archive confirm; guard against phantom iOS click closing it
-                        archiveOpenedAtRef.current = Date.now();
                         setArchiveInput('');
-                        setArchiveConfirm({
-                          english: currentCard.card.english,
-                          russian: currentCard.card.russian,
-                          cardId: currentCard.card.id,
-                        });
+                        setArchiveChallenge(true);
+                        setTimeout(() => archiveInputRef.current?.focus(), 100);
                       } else {
                         // Wrong button held — count as wrong answer
                         handleAnswer(pressedOpt);
@@ -861,65 +883,6 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         />
       )}
 
-      {/* Archive confirm modal */}
-      {archiveConfirm && (
-        <div
-          className="archive-overlay"
-          onClick={() => {
-            // Guard: iOS can fire a phantom click right after the long-press touchend.
-            // Ignore any click within 500ms of the modal opening.
-            if (Date.now() - archiveOpenedAtRef.current < 500) return;
-            setArchiveConfirm(null);
-          }}
-        >
-          <div className="archive-confirm" onClick={e => { e.stopPropagation(); archiveInputRef.current?.focus(); }}>
-            <div className="archive-confirm-title">АРХИВ_</div>
-            <div className="archive-confirm-translation">→ {archiveConfirm.russian}</div>
-            <div className="letter-boxes archive-letter-boxes">
-              {Array.from({ length: archiveConfirm.english.length }).map((_, i) => {
-                const ch = archiveInput[i];
-                const isSpace = archiveConfirm.english[i] === ' ';
-                return (
-                  <span key={i} className={`letter-box${ch && !isSpace ? ' filled' : ''}${isSpace ? ' space' : ''}`}>
-                    {ch ?? (isSpace ? '\u00B7' : '')}
-                  </span>
-                );
-              })}
-            </div>
-            <input
-              ref={archiveInputRef}
-              className="manual-input-hidden"
-              type="text"
-              value={archiveInput}
-              autoFocus
-              autoCapitalize="off"
-              autoCorrect="off"
-              spellCheck={false}
-              inputMode="text"
-              onChange={e => {
-                const v = e.target.value.toLowerCase().replace(/[^a-z'\s-]/g, '');
-                setArchiveInput(v);
-                if (v.length >= archiveConfirm.english.length && checkManualAnswer(v, archiveConfirm.english)) {
-                  playCorrect();
-                  handleArchive();
-                }
-              }}
-              onKeyDown={e => {
-                if (e.key === 'Enter' && checkManualAnswer(archiveInput, archiveConfirm.english)) {
-                  playCorrect();
-                  handleArchive();
-                }
-              }}
-              onFocus={() => setTimeout(() => {
-                const el = document.querySelector('.archive-letter-boxes');
-                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              }, 350)}
-            />
-            <div className="archive-confirm-hint">введи слово чтобы архивировать</div>
-            <button className="archive-confirm-no" onClick={() => setArchiveConfirm(null)}>ОТМЕНА</button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
