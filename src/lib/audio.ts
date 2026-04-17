@@ -76,12 +76,14 @@ const AUDIO_CDN = 'https://pub-00a95b8df66f46f597ce91f5544ae35f.r2.dev';
 let currentSource: AudioBufferSourceNode | null = null;
 let speechEndCallback: (() => void) | null = null;
 
-export type AudioMode = 'word' | 'sentence' | 'both' | 'off';
+export type AudioMode = 'word' | 'sentence' | 'off';
 
 export function getAudioMode(): AudioMode {
   const raw = localStorage.getItem(AUDIO_MODE_KEY);
-  if (raw === 'word' || raw === 'sentence' || raw === 'both' || raw === 'off') return raw;
-  // Legacy: old on/off toggle migrates to 'word'/'off'
+  if (raw === 'word' || raw === 'sentence' || raw === 'off') return raw;
+  // Legacy: 'both' (removed in v0.861) маппим на 'sentence' — самый близкий по сути режим.
+  if (raw === 'both') return 'sentence';
+  // Legacy: старый бинарный tts_enabled → off / word
   if (localStorage.getItem(TTS_KEY) === 'false') return 'off';
   return 'word';
 }

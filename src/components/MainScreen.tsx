@@ -327,21 +327,24 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
   // По окончании вызывает advance() для авто-перехода к следующей карточке.
   const playCorrectAnswerAudio = (english: string, example?: string) => {
     const mode = getAudioMode();
-    const hasExample = !!example;
     if (mode === 'off') {
       autoAdvanceRef.current = setTimeout(() => advance(), 1600);
-    } else if (mode === 'sentence' && hasExample) {
-      speakSentence(example!, () => advance());
-    } else if (mode === 'both' && hasExample) {
-      speakWord(english, () => speakSentence(example!, () => advance()));
+    } else if (mode === 'sentence' && example) {
+      speakSentence(example, () => advance());
     } else {
       speakWord(english, () => advance());
     }
   };
 
-  const playSentenceTap = (example?: string) => {
-    if (!example || getAudioMode() === 'off') return;
-    speakSentence(example, () => {});
+  // Тап по карточке/слову/фразе — озвучка по выбранному режиму.
+  const playByMode = (english: string, example?: string) => {
+    const mode = getAudioMode();
+    if (mode === 'off') return;
+    if (mode === 'sentence' && example) {
+      speakSentence(example, () => {});
+    } else {
+      speakWord(english, () => {});
+    }
   };
 
   const playWordTap = (word: string) => {
@@ -601,7 +604,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.86</span>
+          <span className="header-version">v0.861</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -643,21 +646,25 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
             <div className="xp-toast-slot">
               {showXpToast && <div key={xpToastKey} className="xp-toast">▲ ОПЫТ</div>}
             </div>
-            <div className="word-card" style={{ cursor: 'pointer' }} onClick={e => { e.stopPropagation(); if (answered?.wasCorrect) advance(); else if (!answered) onOpenSettings(); }}>
+            <div
+              className="word-card"
+              style={{ cursor: 'pointer' }}
+              onClick={e => {
+                e.stopPropagation();
+                if (answered?.wasCorrect) { advance(); return; }
+                if ((isFinale || archiveChallenge) && !answered) {
+                  if (archiveChallenge) archiveInputRef.current?.focus();
+                  else manualInputRef.current?.focus();
+                  return;
+                }
+                playByMode(currentCard.card.english, currentCard.card.example);
+              }}
+            >
               {topic && (
                 <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
               )}
               {currentCard.direction === 'en-ru' && currentCard.card.example ? (
-                <div
-                  className="card-sentence"
-                  onClick={e => {
-                    e.stopPropagation();
-                    if (answered?.wasCorrect) { advance(); return; }
-                    if (!(isFinale || archiveChallenge) || answered) {
-                      playSentenceTap(currentCard.card.example);
-                    }
-                  }}
-                >
+                <div className="card-sentence">
                   {(isFinale || archiveChallenge) && !answered
                     ? renderExampleBlanked(currentCard.card.example)
                     : renderExample(currentCard.card.example, currentCard.card.english)}
@@ -689,7 +696,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                 {currentCard.direction === 'ru-en' && currentCard.card.example && (
                   <div
                     className="card-example"
-                    onClick={e => { e.stopPropagation(); playSentenceTap(currentCard.card.example); }}
+                    onClick={e => { e.stopPropagation(); playByMode(currentCard.card.english, currentCard.card.example); }}
                   >
                     {renderExample(currentCard.card.example, currentCard.card.english)}
                   </div>
@@ -701,7 +708,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
               <div
                 key={prevExample.animKey}
                 className="prev-example"
-                onClick={e => { e.stopPropagation(); playSentenceTap(prevExample.text); }}
+                onClick={e => { e.stopPropagation(); playByMode(prevExample.word, prevExample.text); }}
               >
                 {renderExample(prevExample.text, prevExample.word)}
               </div>

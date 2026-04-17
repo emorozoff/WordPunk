@@ -2,12 +2,11 @@ import { FC, useRef, useState } from 'react';
 import { clearAllProgress } from '../db';
 import { AudioMode, getAudioMode, setAudioMode, stopSpeech, isManualInputEnabled, setManualInputEnabled } from '../lib/audio';
 
-const AUDIO_ORDER: AudioMode[] = ['off', 'word', 'sentence', 'both'];
+const AUDIO_ORDER: AudioMode[] = ['off', 'word', 'sentence'];
 const AUDIO_LABELS: Record<AudioMode, string> = {
   off: '◎ ВЫКЛ',
   word: '◉ СЛОВО',
   sentence: '◉ ФРАЗА',
-  both: '◉ ОБА',
 };
 
 interface Props {
