@@ -231,22 +231,32 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
       return c && c.topicId !== 'custom' && !p.archived;
     });
 
-    // New cards — weighted by topic prefs, grouped by difficulty
+    // New cards — sorted by (difficulty, freqLevel), weighted by topic prefs
     const eligibleNew = cards.filter(c =>
       c.topicId !== 'custom' && !progressMap.has(c.id) && c.topicIds.some(t => getWeight(prefs, t) > 0)
-    ).sort((a, b) => (a.difficulty ?? 6) - (b.difficulty ?? 6));
+    ).sort((a, b) => {
+      const diffCmp = (a.difficulty ?? 6) - (b.difficulty ?? 6);
+      if (diffCmp !== 0) return diffCmp;
+      return (a.freqLevel ?? 10) - (b.freqLevel ?? 10);
+    });
 
-    // Group by difficulty, shuffle within each group, then concat
-    const byDiff = new Map<number, Card[]>();
+    // Group by (difficulty, freqLevel); within each bucket, weighted shuffle by topic prefs
+    const byBucket = new Map<string, Card[]>();
     for (const card of eligibleNew) {
       const d = card.difficulty ?? 6;
-      if (!byDiff.has(d)) byDiff.set(d, []);
-      byDiff.get(d)!.push(card);
+      const f = card.freqLevel ?? 10;
+      const key = `${d}-${f}`;
+      if (!byBucket.has(key)) byBucket.set(key, []);
+      byBucket.get(key)!.push(card);
     }
     const pool: Card[] = [];
-    for (const d of [...byDiff.keys()].sort((a, b) => a - b)) {
-      const group = byDiff.get(d)!;
-      // Weighted shuffle within difficulty group
+    const bucketKeys = [...byBucket.keys()].sort((a, b) => {
+      const [da, fa] = a.split('-').map(Number) as [number, number];
+      const [db, fb] = b.split('-').map(Number) as [number, number];
+      return da - db || fa - fb;
+    });
+    for (const key of bucketKeys) {
+      const group = byBucket.get(key)!;
       const weighted: Card[] = [];
       for (const card of group) {
         const w = Math.max(...card.topicIds.map(t => getWeight(prefs, t)));
@@ -573,7 +583,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.853</span>
+          <span className="header-version">v0.854</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
