@@ -71,6 +71,7 @@ export function setManualInputEnabled(v: boolean): void {
 }
 
 const TTS_KEY = 'tts_enabled';
+const AUDIO_CDN = 'https://pub-00a95b8df66f46f597ce91f5544ae35f.r2.dev';
 let currentSource: AudioBufferSourceNode | null = null;
 let speechEndCallback: (() => void) | null = null;
 
@@ -102,7 +103,7 @@ export function speakWord(word: string, onEnd: () => void): void {
   if (ac.state === 'suspended') ac.resume();
   speechEndCallback = onEnd;
 
-  const url = `https://pub-00a95b8df66f46f597ce91f5544ae35f.r2.dev/${slug}.mp3`;
+  const url = `${AUDIO_CDN}/${slug}.mp3`;
   fetch(url)
     .then(r => { if (!r.ok) throw new Error(r.statusText); return r.arrayBuffer(); })
     .then(buf => ac.decodeAudioData(buf))
@@ -138,4 +139,53 @@ export function stopSpeech(): void {
     currentSource.onended = null;
     currentSource = null;
   }
+}
+
+async function sentenceHash(text: string): Promise<string> {
+  const data = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest('SHA-256', data);
+  const hex = Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
+  return hex.slice(0, 16);
+}
+
+function cleanExample(example: string): string {
+  return example.replace(/\*\*([^*]+)\*\*/g, '$1');
+}
+
+export function speakSentence(example: string, onEnd: () => void): void {
+  stopSpeech();
+  const clean = cleanExample(example);
+  if (!clean) { onEnd(); return; }
+
+  const ac = getCtx();
+  if (ac.state === 'suspended') ac.resume();
+  speechEndCallback = onEnd;
+
+  sentenceHash(clean)
+    .then(hash => fetch(`${AUDIO_CDN}/s_${hash}.mp3`))
+    .then(r => { if (!r.ok) throw new Error(r.statusText); return r.arrayBuffer(); })
+    .then(buf => ac.decodeAudioData(buf))
+    .then(audioBuffer => {
+      if (!speechEndCallback) return;
+      const source = ac.createBufferSource();
+      source.buffer = audioBuffer;
+      source.connect(ac.destination);
+      currentSource = source;
+      source.onended = () => {
+        if (speechEndCallback) {
+          const cb = speechEndCallback;
+          speechEndCallback = null;
+          currentSource = null;
+          cb();
+        }
+      };
+      source.start(0);
+    })
+    .catch(() => {
+      if (speechEndCallback) {
+        const cb = speechEndCallback;
+        speechEndCallback = null;
+        cb();
+      }
+    });
 }
