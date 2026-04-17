@@ -12,7 +12,7 @@ import {
   createInitialProgress, getCurrentLevel, getLevelProgress, checkManualAnswer,
   getToday, MAX_LEVEL,
 } from '../lib/srs';
-import { playCorrect, playWrong, playLevelUp, speakWord, stopSpeech, isTtsEnabled, isManualInputEnabled } from '../lib/audio';
+import { playCorrect, playWrong, playLevelUp, speakWord, speakSentence, stopSpeech, getAudioMode, isManualInputEnabled } from '../lib/audio';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
@@ -323,6 +323,32 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
     xpToastTimer.current = setTimeout(() => setShowXpToast(false), 1400);
   };
 
+  // Проигрывает озвучку при правильном ответе в соответствии с выбранным режимом.
+  // По окончании вызывает advance() для авто-перехода к следующей карточке.
+  const playCorrectAnswerAudio = (english: string, example?: string) => {
+    const mode = getAudioMode();
+    const hasExample = !!example;
+    if (mode === 'off') {
+      autoAdvanceRef.current = setTimeout(() => advance(), 1600);
+    } else if (mode === 'sentence' && hasExample) {
+      speakSentence(example!, () => advance());
+    } else if (mode === 'both' && hasExample) {
+      speakWord(english, () => speakSentence(example!, () => advance()));
+    } else {
+      speakWord(english, () => advance());
+    }
+  };
+
+  const playSentenceTap = (example?: string) => {
+    if (!example || getAudioMode() === 'off') return;
+    speakSentence(example, () => {});
+  };
+
+  const playWordTap = (word: string) => {
+    if (getAudioMode() === 'off') return;
+    speakWord(word, () => {});
+  };
+
   const handleAnswer = async (chosen: string) => {
     if (answered || queue.length === 0) return;
     setPrevExample(null); // убираем предыдущий пример при новом ответе
@@ -345,11 +371,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
       if (sc.card.example && sc.direction === 'ru-en') {
         pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
       }
-      if (isTtsEnabled()) {
-        speakWord(sc.card.english, () => advance());
-      } else {
-        autoAdvanceRef.current = setTimeout(() => advance(), 1600);
-      }
+      playCorrectAnswerAudio(sc.card.english, sc.card.example);
     }
 
     // Активность — записываем каждый ответ
@@ -496,11 +518,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
       if (sc.card.example && sc.direction === 'ru-en') {
         pendingExampleRef.current = { text: sc.card.example, word: sc.card.english };
       }
-      if (isTtsEnabled()) {
-        speakWord(sc.card.english, () => advance());
-      } else {
-        autoAdvanceRef.current = setTimeout(() => advance(), 1800);
-      }
+      playCorrectAnswerAudio(correctEnglish, sc.card.example);
     }
 
     await recordActivity(getToday());
@@ -583,7 +601,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.856</span>
+          <span className="header-version">v0.86</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -630,7 +648,16 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                 <div className="card-topic-tag">[ {topic.name.toUpperCase()} ]</div>
               )}
               {currentCard.direction === 'en-ru' && currentCard.card.example ? (
-                <div className="card-sentence">
+                <div
+                  className="card-sentence"
+                  onClick={e => {
+                    e.stopPropagation();
+                    if (answered?.wasCorrect) { advance(); return; }
+                    if (!(isFinale || archiveChallenge) || answered) {
+                      playSentenceTap(currentCard.card.example);
+                    }
+                  }}
+                >
                   {(isFinale || archiveChallenge) && !answered
                     ? renderExampleBlanked(currentCard.card.example)
                     : renderExample(currentCard.card.example, currentCard.card.english)}
@@ -660,7 +687,10 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
                 </div>
                 {/* Пример только для ru-en: при en-ru он уже виден на карточке */}
                 {currentCard.direction === 'ru-en' && currentCard.card.example && (
-                  <div className="card-example">
+                  <div
+                    className="card-example"
+                    onClick={e => { e.stopPropagation(); playSentenceTap(currentCard.card.example); }}
+                  >
                     {renderExample(currentCard.card.example, currentCard.card.english)}
                   </div>
                 )}
@@ -668,7 +698,11 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
             )}
             {/* Предыдущий пример — остаётся и гаснет */}
             {!answered && prevExample && (
-              <div key={prevExample.animKey} className="prev-example">
+              <div
+                key={prevExample.animKey}
+                className="prev-example"
+                onClick={e => { e.stopPropagation(); playSentenceTap(prevExample.text); }}
+              >
                 {renderExample(prevExample.text, prevExample.word)}
               </div>
             )}
@@ -679,7 +713,11 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         {history.length > 0 && (
           <div className="mini-history">
             {history.map((h, i) => (
-              <span key={i} className="mini-history-word">
+              <span
+                key={i}
+                className="mini-history-word"
+                onClick={e => { e.stopPropagation(); playWordTap(h.english); }}
+              >
                 {h.typed
                   ? h.english.split('').map((ch, j) => {
                       const typedCh = h.typed![j];

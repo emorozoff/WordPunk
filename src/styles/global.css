@@ -355,6 +355,7 @@ button {
   text-align: center;
   padding: 4px 0 8px;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .card-sentence .example-highlight {
@@ -386,6 +387,7 @@ button {
   margin-top: 4px;
   line-height: 1.4;
   text-align: center;
+  cursor: pointer;
 }
 
 .example-highlight {
@@ -438,7 +440,7 @@ button {
   font-style: italic;
   text-align: center;
   line-height: 1.5;
-  pointer-events: none;
+  cursor: pointer;
   animation: prev-example-dim 1s ease-out forwards;
 }
 
@@ -672,6 +674,7 @@ button {
   font-family: var(--font-ui);
   font-size: 12px;
   letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 .mini-history-word::after {

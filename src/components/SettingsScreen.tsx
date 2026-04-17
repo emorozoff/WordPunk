@@ -1,6 +1,14 @@
 import { FC, useRef, useState } from 'react';
 import { clearAllProgress } from '../db';
-import { isTtsEnabled, setTtsEnabled, stopSpeech, isManualInputEnabled, setManualInputEnabled } from '../lib/audio';
+import { AudioMode, getAudioMode, setAudioMode, stopSpeech, isManualInputEnabled, setManualInputEnabled } from '../lib/audio';
+
+const AUDIO_ORDER: AudioMode[] = ['off', 'word', 'sentence', 'both'];
+const AUDIO_LABELS: Record<AudioMode, string> = {
+  off: '◎ ВЫКЛ',
+  word: '◉ СЛОВО',
+  sentence: '◉ ФРАЗА',
+  both: '◉ ОБА',
+};
 
 interface Props {
   onClose: () => void;
@@ -12,7 +20,7 @@ interface Props {
 const DISMISS_THRESHOLD = 100;
 
 const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onProgressReset }) => {
-  const [ttsOn, setTtsOn] = useState(isTtsEnabled);
+  const [audioMode, setAudioModeState] = useState<AudioMode>(getAudioMode);
   const [manualOn, setManualOn] = useState(isManualInputEnabled);
   const [confirmReset, setConfirmReset] = useState(false);
 
@@ -60,11 +68,12 @@ const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onPro
     }
   };
 
-  const toggleTts = () => {
-    const next = !ttsOn;
-    setTtsEnabled(next);
-    setTtsOn(next);
-    if (!next) stopSpeech();
+  const cycleAudioMode = () => {
+    const idx = AUDIO_ORDER.indexOf(audioMode);
+    const next = AUDIO_ORDER[(idx + 1) % AUDIO_ORDER.length]!;
+    setAudioMode(next);
+    setAudioModeState(next);
+    if (next === 'off') stopSpeech();
   };
 
   const toggleManualInput = () => {
@@ -93,10 +102,10 @@ const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onPro
         <div className="modal-handle" />
         <div className="modal-title">НАСТРОЙКИ_</div>
 
-        <div className="settings-row" onClick={toggleTts}>
-          <span className="settings-label">озвучка слова</span>
-          <span className={`settings-toggle${ttsOn ? ' on' : ''}`}>
-            {ttsOn ? '◉ ВКЛ' : '◎ ВЫКЛ'}
+        <div className="settings-row" onClick={cycleAudioMode}>
+          <span className="settings-label">озвучка</span>
+          <span className={`settings-toggle${audioMode !== 'off' ? ' on' : ''}`}>
+            {AUDIO_LABELS[audioMode]}
           </span>
         </div>
 

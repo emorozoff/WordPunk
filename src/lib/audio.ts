@@ -71,16 +71,27 @@ export function setManualInputEnabled(v: boolean): void {
 }
 
 const TTS_KEY = 'tts_enabled';
+const AUDIO_MODE_KEY = 'audio_mode';
 const AUDIO_CDN = 'https://pub-00a95b8df66f46f597ce91f5544ae35f.r2.dev';
 let currentSource: AudioBufferSourceNode | null = null;
 let speechEndCallback: (() => void) | null = null;
 
-export function isTtsEnabled(): boolean {
-  return localStorage.getItem(TTS_KEY) !== 'false';
+export type AudioMode = 'word' | 'sentence' | 'both' | 'off';
+
+export function getAudioMode(): AudioMode {
+  const raw = localStorage.getItem(AUDIO_MODE_KEY);
+  if (raw === 'word' || raw === 'sentence' || raw === 'both' || raw === 'off') return raw;
+  // Legacy: old on/off toggle migrates to 'word'/'off'
+  if (localStorage.getItem(TTS_KEY) === 'false') return 'off';
+  return 'word';
 }
 
-export function setTtsEnabled(v: boolean): void {
-  localStorage.setItem(TTS_KEY, v ? 'true' : 'false');
+export function setAudioMode(mode: AudioMode): void {
+  localStorage.setItem(AUDIO_MODE_KEY, mode);
+}
+
+export function isTtsEnabled(): boolean {
+  return getAudioMode() !== 'off';
 }
 
 function toSlug(word: string): string {
