@@ -1387,7 +1387,23 @@ button {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
+.flagged-copy-btn {
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.flagged-copy-btn:active { background: var(--text-muted); color: #0d0d0d; }
 
 .level-dist { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
 .level-dist-row { display: flex; align-items: center; gap: 8px; }

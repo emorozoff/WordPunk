@@ -161,7 +161,20 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
 
         {flaggedCards.length > 0 && (
           <>
-            <div className="stats-section-title">ФЛАГИ_ ({flaggedCards.length})</div>
+            <div className="stats-section-title">
+              ФЛАГИ_ ({flaggedCards.length})
+              <button
+                className="flagged-copy-btn"
+                onClick={() => {
+                  const text = flaggedCards.map(fc => {
+                    const ex = fc.example ? fc.example.replace(/\*\*/g, '') : '';
+                    const opts = fc.options.map(o => o === fc.correctAnswer ? `[${o}]` : o).join(' / ');
+                    return `${fc.english} → ${fc.russian}\n  ${ex}\n  ${opts}`;
+                  }).join('\n\n');
+                  navigator.clipboard.writeText(text).then(() => alert('Скопировано'));
+                }}
+              >COPY</button>
+            </div>
             <div className="flagged-list">
               {flaggedCards.map(fc => (
                 <div key={fc.cardId} className="flagged-item">
