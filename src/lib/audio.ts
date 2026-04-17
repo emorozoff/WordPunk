@@ -102,7 +102,7 @@ export function speakWord(word: string, onEnd: () => void): void {
   if (ac.state === 'suspended') ac.resume();
   speechEndCallback = onEnd;
 
-  const url = `${import.meta.env.BASE_URL}audio/${slug}.mp3`;
+  const url = `https://pub-00a95b8df66f46f597ce91f5544ae35f.r2.dev/${slug}.mp3`;
   fetch(url)
     .then(r => { if (!r.ok) throw new Error(r.statusText); return r.arrayBuffer(); })
     .then(buf => ac.decodeAudioData(buf))
