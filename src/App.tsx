@@ -5,6 +5,7 @@ import TopicModal from './components/TopicModal';
 import StatsScreen from './components/StatsScreen';
 import SettingsScreen from './components/SettingsScreen';
 import AddWordModal from './components/AddWordModal';
+import SkillTree from './components/SkillTree';
 import SwearingBlast from './components/SwearingBlast';
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
   const [showTopics, setShowTopics] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showAddWord, setShowAddWord] = useState(false);
+  const [showSkillTree, setShowSkillTree] = useState(false);
   const [prefsVersion, setPrefsVersion] = useState(0);
   const [blastActive, setBlastActive] = useState(false);
 
@@ -38,6 +40,7 @@ export default function App() {
           prefsVersion={prefsVersion}
           onOpenSettings={() => setShowSettings(true)}
           onOpenStats={() => setShowStats(true)}
+          onOpenSkillTree={() => setShowSkillTree(true)}
         />
 
         {showSettings && (
@@ -65,6 +68,10 @@ export default function App() {
             onClose={() => setShowAddWord(false)}
             onAdded={handleAddWordAdded}
           />
+        )}
+
+        {showSkillTree && (
+          <SkillTree onClose={() => setShowSkillTree(false)} />
         )}
 
         {blastActive && <SwearingBlast onDone={handleBlastDone} />}

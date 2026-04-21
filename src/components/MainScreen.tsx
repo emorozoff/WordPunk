@@ -23,6 +23,7 @@ interface Props {
   prefsVersion: number;
   onOpenSettings: () => void;
   onOpenStats: () => void;
+  onOpenSkillTree: () => void;
 }
 
 function renderExample(example: string, englishWord: string): React.ReactNode {
@@ -72,7 +73,7 @@ function getWordSizeClass(word: string): string {
 
 const TYPING_SPEED_MS = 40;
 
-const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) => {
+const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats, onOpenSkillTree }) => {
   const [queue, setQueue]           = useState<SessionCard[]>([]);
   const [queueIdx, setQueueIdx]     = useState(0);
   const [options, setOptions]       = useState<string[]>([]);
@@ -612,7 +613,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
       </div>
 
       {/* Level bar */}
-      <div className="level-bar" onClick={() => setShowLevels(true)} style={{ cursor: 'pointer' }}>
+      <div className="level-bar" onClick={onOpenSkillTree}>
         <div className="level-bar-top">
           <span className="level-title">{knownLevel.title}</span>
           {wordsUntil > 0 && (
@@ -911,8 +912,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
 
       {/* Bottom nav */}
       <div className="bottom-nav">
-        <button className="nav-btn" onClick={onOpenSettings}>НАСТРОЙКИ</button>
-        <button className="nav-btn" onClick={onOpenStats}>СТАТИСТИКА</button>
+        <button className="nav-btn" onClick={onOpenSkillTree}>Навыки</button>
+        <button className="nav-btn" onClick={onOpenSettings}>Настройки</button>
+        <button className="nav-btn" onClick={onOpenStats}>Статистика</button>
       </div>
 
       {/* XP toast */}

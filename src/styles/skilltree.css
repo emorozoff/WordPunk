@@ -1,0 +1,178 @@
+/* ═══ SKILL TREE ═══ */
+
+.skill-tree-summary {
+  text-align: center;
+  padding: 16px 0 24px;
+}
+
+.skill-tree-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.skill-tree-total-num {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.skill-tree-total-sep {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text-tertiary);
+}
+
+.skill-tree-total-den {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.skill-tree-total-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.skill-tree-progress-track {
+  height: 4px;
+  background: var(--separator);
+  border-radius: 2px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.skill-tree-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.6s var(--spring);
+}
+
+/* Section */
+
+.skill-tree-section {
+  margin-bottom: 20px;
+}
+
+.skill-tree-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+.skill-tree-nodes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Node */
+
+.skill-node {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s var(--spring);
+}
+
+.skill-node:active {
+  transform: scale(0.98);
+}
+
+.skill-node-complete {
+  box-shadow: 0 0 0 1.5px var(--accent-glow), var(--shadow-sm);
+}
+
+.skill-node-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--accent-softer);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s var(--spring);
+}
+
+.skill-node-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.skill-node-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.skill-node-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.skill-node-count {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.skill-node-track {
+  height: 4px;
+  background: var(--separator);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.skill-node-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.4s var(--spring);
+}
+
+.skill-node-next {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+/* Level pips */
+
+.skill-node-level {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.skill-node-pip {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--separator-opaque);
+  transition: background 0.3s var(--spring);
+}
