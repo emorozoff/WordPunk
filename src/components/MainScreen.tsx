@@ -601,10 +601,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
     >
       {/* Header */}
       <div className="header">
-        <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
-          WORDPUNK_
-
-          <span className="header-version">v0.862</span>
+        <div className="header-logo" onClick={() => setDebugOpen(true)}>
+          WordPunk Neo
+          <span className="header-version">v2.0</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>
@@ -633,11 +632,11 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
           </div>
         ) : isFinished ? (
           <div className="empty-state">
-            <div className="empty-state-no-words">НЕТ СЛОВ_</div>
+            <div className="empty-state-no-words">Нет слов</div>
             <div className="empty-state-no-words-body">
-              <span className="empty-state-no-words-line">либо ты всё выучил</span>
-              <span className="empty-state-no-words-sep">//</span>
-              <span className="empty-state-no-words-line">либо не выбрал темы</span>
+              <span className="empty-state-no-words-line">Все слова выучены</span>
+              <span className="empty-state-no-words-sep">или</span>
+              <span className="empty-state-no-words-line">не выбраны темы</span>
             </div>
           </div>
         ) : currentCard ? (

@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { ThemeProvider } from './components/ThemeProvider';
 import MainScreen from './components/MainScreen';
 import TopicModal from './components/TopicModal';
 import StatsScreen from './components/StatsScreen';
@@ -31,44 +32,43 @@ export default function App() {
   const handleSwearingActivated = useCallback(() => setBlastActive(b => b ? b : true), []);
 
   return (
-    <div className={`app${blastActive ? ' swearing-blast' : ''}`}>
-      <MainScreen
-        prefsVersion={prefsVersion}
-        onOpenSettings={() => setShowSettings(true)}
-        onOpenStats={() => setShowStats(true)}
-      />
-
-      {showSettings && (
-        <SettingsScreen
-          onClose={() => setShowSettings(false)}
-          onOpenTopics={() => setShowTopics(true)}
-          onOpenAddWord={() => setShowAddWord(true)}
-          onProgressReset={handleProgressReset}
+    <ThemeProvider>
+      <div className={`app${blastActive ? ' swearing-blast' : ''}`}>
+        <MainScreen
+          prefsVersion={prefsVersion}
+          onOpenSettings={() => setShowSettings(true)}
+          onOpenStats={() => setShowStats(true)}
         />
-      )}
 
-      {showTopics && (
-        <TopicModal
-          onClose={handleTopicsClose}
-          onSwearingActivated={handleSwearingActivated}
-        />
-      )}
+        {showSettings && (
+          <SettingsScreen
+            onClose={() => setShowSettings(false)}
+            onOpenTopics={() => setShowTopics(true)}
+            onOpenAddWord={() => setShowAddWord(true)}
+            onProgressReset={handleProgressReset}
+          />
+        )}
 
-      {showStats && (
-        <StatsScreen onClose={() => setShowStats(false)} />
-      )}
+        {showTopics && (
+          <TopicModal
+            onClose={handleTopicsClose}
+            onSwearingActivated={handleSwearingActivated}
+          />
+        )}
 
-      {showAddWord && (
-        <AddWordModal
-          onClose={() => setShowAddWord(false)}
-          onAdded={handleAddWordAdded}
-        />
-      )}
+        {showStats && (
+          <StatsScreen onClose={() => setShowStats(false)} />
+        )}
 
-      {blastActive && <SwearingBlast onDone={handleBlastDone} />}
+        {showAddWord && (
+          <AddWordModal
+            onClose={() => setShowAddWord(false)}
+            onAdded={handleAddWordAdded}
+          />
+        )}
 
-      {/* CRT scanline effect */}
-      <div className="scanline" />
-    </div>
+        {blastActive && <SwearingBlast onDone={handleBlastDone} />}
+      </div>
+    </ThemeProvider>
   );
 }
