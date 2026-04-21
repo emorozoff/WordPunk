@@ -112,23 +112,23 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
         onTouchEnd={onTouchEnd}
       >
         <div className="modal-handle" />
-        <div className="modal-title">СТАТИСТИКА_</div>
+        <div className="modal-title">Статистика</div>
 
         <div className="stats-cards">
           <div className="stat-card">
-            <div className="stat-number" style={{ color: 'var(--accent-green)' }}>{known}</div>
-            <div className="stat-label">ЗНАЮ слов</div>
+            <div className="stat-number">{known}</div>
+            <div className="stat-label">Знаю</div>
           </div>
           <div className="stat-card">
-            <div className="stat-number">{total}</div>
-            <div className="stat-label">ВСЕГО слов</div>
+            <div className="stat-number" style={{ color: 'var(--text-secondary)' }}>{total}</div>
+            <div className="stat-label">Всего</div>
           </div>
         </div>
         {archived > 0 && (
           <div className="stats-archived-row">архивировано: {archived} слов</div>
         )}
 
-        <div className="stats-section-title">РАСПРЕДЕЛЕНИЕ ПО УРОВНЯМ</div>
+        <div className="stats-section-title">Распределение по уровням</div>
         <div className="level-dist" style={{ marginBottom: 24 }}>
           {([0,1,2,3,4] as const).map(lvl => (
             <div key={lvl} className="level-dist-row">
@@ -147,7 +147,7 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
           ))}
         </div>
 
-        <div className="stats-section-title">АКТИВНОСТЬ (90 дней)</div>
+        <div className="stats-section-title">Активность (90 дней)</div>
         <div className="activity-grid">
           {cells.map(cell => {
             let cls = 'activity-cell';
@@ -162,7 +162,7 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
         {flaggedCards.length > 0 && (
           <>
             <div className="stats-section-title">
-              ФЛАГИ_ ({flaggedCards.length})
+              Отмеченные ({flaggedCards.length})
               <button
                 className="flagged-copy-btn"
                 onClick={() => {
@@ -204,10 +204,10 @@ const StatsScreen: FC<Props> = ({ onClose }) => {
         )}
 
         <div className="stats-counter-info">
-          <div className="stats-section-title">КАК СЧИТАЕТСЯ СЧЁТЧИК</div>
-          <p>Не заморачивайся — алгоритм сам всё считает.</p>
-          <p>Каждое слово имеет свой вес: чем лучше знаешь, тем больше оно добавляет в счётчик. Новое слово — маленький вклад. Повторил через день, через неделю, через месяц — вклад растёт.</p>
-          <p>Просто отвечай на карточки, а цифра будет расти сама.</p>
+          <div className="stats-section-title">Как считается прогресс</div>
+          <p>Каждое слово имеет свой вес: чем лучше вы его знаете, тем больше оно добавляет в счётчик.</p>
+          <p>Новое слово даёт маленький вклад. Повторение через день, неделю и месяц увеличивает его.</p>
+          <p>Просто отвечайте на карточки — прогресс растёт автоматически.</p>
         </div>
       </div>
     </div>

@@ -73,7 +73,7 @@ const LevelsModal: FC<Props> = ({ knownCount, onClose }) => {
         onTouchEnd={onTouchEnd}
       >
         <div className="modal-handle" />
-        <div className="modal-title">УРОВНИ_</div>
+        <div className="modal-title">Уровни</div>
 
         {/* Текущий уровень — выделен */}
         <div className="levels-current-card">

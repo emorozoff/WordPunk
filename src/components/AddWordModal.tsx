@@ -36,7 +36,7 @@ const AddWordModal: FC<Props> = ({ onClose, onAdded }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-sheet" onClick={e => e.stopPropagation()}>
         <div className="modal-handle" />
-        <div className="modal-title">ДОБАВИТЬ_</div>
+        <div className="modal-title">Добавить слово</div>
         <div className="add-form">
           <div className="form-group">
             <label className="form-label">По-английски</label>
@@ -62,7 +62,7 @@ const AddWordModal: FC<Props> = ({ onClose, onAdded }) => {
               ))}
             </select>
           </div>
-          <button className="submit-btn" onClick={handleSubmit}>добавить слово +</button>
+          <button className="submit-btn" onClick={handleSubmit}>Добавить</button>
         </div>
       </div>
     </div>

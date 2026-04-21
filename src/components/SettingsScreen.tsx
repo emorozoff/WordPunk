@@ -1,12 +1,14 @@
 import { FC, useRef, useState } from 'react';
 import { clearAllProgress } from '../db';
 import { AudioMode, getAudioMode, setAudioMode, stopSpeech, isManualInputEnabled, setManualInputEnabled } from '../lib/audio';
+import { useTheme } from './ThemeProvider';
+import { THEME_ORDER, THEME_LABELS, ThemeMode } from '../lib/theme';
 
 const AUDIO_ORDER: AudioMode[] = ['off', 'word', 'sentence'];
 const AUDIO_LABELS: Record<AudioMode, string> = {
-  off: '◎ ВЫКЛ',
-  word: '◉ СЛОВО',
-  sentence: '◉ ФРАЗА',
+  off: 'Выкл',
+  word: 'Слово',
+  sentence: 'Фраза',
 };
 
 interface Props {
@@ -22,6 +24,7 @@ const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onPro
   const [audioMode, setAudioModeState] = useState<AudioMode>(getAudioMode);
   const [manualOn, setManualOn] = useState(isManualInputEnabled);
   const [confirmReset, setConfirmReset] = useState(false);
+  const { mode: themeMode, setMode: setThemeMode } = useTheme();
 
   const sheetRef = useRef<HTMLDivElement>(null);
   const dragStartY = useRef(0);
@@ -30,7 +33,7 @@ const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onPro
   const dismiss = () => {
     const sheet = sheetRef.current;
     if (!sheet) { onClose(); return; }
-    sheet.style.transition = 'transform 0.25s ease';
+    sheet.style.transition = 'transform 0.25s cubic-bezier(0.32, 0.72, 0, 1)';
     sheet.style.transform = 'translateY(110%)';
     setTimeout(onClose, 250);
   };
@@ -75,6 +78,12 @@ const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onPro
     if (next === 'off') stopSpeech();
   };
 
+  const cycleTheme = () => {
+    const idx = THEME_ORDER.indexOf(themeMode);
+    const next = THEME_ORDER[(idx + 1) % THEME_ORDER.length] as ThemeMode;
+    setThemeMode(next);
+  };
+
   const toggleManualInput = () => {
     const next = !manualOn;
     setManualInputEnabled(next);
@@ -99,49 +108,56 @@ const SettingsScreen: FC<Props> = ({ onClose, onOpenTopics, onOpenAddWord, onPro
         onTouchEnd={onTouchEnd}
       >
         <div className="modal-handle" />
-        <div className="modal-title">НАСТРОЙКИ_</div>
+        <div className="modal-title">Настройки</div>
+
+        <div className="settings-row" onClick={cycleTheme}>
+          <span className="settings-label">Тема</span>
+          <span className="settings-toggle on">
+            {THEME_LABELS[themeMode]}
+          </span>
+        </div>
 
         <div className="settings-row" onClick={cycleAudioMode}>
-          <span className="settings-label">озвучка</span>
+          <span className="settings-label">Озвучка</span>
           <span className={`settings-toggle${audioMode !== 'off' ? ' on' : ''}`}>
             {AUDIO_LABELS[audioMode]}
           </span>
         </div>
 
         <div className="settings-row" onClick={toggleManualInput}>
-          <span className="settings-label">ввод на финале</span>
+          <span className="settings-label">Ввод на финале</span>
           <span className={`settings-toggle${manualOn ? ' on' : ''}`}>
-            {manualOn ? '◉ ВКЛ' : '◎ ВЫКЛ'}
+            {manualOn ? 'Вкл' : 'Выкл'}
           </span>
         </div>
 
         <div className="settings-row" onClick={onOpenTopics}>
-          <span className="settings-label">темы</span>
-          <span className="settings-arrow">→</span>
+          <span className="settings-label">Темы</span>
+          <span className="settings-arrow">&rsaquo;</span>
         </div>
 
         <div className="settings-row" onClick={onOpenAddWord}>
-          <span className="settings-label">мои слова</span>
-          <span className="settings-arrow">→</span>
+          <span className="settings-label">Мои слова</span>
+          <span className="settings-arrow">&rsaquo;</span>
         </div>
 
         <div className="settings-section-gap" />
 
         <button className="settings-danger-btn" onClick={() => setConfirmReset(true)}>
-          сбросить прогресс
+          Сбросить прогресс
         </button>
       </div>
 
       {confirmReset && (
         <div className="modal-overlay settings-confirm-overlay" onClick={() => setConfirmReset(false)}>
           <div className="debug-panel" onClick={e => e.stopPropagation()}>
-            <div className="debug-title">// УДАЛИТЬ ВЕСЬ ПРОГРЕСС?</div>
+            <div className="debug-title">Удалить весь прогресс?</div>
             <div className="settings-confirm-body">
-              Это действие нельзя отменить. Все выученные слова вернутся в уровень 0.
+              Это действие нельзя отменить. Все выученные слова вернутся на начальный уровень.
             </div>
             <div className="debug-grid">
-              <button className="debug-btn" onClick={() => setConfirmReset(false)}>отмена</button>
-              <button className="debug-btn danger" onClick={handleReset}>удалить всё</button>
+              <button className="debug-btn" onClick={() => setConfirmReset(false)}>Отмена</button>
+              <button className="debug-btn danger" onClick={handleReset}>Удалить</button>
             </div>
           </div>
         </div>

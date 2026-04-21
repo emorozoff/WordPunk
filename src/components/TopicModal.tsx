@@ -157,9 +157,9 @@ const TopicModal: FC<Props> = ({ onClose, onSwearingActivated }) => {
         onTouchEnd={onTouchEnd}
       >
         <div className="modal-handle" />
-        <div className="modal-title">ТЕМЫ_</div>
+        <div className="modal-title">Темы</div>
         <div className="topics-pref-hint">
-          Выбери темы — алгоритм подберёт слова автоматически
+          Выберите интересующие темы — слова подберутся автоматически
         </div>
         <div className="topics-header-row">
           <div className="topics-pref-legend">
@@ -275,10 +275,9 @@ const TopicModal: FC<Props> = ({ onClose, onSwearingActivated }) => {
       {showBasicWarning && (
         <div className="info-overlay" onClick={() => setShowBasicWarning(false)}>
           <div className="info-popup" onClick={e => e.stopPropagation()}>
-            <div className="info-popup-title">лучше не выключать</div>
+            <div className="info-popup-title">Рекомендуем оставить</div>
             <div className="info-popup-body">
-              <p>Это фундамент — базовые глаголы, служебные слова, числа. Без них остальные темы учить сложнее.</p>
-              <p>Но если очень хочется — можно.</p>
+              <p>Базовая тема содержит фундаментальные слова: глаголы, служебные слова, числа. Без неё другие темы учить сложнее.</p>
             </div>
             <button
               className="info-popup-close info-popup-close-dim"
@@ -290,9 +289,9 @@ const TopicModal: FC<Props> = ({ onClose, onSwearingActivated }) => {
                 setShowBasicWarning(false);
               }}
             >
-              всё равно выключить
+              Всё равно отключить
             </button>
-            <button className="info-popup-close" onClick={() => setShowBasicWarning(false)}>оставить</button>
+            <button className="info-popup-close" onClick={() => setShowBasicWarning(false)}>Оставить</button>
           </div>
         </div>
       )}
