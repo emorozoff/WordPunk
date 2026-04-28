@@ -6,9 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:ios": "CAPACITOR=1 tsc -b && CAPACITOR=1 vite build",
+    "ios:sync": "npm run build:ios && cap sync ios",
+    "ios:open": "npm run ios:sync && cap open ios",
+    "assets:generate": "capacitor-assets generate --ios"
   },
   "dependencies": {
+    "@capacitor/app": "^8.1.0",
+    "@capacitor/core": "^8.3.1",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.3.1",
+    "@capacitor/splash-screen": "^8.0.1",
+    "@capacitor/status-bar": "^8.0.2",
     "@mintplex-labs/piper-tts-web": "^1.0.4",
     "idb": "^8.0.0",
     "lucide-react": "^1.7.0",
@@ -16,6 +26,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.3.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",

@@ -3,3 +3,18 @@ dist/
 .DS_Store
 *.local
 public/audio-samples/**/*.mp3
+
+# Capacitor / iOS build artifacts
+ios/App/Pods/
+ios/App/build/
+ios/App/App/public/
+ios/DerivedData/
+ios/.build/
+ios/App/output/
+ios/App/App.xcworkspace/xcuserdata/
+ios/App/App.xcodeproj/xcuserdata/
+ios/App/App.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcuserstate
+ios/capacitor-cordova-ios-plugins/
+tmp_sentence_audio/
+

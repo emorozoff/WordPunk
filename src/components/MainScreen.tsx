@@ -13,6 +13,7 @@ import {
   getToday, MAX_LEVEL,
 } from '../lib/srs';
 import { playCorrect, playWrong, playLevelUp, speakWord, speakSentence, stopSpeech, getAudioMode, isManualInputEnabled } from '../lib/audio';
+import { hapticLight, hapticWarning, hapticSuccess } from '../lib/native';
 import { getTopicById } from '../data/topics';
 import { loadTopicPrefs, getWeight } from '../lib/topicPrefs';
 import LevelUpPopup from './LevelUpPopup';
@@ -365,6 +366,10 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
     setAnswered({ chosen, correct: correctAnswer, wasCorrect: isCorrect });
     setHistory(h => [{ english: sc.card.english, wasCorrect: isCorrect }, ...h].slice(0, 5));
 
+    // Виброотдача (нативно на iOS, no-op в браузере)
+    if (isCorrect) hapticLight();
+    else hapticWarning();
+
     // Звук
     if (isCorrect) playCorrect();
     else playWrong();
@@ -514,6 +519,9 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
     setAnswered({ chosen: manualInput, correct: correctEnglish, wasCorrect: isCorrect });
     setHistory(h => [{ english: correctEnglish, wasCorrect: isCorrect, typed: manualInput }, ...h].slice(0, 5));
 
+    if (isCorrect) hapticSuccess();
+    else hapticWarning();
+
     if (isCorrect) playCorrect();
     else playWrong();
 
@@ -604,7 +612,7 @@ const MainScreen: FC<Props> = ({ prefsVersion, onOpenSettings, onOpenStats }) =>
         <div className="header-logo" onClick={() => setDebugOpen(true)} style={{ cursor: 'pointer' }}>
           WORDPUNK_
 
-          <span className="header-version">v0.862</span>
+          <span className="header-version">v0.87</span>
         </div>
         <div className="header-known" onClick={onOpenStats} style={{ cursor: 'pointer' }}>
           <span className="header-known-label">знаю слов:</span>

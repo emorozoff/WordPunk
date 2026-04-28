@@ -1,10 +1,11 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import MainScreen from './components/MainScreen';
 import TopicModal from './components/TopicModal';
 import StatsScreen from './components/StatsScreen';
 import SettingsScreen from './components/SettingsScreen';
 import AddWordModal from './components/AddWordModal';
 import SwearingBlast from './components/SwearingBlast';
+import { applyStatusBarTheme, hideSplash } from './lib/native';
 
 export default function App() {
   const [showSettings, setShowSettings] = useState(false);
@@ -13,6 +14,12 @@ export default function App() {
   const [showAddWord, setShowAddWord] = useState(false);
   const [prefsVersion, setPrefsVersion] = useState(0);
   const [blastActive, setBlastActive] = useState(false);
+
+  useEffect(() => {
+    applyStatusBarTheme('dark');
+    const t = setTimeout(() => { hideSplash(); }, 200);
+    return () => clearTimeout(t);
+  }, []);
 
   const handleTopicsClose = useCallback(() => {
     setShowTopics(false);
